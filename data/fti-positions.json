@@ -1,0 +1,1717 @@
+{
+  "Abrahamsbergsvägen": {
+    "stationName": "Abrahamsbergsvägen",
+    "lat": "59.332223",
+    "lng": "17.948369",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Adolfsbergsvägen 13": {
+    "stationName": "Adolfsbergsvägen 13",
+    "lat": "59.358219",
+    "lng": "17.956068",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Alsnögatan": {
+    "stationName": "Alsnögatan",
+    "lat": "59.312735",
+    "lng": "18.101793",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Alviksvägen 1, vid Circle-K": {
+    "stationName": "Alviksvägen 1, vid Circle-K",
+    "lat": "59.332763",
+    "lng": "17.975572",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Anders Frantzens park": {
+    "stationName": "Anders Frantzens park",
+    "lat": "59.311278",
+    "lng": "18.104487",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Annebodavägen 66": {
+    "stationName": "Annebodavägen 66",
+    "lat": "59.287790",
+    "lng": "18.027390",
+    "location": "Älvsjö",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Artemisgatan, utanför 89:an": {
+    "stationName": "Artemisgatan, utanför 89:an",
+    "lat": "59.354994",
+    "lng": "18.097574",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Backlöksvägen 22": {
+    "stationName": "Backlöksvägen 22",
+    "lat": "59.392847",
+    "lng": "17.810403",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Backtimjegränd": {
+    "stationName": "Backtimjegränd",
+    "lat": "59.380322",
+    "lng": "17.834276",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Basgränd": {
+    "stationName": "Basgränd",
+    "lat": "59.383856",
+    "lng": "17.865026",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Bergmyntegrän Vändzon": {
+    "stationName": "Bergmyntegrän Vändzon",
+    "lat": "59.390279",
+    "lng": "17.802263",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Bergslagsvägen": {
+    "stationName": "Bergslagsvägen",
+    "lat": "59.341914",
+    "lng": "17.924862",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Bergslagsvägen/Vultejusvägen": {
+    "stationName": "Bergslagsvägen/Vultejusvägen",
+    "lat": "59.342852",
+    "lng": "17.907361",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Bersågränd 1/Åstorpsringen": {
+    "stationName": "Bersågränd 1/Åstorpsringen",
+    "lat": "59.284283",
+    "lng": "18.097215",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Bjurholmsgatan 16": {
+    "stationName": "Bjurholmsgatan 16",
+    "lat": "59.310093",
+    "lng": "18.078851",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Bjursätragränd/Lurstigen": {
+    "stationName": "Bjursätragränd/Lurstigen",
+    "lat": "59.256448",
+    "lng": "18.036285",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Björnmossevägen 5": {
+    "stationName": "Björnmossevägen 5",
+    "lat": "59.237727",
+    "lng": "17.963489",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Björnsongatan 4": {
+    "stationName": "Björnsongatan 4",
+    "lat": "59.343816",
+    "lng": "17.886655",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Blommensbergsvägen": {
+    "stationName": "Blommensbergsvägen",
+    "lat": "59.307158",
+    "lng": "17.996081",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Blåklocksvägen 3": {
+    "stationName": "Blåklocksvägen 3",
+    "lat": "59.367962",
+    "lng": "17.820920",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Bokbindarvägen/Bäckvägen": {
+    "stationName": "Bokbindarvägen/Bäckvägen",
+    "lat": "59.300184",
+    "lng": "17.981744",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Bondegatan, Mittemot nr 79": {
+    "stationName": "Bondegatan, Mittemot nr 79",
+    "lat": "59.313165",
+    "lng": "18.095827",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Borgargatan 6": {
+    "stationName": "Borgargatan 6",
+    "lat": "59.317784",
+    "lng": "18.034688",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Brantholmsgränd": {
+    "stationName": "Brantholmsgränd",
+    "lat": "59.276796",
+    "lng": "17.896622",
+    "location": "Skärholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Bromma kyrka": {
+    "stationName": "Bromma kyrka",
+    "lat": "59.353723",
+    "lng": "17.916996",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Brotorpsvägen-Arrendeväg": {
+    "stationName": "Brotorpsvägen-Arrendeväg",
+    "lat": "59.365565",
+    "lng": "17.916865",
+    "location": "Spånga-Tensta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Bägersta Byväg/Sockenvägen": {
+    "stationName": "Bägersta Byväg/Sockenvägen",
+    "lat": "59.288643",
+    "lng": "18.060620",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Bägerstavägen/Herrgårdsvägen": {
+    "stationName": "Bägerstavägen/Herrgårdsvägen",
+    "lat": "59.289980",
+    "lng": "18.064688",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Bärbogränd 2": {
+    "stationName": "Bärbogränd 2",
+    "lat": "59.271405",
+    "lng": "18.042651",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Cervins Väg/Duvbovägen": {
+    "stationName": "Cervins Väg/Duvbovägen",
+    "lat": "59.376248",
+    "lng": "17.919630",
+    "location": "Spånga-Tensta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "COOP Vinsta": {
+    "stationName": "COOP Vinsta",
+    "lat": "59.369428",
+    "lng": "17.856177",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Dagsverksvägen": {
+    "stationName": "Dagsverksvägen",
+    "lat": "59.377893",
+    "lng": "17.906606",
+    "location": "Spånga-Tensta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Dalagatan": {
+    "stationName": "Dalagatan",
+    "lat": "59.346227",
+    "lng": "18.040980",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Dubbel Tidning": {
+    "stationName": "Dubbel Tidning",
+    "lat": "59.241651",
+    "lng": "18.086702",
+    "location": "Farsta",
+    "sorting": "tidningar"
+  },
+  "Dvärglinsgränd": {
+    "stationName": "Dvärglinsgränd",
+    "lat": "59.392574",
+    "lng": "17.818967",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Ekhagsvägen/Åminnevägen": {
+    "stationName": "Ekhagsvägen/Åminnevägen",
+    "lat": "59.370555",
+    "lng": "18.053979",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Elsa Brännströms gata": {
+    "stationName": "Elsa Brännströms gata",
+    "lat": "59.287691",
+    "lng": "17.964113",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Engelbrektsgatan": {
+    "stationName": "Engelbrektsgatan",
+    "lat": "59.338882",
+    "lng": "18.069837",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Enighetsvägen/vid vändplanen": {
+    "stationName": "Enighetsvägen/vid vändplanen",
+    "lat": "59.361136",
+    "lng": "17.952449",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Erik Dahlbergsgatan 43": {
+    "stationName": "Erik Dahlbergsgatan 43",
+    "lat": "59.344871",
+    "lng": "18.092940",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Erik Segersälls vägAspuddens centrum, vid T-banan": {
+    "stationName": "Erik Segersälls vägAspuddens centrum, vid T-banan",
+    "lat": "59.306655",
+    "lng": "18.000733",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Eriksdalsgatan 23-25": {
+    "stationName": "Eriksdalsgatan 23-25",
+    "lat": "59.306397",
+    "lng": "18.068316",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Essinge Brogatan 37": {
+    "stationName": "Essinge Brogatan 37",
+    "lat": "59.324973",
+    "lng": "18.003628",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Essinge Kyrkväg, Nedanför kyrkan": {
+    "stationName": "Essinge Kyrkväg, Nedanför kyrkan",
+    "lat": "59.321339",
+    "lng": "17.990062",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Fagersjövägen": {
+    "stationName": "Fagersjövägen",
+    "lat": "59.256840",
+    "lng": "18.079850",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Falkholmsgränd 41": {
+    "stationName": "Falkholmsgränd 41",
+    "lat": "59.279238",
+    "lng": "17.896619",
+    "location": "Skärholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Filipstadbacken 70, Mittemot Larsboda": {
+    "stationName": "Filipstadbacken 70, Mittemot Larsboda",
+    "lat": "59.238324",
+    "lng": "18.106274",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Fjärdholmsgränd": {
+    "stationName": "Fjärdholmsgränd",
+    "lat": "59.276328",
+    "lng": "17.886584",
+    "location": "Skärholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Folkskolegatan 13": {
+    "stationName": "Folkskolegatan 13",
+    "lat": "59.316731",
+    "lng": "18.030593",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Folkungagatan 141-143": {
+    "stationName": "Folkungagatan 141-143",
+    "lat": "59.315607",
+    "lng": "18.092587",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Fredrika Bremers gata 40": {
+    "stationName": "Fredrika Bremers gata 40",
+    "lat": "59.285587",
+    "lng": "17.973319",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Fregattvägen 29": {
+    "stationName": "Fregattvägen 29",
+    "lat": "59.314120",
+    "lng": "18.004310",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Frejgatan": {
+    "stationName": "Frejgatan",
+    "lat": "59.347275",
+    "lng": "18.056467",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Frejgatan, vid bryggarsalen": {
+    "stationName": "Frejgatan, vid bryggarsalen",
+    "lat": "59.345355",
+    "lng": "18.049429",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Fridhemsgatan 16": {
+    "stationName": "Fridhemsgatan 16",
+    "lat": "59.331191",
+    "lng": "18.027566",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Frimurarvägen 38": {
+    "stationName": "Frimurarvägen 38",
+    "lat": "59.289428",
+    "lng": "17.938834",
+    "location": "Skärholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Fågelstavägen 1": {
+    "stationName": "Fågelstavägen 1",
+    "lat": "59.270336",
+    "lng": "18.046322",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Färgarplan, Södermalm": {
+    "stationName": "Färgarplan, Södermalm",
+    "lat": "59.310182",
+    "lng": "18.095126",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Färnebogatan 66": {
+    "stationName": "Färnebogatan 66",
+    "lat": "59.245808",
+    "lng": "18.097142",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Gamla Bromstensvägen 88": {
+    "stationName": "Gamla Bromstensvägen 88",
+    "lat": "59.367850",
+    "lng": "17.926023",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Garagevägen": {
+    "stationName": "Garagevägen",
+    "lat": "59.292615",
+    "lng": "18.095405",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Gimmerstavägen 2": {
+    "stationName": "Gimmerstavägen 2",
+    "lat": "59.280382",
+    "lng": "18.034811",
+    "location": "Älvsjö",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Glanshammarsgatan 42": {
+    "stationName": "Glanshammarsgatan 42",
+    "lat": "59.264580",
+    "lng": "18.010130",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Grenljusbacken/Lövholmsvägen": {
+    "stationName": "Grenljusbacken/Lövholmsvägen",
+    "lat": "59.314145",
+    "lng": "18.014081",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Gröndalsvägen 118": {
+    "stationName": "Gröndalsvägen 118",
+    "lat": "59.314809",
+    "lng": "17.996819",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Gullmarsvägen 7": {
+    "stationName": "Gullmarsvägen 7",
+    "lat": "59.298743",
+    "lng": "18.078542",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Gångbro över Roslagsbanan": {
+    "stationName": "Gångbro över Roslagsbanan",
+    "lat": "59.350303",
+    "lng": "18.064905",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Götaforsvägen/Grycksbovägen vid bensinstation": {
+    "stationName": "Götaforsvägen/Grycksbovägen vid bensinstation",
+    "lat": "59.269206",
+    "lng": "18.058157",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Götalandsvägen 205": {
+    "stationName": "Götalandsvägen 205",
+    "lat": "59.281121",
+    "lng": "18.015327",
+    "location": "Älvsjö",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Hagsätravägen 119": {
+    "stationName": "Hagsätravägen 119",
+    "lat": "59.261076",
+    "lng": "18.025826",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Havsörnsvägen 44": {
+    "stationName": "Havsörnsvägen 44",
+    "lat": "59.248524",
+    "lng": "18.056374",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Heleneborgsgatan": {
+    "stationName": "Heleneborgsgatan",
+    "lat": "59.319493",
+    "lng": "18.041017",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Hemköps parkering Gråhundsvägen 9": {
+    "stationName": "Hemköps parkering Gråhundsvägen 9",
+    "lat": "59.263076",
+    "lng": "18.123477",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Herrängsvägen": {
+    "stationName": "Herrängsvägen",
+    "lat": "59.280832",
+    "lng": "17.960256",
+    "location": "Älvsjö",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Hjalmar Söderbergs Väg 14": {
+    "stationName": "Hjalmar Söderbergs Väg 14",
+    "lat": "59.333139",
+    "lng": "18.001375",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Holmögaddsvägen 1": {
+    "stationName": "Holmögaddsvägen 1",
+    "lat": "59.283148",
+    "lng": "18.115122",
+    "location": "Skarpnäck",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Hornsgatan 182": {
+    "stationName": "Hornsgatan 182",
+    "lat": "59.314998",
+    "lng": "18.031927",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Hägerstens allé 5": {
+    "stationName": "Hägerstens allé 5",
+    "lat": "59.305027",
+    "lng": "17.976250",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Hägerstensvägen 302": {
+    "stationName": "Hägerstensvägen 302",
+    "lat": "59.300627",
+    "lng": "17.964064",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Hägerstensvägen vid T-bana Mälarhöjden": {
+    "stationName": "Hägerstensvägen vid T-bana Mälarhöjden",
+    "lat": "59.301344",
+    "lng": "17.958303",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Högbergs gatan/Rosenlundsgatan": {
+    "stationName": "Högbergs gatan/Rosenlundsgatan",
+    "lat": "59.314604",
+    "lng": "18.057219",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "ICA Maxi Barkarbystaden/Järfälla": {
+    "stationName": "ICA Maxi Barkarbystaden/Järfälla",
+    "lat": "59.415075",
+    "lng": "17.864054",
+    "location": "Barkarbystaden/Järfälla",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Igeldammsgatan, Mittemot nr 42": {
+    "stationName": "Igeldammsgatan, Mittemot nr 42",
+    "lat": "59.338344",
+    "lng": "18.022341",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Igeldammsgatan/Flemingatan": {
+    "stationName": "Igeldammsgatan/Flemingatan",
+    "lat": "59.335746",
+    "lng": "18.025909",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Jyllandsgatan": {
+    "stationName": "Jyllandsgatan",
+    "lat": "59.402342",
+    "lng": "17.933102",
+    "location": "Rinkeby-Kista",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Jämtlandsgatan/Håsjögränd": {
+    "stationName": "Jämtlandsgatan/Håsjögränd",
+    "lat": "59.356086",
+    "lng": "17.882272",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Kampementsgatan 2": {
+    "stationName": "Kampementsgatan 2",
+    "lat": "59.346439",
+    "lng": "18.102301",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Kapellgränd, Mittemot nr 15": {
+    "stationName": "Kapellgränd, Mittemot nr 15",
+    "lat": "59.316027",
+    "lng": "18.074984",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Karlbergsv./Västmannag. (Odenplan)": {
+    "stationName": "Karlbergsv./Västmannag. (Odenplan)",
+    "lat": "59.342975",
+    "lng": "18.045925",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Karlbergsvägen/Norra Stationsgatan": {
+    "stationName": "Karlbergsvägen/Norra Stationsgatan",
+    "lat": "59.343341",
+    "lng": "18.027236",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Karlskronavägen 2": {
+    "stationName": "Karlskronavägen 2",
+    "lat": "59.293333",
+    "lng": "18.114477",
+    "location": "Skarpnäck",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Karossvägen/Vagnvägen": {
+    "stationName": "Karossvägen/Vagnvägen",
+    "lat": "59.286935",
+    "lng": "17.980075",
+    "location": "Älvsjö",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Kirunagatan 29": {
+    "stationName": "Kirunagatan 29",
+    "lat": "59.365419",
+    "lng": "17.861672",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Kistvägen/Herrhagsvägen Gubbängen": {
+    "stationName": "Kistvägen/Herrhagsvägen Gubbängen",
+    "lat": "59.264499",
+    "lng": "18.080881",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Klevgränd, nedanför Mosebacke Terrass": {
+    "stationName": "Klevgränd, nedanför Mosebacke Terrass",
+    "lat": "59.318325",
+    "lng": "18.075038",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Kronofogdevägen": {
+    "stationName": "Kronofogdevägen",
+    "lat": "59.382186",
+    "lng": "17.896042",
+    "location": "Spånga-Tensta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Krällingegränd 24": {
+    "stationName": "Krällingegränd 24",
+    "lat": "59.395117",
+    "lng": "17.916214",
+    "location": "Spånga-Tensta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Kungsholms Strand, bredvid bron": {
+    "stationName": "Kungsholms Strand, bredvid bron",
+    "lat": "59.336888",
+    "lng": "18.034016",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Kungsklippan 6": {
+    "stationName": "Kungsklippan 6",
+    "lat": "59.330086",
+    "lng": "18.048782",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Kungstensgatan/Drottninggatan": {
+    "stationName": "Kungstensgatan/Drottninggatan",
+    "lat": "59.340499",
+    "lng": "18.054232",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Kvarnbacksvägen 64": {
+    "stationName": "Kvarnbacksvägen 64",
+    "lat": "59.342165",
+    "lng": "17.949856",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Kvarnhagsgatan 54": {
+    "stationName": "Kvarnhagsgatan 54",
+    "lat": "59.366469",
+    "lng": "17.850276",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Liljeholmsstranden": {
+    "stationName": "Liljeholmsstranden",
+    "lat": "59.313989",
+    "lng": "18.027700",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Lindarängsvägen vid Tullvaktsvägen": {
+    "stationName": "Lindarängsvägen vid Tullvaktsvägen",
+    "lat": "59.339538",
+    "lng": "18.117156",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Ljusnevägen, mittemot nr 15": {
+    "stationName": "Ljusnevägen, mittemot nr 15",
+    "lat": "59.277160",
+    "lng": "18.141633",
+    "location": "Skarpnäck",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Loviselundsvägen": {
+    "stationName": "Loviselundsvägen",
+    "lat": "59.369427",
+    "lng": "17.835036",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Ludvigsbergsgatan 17": {
+    "stationName": "Ludvigsbergsgatan 17",
+    "lat": "59.319797",
+    "lng": "18.054476",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Lugntorpsvägen 57": {
+    "stationName": "Lugntorpsvägen 57",
+    "lat": "59.294728",
+    "lng": "17.964355",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Luntmakargatan 28": {
+    "stationName": "Luntmakargatan 28",
+    "lat": "59.338221",
+    "lng": "18.062257",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Luntmakargatan 80/Rehnsgatan": {
+    "stationName": "Luntmakargatan 80/Rehnsgatan",
+    "lat": "59.342720",
+    "lng": "18.058525",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Lusuddsvägen 4": {
+    "stationName": "Lusuddsvägen 4",
+    "lat": "59.315958",
+    "lng": "18.015068",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Lyckselevägen/Kirunagatan": {
+    "stationName": "Lyckselevägen/Kirunagatan",
+    "lat": "59.365440",
+    "lng": "17.861819",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Långsjövägen/ Pukslagargatan": {
+    "stationName": "Långsjövägen/ Pukslagargatan",
+    "lat": "59.273485",
+    "lng": "17.994688",
+    "location": "Älvsjö",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Lövsätragränd/Björksätravägen": {
+    "stationName": "Lövsätragränd/Björksätravägen",
+    "lat": "59.287216",
+    "lng": "17.913585",
+    "location": "Skärholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Malmövägen; mittemot nr 59": {
+    "stationName": "Malmövägen; mittemot nr 59",
+    "lat": "59.289717",
+    "lng": "18.115841",
+    "location": "Skarpnäck",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Maltesholmsvägen 85": {
+    "stationName": "Maltesholmsvägen 85",
+    "lat": "59.365543",
+    "lng": "17.842952",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Margeretelundsvägen": {
+    "stationName": "Margeretelundsvägen",
+    "lat": "59.337669",
+    "lng": "17.982677",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Margeretelundsvägen 10-12": {
+    "stationName": "Margeretelundsvägen 10-12",
+    "lat": "59.334765",
+    "lng": "17.987241",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Mariehamnsgatan 11-13": {
+    "stationName": "Mariehamnsgatan 11-13",
+    "lat": "59.415229",
+    "lng": "17.911361",
+    "location": "Rinkeby-Kista",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Mellanvägen/Sockenvägen": {
+    "stationName": "Mellanvägen/Sockenvägen",
+    "lat": "59.281276",
+    "lng": "18.080728",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Messeniusgatan/ Stagneliusvägen": {
+    "stationName": "Messeniusgatan/ Stagneliusvägen",
+    "lat": "59.330238",
+    "lng": "17.999901",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Multrågatan 142": {
+    "stationName": "Multrågatan 142",
+    "lat": "59.360216",
+    "lng": "17.878509",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Mälartorget 17": {
+    "stationName": "Mälartorget 17",
+    "lat": "59.322893",
+    "lng": "18.069114",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Narviksgatan 11": {
+    "stationName": "Narviksgatan 11",
+    "lat": "59.412930",
+    "lng": "17.923355",
+    "location": "Rinkeby-Kista",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Nitvägen 26": {
+    "stationName": "Nitvägen 26",
+    "lat": "59.291708",
+    "lng": "17.991289",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Norrmälarstrand mittemot nr 20": {
+    "stationName": "Norrmälarstrand mittemot nr 20",
+    "lat": "59.326655",
+    "lng": "18.046386",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Nybrogatan 57": {
+    "stationName": "Nybrogatan 57",
+    "lat": "59.338263",
+    "lng": "18.078981",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Olaus Magnus väg 36": {
+    "stationName": "Olaus Magnus väg 36",
+    "lat": "59.297733",
+    "lng": "18.094161",
+    "location": "Skarpnäck",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Ormängsgatan 16": {
+    "stationName": "Ormängsgatan 16",
+    "lat": "59.363971",
+    "lng": "17.842065",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Pastellvägen 1": {
+    "stationName": "Pastellvägen 1",
+    "lat": "59.294152",
+    "lng": "18.086354",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Pepparvägen": {
+    "stationName": "Pepparvägen",
+    "lat": "59.252700",
+    "lng": "18.082826",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Per Ekströms väg 5": {
+    "stationName": "Per Ekströms väg 5",
+    "lat": "59.345314",
+    "lng": "17.894969",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Perstorpsvägen 75": {
+    "stationName": "Perstorpsvägen 75",
+    "lat": "59.255918",
+    "lng": "18.106811",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Pipersgatan 41": {
+    "stationName": "Pipersgatan 41",
+    "lat": "59.333329",
+    "lng": "18.047458",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Pokalvägen": {
+    "stationName": "Pokalvägen",
+    "lat": "59.318090",
+    "lng": "18.022851",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Polhemsgatan 23 mitt emot polishus": {
+    "stationName": "Polhemsgatan 23 mitt emot polishus",
+    "lat": "59.331096",
+    "lng": "18.036797",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Polhemsgatan/P O Hallmans gata": {
+    "stationName": "Polhemsgatan/P O Hallmans gata",
+    "lat": "59.334677",
+    "lng": "18.038843",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Pontonjärgatan 19": {
+    "stationName": "Pontonjärgatan 19",
+    "lat": "59.328994",
+    "lng": "18.032909",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Ragvaldsgatan 9": {
+    "stationName": "Ragvaldsgatan 9",
+    "lat": "59.318710",
+    "lng": "18.068188",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Ramvägen 23": {
+    "stationName": "Ramvägen 23",
+    "lat": "59.263725",
+    "lng": "18.089686",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Renstiernas Gata/Skånegatan": {
+    "stationName": "Renstiernas Gata/Skånegatan",
+    "lat": "59.312824",
+    "lng": "18.084946",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Ringvägen 163": {
+    "stationName": "Ringvägen 163",
+    "lat": "59.310360",
+    "lng": "18.087256",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Ripsavägen 34": {
+    "stationName": "Ripsavägen 34",
+    "lat": "59.266888",
+    "lng": "18.031600",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Runebergsgatan 1": {
+    "stationName": "Runebergsgatan 1",
+    "lat": "59.340869",
+    "lng": "18.066169",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Rusthållarvägen, vid nr 38": {
+    "stationName": "Rusthållarvägen, vid nr 38",
+    "lat": "59.274952",
+    "lng": "18.130919",
+    "location": "Skarpnäck",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Rusthållarvägen-Fogdevägen": {
+    "stationName": "Rusthållarvägen-Fogdevägen",
+    "lat": "59.276874",
+    "lng": "18.127090",
+    "location": "Skarpnäck",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Rågsveds Skolgränd 6": {
+    "stationName": "Rågsveds Skolgränd 6",
+    "lat": "59.257102",
+    "lng": "18.024645",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Rålambsvägen 30, Mittemot Marieberg": {
+    "stationName": "Rålambsvägen 30, Mittemot Marieberg",
+    "lat": "59.328466",
+    "lng": "18.010519",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Rättar Vigs väg 93": {
+    "stationName": "Rättar Vigs väg 93",
+    "lat": "59.371532",
+    "lng": "17.885550",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Rödkindavägen 18": {
+    "stationName": "Rödkindavägen 18",
+    "lat": "59.236040",
+    "lng": "18.086964",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Rörstrandsgatan 32": {
+    "stationName": "Rörstrandsgatan 32",
+    "lat": "59.340772",
+    "lng": "18.029544",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "S:t Göransgatan 152": {
+    "stationName": "S:t Göransgatan 152",
+    "lat": "59.338166",
+    "lng": "18.014585",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sandjärdsgatan, mittemot Årsta Värdshus": {
+    "stationName": "Sandjärdsgatan, mittemot Årsta Värdshus",
+    "lat": "59.295331",
+    "lng": "18.043652",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sandviksvägen/Lövsta vägen": {
+    "stationName": "Sandviksvägen/Lövsta vägen",
+    "lat": "59.378308",
+    "lng": "17.816032",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Segeltorpsvägen 37": {
+    "stationName": "Segeltorpsvägen 37",
+    "lat": "59.272945",
+    "lng": "17.961644",
+    "location": "Älvsjö",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Siljansvägen 75": {
+    "stationName": "Siljansvägen 75",
+    "lat": "59.299375",
+    "lng": "18.041223",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sandhamnsgatan 4": {
+    "stationName": "Sandhamnsgatan 4",
+    "lat": "59.347226",
+    "lng": "18.102734",
+    "location": "Östermalm",
+    "sorting": "tidningar"
+  },
+  "Abiskovägen 30": {
+    "stationName": "Abiskovägen 30",
+    "lat": "59.365558",
+    "lng": "17.866670",
+    "location": "Hässelby-Vällingby",
+    "sorting": "tidningar"
+  },
+  "Fågelstavägen 8": {
+    "stationName": "Fågelstavägen 8",
+    "lat": "59.270310",
+    "lng": "18.046306",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "tidningar"
+  },
+  "Skebokvarnsvägen 159": {
+    "stationName": "Skebokvarnsvägen 159",
+    "lat": "59.266755",
+    "lng": "18.036339",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Skebokvarnsvägen 337": {
+    "stationName": "Skebokvarnsvägen 337",
+    "lat": "59.262813",
+    "lng": "18.040592",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Skrubba koloniområde": {
+    "stationName": "Skrubba koloniområde",
+    "lat": "59.325369",
+    "lng": "18.076084",
+    "location": "Skarpnäck",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Skälderviksplan 3": {
+    "stationName": "Skälderviksplan 3",
+    "lat": "59.298751",
+    "lng": "18.033667",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sköndalsvägen 82-86": {
+    "stationName": "Sköndalsvägen 82-86",
+    "lat": "59.254794",
+    "lng": "18.114557",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sköntorpsvägen 18": {
+    "stationName": "Sköntorpsvägen 18",
+    "lat": "59.298236",
+    "lng": "18.066612",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Skönviksvägen/Munksjövägen": {
+    "stationName": "Skönviksvägen/Munksjövägen",
+    "lat": "59.274739",
+    "lng": "18.058385",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Snöripsvägen, vid dagis och Thaikiosk": {
+    "stationName": "Snöripsvägen, vid dagis och Thaikiosk",
+    "lat": "59.272874",
+    "lng": "17.977973",
+    "location": "Älvsjö",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Solhems Hagväg 8": {
+    "stationName": "Solhems Hagväg 8",
+    "lat": "59.386646",
+    "lng": "17.902924",
+    "location": "Spånga-Tensta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Solleftegatan": {
+    "stationName": "Solleftegatan",
+    "lat": "59.357984",
+    "lng": "17.888614",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sparbanksvägen, vid Mellanbergsvägen": {
+    "stationName": "Sparbanksvägen, vid Mellanbergsvägen",
+    "lat": "59.292740",
+    "lng": "17.984919",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sparreholmsvägen/vid Tussmötesvägen": {
+    "stationName": "Sparreholmsvägen/vid Tussmötesvägen",
+    "lat": "59.283097",
+    "lng": "18.042818",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Spångavägen 353": {
+    "stationName": "Spångavägen 353",
+    "lat": "59.373256",
+    "lng": "17.900456",
+    "location": "Spånga-Tensta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Spångavägen/Vinbärsvägen Eneby": {
+    "stationName": "Spångavägen/Vinbärsvägen Eneby",
+    "lat": "59.361562",
+    "lng": "17.905338",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Stadshagsvägen 14": {
+    "stationName": "Stadshagsvägen 14",
+    "lat": "59.336448",
+    "lng": "18.021324",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vinstavägen": {
+    "stationName": "Vinstavägen",
+    "lat": "59.380539",
+    "lng": "17.885086",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Stenkilsgatan": {
+    "stationName": "Stenkilsgatan",
+    "lat": "59.307958",
+    "lng": "17.989233",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Stenkullavägen/Essingestråket": {
+    "stationName": "Stenkullavägen/Essingestråket",
+    "lat": "59.318568",
+    "lng": "17.990031",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Stjärnsundsgatan/Glanshammarsgatan": {
+    "stationName": "Stjärnsundsgatan/Glanshammarsgatan",
+    "lat": "59.262086",
+    "lng": "18.002830",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Stockholmsvägen 3": {
+    "stationName": "Stockholmsvägen 3",
+    "lat": "59.286068",
+    "lng": "18.087396",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Storforsplan Larsbodavägen": {
+    "stationName": "Storforsplan Larsbodavägen",
+    "lat": "59.241170",
+    "lng": "18.094251",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Strandvägen": {
+    "stationName": "Strandvägen",
+    "lat": "59.331481",
+    "lng": "18.089581",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Studentbacken 2": {
+    "stationName": "Studentbacken 2",
+    "lat": "59.348544",
+    "lng": "18.095725",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sundbyvägen": {
+    "stationName": "Sundbyvägen",
+    "lat": "59.363783",
+    "lng": "17.904167",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Svartlösavägen/Strandängsstigen": {
+    "stationName": "Svartlösavägen/Strandängsstigen",
+    "lat": "59.265828",
+    "lng": "17.976289",
+    "location": "Älvsjö",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sveavägen 143": {
+    "stationName": "Sveavägen 143",
+    "lat": "59.349877",
+    "lng": "18.048569",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sågverksgatan vid Korsnäsvägen": {
+    "stationName": "Sågverksgatan vid Korsnäsvägen",
+    "lat": "59.277334",
+    "lng": "18.048126",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sätra Gårdsväg": {
+    "stationName": "Sätra Gårdsväg",
+    "lat": "59.288062",
+    "lng": "17.912389",
+    "location": "Skärholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sätra Torg": {
+    "stationName": "Sätra Torg",
+    "lat": "59.284846",
+    "lng": "17.923583 ",
+    "location": "Skärholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Södermannagatan 2": {
+    "stationName": "Södermannagatan 2",
+    "lat": "59.315619",
+    "lng": "18.079353",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Sörgårdsvägen/Tenorgränd": {
+    "stationName": "Sörgårdsvägen/Tenorgränd",
+    "lat": "59.383265",
+    "lng": "17.858663",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Tackjärnsvägen 6": {
+    "stationName": "Tackjärnsvägen 6",
+    "lat": "59.345235",
+    "lng": "17.971696",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Tallkrogsvägen 41": {
+    "stationName": "Tallkrogsvägen 41",
+    "lat": "59.274578",
+    "lng": "18.091538 ",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Tankebyggarbacken": {
+    "stationName": "Tankebyggarbacken",
+    "lat": "59.290878",
+    "lng": "17.930580",
+    "location": "Skärholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Tantogatan 12": {
+    "stationName": "Tantogatan 12",
+    "lat": "59.311459",
+    "lng": "18.051973",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Tegelbruksvägen 17": {
+    "stationName": "Tegelbruksvägen 17",
+    "lat": "59.302832",
+    "lng": "18.012057",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Tegnérgatan 27/Sveavägen": {
+    "stationName": "Tegnérgatan 27/Sveavägen",
+    "lat": "59.339604",
+    "lng": "18.060189",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Tellusborgsvägen 53": {
+    "stationName": "Tellusborgsvägen 53",
+    "lat": "59.301783",
+    "lng": "18.005115",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Thorildsplans gymnasium": {
+    "stationName": "Thorildsplans gymnasium",
+    "lat": "59.332708",
+    "lng": "18.011971",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Timmermansgatan 27": {
+    "stationName": "Timmermansgatan 27",
+    "lat": "59.316943",
+    "lng": "18.061023 ",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Tjurbergsgatan 23-25 på torget": {
+    "stationName": "Tjurbergsgatan 23-25 på torget",
+    "lat": "59.311155",
+    "lng": "18.072793",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Tomtebogatan": {
+    "stationName": "Tomtebogatan",
+    "lat": "59.341307",
+    "lng": "18.035703 ",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Torkel Knutssonsgatan": {
+    "stationName": "Torkel Knutssonsgatan",
+    "lat": "59.319002",
+    "lng": "18.056525",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Trollesundsvägen 63": {
+    "stationName": "Trollesundsvägen 63",
+    "lat": "59.263297",
+    "lng": "18.051913",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Trollesundsvägen/Skeppstavägen": {
+    "stationName": "Trollesundsvägen/Skeppstavägen",
+    "lat": "59.266296",
+    "lng": "18.056123 ",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Trädskolevägen (mitt emot nr 17 i Johanneshov)": {
+    "stationName": "Trädskolevägen (mitt emot nr 17 i Johanneshov)",
+    "lat": "59.287661",
+    "lng": "18.080737",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Tussmötevägen/Bandhagsvägen": {
+    "stationName": "Tussmötevägen/Bandhagsvägen",
+    "lat": "59.279986",
+    "lng": "18.056535",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Tättorpsvägen/Pilotgatan": {
+    "stationName": "Tättorpsvägen/Pilotgatan",
+    "lat": "59.267234",
+    "lng": "18.139363",
+    "location": "Skarpnäck",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Ugglemossevägen 61-65": {
+    "stationName": "Ugglemossevägen 61-65",
+    "lat": "59.293432",
+    "lng": "17.946694",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Upplandsgatan": {
+    "stationName": "Upplandsgatan",
+    "lat": "59.340157",
+    "lng": "18.051175 ",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Upplandsgatan 1": {
+    "stationName": "Upplandsgatan 1",
+    "lat": "59.335950",
+    "lng": "18.055272",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Valhallavägen 16": {
+    "stationName": "Valhallavägen 16",
+    "lat": "59.349065",
+    "lng": "18.062207",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Valhallavägen/Oxenstiernsgatan": {
+    "stationName": "Valhallavägen/Oxenstiernsgatan",
+    "lat": "59.337624",
+    "lng": "18.103632 ",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Valla Torg 63": {
+    "stationName": "Valla Torg 63",
+    "lat": "59.293616",
+    "lng": "18.050355",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vantörsvägen": {
+    "stationName": "Vantörsvägen",
+    "lat": "59.276007",
+    "lng": "17.982258",
+    "location": "Älvsjö",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Varvsgatan (mittemot nr 21)": {
+    "stationName": "Varvsgatan (mittemot nr 21)",
+    "lat": "59.316945",
+    "lng": "18.040008",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vejlegatan Kista C": {
+    "stationName": "Vejlegatan Kista C",
+    "lat": "59.401594",
+    "lng": "17.943937",
+    "location": "Rinkeby-Kista",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Wennerbergsgatan 9, Vändzon": {
+    "stationName": "Wennerbergsgatan 9, Vändzon",
+    "lat": "59.326926",
+    "lng": "18.013131",
+    "location": "Kungsholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vid butiken Ekodirekt": {
+    "stationName": "Vid butiken Ekodirekt",
+    "lat": "59.279756",
+    "lng": "18.108714",
+    "location": "Skarpnäck",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vidholmsbackarna 102/Riddersviksvägen": {
+    "stationName": "Vidholmsbackarna 102/Riddersviksvägen",
+    "lat": "59.379955",
+    "lng": "17.803236",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vidängsvägen": {
+    "stationName": "Vidängsvägen",
+    "lat": "59.336856",
+    "lng": "17.979121",
+    "location": "Bromma",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vikingagatan": {
+    "stationName": "Vikingagatan",
+    "lat": "59.343482",
+    "lng": "18.033827",
+    "location": "Norrmalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Villmanstrandsgatan/Ainogången": {
+    "stationName": "Villmanstrandsgatan/Ainogången",
+    "lat": "59.413478",
+    "lng": "17.917145",
+    "location": "Rinkeby-Kista",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Willy Brandts Park/Fotbollsplanen": {
+    "stationName": "Willy Brandts Park/Fotbollsplanen",
+    "lat": "59.295372",
+    "lng": "18.107480",
+    "location": "Skarpnäck",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vingåkersplan, vid fotbollsplanen": {
+    "stationName": "Vingåkersplan, vid fotbollsplanen",
+    "lat": "59.275282",
+    "lng": "18.029300",
+    "location": "Älvsjö",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vinstavägen/Sörgårdsvägen": {
+    "stationName": "Vinstavägen/Sörgårdsvägen",
+    "lat": "59.375990",
+    "lng": "17.874302",
+    "location": "Spånga-Tensta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vintrosagatan/Olshammarsgatan": {
+    "stationName": "Vintrosagatan/Olshammarsgatan",
+    "lat": "59.261987",
+    "lng": "18.018061",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vårbergsvägen 135": {
+    "stationName": "Vårbergsvägen 135",
+    "lat": "59.277311",
+    "lng": "17.878798",
+    "location": "Skärholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vällingbyvägen / Tornedalsgatan": {
+    "stationName": "Vällingbyvägen / Tornedalsgatan",
+    "lat": "59.366255",
+    "lng": "17.883392",
+    "location": "Hässelby-Vällingby",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Väpnargatan": {
+    "stationName": "Väpnargatan",
+    "lat": "59.332778",
+    "lng": "18.078261",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Värmlandsvägen snett emot bollplan": {
+    "stationName": "Värmlandsvägen snett emot bollplan",
+    "lat": "59.247786",
+    "lng": "18.084878",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Värmlandsvägen, mitt emot 410": {
+    "stationName": "Värmlandsvägen, mitt emot 410",
+    "lat": "59.244743",
+    "lng": "18.078653",
+    "location": "Farsta",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Västertorpsvägen/ Broddgränd": {
+    "stationName": "Västertorpsvägen/ Broddgränd",
+    "lat": "59.292051",
+    "lng": "17.977941",
+    "location": "Hägersten-Liljeholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Västgötagatan 5": {
+    "stationName": "Västgötagatan 5",
+    "lat": "59.313192",
+    "lng": "18.071469",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Vättersvägen; efter Bolmensvägen": {
+    "stationName": "Vättersvägen; efter Bolmensvägen",
+    "lat": "59.295242",
+    "lng": "18.058831 ",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Zinkensdamms IP, kiosken": {
+    "stationName": "Zinkensdamms IP, kiosken",
+    "lat": "59.316420",
+    "lng": "18.050923",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Ålgrytevägen 90": {
+    "stationName": "Ålgrytevägen 90",
+    "lat": "59.301275",
+    "lng": "17.936295",
+    "location": "Skärholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Åmänningevägen; vid tvärbanans station": {
+    "stationName": "Åmänningevägen; vid tvärbanans station",
+    "lat": "59.296557",
+    "lng": "18.040427",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Åsögatan 113-121": {
+    "stationName": "Åsögatan 113-121",
+    "lat": "59.313432",
+    "lng": "18.074638",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Älvsborgsgatan 6": {
+    "stationName": "Älvsborgsgatan 6",
+    "lat": "59.308994",
+    "lng": "18.073144 ",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Älvsjövägen 90": {
+    "stationName": "Älvsjövägen 90",
+    "lat": "59.285056",
+    "lng": "17.993259 ",
+    "location": "Älvsjö",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Ängsholmsgränd, bredvid lekplatsen": {
+    "stationName": "Ängsholmsgränd, bredvid lekplatsen",
+    "lat": "59.275321",
+    "lng": "17.879727 ",
+    "location": "Skärholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Ängsholmsgränd; vid vändplanen": {
+    "stationName": "Ängsholmsgränd; vid vändplanen",
+    "lat": "59.275412",
+    "lng": "17.882989 ",
+    "location": "Skärholmen",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Östbergabackarna, infarten från Årstafältet": {
+    "stationName": "Östbergabackarna, infarten från Årstafältet",
+    "lat": "59.288687",
+    "lng": "18.037305",
+    "location": "Enskede-Årsta-Vantör",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Östermalmsgatan 88": {
+    "stationName": "Östermalmsgatan 88",
+    "lat": "59.339894",
+    "lng": "18.087106",
+    "location": "Östermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  },
+  "Östgötagatan, vid nr 97": {
+    "stationName": "Östgötagatan, vid nr 97",
+    "lat": "59.306281",
+    "lng": "18.081095",
+    "location": "Södermalm",
+    "sorting": "glas, kartong, metall, plast, tidningar"
+  }
+}
