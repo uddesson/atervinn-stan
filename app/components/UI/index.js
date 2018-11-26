@@ -3,3 +3,4 @@ export { colors } from './colors';
 export { utilityStyles } from './utilityStyles';
 export { Header, SubHeading, Paragraph, ParagraphBold } from './Types';
 export { Message } from './Message';
+export { HeartIcon, SadIcon } from './Icons';
