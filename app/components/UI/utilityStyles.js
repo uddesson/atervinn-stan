@@ -6,6 +6,9 @@ export const utilityStyles = StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'center',
   },
+  justifyBetween: {
+    justifyContent: 'space-between',
+  },
   center: {
     alignItems: 'center',
     justifyContent: 'center',
