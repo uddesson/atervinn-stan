@@ -6,6 +6,10 @@ export const utilityStyles = StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'center',
   },
+  center: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   whiteText: {
     color: 'white',
   },
