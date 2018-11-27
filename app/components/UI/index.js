@@ -13,3 +13,4 @@ export {
 } from './Icons';
 export { SearchResultList } from './SearchResultList';
 export { ShortcutBanner } from './ShortcutBanner';
+export { SearchResultModal } from './SearchResultModal';
