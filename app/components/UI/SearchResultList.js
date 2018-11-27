@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
-import { SubHeading, Paragraph } from './Types';
+import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
 import { calcColor } from '../../utils';
 
@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
   wrapper: {
     display: 'flex',
     justifyContent: 'space-between',
-    padding: 20,
+    padding: 10,
+    marginTop: 10,
   },
   circle: {
     width: 20,
