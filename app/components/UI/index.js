@@ -11,3 +11,4 @@ export {
   InfoIcon,
   GpsIcon,
 } from './Icons';
+export { SearchResultList } from './SearchResultList';
