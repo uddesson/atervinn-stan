@@ -11,4 +11,5 @@ export {
   InfoIcon,
   GpsIcon,
 } from './Icons';
+export { SearchResultList } from './SearchResultList';
 export { ShortcutBanner } from './ShortcutBanner';
