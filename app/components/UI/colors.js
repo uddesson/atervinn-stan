@@ -1,6 +1,9 @@
 export const colors = {
+  white: 'rgb(255, 255, 255)',
   green: 'rgb(155,199,160)',
+  greenDark: 'rgb(123,170,128)',
   blue: 'rgb(62,155,216)',
+  lightGrey: 'rgb(221,221,221)',
   darkGrey: 'rgb(85,87,96)',
 
   ftiGreen: 'rgb(106,178,32)',
