@@ -38,14 +38,16 @@ export const SearchResultList = props => {
     <>
       <FlatList
         data={listItems}
+        keyExtractor={item => item.title}
         renderItem={({ item }) => {
           const backgroundColor = calcColor(item.category);
 
           return (
             <View>
               <TouchableOpacity
-                onPress={() => handleModal(true)}
                 style={[utilityStyles.row, styles.wrapper]}
+                activeOpacity={0.7}
+                onPress={() => handleModal(true)}
               >
                 <Paragraph style={styles.listItem}>{item.title}</Paragraph>
                 <View style={[styles.circle, { backgroundColor }]} />
@@ -54,6 +56,7 @@ export const SearchResultList = props => {
           );
         }}
       />
+
       <SearchResultModal isVisible={isModalOpen} handleModal={handleModal} />
     </>
   );
