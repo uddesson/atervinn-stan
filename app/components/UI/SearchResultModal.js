@@ -1,32 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   View,
   TouchableOpacity,
-  Text,
   StyleSheet,
   Modal,
   Image,
+  Text,
 } from 'react-native';
 import { utilityStyles } from './utilityStyles';
 import { colors } from './colors';
-import { SubHeading, Paragraph, ParagraphBold } from './Types';
+import { SubHeading, Paragraph } from './Types';
 
 export const SearchResultModal = props => {
   const { isVisible, handleModal } = props;
   return (
     <View>
-      <Modal
-        visible={isVisible}
-        transparent={true}
-        backdropColor="black"
-        style={styles.modal}
-      >
+      <Modal visible={isVisible} transparent={true}>
         <View style={styles.wrapper}>
-          <SubHeading style={styles.subheading}>Plastbestick</SubHeading>
-          <Paragraph>Detta ska sorteras som plast.</Paragraph>
-          <Image style={{ width: 50, height: 50 }} source={{ uri: 'plast' }} />
-          <TouchableOpacity onPress={() => handleModal(false)}>
-            <Text>Stäng</Text>
+          <View style={[utilityStyles.row, utilityStyles.justifyBetween]}>
+            <SubHeading style={styles.subheading}>Plastbestick</SubHeading>
+            <Image style={styles.image} source={{ uri: 'plast' }} />
+          </View>
+          <Paragraph style={styles.paragraph}>
+            Plastbestick kan återvinnas i stan. Sorteras som plast.
+          </Paragraph>
+          <TouchableOpacity
+            style={styles.button}
+            activeOpacity={0.7}
+            onPress={() => handleModal(false)}
+          >
+            <Text style={utilityStyles.whiteText}>Stäng</Text>
           </TouchableOpacity>
         </View>
       </Modal>
@@ -40,16 +43,32 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginLeft: 10,
     padding: 10,
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     borderWidth: 1,
     borderRadius: 5,
-    borderColor: '#ddd',
-    shadowColor: '#ddd',
+    borderColor: colors.lightGrey,
+    shadowColor: colors.lightGrey,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.5,
     shadowRadius: 2,
   },
   subheading: {
-    paddingTop: 10,
+    color: colors.greenDark,
+  },
+  image: {
+    width: 40,
+    height: 40,
+  },
+  paragraph: {
+    marginTop: 5,
+  },
+  button: {
+    borderWidth: 1,
+    borderColor: colors.green,
+    backgroundColor: colors.green,
+    borderRadius: 5,
+    padding: 5,
+    marginTop: 15,
+    width: 50,
   },
 });
