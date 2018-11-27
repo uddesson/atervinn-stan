@@ -8,10 +8,12 @@ import {
 } from 'react-native';
 import { utilityStyles } from './utilityStyles';
 import { colors } from './colors';
+import { SearchResultList } from './SearchResultList';
 
 export class SearchInput extends Component {
   state = {
     value: null,
+    isModalOpen: false,
   };
 
   handleInput = value => {
@@ -20,21 +22,33 @@ export class SearchInput extends Component {
     // handleSearchInput(value);
   };
 
+  handleModal = visibility => {
+    this.setState({ isModalOpen: visibility });
+  };
+
   render() {
     const { value } = this.state;
     return (
-      <View style={utilityStyles.row}>
-        <TextInput
-          onChangeText={text => this.handleInput(text)}
-          placeholder={'T.ex pizzakartong'}
-          value={value}
-          placeholderTextColor={colors.darkGrey}
-          style={styles.inputContainer}
-        />
-        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
-          <Text style={utilityStyles.whiteText}>Sök</Text>
-        </TouchableOpacity>
-      </View>
+      <>
+        <View style={utilityStyles.row}>
+          <TextInput
+            onChangeText={text => this.handleInput(text)}
+            placeholder={'T.ex pizzakartong'}
+            value={value}
+            placeholderTextColor={colors.darkGrey}
+            style={styles.inputContainer}
+          />
+          <TouchableOpacity activeOpacity={0.7} style={styles.button}>
+            <Text style={utilityStyles.whiteText}>Sök</Text>
+          </TouchableOpacity>
+        </View>
+        <View>
+          <SearchResultList
+            isModalOpen={this.state.isModalOpen}
+            handleModal={this.handleModal}
+          />
+        </View>
+      </>
     );
   }
 }
