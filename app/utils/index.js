@@ -1,0 +1,1 @@
+export { calcColor } from './calcColor';
