@@ -1,36 +1,33 @@
 import React from 'react';
-import {
-  View,
-  TouchableOpacity,
-  FlatList,
-  Text,
-  StyleSheet,
-  Image,
-} from 'react-native';
+import { View, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
 import { SubHeading, Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
-import { colors } from './colors';
+import { calcColor } from '../../utils';
 
 const listItems = [
   {
     title: 'plastbestick',
-    category: 'plast',
+    category: 'Plastförpackning',
   },
   {
     title: 'ölflaska färgat glas',
-    category: 'fargat-glas',
+    category: 'Glasförpackningar',
   },
   {
     title: 'läsflaska ofärgat glas',
-    category: 'ofargat-glas',
+    category: 'Glasförpackningar',
   },
   {
     title: 'kapsyl',
-    category: 'metall',
+    category: 'Metall',
   },
   {
     title: 'reklamblad',
-    category: 'tidningar',
+    category: 'Tidning/Returpapper',
+  },
+  {
+    title: 'tuggumi',
+    category: '',
   },
 ];
 
@@ -39,11 +36,13 @@ export const SearchResultList = () => {
     <FlatList
       data={listItems}
       renderItem={({ item }) => {
+        const backgroundColor = calcColor(item.category);
+
         return (
           <View>
             <TouchableOpacity style={[utilityStyles.row, styles.wrapper]}>
               <Paragraph style={styles.listItem}>{item.title}</Paragraph>
-              <Image source={{ uri: item.category }} style={styles.icon} />
+              <View style={[styles.circle, { backgroundColor }]} />
             </TouchableOpacity>
           </View>
         );
@@ -58,9 +57,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 20,
   },
-  icon: {
+  circle: {
     width: 20,
     height: 20,
+    borderRadius: 10,
   },
   listItem: {
     textTransform: 'capitalize',
