@@ -3,6 +3,7 @@ import { View, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
 import { calcColor } from '../../utils';
+import { SearchModal } from '../../screens/SearchModal';
 
 const listItems = [
   {
@@ -31,23 +32,32 @@ const listItems = [
   },
 ];
 
-export const SearchResultList = () => {
+export const SearchResultList = props => {
+  const { navigation } = props;
   return (
-    <FlatList
-      data={listItems}
-      renderItem={({ item }) => {
-        const backgroundColor = calcColor(item.category);
+    <View>
+      <FlatList
+        data={listItems}
+        renderItem={({ item }) => {
+          const backgroundColor = calcColor(item.category);
 
-        return (
-          <View>
-            <TouchableOpacity style={[utilityStyles.row, styles.wrapper]}>
-              <Paragraph style={styles.listItem}>{item.title}</Paragraph>
-              <View style={[styles.circle, { backgroundColor }]} />
-            </TouchableOpacity>
-          </View>
-        );
-      }}
-    />
+          return (
+            <View>
+              <TouchableOpacity
+                onPress={navigation.navigate('SearchModal', {
+                  itemTitle: item.title,
+                })}
+                style={[utilityStyles.row, styles.wrapper]}
+              >
+                <Paragraph style={styles.listItem}>{item.title}</Paragraph>
+                <View style={[styles.circle, { backgroundColor }]} />
+              </TouchableOpacity>
+            </View>
+          );
+        }}
+      />
+      {/* <SearchModal navigation={navigation} /> */}
+    </View>
   );
 };
 
