@@ -16,6 +16,9 @@ export const utilityStyles = StyleSheet.create({
   justifyBetween: {
     justifyContent: 'space-between',
   },
+  fullWidth: {
+    width: '100%',
+  },
   whiteText: {
     color: 'white',
   },
