@@ -1,18 +1,24 @@
 import React from 'react';
-import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
-import { Home, Map, Info } from '../screens';
 import {
-  colors, SearchIcon, MapIcon, InfoIcon,
-} from './UI';
+  createBottomTabNavigator,
+  createStackNavigator,
+} from 'react-navigation';
+import { Home, Map, Info } from '../screens';
+import { colors, SearchIcon, MapIcon, InfoIcon } from './UI';
+import { SearchNavigator } from './SearchNavigator';
 
 export const AppNavigator = createBottomTabNavigator(
   {
     Home: {
-      screen: Home,
+      screen: SearchNavigator,
       navigationOptions: {
         tabBarLabel: 'Hem',
         tabBarIcon: ({ activeTintColor, focused }) => (
-          <SearchIcon width={23} height={23} fill={focused ? colors.blue : 'grey'} />
+          <SearchIcon
+            width={23}
+            height={23}
+            fill={focused ? colors.blue : 'grey'}
+          />
         ),
       },
     },
@@ -21,7 +27,11 @@ export const AppNavigator = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'Karta',
         tabBarIcon: ({ focused }) => (
-          <MapIcon width={23} height={23} fill={focused ? colors.blue : 'grey'} />
+          <MapIcon
+            width={23}
+            height={23}
+            fill={focused ? colors.blue : 'grey'}
+          />
         ),
       },
     },
@@ -30,7 +40,11 @@ export const AppNavigator = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'Info',
         tabBarIcon: ({ focused }) => (
-          <InfoIcon width={23} height={23} fill={focused ? colors.blue : 'grey'} />
+          <InfoIcon
+            width={23}
+            height={23}
+            fill={focused ? colors.blue : 'grey'}
+          />
         ),
       },
     },
@@ -50,5 +64,5 @@ export const AppNavigator = createBottomTabNavigator(
         backgroundColor: colors.darkGrey,
       },
     },
-  },
+  }
 );
