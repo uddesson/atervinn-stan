@@ -53,9 +53,12 @@ export const SearchResultList = props => {
           return (
             <View>
               <TouchableOpacity
-                onPress={navigation.navigate('SearchModal', {
-                  itemTitle: item.title,
-                })}
+                onPress={() =>
+                  navigation.navigate('SearchModal', {
+                    itemTitle: item.title,
+                    sortingCategory: item.category,
+                  })
+                }
                 style={[utilityStyles.row, styles.wrapper]}
               >
                 <Paragraph style={styles.listItem}>{item.title}</Paragraph>
