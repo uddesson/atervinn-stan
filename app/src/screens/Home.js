@@ -13,7 +13,6 @@ export class Home extends Component {
 
     return (
       <SafeAreaView style={[styles.screen, utilityStyles.center]}>
-        <Paragraph>I'm the home screen</Paragraph>
         <SearchInput />
         <SearchResultList navigation={navigation} />
       </SafeAreaView>
@@ -24,6 +23,6 @@ export class Home extends Component {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    width: '90%',
+    width: '100%',
   },
 });
