@@ -42,7 +42,7 @@ const listItems = [
 export const SearchResultList = props => {
   const { navigation } = props;
   return (
-    <View>
+    <View style={utilityStyles.fullWidth}>
       <FlatList
         keyExtractor={item => item.title}
         data={listItems}
@@ -58,9 +58,15 @@ export const SearchResultList = props => {
                     sortingCategory: item.category,
                   })
                 }
-                style={[utilityStyles.row, styles.wrapper]}
+                style={[
+                  utilityStyles.row,
+                  utilityStyles.justifyBetween,
+                  styles.wrapper,
+                ]}
               >
-                <Paragraph style={styles.listItem}>{item.title}</Paragraph>
+                <Paragraph style={utilityStyles.capitalizeText}>
+                  {item.title}
+                </Paragraph>
                 <View style={[styles.circle, { backgroundColor }]} />
               </TouchableOpacity>
             </View>
@@ -73,8 +79,6 @@ export const SearchResultList = props => {
 
 const styles = StyleSheet.create({
   wrapper: {
-    display: 'flex',
-    justifyContent: 'space-between',
     padding: 10,
     marginTop: 10,
   },
@@ -82,8 +86,5 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     borderRadius: 10,
-  },
-  listItem: {
-    textTransform: 'capitalize',
   },
 });
