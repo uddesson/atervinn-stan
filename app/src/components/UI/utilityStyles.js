@@ -10,6 +10,9 @@ export const utilityStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  justifyBetween: {
+    justifyContent: 'space-between',
+  },
   whiteText: {
     color: 'white',
   },
