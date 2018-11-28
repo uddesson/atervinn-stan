@@ -8,27 +8,35 @@ import { SearchModal } from '../../screens/SearchModal';
 const listItems = [
   {
     title: 'plastbestick',
-    category: 'Plastförpackning',
+    category: 'plastförpackning',
   },
   {
     title: 'ölflaska färgat glas',
-    category: 'Glasförpackningar',
+    category: 'glasförpackningar',
   },
   {
     title: 'läsflaska ofärgat glas',
-    category: 'Glasförpackningar',
+    category: 'glasförpackningar',
   },
   {
     title: 'kapsyl',
-    category: 'Metall',
+    // sorting data also includes 'metall'
+    category: 'metallförpackning',
   },
   {
+    //sorting data spells out with / but imagetitle in xcode doesnt allow /
+    // should also be translated to tidningar & returpapper in modal
     title: 'reklamblad',
-    category: 'Tidning/Returpapper',
+    category: 'tidning_returpapper',
+  },
+  {
+    title: 'Pizzakartong',
+    category: 'pappersförpackning',
   },
   {
     title: 'tuggumi',
-    category: '',
+    // sorting data calls this soppåsen, convert to övrigt?
+    category: 'övrigt',
   },
 ];
 
