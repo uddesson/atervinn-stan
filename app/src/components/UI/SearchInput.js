@@ -28,7 +28,7 @@ export class SearchInput extends Component {
   render() {
     const { value } = this.state;
     return (
-      <View style={utilityStyles.row}>
+      <View style={[utilityStyles.row]}>
         <TextInput
           onChangeText={text => this.handleInput(text)}
           placeholder={'T.ex pizzakartong'}
