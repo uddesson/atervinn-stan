@@ -45,6 +45,7 @@ export const SearchResultList = props => {
   return (
     <View>
       <FlatList
+        keyExtractor={item => item.title}
         data={listItems}
         renderItem={({ item }) => {
           const backgroundColor = calcColor(item.category);
