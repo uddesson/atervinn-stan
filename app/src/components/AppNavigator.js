@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  createBottomTabNavigator,
-  createStackNavigator,
-} from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation';
 import { Home, Map, Info } from '../screens';
 import { colors, SearchIcon, MapIcon, InfoIcon } from './UI';
 import { SearchNavigator } from './SearchNavigator';

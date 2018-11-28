@@ -8,7 +8,6 @@ import {
 } from 'react-native';
 import { utilityStyles } from './utilityStyles';
 import { colors } from './colors';
-import { SearchResultList } from './SearchResultList';
 
 export class SearchInput extends Component {
   state = {
@@ -29,26 +28,18 @@ export class SearchInput extends Component {
   render() {
     const { value } = this.state;
     return (
-      <>
-        <View style={utilityStyles.row}>
-          <TextInput
-            onChangeText={text => this.handleInput(text)}
-            placeholder={'T.ex pizzakartong'}
-            value={value}
-            placeholderTextColor={colors.darkGrey}
-            style={styles.inputContainer}
-          />
-          <TouchableOpacity activeOpacity={0.7} style={styles.button}>
-            <Text style={utilityStyles.whiteText}>Sök</Text>
-          </TouchableOpacity>
-        </View>
-        <View>
-          <SearchResultList
-            isModalOpen={this.state.isModalOpen}
-            handleModal={this.handleModal}
-          />
-        </View>
-      </>
+      <View style={utilityStyles.row}>
+        <TextInput
+          onChangeText={text => this.handleInput(text)}
+          placeholder={'T.ex pizzakartong'}
+          value={value}
+          placeholderTextColor={colors.darkGrey}
+          style={styles.inputContainer}
+        />
+        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
+          <Text style={utilityStyles.whiteText}>Sök</Text>
+        </TouchableOpacity>
+      </View>
     );
   }
 }

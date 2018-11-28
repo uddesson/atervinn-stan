@@ -3,7 +3,6 @@ import { View, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
 import { calcColor } from '../../utils';
-import { SearchModal } from '../../screens/SearchModal';
 
 const listItems = [
   {
@@ -68,7 +67,6 @@ export const SearchResultList = props => {
           );
         }}
       />
-      {/* <SearchModal navigation={navigation} /> */}
     </View>
   );
 };
