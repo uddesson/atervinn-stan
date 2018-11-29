@@ -1,19 +1,23 @@
+//@flow
+
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
-export const Heading = ({ style, ...props }) => {
+type TextProps = React$ElementProps<typeof Text>;
+
+export const Heading = ({ style, ...props }: TextProps) => {
   return <Text style={[styles.heading, style]} {...props} />;
 };
 
-export const SubHeading = ({ style, ...props }) => {
+export const SubHeading = ({ style, ...props }: TextProps) => {
   return <Text style={[styles.subHeading, style]} {...props} />;
 };
 
-export const Paragraph = ({ style, ...props }) => {
+export const Paragraph = ({ style, ...props }: TextProps) => {
   return <Text style={[styles.paragraph, style]} {...props} />;
 };
 
-export const ParagraphBold = ({ style, ...props }) => {
+export const ParagraphBold = ({ style, ...props }: TextProps) => {
   return <Text style={[styles.paragraph, styles.bold, style]} {...props} />;
 };
 

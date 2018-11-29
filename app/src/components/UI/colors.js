@@ -1,3 +1,5 @@
+//@flow
+
 export const colors = {
   green: 'rgb(155,199,160)',
   darkGreen: 'rgb(123,170,128)',

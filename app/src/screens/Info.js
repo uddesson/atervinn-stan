@@ -1,3 +1,5 @@
+//@flow
+
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -17,7 +19,9 @@ import {
 import { symbolExplanation } from '../components/UI';
 import { toUpperCase } from '../utils';
 
-export class Info extends Component {
+type Props = {};
+
+export class Info extends Component<Props> {
   render() {
     return (
       <SafeAreaView>

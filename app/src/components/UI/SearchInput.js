@@ -1,3 +1,5 @@
+//@flow
+
 import React, { Component } from 'react';
 import {
   TextInput,
@@ -9,20 +11,21 @@ import {
 import { utilityStyles } from './utilityStyles';
 import { colors } from './colors';
 
-export class SearchInput extends Component {
+type Props = {};
+
+type State = {
+  value: string | null,
+};
+
+export class SearchInput extends Component<Props, State> {
   state = {
     value: null,
-    isModalOpen: false,
   };
 
-  handleInput = value => {
+  handleInput = (value: string) => {
     // const { handleSearchInput } = this.props;
     this.setState({ value });
     // handleSearchInput(value);
-  };
-
-  handleModal = visibility => {
-    this.setState({ isModalOpen: visibility });
   };
 
   render() {
