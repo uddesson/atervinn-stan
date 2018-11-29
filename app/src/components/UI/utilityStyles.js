@@ -19,6 +19,9 @@ export const utilityStyles = StyleSheet.create({
   flex1: {
     flex: 1,
   },
+  alignSelfEnd: {
+    alignSelf: 'flex-end',
+  },
   fullWidth: {
     width: '100%',
   },

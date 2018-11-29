@@ -7,10 +7,14 @@ import { gradients, colors } from './colors';
 import { utilityStyles } from './utilityStyles';
 import { Pulse } from './Pulse';
 
-export const ShortcutBanner = (props) => {
+export const ShortcutBanner = props => {
   const { onPress } = props;
   return (
-    <TouchableOpacity activeOpacity={0.9} onPress={onPress}>
+    <TouchableOpacity
+      activeOpacity={0.9}
+      onPress={onPress}
+      style={utilityStyles.fullWidth}
+    >
       <LinearGradient
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0 }}

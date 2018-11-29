@@ -7,6 +7,7 @@ import {
   Paragraph,
   ParagraphBold,
   SubHeading,
+  GpsIcon,
 } from '../components/UI';
 import { toUpperCase } from '../utils';
 
@@ -37,15 +38,19 @@ export const SearchModal = props => {
           </Paragraph>
         </View>
         <TouchableOpacity
-          style={styles.button}
+          style={[styles.button, utilityStyles.row]}
           activeOpacity={0.7}
           onPress={() => navigation.navigate('Home')}
         >
-          <ParagraphBold
-            style={[utilityStyles.whiteText, utilityStyles.centerText]}
-          >
+          <ParagraphBold style={[utilityStyles.whiteText, styles.buttonText]}>
             Hitta närmsta återvinningskärl
           </ParagraphBold>
+          <GpsIcon
+            style={styles.icon}
+            height={20}
+            width={20}
+            fill={colors.white}
+          />
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -78,5 +83,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 5,
     marginTop: 15,
+  },
+  buttonText: {
+    marginRight: 10,
   },
 });

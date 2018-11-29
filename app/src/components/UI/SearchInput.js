@@ -28,7 +28,7 @@ export class SearchInput extends Component {
   render() {
     const { value } = this.state;
     return (
-      <View style={[utilityStyles.row]}>
+      <View style={[utilityStyles.row, styles.container]}>
         <TextInput
           onChangeText={text => this.handleInput(text)}
           placeholder={'T.ex pizzakartong'}
@@ -45,6 +45,9 @@ export class SearchInput extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    width: '80%',
+  },
   inputContainer: {
     borderWidth: 1,
     borderColor: colors.green,
@@ -52,6 +55,8 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 30,
     borderBottomLeftRadius: 30,
     padding: 10,
+    backgroundColor: colors.white,
+    opacity: 0.8,
   },
   button: {
     borderWidth: 1,
