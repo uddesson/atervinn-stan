@@ -16,6 +16,9 @@ export const utilityStyles = StyleSheet.create({
   justifyBetween: {
     justifyContent: 'space-between',
   },
+  flex1: {
+    flex: 1,
+  },
   fullWidth: {
     width: '100%',
   },
@@ -24,5 +27,8 @@ export const utilityStyles = StyleSheet.create({
   },
   capitalizeText: {
     textTransform: 'capitalize',
+  },
+  centerText: {
+    textAlign: 'center',
   },
 });
