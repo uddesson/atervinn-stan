@@ -9,6 +9,5 @@ export const SearchNavigator = createStackNavigator(
   },
   {
     initialRouteName: 'Home',
-    headerMode: 'none',
   }
 );
