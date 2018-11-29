@@ -1,9 +1,7 @@
 import React from 'react';
-import Svg, {
-  G, Path, Polygon, Circle, Line,
-} from 'react-native-svg';
+import Svg, { G, Path, Polygon, Circle, Line } from 'react-native-svg';
 
-export const SadIcon = (props) => {
+export const SadIcon = props => {
   const { width, height, fill } = props;
 
   return (
@@ -56,7 +54,7 @@ export const SadIcon = (props) => {
   );
 };
 
-export const HeartIcon = (props) => {
+export const HeartIcon = props => {
   const { width, height, fill } = props;
 
   return (
@@ -158,7 +156,7 @@ export const GpsIcon = props => {
       width={width}
       height={height}
       viewBox="0 0 24 24"
-      fill={fill}
+      fill="none"
       stroke={fill}
       strokeWidth="2"
       strokeLinecap="round"
