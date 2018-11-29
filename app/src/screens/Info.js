@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   SafeAreaView,
+  ScrollView,
   FlatList,
   View,
   Image,
-  Text,
 } from 'react-native';
 import {
   Paragraph,
@@ -15,38 +15,44 @@ import {
   colors,
 } from '../components/UI';
 import { symbolExplanation } from '../components/UI';
+import { toUpperCase } from '../utils';
 
 export class Info extends Component {
   render() {
     return (
-      <SafeAreaView style={[styles.screen]}>
-        <View style={[styles.container, utilityStyles.center]}>
+      <SafeAreaView>
+        <ScrollView
+          contentContainerStyle={[styles.screen, utilityStyles.center]}
+        >
           <Heading>Symbolförklaring</Heading>
           <FlatList
-            style={styles.listContainer}
             data={symbolExplanation}
+            contentContainerStyle={styles.listContainer}
+            ListFooterComponent={
+              <Paragraph style={styles.smallText}>
+                Material hämtat från FTI, HSR, SVOA och Stockholms stad.
+              </Paragraph>
+            }
             keyExtractor={item => item.title}
-            renderItem={({ item }) => {
-              return (
-                <View style={[utilityStyles.row]}>
-                  <Image style={styles.image} source={{ uri: item.icon }} />
-                  <SubHeading
-                    style={[
-                      utilityStyles.capitalizeText,
-                      utilityStyles.alignSelfEnd,
-                      styles.subHeading,
-                    ]}
-                  >
-                    {item.title}
-                  </SubHeading>
-                  <Paragraph style={styles.text}>{item.text}</Paragraph>
-                </View>
-              );
-            }}
+            renderItem={({ item }) => (
+              <View style={[utilityStyles.row]}>
+                <Image style={styles.image} source={{ uri: item.icon }} />
+                <SubHeading
+                  style={[
+                    utilityStyles.capitalizeText,
+                    utilityStyles.alignSelfEnd,
+                    styles.subHeading,
+                  ]}
+                >
+                  {item.title}
+                </SubHeading>
+                <Paragraph style={styles.text}>
+                  {toUpperCase(item.text)}
+                </Paragraph>
+              </View>
+            )}
           />
-
-          <Paragraph>Material hämtat från FTI, HSR, SVOA</Paragraph>
-        </View>
+        </ScrollView>
       </SafeAreaView>
     );
   }
@@ -54,25 +60,28 @@ export class Info extends Component {
 
 const styles = StyleSheet.create({
   screen: {
-    flex: 1,
-    padding: 10,
     backgroundColor: colors.whiteSmoke,
-  },
-  container: {
-    padding: 10,
   },
   listContainer: {
     backgroundColor: colors.white,
     borderRadius: 5,
     padding: 10,
-    height: 400,
+    margin: 15,
+    marginTop: 5,
   },
   image: {
     width: 60,
     height: 60,
     marginRight: 10,
   },
+  subHeading: {
+    marginTop: 10,
+  },
   text: {
     margin: 10,
+  },
+  smallText: {
+    marginTop: 20,
+    fontSize: 12,
   },
 });
