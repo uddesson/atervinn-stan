@@ -6,17 +6,27 @@ import { MapIcon } from './Icons';
 import { gradients } from './colors';
 import { utilityStyles } from './utilityStyles';
 
-export const ShortcutBanner = (props) => {
+export const ShortcutBanner = props => {
   const { onPress } = props;
   return (
-    <TouchableOpacity activeOpacity={0.9} onPress={onPress}>
+    <TouchableOpacity
+      activeOpacity={0.9}
+      onPress={onPress}
+      style={utilityStyles.fullWidth}
+    >
       <LinearGradient
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0 }}
         colors={gradients.greenToBlue}
         style={styles.gradientContainer}
       >
-        <View style={[utilityStyles.row, utilityStyles.center, styles.innerContainer]}>
+        <View
+          style={[
+            utilityStyles.row,
+            utilityStyles.center,
+            styles.innerContainer,
+          ]}
+        >
           <MapIcon height={30} width={30} fill="white" />
           <Paragraph style={[utilityStyles.whiteText, styles.textMargin]}>
             Hitta närmsta station

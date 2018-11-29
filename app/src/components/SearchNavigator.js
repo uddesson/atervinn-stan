@@ -4,8 +4,17 @@ import { Home, SearchModal } from '../screens';
 
 export const SearchNavigator = createStackNavigator(
   {
-    Home,
-    SearchModal,
+    Home: {
+      screen: Home,
+      navigationOptions: () => ({
+        headerBackTitle: null,
+      }),
+    },
+    SearchModal: {
+      screen: SearchModal,
+    },
   },
-  { initialRouteName: 'Home' }
+  {
+    initialRouteName: 'Home',
+  }
 );

@@ -3,6 +3,8 @@ export const colors = {
   darkGreen: 'rgb(123,170,128)',
   blue: 'rgb(62,155,216)',
   darkGrey: 'rgb(85,87,96)',
+  white: 'rgb(255,255,255)',
+  whiteSmoke: 'rgb(245, 245, 245)',
 
   ftiGreen: 'rgb(106,178,32)',
   ftiGrey: 'rgb(163,164,168)',
