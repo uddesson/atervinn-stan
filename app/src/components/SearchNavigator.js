@@ -7,5 +7,8 @@ export const SearchNavigator = createStackNavigator(
     Home,
     SearchModal,
   },
-  { initialRouteName: 'Home' }
+  {
+    initialRouteName: 'Home',
+    headerMode: 'none',
+  }
 );
