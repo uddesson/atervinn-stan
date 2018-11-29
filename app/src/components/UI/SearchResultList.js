@@ -7,54 +7,78 @@ import { calcColor } from '../../utils';
 const listItems = [
   {
     title: 'plastbestick',
-    category: 'Plastförpackning',
+    category: 'plastförpackning',
   },
   {
     title: 'ölflaska färgat glas',
-    category: 'Glasförpackningar',
+    category: 'glasförpackningar',
   },
   {
     title: 'läsflaska ofärgat glas',
-    category: 'Glasförpackningar',
+    category: 'glasförpackningar',
   },
   {
     title: 'kapsyl',
-    category: 'Metall',
+    // sorting data also includes 'metall'
+    category: 'metallförpackning',
   },
   {
+    //sorting data spells out with / but imagetitle in xcode doesnt allow /
+    // should also be translated to tidningar & returpapper in modal
     title: 'reklamblad',
-    category: 'Tidning/Returpapper',
+    category: 'tidning_returpapper',
+  },
+  {
+    title: 'Pizzakartong',
+    category: 'pappersförpackning',
   },
   {
     title: 'tuggumi',
-    category: '',
+    // sorting data calls this soppåsen, convert to övrigt?
+    category: 'övrigt',
   },
 ];
 
-export const SearchResultList = () => {
+export const SearchResultList = props => {
+  const { navigation } = props;
   return (
-    <FlatList
-      data={listItems}
-      renderItem={({ item }) => {
-        const backgroundColor = calcColor(item.category);
+    <View style={utilityStyles.fullWidth}>
+      <FlatList
+        keyExtractor={item => item.title}
+        data={listItems}
+        renderItem={({ item }) => {
+          const backgroundColor = calcColor(item.category);
 
-        return (
-          <View>
-            <TouchableOpacity style={[utilityStyles.row, styles.wrapper]}>
-              <Paragraph style={styles.listItem}>{item.title}</Paragraph>
-              <View style={[styles.circle, { backgroundColor }]} />
-            </TouchableOpacity>
-          </View>
-        );
-      }}
-    />
+          return (
+            <View>
+              <TouchableOpacity
+                onPress={() =>
+                  navigation.navigate('SearchModal', {
+                    itemTitle: item.title,
+                    sortingCategory: item.category,
+                  })
+                }
+                style={[
+                  utilityStyles.row,
+                  utilityStyles.justifyBetween,
+                  styles.wrapper,
+                ]}
+              >
+                <Paragraph style={utilityStyles.capitalizeText}>
+                  {item.title}
+                </Paragraph>
+                <View style={[styles.circle, { backgroundColor }]} />
+              </TouchableOpacity>
+            </View>
+          );
+        }}
+      />
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   wrapper: {
-    display: 'flex',
-    justifyContent: 'space-between',
     padding: 10,
     marginTop: 10,
   },
@@ -62,8 +86,5 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     borderRadius: 10,
-  },
-  listItem: {
-    textTransform: 'capitalize',
   },
 });

@@ -6,11 +6,29 @@ export const utilityStyles = StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'center',
   },
+  justifyBetween: {
+    justifyContent: 'space-between',
+  },
   center: {
     alignItems: 'center',
     justifyContent: 'center',
   },
+  justifyBetween: {
+    justifyContent: 'space-between',
+  },
+  flex1: {
+    flex: 1,
+  },
+  fullWidth: {
+    width: '100%',
+  },
   whiteText: {
     color: 'white',
+  },
+  capitalizeText: {
+    textTransform: 'capitalize',
+  },
+  centerText: {
+    textAlign: 'center',
   },
 });
