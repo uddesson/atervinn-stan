@@ -16,6 +16,7 @@ import {
 } from '../components/UI';
 
 export class Home extends Component {
+  static navigationOptions = { header: null };
   render() {
     const { navigation } = this.props;
 
