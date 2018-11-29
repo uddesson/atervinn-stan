@@ -57,7 +57,6 @@ export class Pulse extends Component<Props> {
           backgroundColor: 'transparent',
           justifyContent: 'center',
           alignItems: 'center',
-          borderWidth: 1,
         }}
       >
         {this.state.circles.map(circle => (
