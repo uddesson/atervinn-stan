@@ -12,6 +12,7 @@ import { colors } from './colors';
 export class SearchInput extends Component {
   state = {
     value: null,
+    isModalOpen: false,
   };
 
   handleInput = value => {
@@ -20,10 +21,14 @@ export class SearchInput extends Component {
     // handleSearchInput(value);
   };
 
+  handleModal = visibility => {
+    this.setState({ isModalOpen: visibility });
+  };
+
   render() {
     const { value } = this.state;
     return (
-      <View style={utilityStyles.row}>
+      <View style={[utilityStyles.row]}>
         <TextInput
           onChangeText={text => this.handleInput(text)}
           placeholder={'T.ex pizzakartong'}

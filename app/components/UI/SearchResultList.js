@@ -3,6 +3,7 @@ import { View, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
 import { calcColor } from '../../utils';
+import { SearchResultModal } from './SearchResultModal';
 
 const listItems = [
   {
@@ -31,23 +32,33 @@ const listItems = [
   },
 ];
 
-export const SearchResultList = () => {
+export const SearchResultList = props => {
+  const { isModalOpen, handleModal } = props;
   return (
-    <FlatList
-      data={listItems}
-      renderItem={({ item }) => {
-        const backgroundColor = calcColor(item.category);
+    <>
+      <FlatList
+        data={listItems}
+        keyExtractor={item => item.title}
+        renderItem={({ item }) => {
+          const backgroundColor = calcColor(item.category);
 
-        return (
-          <View>
-            <TouchableOpacity style={[utilityStyles.row, styles.wrapper]}>
-              <Paragraph style={styles.listItem}>{item.title}</Paragraph>
-              <View style={[styles.circle, { backgroundColor }]} />
-            </TouchableOpacity>
-          </View>
-        );
-      }}
-    />
+          return (
+            <View>
+              <TouchableOpacity
+                style={[utilityStyles.row, styles.wrapper]}
+                activeOpacity={0.7}
+                onPress={() => handleModal(true)}
+              >
+                <Paragraph style={styles.listItem}>{item.title}</Paragraph>
+                <View style={[styles.circle, { backgroundColor }]} />
+              </TouchableOpacity>
+            </View>
+          );
+        }}
+      />
+
+      <SearchResultModal isVisible={isModalOpen} handleModal={handleModal} />
+    </>
   );
 };
 

@@ -1,15 +1,14 @@
 export const colors = {
-  white: 'rgb(255, 255, 255)',
   green: 'rgb(155,199,160)',
-  greenDark: 'rgb(123,170,128)',
+  darkGreen: 'rgb(123,170,128)',
   blue: 'rgb(62,155,216)',
-  lightGrey: 'rgb(221,221,221)',
   darkGrey: 'rgb(85,87,96)',
 
   ftiGreen: 'rgb(106,178,32)',
   ftiGrey: 'rgb(163,164,168)',
   ftiYellow: 'rgb(254,211,22)',
   ftiBlue: 'rgb(0,150,213)',
+  ftiOrange: 'rgb(245,129,42)',
   ftiBrown: 'rgb(165,104,42)',
 };
 
