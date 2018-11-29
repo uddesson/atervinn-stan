@@ -4,7 +4,7 @@ import { View, StyleSheet, Animated, Easing } from 'react-native';
 
 /**
  * Credit for pulse and animation goes to https://github.com/mastermoo/react-native-pulse-loader.
- * Component have been modified to fit the purposes of this app.
+ * Component has been modified to fit the purposes of this app.
  */
 
 type Props = {
