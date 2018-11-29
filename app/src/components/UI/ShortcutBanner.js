@@ -3,8 +3,9 @@ import { TouchableOpacity, View, StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Paragraph } from './Types';
 import { MapIcon } from './Icons';
-import { gradients } from './colors';
+import { gradients, colors } from './colors';
 import { utilityStyles } from './utilityStyles';
+import { Pulse } from './Pulse';
 
 export const ShortcutBanner = props => {
   const { onPress } = props;
@@ -20,14 +21,15 @@ export const ShortcutBanner = props => {
         colors={gradients.greenToBlue}
         style={styles.gradientContainer}
       >
-        <View
-          style={[
-            utilityStyles.row,
-            utilityStyles.center,
-            styles.innerContainer,
-          ]}
-        >
-          <MapIcon height={30} width={30} fill="white" />
+        <View style={[utilityStyles.row, utilityStyles.center, styles.innerContainer]}>
+          <Pulse
+            size={35}
+            pulseMaxSize={55}
+            interval={2000}
+            backgroundColor="rgba(255,255,255,0.4)"
+            borderColor="rgba(255,255,255,0.4)"
+            icon={<MapIcon height={30} width={30} fill="white" />}
+          />
           <Paragraph style={[utilityStyles.whiteText, styles.textMargin]}>
             Hitta närmsta station
           </Paragraph>
