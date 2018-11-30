@@ -10,43 +10,47 @@ import { calcColor } from '../../utils';
 const listItems = [
   {
     title: 'plastbestick',
-    category: 'plast',
+    sortingType: 'plast',
     iconCode: 'plastförpackning',
   },
-  // sorting data doesn't seperate 'ofärgat' and 'färgat'
-  {
-    title: 'ölflaska färgat glas',
-    category: 'glas',
-    iconCode: 'glasförpackningar',
-  },
+  //sorting data doesn't seperate 'ofärgat' and 'färgat'
+  // {
+  //   title: 'ölflaska färgat glas',
+  //   sortingType: 'glas',
+  //   iconCode: 'glasförpackningar',
+  // },
   {
     title: 'läsflaska ofärgat glas',
-    category: 'glas',
+    sortingType: 'glas',
     iconCode: 'glasförpackningar',
   },
   {
     title: 'kapsyl',
-    // sorting data also includes 'metall'
-    category: 'metall',
+    sortingType: 'metall',
     iconCode: 'metallförpackning',
   },
   {
     //sorting data spells out with / but imagetitle in xcode doesnt allow /
     // should also be translated to tidningar & returpapper in modal
     title: 'reklamblad',
-    category: 'tidning & returpapper',
+    sortingType: 'tidning & returpapper',
     iconCode: 'tidning_returpapper',
   },
   {
     title: 'Pizzakartong',
-    category: 'papper',
+    sortingType: 'papper',
     iconCode: 'pappersförpackning',
   },
   {
     title: 'tuggumi',
     // sorting data calls this soppåsen, convert to övrigt?
-    category: 'övrigt',
+    sortingType: 'övrigt',
     iconCode: 'ovrigt',
+  },
+  {
+    title: 'braständare',
+    sortingType: 'farligt avfall',
+    iconCode: 'farligt_avfall',
   },
 ];
 
@@ -70,7 +74,7 @@ export const SearchResultList = (props: Props) => {
                 onPress={() =>
                   navigation.navigate('SearchModal', {
                     title: item.title,
-                    category: item.category,
+                    sortingType: item.sortingType,
                     iconCode: item.iconCode,
                   })
                 }

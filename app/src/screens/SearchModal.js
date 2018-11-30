@@ -1,7 +1,7 @@
 //@flow
 
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, Image, Text } from 'react-native';
 import { SafeAreaView } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import {
@@ -11,6 +11,8 @@ import {
   ParagraphBold,
   SubHeading,
   GpsIcon,
+  ExternalLink,
+  ExternalLinkIcon,
 } from '../components/UI';
 import { toUpperCase } from '../utils';
 
@@ -21,8 +23,19 @@ type Props = {
 export const SearchModal = (props: Props) => {
   const { navigation } = props;
   const title = toUpperCase(navigation.getParam('title'));
-  const category = navigation.getParam('category');
+  const sortingType = navigation.getParam('sortingType');
   const iconCode = navigation.getParam('iconCode');
+
+  const messageIfAvailable = 'kan återvinnas i stan. Sorteras som';
+  const messageIfUnavailable =
+    'måste återvinnas på återvinningscentral och sorteras där som';
+  const message =
+    sortingType === 'farligt avfall'
+      ? messageIfUnavailable
+      : messageIfAvailable;
+
+  const externalUrl =
+    'http://www.stockholmvattenochavfall.se/avfall-och-atervinning/har-lamnar-du-dina-sopor/privatkund/har-lamnar-du-sopor/atervinningscentral/';
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -37,23 +50,33 @@ export const SearchModal = (props: Props) => {
             <Image style={styles.image} source={{ uri: iconCode }} />
           </View>
           <Paragraph style={styles.paragraph}>
-            {title} kan återvinnas i stan. Sorteras som {category}
+            {title + ' ' + message + ' ' + sortingType + '.'}
           </Paragraph>
-          <Paragraph style={styles.paragraph}>
-            {title} Kan både återvinnas på en FTI-station eller
-            återvinningsmodul.
-          </Paragraph>
+          {sortingType !== 'farligt avfall' ? (
+            <Paragraph style={styles.paragraph}>
+              {title} Kan både återvinnas på en FTI-station eller
+              återvinningsmodul.
+            </Paragraph>
+          ) : null}
         </View>
-        <TouchableOpacity
-          style={[styles.button, utilityStyles.row]}
-          activeOpacity={0.7}
-          onPress={() => navigation.navigate('Home')}
-        >
-          <ParagraphBold style={[utilityStyles.whiteText, styles.buttonText]}>
-            Hitta närmsta återvinningskärl
-          </ParagraphBold>
-          <GpsIcon height={20} width={20} fill={colors.white} />
-        </TouchableOpacity>
+
+        {sortingType !== 'farligt avfall' ? (
+          <TouchableOpacity
+            style={[styles.button, utilityStyles.row]}
+            activeOpacity={0.7}
+            onPress={() => navigation.navigate('Home')}
+          >
+            <ParagraphBold style={[utilityStyles.whiteText, styles.buttonText]}>
+              Hitta närmsta återvinningskärl
+            </ParagraphBold>
+            <GpsIcon height={20} width={20} fill={colors.white} />
+          </TouchableOpacity>
+        ) : (
+          <ExternalLink url={externalUrl} style={styles.externalLink}>
+            Hitta en återvinningscentral
+            <ExternalLinkIcon height={20} width={20} fill={colors.darkGreen} />
+          </ExternalLink>
+        )}
       </View>
     </SafeAreaView>
   );
@@ -88,5 +111,8 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     marginRight: 10,
+  },
+  externalLink: {
+    color: colors.darkGreen,
   },
 });

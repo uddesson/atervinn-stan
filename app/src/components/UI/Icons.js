@@ -1,7 +1,14 @@
 //@flow
 
 import React from 'react';
-import Svg, { G, Path, Polygon, Circle, Line } from 'react-native-svg';
+import Svg, {
+  G,
+  Path,
+  Polygon,
+  Circle,
+  Line,
+  Polyline,
+} from 'react-native-svg';
 
 type Props = {
   width: number,
@@ -171,6 +178,27 @@ export const GpsIcon = (props: Props) => {
       strokeLinejoin="round"
     >
       <Polygon points="3 11 22 2 13 21 11 13 3 11" />
+    </Svg>
+  );
+};
+
+export const ExternalLinkIcon = (props: Props) => {
+  const { width, height, fill } = props;
+
+  return (
+    <Svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={fill}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <Path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      <Polyline points="15 3 21 3 21 9" />
+      <Line x1="10" y1="14" x2="21" y2="3" />
     </Svg>
   );
 };
