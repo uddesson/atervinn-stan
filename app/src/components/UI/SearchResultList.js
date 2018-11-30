@@ -48,6 +48,12 @@ const listItems = [
     category: 'övrigt',
     iconCode: 'ovrigt',
   },
+  {
+    title: 'braständare',
+    // sorting data calls this soppåsen, convert to övrigt?
+    category: 'farligt avfall',
+    iconCode: 'farligt_avfall',
+  },
 ];
 
 type Props = {
