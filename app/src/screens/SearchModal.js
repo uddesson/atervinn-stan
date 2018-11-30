@@ -23,14 +23,16 @@ type Props = {
 export const SearchModal = (props: Props) => {
   const { navigation } = props;
   const title = toUpperCase(navigation.getParam('title'));
-  const type = navigation.getParam('category');
+  const sortingType = navigation.getParam('sortingType');
   const iconCode = navigation.getParam('iconCode');
 
   const messageIfAvailable = 'kan återvinnas i stan. Sorteras som';
   const messageIfUnavailable =
     'måste återvinnas på återvinningscentral och sorteras där som';
   const message =
-    type === 'farligt avfall' ? messageIfUnavailable : messageIfAvailable;
+    sortingType === 'farligt avfall'
+      ? messageIfUnavailable
+      : messageIfAvailable;
 
   const externalUrl =
     'http://www.stockholmvattenochavfall.se/avfall-och-atervinning/har-lamnar-du-dina-sopor/privatkund/har-lamnar-du-sopor/atervinningscentral/';
@@ -48,9 +50,9 @@ export const SearchModal = (props: Props) => {
             <Image style={styles.image} source={{ uri: iconCode }} />
           </View>
           <Paragraph style={styles.paragraph}>
-            {title + ' ' + message + ' ' + type + '.'}
+            {title + ' ' + message + ' ' + sortingType + '.'}
           </Paragraph>
-          {type !== 'farligt avfall' ? (
+          {sortingType !== 'farligt avfall' ? (
             <Paragraph style={styles.paragraph}>
               {title} Kan både återvinnas på en FTI-station eller
               återvinningsmodul.
@@ -58,7 +60,7 @@ export const SearchModal = (props: Props) => {
           ) : null}
         </View>
 
-        {type !== 'farligt avfall' ? (
+        {sortingType !== 'farligt avfall' ? (
           <TouchableOpacity
             style={[styles.button, utilityStyles.row]}
             activeOpacity={0.7}
