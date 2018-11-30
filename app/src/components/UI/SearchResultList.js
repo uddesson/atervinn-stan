@@ -10,35 +10,43 @@ import { calcColor } from '../../utils';
 const listItems = [
   {
     title: 'plastbestick',
-    category: 'plastförpackning',
+    category: 'plast',
+    iconCode: 'plastförpackning',
   },
-  // {
-  //   title: 'ölflaska färgat glas',
-  //   category: 'glasförpackningar',
-  // },
-  // {
-  //   title: 'läsflaska ofärgat glas',
-  //   category: 'glasförpackningar',
-  // },
+  // sorting data doesn't seperate 'ofärgat' and 'färgat'
+  {
+    title: 'ölflaska färgat glas',
+    category: 'glas',
+    iconCode: 'glasförpackningar',
+  },
+  {
+    title: 'läsflaska ofärgat glas',
+    category: 'glas',
+    iconCode: 'glasförpackningar',
+  },
   {
     title: 'kapsyl',
     // sorting data also includes 'metall'
-    category: 'metallförpackning',
+    category: 'metall',
+    iconCode: 'metallförpackning',
   },
   {
     //sorting data spells out with / but imagetitle in xcode doesnt allow /
     // should also be translated to tidningar & returpapper in modal
     title: 'reklamblad',
-    category: 'tidning_returpapper',
+    category: 'tidning & returpapper',
+    iconCode: 'tidning_returpapper',
   },
   {
     title: 'Pizzakartong',
-    category: 'pappersförpackning',
+    category: 'papper',
+    iconCode: 'pappersförpackning',
   },
   {
     title: 'tuggumi',
     // sorting data calls this soppåsen, convert to övrigt?
     category: 'övrigt',
+    iconCode: 'ovrigt',
   },
 ];
 
@@ -54,15 +62,16 @@ export const SearchResultList = (props: Props) => {
         keyExtractor={item => item.title}
         data={listItems}
         renderItem={({ item }) => {
-          const backgroundColor = calcColor(item.category);
+          const backgroundColor = calcColor(item.iconCode);
 
           return (
             <View>
               <TouchableOpacity
                 onPress={() =>
                   navigation.navigate('SearchModal', {
-                    itemTitle: item.title,
-                    sortingCategory: item.category,
+                    title: item.title,
+                    category: item.category,
+                    iconCode: item.iconCode,
                   })
                 }
                 style={[
