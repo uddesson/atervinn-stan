@@ -20,8 +20,9 @@ type Props = {
 
 export const SearchModal = (props: Props) => {
   const { navigation } = props;
-  const itemTitle = toUpperCase(navigation.getParam('itemTitle'));
-  const sortingCategory = navigation.getParam('sortingCategory');
+  const title = toUpperCase(navigation.getParam('title'));
+  const category = navigation.getParam('category');
+  const iconCode = navigation.getParam('iconCode');
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -31,16 +32,16 @@ export const SearchModal = (props: Props) => {
             <SubHeading
               style={[styles.subheading, utilityStyles.capitalizeText]}
             >
-              {itemTitle}
+              {title}
             </SubHeading>
             {/* TODO: add image for 'övrigt avfall' */}
-            <Image style={styles.image} source={{ uri: sortingCategory }} />
+            <Image style={styles.image} source={{ uri: iconCode }} />
           </View>
           <Paragraph style={styles.paragraph}>
-            {itemTitle} kan återvinnas i stan. Sorteras som {sortingCategory}
+            {title} kan återvinnas i stan. Sorteras som {category}
           </Paragraph>
           <Paragraph style={styles.paragraph}>
-            {itemTitle} Kan både återvinnas på en FTI-station eller
+            {title} Kan både återvinnas på en FTI-station eller
             återvinningsmodul.
           </Paragraph>
         </View>
