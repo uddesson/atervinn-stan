@@ -44,8 +44,8 @@ export class Map extends Component<Props, State> {
         <FilterToggler
           isFtiContainerVisible={isFtiContainerVisible}
           isModuleVisible={isModuleVisible}
-          handleFtiContainerToggling={this.handleFtiContainerToggling}
-          handleModuleToggling={this.handleModuleToggling}
+          onFtiContainerPress={this.handleFtiContainerToggling}
+          onModulePress={this.handleModuleToggling}
         />
       </SafeAreaView>
     );

@@ -6,21 +6,21 @@ import { colors } from './colors';
 type Props = {
   isFtiContainerVisible: boolean,
   isModuleVisible: boolean,
-  handleFtiContainerToggling: () => boolean,
-  handleModuleToggling: () => boolean,
+  onFtiContainerPress: () => boolean,
+  onModulePress: () => boolean,
 };
 
 export const FilterToggler = (props: Props) => {
   const {
     isFtiContainerVisible,
     isModuleVisible,
-    handleFtiContainerToggling,
-    handleModuleToggling,
+    onFtiContainerPress,
+    onModulePress,
   } = props;
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={handleFtiContainerToggling}>
+      <TouchableOpacity onPress={onFtiContainerPress}>
         <Image
           style={[
             styles.icon,
@@ -29,7 +29,7 @@ export const FilterToggler = (props: Props) => {
           source={{ uri: 'fti-container' }}
         />
       </TouchableOpacity>
-      <TouchableOpacity onPress={handleModuleToggling}>
+      <TouchableOpacity onPress={onModulePress}>
         <Image
           style={[
             styles.icon,
