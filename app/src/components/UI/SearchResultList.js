@@ -14,22 +14,21 @@ const listItems = [
     iconCode: 'plastförpackning',
   },
   // sorting data doesn't seperate 'ofärgat' and 'färgat'
-  {
-    title: 'ölflaska färgat glas',
-    category: 'glas',
-    iconCode: 'glasförpackningar',
-  },
-  {
-    title: 'läsflaska ofärgat glas',
-    category: 'glas',
-    iconCode: 'glasförpackningar',
-  },
-  {
-    title: 'kapsyl',
-    // sorting data also includes 'metall'
-    category: 'metall',
-    iconCode: 'metallförpackning',
-  },
+  // {
+  //   title: 'ölflaska färgat glas',
+  //   category: 'glas',
+  //   iconCode: 'glasförpackningar',
+  // },
+  // {
+  //   title: 'läsflaska ofärgat glas',
+  //   category: 'glas',
+  //   iconCode: 'glasförpackningar',
+  // },
+  // {
+  //   title: 'kapsyl',
+  //   category: 'metall',
+  //   iconCode: 'metallförpackning',
+  // },
   {
     //sorting data spells out with / but imagetitle in xcode doesnt allow /
     // should also be translated to tidningar & returpapper in modal
@@ -50,7 +49,6 @@ const listItems = [
   },
   {
     title: 'braständare',
-    // sorting data calls this soppåsen, convert to övrigt?
     category: 'farligt avfall',
     iconCode: 'farligt_avfall',
   },
