@@ -34,7 +34,6 @@ export const SearchModal = (props: Props) => {
             >
               {title}
             </SubHeading>
-            {/* TODO: add image for 'övrigt avfall' */}
             <Image style={styles.image} source={{ uri: iconCode }} />
           </View>
           <Paragraph style={styles.paragraph}>
