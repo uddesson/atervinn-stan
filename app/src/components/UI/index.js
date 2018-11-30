@@ -18,3 +18,4 @@ export { symbolExplanation } from './symbolExplanation';
 export { Pulse } from './Pulse';
 export { ExternalLink } from './ExternalLink';
 export { CurrentLocation } from './CurrentLocation';
+export { FilterToggler } from './FilterToggler';
