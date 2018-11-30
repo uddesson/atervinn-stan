@@ -19,6 +19,6 @@ export const calcColor = (category: string): string => {
     case 'tidning_returpapper':
       return colors.ftiBlue;
     default:
-      return colors.ftiBrown;
+      return colors.ftiBlack;
   }
 };

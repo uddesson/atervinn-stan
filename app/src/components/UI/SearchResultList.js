@@ -12,14 +12,14 @@ const listItems = [
     title: 'plastbestick',
     category: 'plastförpackning',
   },
-  {
-    title: 'ölflaska färgat glas',
-    category: 'glasförpackningar',
-  },
-  {
-    title: 'läsflaska ofärgat glas',
-    category: 'glasförpackningar',
-  },
+  // {
+  //   title: 'ölflaska färgat glas',
+  //   category: 'glasförpackningar',
+  // },
+  // {
+  //   title: 'läsflaska ofärgat glas',
+  //   category: 'glasförpackningar',
+  // },
   {
     title: 'kapsyl',
     // sorting data also includes 'metall'

@@ -15,7 +15,7 @@ export const colors = {
   ftiYellow: 'rgb(254,211,22)',
   ftiBlue: 'rgb(0,150,213)',
   ftiOrange: 'rgb(245,129,42)',
-  ftiBrown: 'rgb(165,104,42)',
+  ftiBlack: 'rgb(0,0,0)',
 };
 
 export const gradients = {
