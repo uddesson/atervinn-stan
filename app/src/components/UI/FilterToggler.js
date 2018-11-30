@@ -44,13 +44,19 @@ export const FilterToggler = (props: Props) => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.whiteSmoke,
+    backgroundColor: colors.white,
     position: 'absolute',
     top: '8%',
     left: '5%',
     padding: 10,
     borderRadius: 5,
     shadowColor: colors.lightGrey,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowRadius: 2,
+    shadowOpacity: 0.8,
   },
   icon: {
     width: 20,
