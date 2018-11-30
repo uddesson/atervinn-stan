@@ -1,3 +1,5 @@
+//@flow
+
 import React from 'react';
 import { TouchableOpacity, View, StyleSheet } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
@@ -7,7 +9,11 @@ import { gradients, colors } from './colors';
 import { utilityStyles } from './utilityStyles';
 import { Pulse } from './Pulse';
 
-export const ShortcutBanner = props => {
+type Props = {
+  onPress: () => void,
+};
+
+export const ShortcutBanner = (props: Props) => {
   const { onPress } = props;
   return (
     <TouchableOpacity
@@ -21,7 +27,13 @@ export const ShortcutBanner = props => {
         colors={gradients.greenToBlue}
         style={styles.gradientContainer}
       >
-        <View style={[utilityStyles.row, utilityStyles.center, styles.innerContainer]}>
+        <View
+          style={[
+            utilityStyles.row,
+            utilityStyles.center,
+            styles.innerContainer,
+          ]}
+        >
           <Pulse
             size={35}
             pulseMaxSize={55}

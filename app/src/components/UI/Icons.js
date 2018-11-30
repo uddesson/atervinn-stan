@@ -1,7 +1,15 @@
+//@flow
+
 import React from 'react';
 import Svg, { G, Path, Polygon, Circle, Line } from 'react-native-svg';
 
-export const SadIcon = props => {
+type Props = {
+  width: number,
+  height: number,
+  fill: string,
+};
+
+export const SadIcon = (props: Props) => {
   const { width, height, fill } = props;
 
   return (
@@ -54,7 +62,7 @@ export const SadIcon = props => {
   );
 };
 
-export const HeartIcon = props => {
+export const HeartIcon = (props: Props) => {
   const { width, height, fill } = props;
 
   return (
@@ -87,7 +95,7 @@ export const HeartIcon = props => {
   );
 };
 
-export const SearchIcon = props => {
+export const SearchIcon = (props: Props) => {
   const { width, height, fill } = props;
 
   return (
@@ -107,7 +115,7 @@ export const SearchIcon = props => {
   );
 };
 
-export const MapIcon = props => {
+export const MapIcon = (props: Props) => {
   const { width, height, fill } = props;
 
   return (
@@ -127,7 +135,7 @@ export const MapIcon = props => {
   );
 };
 
-export const InfoIcon = props => {
+export const InfoIcon = (props: Props) => {
   const { width, height, fill } = props;
 
   return (
@@ -148,7 +156,7 @@ export const InfoIcon = props => {
   );
 };
 
-export const GpsIcon = props => {
+export const GpsIcon = (props: Props) => {
   const { width, height, fill } = props;
 
   return (

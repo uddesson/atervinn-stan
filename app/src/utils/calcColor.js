@@ -1,7 +1,9 @@
+//@flow
+
 import React from 'react';
 import { colors } from '../components/UI';
 
-export const calcColor = category => {
+export const calcColor = (category: string): string => {
   switch (category) {
     case 'pappersförpackning':
       return colors.ftiYellow;

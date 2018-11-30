@@ -1,3 +1,5 @@
+//@flow
+
 import React, { Component } from 'react';
 import {
   StyleSheet,
@@ -6,6 +8,7 @@ import {
   ImageBackground,
   View,
 } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 import {
   Paragraph,
   Heading,
@@ -15,7 +18,11 @@ import {
   ShortcutBanner,
 } from '../components/UI';
 
-export class Home extends Component {
+type Props = {
+  navigation: NavigationScreenProps,
+};
+
+export class Home extends Component<Props> {
   static navigationOptions = { header: null };
   render() {
     const { navigation } = this.props;

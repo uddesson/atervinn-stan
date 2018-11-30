@@ -13,23 +13,37 @@ type Props = {
   interval: number,
   size: number,
   pulseMaxSize: number,
-  icon: Component,
+  icon: React$Element<any>,
   borderColor: string,
   backgroundColor: string,
-  getStyle: Function,
+  getStyle: ?Function,
 };
 
-export class Pulse extends Component<Props> {
-  constructor(props) {
+type State = {
+  circles: number[],
+};
+
+export class Pulse extends Component<Props, State> {
+  static defaultProps = {
+    interval: 20,
+    size: 50,
+    pulseMaxSize: 150,
+    icon: undefined,
+    borderColor: colors.darkBlue,
+    backgroundColor: colors.blue,
+    getStyle: undefined,
+  };
+
+  state = {
+    circles: [],
+  };
+
+  counter = 1;
+  setInterval = null;
+  anim = new Animated.Value(1);
+
+  constructor(props: Props) {
     super(props);
-
-    this.state = {
-      circles: [],
-    };
-
-    this.counter = 1;
-    this.setInterval = null;
-    this.anim = new Animated.Value(1);
   }
 
   componentDidMount() {
@@ -79,13 +93,3 @@ export class Pulse extends Component<Props> {
     );
   }
 }
-
-Pulse.defaultProps = {
-  interval: 2000,
-  size: 50,
-  pulseMaxSize: 150,
-  icon: undefined,
-  borderColor: colors.darkBlue,
-  backgroundColor: colors.blue,
-  getStyle: undefined,
-};

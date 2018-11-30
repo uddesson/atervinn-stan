@@ -12,7 +12,7 @@ import { AppNavigator } from './src/components/AppNavigator';
 
 const RootNavigator = createAppContainer(AppNavigator);
 
-export default class App extends Component {
+export default class App extends Component<{}> {
   render() {
     return <RootNavigator />;
   }

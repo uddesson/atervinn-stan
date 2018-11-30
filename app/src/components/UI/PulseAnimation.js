@@ -1,4 +1,5 @@
 // @flow
+
 import React, { Component } from 'react';
 import { View, StyleSheet, Animated, Easing } from 'react-native';
 
@@ -12,15 +13,15 @@ type Props = {
   pulseMaxSize: number,
   borderColor: string,
   backgroundColor: string,
-  getStyle: Function,
+  getStyle: ?Function,
   interval: number,
 };
 
 export class PulseAnimation extends Component<Props> {
-  constructor(props) {
-    super(props);
+  anim = new Animated.Value(0);
 
-    this.anim = new Animated.Value(0);
+  constructor(props: Props) {
+    super(props);
   }
 
   componentDidMount() {
@@ -28,12 +29,18 @@ export class PulseAnimation extends Component<Props> {
     Animated.timing(this.anim, {
       toValue: 1,
       duration: interval,
-      easing: Easing.in,
+      //easing: Easing.in,
     }).start();
   }
 
   render() {
-    const { size, pulseMaxSize, borderColor, backgroundColor, getStyle } = this.props;
+    const {
+      size,
+      pulseMaxSize,
+      borderColor,
+      backgroundColor,
+      getStyle,
+    } = this.props;
 
     return (
       <View

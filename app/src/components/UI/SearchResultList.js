@@ -1,5 +1,8 @@
+//@flow
+
 import React from 'react';
 import { View, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
 import { calcColor } from '../../utils';
@@ -39,7 +42,11 @@ const listItems = [
   },
 ];
 
-export const SearchResultList = props => {
+type Props = {
+  navigation: NavigationScreenProps,
+};
+
+export const SearchResultList = (props: Props) => {
   const { navigation } = props;
   return (
     <View style={utilityStyles.fullWidth}>

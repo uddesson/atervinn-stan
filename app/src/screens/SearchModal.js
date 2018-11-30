@@ -1,6 +1,9 @@
+//@flow
+
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 import {
   utilityStyles,
   colors,
@@ -11,7 +14,11 @@ import {
 } from '../components/UI';
 import { toUpperCase } from '../utils';
 
-export const SearchModal = props => {
+type Props = {
+  navigation: NavigationScreenProps,
+};
+
+export const SearchModal = (props: Props) => {
   const { navigation } = props;
   const itemTitle = toUpperCase(navigation.getParam('itemTitle'));
   const sortingCategory = navigation.getParam('sortingCategory');
@@ -45,12 +52,7 @@ export const SearchModal = props => {
           <ParagraphBold style={[utilityStyles.whiteText, styles.buttonText]}>
             Hitta närmsta återvinningskärl
           </ParagraphBold>
-          <GpsIcon
-            style={styles.icon}
-            height={20}
-            width={20}
-            fill={colors.white}
-          />
+          <GpsIcon height={20} width={20} fill={colors.white} />
         </TouchableOpacity>
       </View>
     </SafeAreaView>
