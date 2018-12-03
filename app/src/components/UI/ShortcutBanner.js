@@ -16,31 +16,21 @@ type Props = {
 export const ShortcutBanner = (props: Props) => {
   const { onPress } = props;
   return (
-    <TouchableOpacity
-      activeOpacity={0.9}
-      onPress={onPress}
-      style={utilityStyles.fullWidth}
-    >
+    <TouchableOpacity activeOpacity={0.9} onPress={onPress} style={utilityStyles.fullWidth}>
       <LinearGradient
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0 }}
         colors={gradients.greenToBlue}
         style={styles.gradientContainer}
       >
-        <View
-          style={[
-            utilityStyles.row,
-            utilityStyles.center,
-            styles.innerContainer,
-          ]}
-        >
+        <View style={[utilityStyles.row, utilityStyles.center, styles.innerContainer]}>
           <Pulse
-            size={35}
-            pulseMaxSize={55}
+            size={5}
+            pulseMaxSize={50}
             interval={2000}
             backgroundColor="rgba(255,255,255,0.4)"
             borderColor="rgba(255,255,255,0.4)"
-            icon={<MapIcon height={30} width={30} fill="white" />}
+            icon={<View style={styles.circle} />}
           />
           <Paragraph style={[utilityStyles.whiteText, styles.textMargin]}>
             Hitta närmsta station
@@ -58,7 +48,7 @@ ShortcutBanner.defaultProps = {
 const styles = StyleSheet.create({
   gradientContainer: {
     width: '100%',
-    height: 60,
+    height: 65,
   },
   innerContainer: {
     alignSelf: 'center',
@@ -67,5 +57,13 @@ const styles = StyleSheet.create({
   textMargin: {
     marginRight: 10,
     marginLeft: 15,
+  },
+  circle: {
+    height: 18,
+    width: 18,
+    borderRadius: 18 / 2,
+    backgroundColor: colors.blue,
+    borderWidth: 2,
+    borderColor: colors.white,
   },
 });
