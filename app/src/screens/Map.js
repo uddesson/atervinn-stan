@@ -82,6 +82,8 @@ export class Map extends Component<Props, State> {
           style={styles.map}
           initialRegion={region}
           loadingEnabled={true}
+          showsUserLocation={true}
+          followsUserLocation={true}
           loadingIndicatorColor={colors.blue}
           loadingBackgroundColor={colors.whiteSmoke}
         >
