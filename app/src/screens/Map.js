@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import { StyleSheet, SafeAreaView } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { getRegion } from '../utils';
-import { utilityStyles, CurrentLocation, FilterToggler } from '../components/UI';
+import {
+  utilityStyles,
+  CurrentLocation,
+  FilterToggler,
+  MarkerImage,
+  colors,
+} from '../components/UI';
 
 /**
  * NOTE:
@@ -18,9 +24,18 @@ const fakeCurrentPosition = { latitude: 59.334591, longitude: 18.06324 };
 const testMarkers = [
   {
     coordinate: {
-      latitude: 59.343591,
-      longitude: 18.06524,
+      latitude: 59.337016,
+      longitude: 18.062643,
     },
+    type: 'pin-fti-container',
+    id: 1,
+  },
+  {
+    coordinate: {
+      latitude: 59.332043,
+      longitude: 18.061493,
+    },
+    type: 'pin-module',
     id: 1,
   },
 ];
@@ -67,9 +82,8 @@ export class Map extends Component<Props, State> {
           style={styles.map}
           initialRegion={region}
           loadingEnabled={true}
-          loadingIndicatorColor="#666666"
-          loadingBackgroundColor="#eeeeee"
-          showsCompass={true}
+          loadingIndicatorColor={colors.blue}
+          loadingBackgroundColor={colors.whiteSmoke}
         >
           <Marker coordinate={fakeCurrentPosition}>
             <CurrentLocation />
@@ -80,7 +94,9 @@ export class Map extends Component<Props, State> {
               coordinate={marker.coordinate}
               title={marker.title}
               description={marker.description}
-            />
+            >
+              <MarkerImage type={marker.type} />
+            </Marker>
           ))}
         </MapView>
         <FilterToggler
