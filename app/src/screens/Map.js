@@ -107,6 +107,16 @@ export class Map extends Component<Props, State> {
           }}
           mapType={'standard'}
         />
+        <CurrentLocation
+          style={{ position: 'absolute', bottom: '50%', left: '50%' }}
+        />
+        <FilterToggler
+          style={utilityStyles.absolute}
+          isFtiContainerVisible={isFtiContainerVisible}
+          isModuleVisible={isModuleVisible}
+          onFtiContainerPress={this.handleFtiContainerToggling}
+          onModulePress={this.handleModuleToggling}
+        />
       </SafeAreaView>
     );
   }
