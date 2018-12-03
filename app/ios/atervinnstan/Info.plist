@@ -38,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string>För att hitta en station nära dig behöver appen åtkomst till telefonens platstjänster. Informationen kommer inte användas av Återvinn Stan på något annat sätt än att vägleda dig till rätt plats.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Jaldi-Bold.ttf</string>
