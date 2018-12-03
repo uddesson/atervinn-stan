@@ -2,6 +2,7 @@
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Image } from 'react-native';
 import { colors } from './colors';
+import { utilityStyles } from './utilityStyles';
 
 type Props = {
   isFtiContainerVisible: boolean,
@@ -19,11 +20,20 @@ export const FilterToggler = (props: Props) => {
   } = props;
 
   return (
-    <View style={styles.container}>
+    <View
+      style={[
+        styles.container,
+        utilityStyles.col,
+        utilityStyles.justifyBetween,
+        utilityStyles.itemsCenter,
+        utilityStyles.absolute,
+      ]}
+    >
       <TouchableOpacity onPress={onFtiContainerPress}>
         <Image
           style={[
-            styles.icon,
+            styles.iconSmall,
+            utilityStyles.relative,
             isFtiContainerVisible ? styles.active : styles.inactive,
           ]}
           source={{ uri: 'fti-container' }}
@@ -33,6 +43,7 @@ export const FilterToggler = (props: Props) => {
         <Image
           style={[
             styles.icon,
+            utilityStyles.relative,
             isModuleVisible ? styles.active : styles.inactive,
           ]}
           source={{ uri: 'module' }}
@@ -45,9 +56,10 @@ export const FilterToggler = (props: Props) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.white,
-    position: 'absolute',
-    top: '8%',
-    left: '5%',
+    top: '5%',
+    left: '3%',
+    width: 65,
+    height: 110,
     padding: 10,
     borderRadius: 5,
     shadowColor: colors.lightGrey,
@@ -59,9 +71,12 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.8,
   },
   icon: {
-    width: 20,
-    height: 30,
-    position: 'relative',
+    width: 40,
+    height: 50,
+  },
+  iconSmall: {
+    width: 45,
+    height: 35,
   },
   inactive: {
     opacity: 0.2,

@@ -8,12 +8,18 @@ export const utilityStyles = StyleSheet.create({
     flexWrap: 'wrap',
     alignItems: 'center',
   },
+  col: {
+    flexDirection: 'column',
+  },
   justifyBetween: {
     justifyContent: 'space-between',
   },
   center: {
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  itemsCenter: {
+    alignItems: 'center',
   },
   justifyBetween: {
     justifyContent: 'space-between',
@@ -35,5 +41,11 @@ export const utilityStyles = StyleSheet.create({
   },
   centerText: {
     textAlign: 'center',
+  },
+  absolute: {
+    position: 'absolute',
+  },
+  relative: {
+    position: 'relative',
   },
 });
