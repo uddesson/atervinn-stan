@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, SafeAreaView } from 'react-native';
-import MapView from 'react-native-maps';
+import MapView, { Marker } from 'react-native-maps';
 import { getRegion } from '../utils';
 import { utilityStyles, CurrentLocation, FilterToggler } from '../components/UI';
 
@@ -13,6 +13,17 @@ import { utilityStyles, CurrentLocation, FilterToggler } from '../components/UI'
  */
 
 const fakeCurrentPosition = { latitude: 59.334591, longitude: 18.06324 };
+
+// Remove later.
+const testMarkers = [
+  {
+    coordinate: {
+      latitude: 59.343591,
+      longitude: 18.06524,
+    },
+    id: 1,
+  },
+];
 
 type Props = {
   handleFilterToggling: () => boolean,
@@ -54,17 +65,24 @@ export class Map extends Component<Props, State> {
       <SafeAreaView>
         <MapView
           style={styles.map}
-          initialRegion={{
-            latitude: region.latitude,
-            longitude: region.longitude,
-            latitudeDelta: region.latitudeDelta,
-            longitudeDelta: region.longitudeDelta,
-          }}
-          mapType={'standard'}
-        />
-        <CurrentLocation
-          style={{ position: 'absolute', bottom: '50%', left: '50%' }}
-        />
+          initialRegion={region}
+          loadingEnabled={true}
+          loadingIndicatorColor="#666666"
+          loadingBackgroundColor="#eeeeee"
+          showsCompass={true}
+        >
+          <Marker coordinate={fakeCurrentPosition}>
+            <CurrentLocation />
+          </Marker>
+          {testMarkers.map((marker: any) => (
+            <Marker
+              key={marker.id}
+              coordinate={marker.coordinate}
+              title={marker.title}
+              description={marker.description}
+            />
+          ))}
+        </MapView>
         <FilterToggler
           style={utilityStyles.absolute}
           isFtiContainerVisible={isFtiContainerVisible}
