@@ -49,7 +49,7 @@ export const AppNavigator = createBottomTabNavigator(
     },
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Map',
     tabBarOptions: {
       activeTintColor: 'white',
 
