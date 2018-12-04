@@ -27,5 +27,6 @@ export const symbolExplanation = [
   {
     title: 'övrigt',
     text: 't.ex. servetter, ciggarettfimpar och tuggummi.',
+    icon: 'ovrigt',
   },
 ];
