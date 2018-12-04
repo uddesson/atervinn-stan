@@ -22,16 +22,12 @@ import { ftiPositions } from '../data/fti-positions';
 
 const fakeCurrentPosition = { latitude: 59.334591, longitude: 18.06324 };
 
-type Props = {
-  handleFilterToggling: () => boolean,
-};
-
 type State = {
   isFtiContainerVisible: boolean,
   isModuleVisible: boolean,
 };
 
-export class Map extends Component<Props, State> {
+export class Map extends Component<State> {
   state = {
     isFtiContainerVisible: true,
     isModuleVisible: true,
@@ -47,6 +43,36 @@ export class Map extends Component<Props, State> {
     this.setState({
       isModuleVisible: !this.state.isModuleVisible,
     });
+  };
+
+  renderModuleMarkers = () => {
+    return modulePositions.map((marker: any) => (
+      <Marker
+        key={marker.address}
+        coordinate={{
+          latitude: marker.lat,
+          longitude: marker.lng,
+        }}
+        title={marker.title}
+      >
+        <MarkerImage type={'pin-module'} />
+      </Marker>
+    ));
+  };
+
+  renderFtiMarkers = () => {
+    return ftiPositions.map((marker: any) => (
+      <Marker
+        key={marker.stationName}
+        coordinate={{
+          latitude: marker.lat,
+          longitude: marker.lng,
+        }}
+        title={marker.address}
+      >
+        <MarkerImage type={'pin-fti-container'} />
+      </Marker>
+    ));
   };
 
   render() {
@@ -74,35 +100,8 @@ export class Map extends Component<Props, State> {
           <Marker coordinate={fakeCurrentPosition}>
             <CurrentLocation />
           </Marker>
-          {isModuleVisible
-            ? modulePositions.map((marker: any) => (
-                <Marker
-                  key={marker.address}
-                  coordinate={{
-                    latitude: marker.lat,
-                    longitude: marker.lng,
-                  }}
-                  title={marker.address}
-                >
-                  <MarkerImage type={'pin-module'} />
-                </Marker>
-              ))
-            : null}
-
-          {isFtiContainerVisible
-            ? ftiPositions.map((marker: any) => (
-                <Marker
-                  key={marker.id}
-                  coordinate={{
-                    latitude: marker.lat,
-                    longitude: marker.lng,
-                  }}
-                  title={marker.title}
-                >
-                  <MarkerImage type={'pin-fti-container'} />
-                </Marker>
-              ))
-            : null}
+          {isModuleVisible ? this.renderModuleMarkers() : null}
+          {isFtiContainerVisible ? this.renderFtiMarkers() : null}
         </MapView>
         <FilterToggler
           style={utilityStyles.absolute}
