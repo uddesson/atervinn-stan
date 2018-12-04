@@ -9,6 +9,8 @@ import {
   MarkerImage,
   colors,
 } from '../components/UI';
+import { modulePositions } from '../data/positions';
+import { ftiPositions } from '../data/fti-positions';
 
 /**
  * NOTE:
@@ -20,36 +22,12 @@ import {
 
 const fakeCurrentPosition = { latitude: 59.334591, longitude: 18.06324 };
 
-// Remove later.
-const testMarkers = [
-  {
-    coordinate: {
-      latitude: 59.337016,
-      longitude: 18.062643,
-    },
-    type: 'pin-fti-container',
-    id: 1,
-  },
-  {
-    coordinate: {
-      latitude: 59.332043,
-      longitude: 18.061493,
-    },
-    type: 'pin-module',
-    id: 1,
-  },
-];
-
-type Props = {
-  handleFilterToggling: () => boolean,
-};
-
 type State = {
   isFtiContainerVisible: boolean,
   isModuleVisible: boolean,
 };
 
-export class Map extends Component<Props, State> {
+export class Map extends Component<State> {
   state = {
     isFtiContainerVisible: true,
     isModuleVisible: true,
@@ -67,6 +45,36 @@ export class Map extends Component<Props, State> {
     });
   };
 
+  renderModuleMarkers = () => {
+    return modulePositions.map((marker: any) => (
+      <Marker
+        key={marker.address}
+        coordinate={{
+          latitude: marker.lat,
+          longitude: marker.lng,
+        }}
+        title={marker.title}
+      >
+        <MarkerImage type={'pin-module'} />
+      </Marker>
+    ));
+  };
+
+  renderFtiMarkers = () => {
+    return ftiPositions.map((marker: any) => (
+      <Marker
+        key={marker.stationName}
+        coordinate={{
+          latitude: marker.lat,
+          longitude: marker.lng,
+        }}
+        title={marker.address}
+      >
+        <MarkerImage type={'pin-fti-container'} />
+      </Marker>
+    ));
+  };
+
   render() {
     const { isFtiContainerVisible, isModuleVisible } = this.state;
 
@@ -74,7 +82,11 @@ export class Map extends Component<Props, State> {
      * Get region values based on position and distance in meters.
      * (Note on distance: Higher numbers = "Zoomed out" effect. Lower = Zoomed in)
      */
-    const region = getRegion(fakeCurrentPosition.latitude, fakeCurrentPosition.longitude, 2000);
+    const region = getRegion(
+      fakeCurrentPosition.latitude,
+      fakeCurrentPosition.longitude,
+      2000
+    );
 
     return (
       <SafeAreaView>
@@ -88,16 +100,8 @@ export class Map extends Component<Props, State> {
           <Marker coordinate={fakeCurrentPosition}>
             <CurrentLocation />
           </Marker>
-          {testMarkers.map((marker: any) => (
-            <Marker
-              key={marker.id}
-              coordinate={marker.coordinate}
-              title={marker.title}
-              description={marker.description}
-            >
-              <MarkerImage type={marker.type} />
-            </Marker>
-          ))}
+          {isModuleVisible ? this.renderModuleMarkers() : null}
+          {isFtiContainerVisible ? this.renderFtiMarkers() : null}
         </MapView>
         <FilterToggler
           style={utilityStyles.absolute}
