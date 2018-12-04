@@ -1,7 +1,6 @@
 //@flow
-
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet, Image, Text } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import {
@@ -22,6 +21,7 @@ type Props = {
 
 export const SearchModal = (props: Props) => {
   const { navigation } = props;
+
   const title = toUpperCase(navigation.getParam('title'));
   const sortingType = navigation.getParam('sortingType');
   const iconCode = navigation.getParam('iconCode');
@@ -29,13 +29,14 @@ export const SearchModal = (props: Props) => {
   const messageIfAvailable = 'kan återvinnas i stan. Sorteras som';
   const messageIfUnavailable =
     'måste återvinnas på återvinningscentral och sorteras där som';
+
   const message =
     sortingType === 'farligt avfall'
       ? messageIfUnavailable
       : messageIfAvailable;
 
-  const externalUrl =
-    'http://www.stockholmvattenochavfall.se/avfall-och-atervinning/har-lamnar-du-dina-sopor/privatkund/har-lamnar-du-sopor/atervinningscentral/';
+  // url to list of recyclingcentrals in stockholm on SVOA's webpage
+  const externalUrl = 'https://tinyurl.com/y9sast9a';
 
   return (
     <SafeAreaView style={styles.wrapper}>
@@ -43,7 +44,11 @@ export const SearchModal = (props: Props) => {
         <View>
           <View style={[utilityStyles.row, utilityStyles.justifyBetween]}>
             <SubHeading
-              style={[styles.subheading, utilityStyles.capitalizeText]}
+              style={[
+                utilityStyles.capitalizeText,
+                utilityStyles.greenText,
+                utilityStyles.alignSelfEnd,
+              ]}
             >
               {title}
             </SubHeading>
@@ -74,8 +79,10 @@ export const SearchModal = (props: Props) => {
             <GpsIcon height={20} width={20} fill={colors.white} />
           </TouchableOpacity>
         ) : (
-          <ExternalLink url={externalUrl} style={styles.externalLink}>
-            Hitta en återvinningscentral
+          <ExternalLink url={externalUrl}>
+            <ParagraphBold style={[utilityStyles.greenText, styles.buttonText]}>
+              Hitta en återvinningscentral
+            </ParagraphBold>
             <ExternalLinkIcon height={20} width={20} fill={colors.darkGreen} />
           </ExternalLink>
         )}
@@ -91,10 +98,6 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     padding: 10,
     height: '90%',
-  },
-  subheading: {
-    color: colors.darkGreen,
-    alignSelf: 'flex-end',
   },
   image: {
     width: 60,
@@ -113,8 +116,5 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     marginRight: 10,
-  },
-  externalLink: {
-    color: colors.darkGreen,
   },
 });
