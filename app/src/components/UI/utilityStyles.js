@@ -1,6 +1,6 @@
 //@flow
-
 import { StyleSheet } from 'react-native';
+import { colors } from './colors';
 
 export const utilityStyles = StyleSheet.create({
   row: {
@@ -35,6 +35,9 @@ export const utilityStyles = StyleSheet.create({
   },
   whiteText: {
     color: 'white',
+  },
+  greenText: {
+    color: colors.darkGreen,
   },
   capitalizeText: {
     textTransform: 'capitalize',

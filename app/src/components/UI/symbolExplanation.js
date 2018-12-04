@@ -1,7 +1,3 @@
-//@flow
-
-import React from 'react';
-
 export const symbolExplanation = [
   {
     title: 'plast',
@@ -27,5 +23,6 @@ export const symbolExplanation = [
   {
     title: 'övrigt',
     text: 't.ex. servetter, ciggarettfimpar och tuggummi.',
+    icon: 'ovrigt',
   },
 ];

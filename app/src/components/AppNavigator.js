@@ -1,5 +1,4 @@
 //@flow
-
 import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation';
 import { Home, Map, Info } from '../screens';
