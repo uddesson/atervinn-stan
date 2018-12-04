@@ -18,6 +18,8 @@ export const calcColor = (category: string): string => {
       return colors.ftiGrey;
     case 'tidning_returpapper':
       return colors.ftiBlue;
+    case 'farligt_avfall':
+      return colors.red;
     default:
       return colors.ftiBlack;
   }
