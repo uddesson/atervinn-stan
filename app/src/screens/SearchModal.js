@@ -47,7 +47,9 @@ export const SearchModal = (props: Props) => {
             >
               {title}
             </SubHeading>
-            <Image style={styles.image} source={{ uri: iconCode }} />
+            {sortingType !== 'farligt avfall' ? (
+              <Image style={styles.image} source={{ uri: iconCode }} />
+            ) : null}
           </View>
           <Paragraph style={styles.paragraph}>
             {title + ' ' + message + ' ' + sortingType + '.'}
