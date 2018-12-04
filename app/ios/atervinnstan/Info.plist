@@ -38,7 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string>Informationen kommer inte användas av Återvinn Stan på något annat sätt än att vägleda dig till närmsta återvinningsplats.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Jaldi-Bold.ttf</string>

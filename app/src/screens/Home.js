@@ -22,7 +22,7 @@ export class Home extends Component<Props> {
     return (
       <SafeAreaView style={[styles.screen, utilityStyles.center]}>
         <View style={[utilityStyles.flex1, utilityStyles.fullWidth]}>
-          <ShortcutBanner />
+          <ShortcutBanner navigation={navigation} />
 
           <ImageBackground
             source={{ uri: 'header-city' }}
