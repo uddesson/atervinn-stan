@@ -1,6 +1,12 @@
 //@flow
 import React from 'react';
-import { View, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
+import {
+  View,
+  ScrollView,
+  TouchableOpacity,
+  FlatList,
+  StyleSheet,
+} from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
@@ -15,11 +21,11 @@ const listItems = [
     iconCode: 'plastförpackning',
   },
   //sorting data doesn't seperate 'ofärgat' and 'färgat'
-  // {
-  //   title: 'ölflaska färgat glas',
-  //   sortingType: 'glas',
-  //   iconCode: 'glasförpackningar',
-  // },
+  {
+    title: 'ölflaska färgat glas',
+    sortingType: 'glas',
+    iconCode: 'glasförpackningar',
+  },
   {
     title: 'läsflaska ofärgat glas',
     sortingType: 'glas',
@@ -62,7 +68,9 @@ type Props = {
 export const SearchResultList = (props: Props) => {
   const { navigation } = props;
   return (
-    <View style={utilityStyles.fullWidth}>
+    <ScrollView
+      contentContainerStyle={[utilityStyles.fullWidth, styles.container]}
+    >
       <FlatList
         keyExtractor={item => item.title}
         data={listItems}
@@ -99,11 +107,14 @@ export const SearchResultList = (props: Props) => {
           );
         }}
       />
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    height: '100%',
+  },
   wrapper: {
     padding: 10,
     marginTop: 10,
