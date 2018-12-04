@@ -21,3 +21,4 @@ export { Pulse } from './Pulse';
 export { ExternalLink } from './ExternalLink';
 export { FilterToggler } from './FilterToggler';
 export { MarkerImage } from './MarkerImage';
+export { GpsIconButton } from './GpsIconButton';

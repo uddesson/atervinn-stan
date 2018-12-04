@@ -1,8 +1,9 @@
+// @flow
 import React, { Component } from 'react';
 import { StyleSheet, SafeAreaView } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { initialRegion } from '../utils';
-import { utilityStyles, FilterToggler, MarkerImage, colors } from '../components/UI';
+import { utilityStyles, FilterToggler, MarkerImage, colors, GpsIconButton } from '../components/UI';
 import { modulePositions } from '../data/positions';
 import { ftiPositions } from '../data/fti-positions';
 
@@ -11,7 +12,11 @@ type State = {
   isModuleVisible: boolean,
 };
 
-export class Map extends Component<State> {
+type Props = {
+  navigation: Object,
+};
+
+export class Map extends Component<Props, State> {
   state = {
     isFtiContainerVisible: true,
     isModuleVisible: true,
@@ -82,6 +87,7 @@ export class Map extends Component<State> {
           onFtiContainerPress={this.handleFtiContainerToggling}
           onModulePress={this.handleModuleToggling}
         />
+        <GpsIconButton />
       </SafeAreaView>
     );
   }
