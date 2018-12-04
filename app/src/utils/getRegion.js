@@ -1,6 +1,7 @@
-// Reference: https://github.com/react-community/react-native-maps/issues/505#issuecomment-301308736
+const stockholmCityCenter = { latitude: 59.334591, longitude: 18.06324 };
 
-export const getRegion = (lat, lon, distance) => {
+// Reference: https://github.com/react-community/react-native-maps/issues/505#issuecomment-301308736
+const getRegion = (lat, lon, distance) => {
   distance /= 2;
   const circumference = 40075;
   const oneDegreeOfLatitudeInMeters = 111.32 * 1000;
@@ -21,3 +22,13 @@ export const getRegion = (lat, lon, distance) => {
     longitudeDelta,
   });
 };
+
+/*
+ * Get region values based on position and distance in meters.
+ * (Note on distance: Higher numbers = "Zoomed out" effect. Lower = Zoomed in)
+ */
+export const initialRegion = getRegion(
+  stockholmCityCenter.latitude,
+  stockholmCityCenter.longitude,
+  2000,
+);
