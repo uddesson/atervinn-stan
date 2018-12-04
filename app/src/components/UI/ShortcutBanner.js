@@ -11,7 +11,7 @@ import { Pulse } from './Pulse';
 
 type Props = {
   onPress: () => void,
-  navigation: Object,
+  navigation: NavigationScreenProps,
 };
 
 export class ShortcutBanner extends Component<Props> {
