@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, SafeAreaView } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { initialRegion } from '../utils';
-import { utilityStyles, FilterToggler, MarkerImage, colors } from '../components/UI';
+import { utilityStyles, FilterToggler, MarkerImage, colors, GpsIconButton } from '../components/UI';
 import { modulePositions } from '../data/positions';
 import { ftiPositions } from '../data/fti-positions';
 
