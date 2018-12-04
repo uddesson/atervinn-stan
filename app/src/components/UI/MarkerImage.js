@@ -1,5 +1,4 @@
 // @flow
-
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 import { colors } from './colors';

@@ -1,7 +1,6 @@
 //@flow
-
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet, Image, Text } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import {

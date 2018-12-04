@@ -1,5 +1,4 @@
 //@flow
-
 import React from 'react';
 import { TouchableOpacity, StyleSheet, Linking } from 'react-native';
 import { ParagraphBold } from './Types';
