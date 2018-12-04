@@ -4,7 +4,6 @@ import MapView, { Marker } from 'react-native-maps';
 import { getRegion } from '../utils';
 import {
   utilityStyles,
-  CurrentLocation,
   FilterToggler,
   MarkerImage,
   colors,
@@ -99,9 +98,6 @@ export class Map extends Component<State> {
           loadingIndicatorColor={colors.blue}
           loadingBackgroundColor={colors.whiteSmoke}
         >
-          <Marker coordinate={fakeCurrentPosition}>
-            <CurrentLocation />
-          </Marker>
           {isModuleVisible ? this.renderModuleMarkers() : null}
           {isFtiContainerVisible ? this.renderFtiMarkers() : null}
         </MapView>
