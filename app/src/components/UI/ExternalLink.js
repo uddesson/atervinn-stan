@@ -24,7 +24,7 @@ export const ExternalLink = (props: Props) => {
       onPress={onPress}
       style={[utilityStyles.row, styles.button]}
     >
-      <ParagraphBold style={style}>{children}</ParagraphBold>
+      {children}
     </TouchableOpacity>
   );
 };
@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
   button: {
     borderWidth: 1,
     borderColor: colors.darkGreen,
-    color: colors.darkGreen,
     borderRadius: 5,
     padding: 5,
   },
