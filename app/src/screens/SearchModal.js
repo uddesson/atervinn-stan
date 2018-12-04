@@ -33,8 +33,8 @@ export const SearchModal = (props: Props) => {
       ? messageIfUnavailable
       : messageIfAvailable;
 
-  const externalUrl =
-    'http://www.stockholmvattenochavfall.se/avfall-och-atervinning/har-lamnar-du-dina-sopor/privatkund/har-lamnar-du-sopor/atervinningscentral/';
+  // url to list of recyclingcentrals in stockholm on SVOA's webpage
+  const externalUrl = 'https://tinyurl.com/y9sast9a';
 
   return (
     <SafeAreaView style={styles.wrapper}>
