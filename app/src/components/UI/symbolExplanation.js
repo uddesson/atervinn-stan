@@ -1,7 +1,3 @@
-//@flow
-
-import React from 'react';
-
 export const symbolExplanation = [
   {
     title: 'plast',
