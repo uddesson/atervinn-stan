@@ -6,6 +6,8 @@ import { NavigationScreenProps } from 'react-navigation';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
 import { calcColor } from '../../utils';
+import { WarningIcon } from './Icons';
+import { colors } from './colors';
 
 const listItems = [
   {
@@ -87,7 +89,12 @@ export const SearchResultList = (props: Props) => {
                 <Paragraph style={utilityStyles.capitalizeText}>
                   {item.title}
                 </Paragraph>
-                <View style={[styles.circle, { backgroundColor }]} />
+
+                {item.iconCode !== 'farligt_avfall' ? (
+                  <View style={[styles.circle, { backgroundColor }]} />
+                ) : (
+                  <WarningIcon width={23} height={23} fill={colors.red} />
+                )}
               </TouchableOpacity>
             </View>
           );
