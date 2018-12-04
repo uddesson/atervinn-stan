@@ -9,6 +9,7 @@ export const colors = {
   darkGrey: 'rgb(85,87,96)',
   white: 'rgb(255,255,255)',
   whiteSmoke: 'rgb(245, 245, 245)',
+  red: 'rgb(255,51,51)',
 
   ftiGreen: 'rgb(106,178,32)',
   ftiGrey: 'rgb(163,164,168)',
