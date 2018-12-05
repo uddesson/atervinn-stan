@@ -1,6 +1,7 @@
 //@flow
 import React, { Component } from 'react';
 import { StyleSheet, SafeAreaView, View, Text } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 import MapView, { Marker } from 'react-native-maps';
 import { initialRegion } from '../utils';
 import {
@@ -28,7 +29,7 @@ type State = {
 };
 
 type Props = {
-  navigation: Object,
+  navigation: NavigationScreenProps,
 };
 
 export class Map extends Component<Props, State> {
