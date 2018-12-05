@@ -8,11 +8,11 @@ export const modulePositions = [
     locationConfirmed: true,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -22,11 +22,11 @@ export const modulePositions = [
     locationConfirmed: true,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -36,11 +36,11 @@ export const modulePositions = [
     locationConfirmed: true,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -50,11 +50,11 @@ export const modulePositions = [
     locationConfirmed: true,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -64,11 +64,11 @@ export const modulePositions = [
     locationConfirmed: true,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -78,11 +78,11 @@ export const modulePositions = [
     locationConfirmed: true,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -92,11 +92,11 @@ export const modulePositions = [
     locationConfirmed: true,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -106,11 +106,11 @@ export const modulePositions = [
     locationConfirmed: true,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -120,11 +120,11 @@ export const modulePositions = [
     locationConfirmed: true,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -166,11 +166,11 @@ export const modulePositions = [
     locationConfirmed: true,
     locationConfirmedSorting: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -212,11 +212,11 @@ export const modulePositions = [
     locationConfirmed: false,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -226,11 +226,11 @@ export const modulePositions = [
     locationConfirmed: false,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -240,11 +240,11 @@ export const modulePositions = [
     locationConfirmed: false,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
   {
@@ -254,11 +254,11 @@ export const modulePositions = [
     locationConfirmed: false,
     sortingConfirmed: true,
     sorting: [
-      'plast',
-      'pappersförpackningar',
+      'plastförpackning',
+      'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'övrigt avfall',
+      'ovrigt',
     ],
   },
 ];
