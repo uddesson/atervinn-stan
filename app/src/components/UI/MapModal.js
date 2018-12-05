@@ -8,13 +8,13 @@ import { CancelIcon, SuccessIcon, WarningIcon } from './Icons';
 
 type Props = {
   visible: boolean,
-  onPress: () => boolean,
+  onPress: () => void,
   marker: {
-    address: ?string,
-    stationName: ?string,
+    address?: string,
+    stationName?: string,
     sorting: [],
-    locationConfirmed: ?boolean,
-    sortingConfirmed: ?boolean,
+    locationConfirmed?: boolean,
+    sortingConfirmed?: boolean,
   },
 };
 
