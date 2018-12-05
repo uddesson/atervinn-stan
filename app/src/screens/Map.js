@@ -1,3 +1,4 @@
+//@flow
 import React, { Component } from 'react';
 import { StyleSheet, SafeAreaView, View, Text } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
@@ -17,7 +18,13 @@ type State = {
   isFtiContainerVisible: boolean,
   isModuleVisible: boolean,
   isModalVisible: boolean,
-  clickedMarker: {},
+  clickedMarker: {
+    address?: string,
+    stationName?: string,
+    sorting: [],
+    locationConfirmed?: boolean,
+    sortingConfirmed?: boolean,
+  },
 };
 
 type Props = {
@@ -29,7 +36,9 @@ export class Map extends Component<Props, State> {
     isFtiContainerVisible: true,
     isModuleVisible: true,
     isModalVisible: false,
-    clickedMarker: {},
+    clickedMarker: {
+      sorting: [],
+    },
   };
 
   handleFtiContainerToggling = () => {
@@ -50,14 +59,14 @@ export class Map extends Component<Props, State> {
     });
   };
 
-  handleMarkerInfo = marker => {
+  handleMarkerInfo = (marker: Object) => {
     this.setState({
       clickedMarker: marker,
     });
   };
 
   renderModuleMarkers = () => {
-    return modulePositions.map((marker: any) => (
+    return modulePositions.map((marker: Object) => (
       <Marker
         key={marker.address}
         coordinate={{
@@ -78,7 +87,7 @@ export class Map extends Component<Props, State> {
   };
 
   renderFtiMarkers = () => {
-    return ftiPositions.map((marker: any) => (
+    return ftiPositions.map((marker: Object) => (
       <Marker
         key={marker.stationName}
         coordinate={{
@@ -103,6 +112,7 @@ export class Map extends Component<Props, State> {
       isFtiContainerVisible,
       isModuleVisible,
       isModalVisible,
+      clickedMarker,
     } = this.state;
     return (
       <SafeAreaView>
@@ -127,9 +137,9 @@ export class Map extends Component<Props, State> {
         />
         {isModalVisible ? (
           <MapModal
-            visible={this.isModalVisible}
+            visible={isModalVisible}
             onPress={this.handleModal}
-            marker={this.state.clickedMarker}
+            marker={clickedMarker}
           />
         ) : null}
         <GpsIconButton />
