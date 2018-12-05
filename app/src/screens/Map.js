@@ -86,6 +86,12 @@ export class Map extends Component<Props, State> {
           longitude: marker.lng,
         }}
         title={marker.address}
+        onPress={() => {
+          // save marker obj in state
+          this.handleMarkerInfo(marker);
+          // open modal
+          this.handleModal();
+        }}
       >
         <MarkerImage type={'pin-fti-container'} />
       </Marker>
@@ -120,13 +126,11 @@ export class Map extends Component<Props, State> {
           onModulePress={this.handleModuleToggling}
         />
         {isModalVisible ? (
-          <View style={styles.test}>
-            <MapModal
-              visible={this.isModalVisible}
-              onPress={this.handleModal}
-              marker={this.state.clickedMarker}
-            />
-          </View>
+          <MapModal
+            visible={this.isModalVisible}
+            onPress={this.handleModal}
+            marker={this.state.clickedMarker}
+          />
         ) : null}
         <GpsIconButton />
       </SafeAreaView>
