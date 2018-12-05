@@ -12,7 +12,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -26,7 +25,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -40,7 +38,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -54,7 +51,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -68,7 +64,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -82,7 +77,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -96,7 +90,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -110,7 +103,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -124,7 +116,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -170,7 +161,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -216,7 +206,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -230,7 +219,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -244,7 +232,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
   {
@@ -258,7 +245,6 @@ export const modulePositions = [
       'pappersförpackning',
       'färgat glas',
       'ofärgat glas',
-      'ovrigt',
     ],
   },
 ];
