@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import { TouchableOpacity, View, Alert, StyleSheet } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 import LinearGradient from 'react-native-linear-gradient';
 import Permissions from 'react-native-permissions';
 import { Paragraph } from './Types';
@@ -39,8 +40,11 @@ export class ShortcutBanner extends Component<Props> {
          */
         permissionStatus === 'undetermined'
           ? { text: 'Ja, det går bra', onPress: this.requestPermission } // Send a permission request.
-          : { text: 'Ja, ändra inställningar', onPress: Permissions.openSettings },
-      ],
+          : {
+              text: 'Ja, ändra inställningar',
+              onPress: Permissions.openSettings,
+            },
+      ]
     );
   };
 
@@ -66,7 +70,13 @@ export class ShortcutBanner extends Component<Props> {
           colors={gradients.greenToBlue}
           style={styles.gradientContainer}
         >
-          <View style={[utilityStyles.row, utilityStyles.center, styles.innerContainer]}>
+          <View
+            style={[
+              utilityStyles.row,
+              utilityStyles.center,
+              styles.innerContainer,
+            ]}
+          >
             <Pulse
               size={5}
               pulseMaxSize={50}
