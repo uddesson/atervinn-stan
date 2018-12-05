@@ -7,7 +7,13 @@ import { SubHeading, Paragraph } from './Types';
 type Props = {
   visible: boolean,
   onPress: () => boolean,
-  marker: {},
+  marker: {
+    address: ?string,
+    stationName: ?string,
+    sorting: [],
+    locationConfirmed: ?boolean,
+    sortingConfirmed: ?boolean,
+  },
 };
 
 export const MapModal = (props: Props) => {
