@@ -14,6 +14,7 @@ import {
   SubHeading,
   utilityStyles,
   colors,
+  ParagraphBold,
 } from '../components/UI';
 import { symbolExplanation } from '../components/UI';
 import { toUpperCase } from '../utils';
@@ -25,33 +26,41 @@ export class Info extends Component<Props> {
     return (
       <SafeAreaView>
         <ScrollView
-          contentContainerStyle={[styles.screen, utilityStyles.center]}
+          contentContainerStyle={[styles.screen, utilityStyles.justifyCenter]}
         >
-          <Heading>Symbolförklaring</Heading>
+          <Heading style={styles.heading}>Symbolförklaring</Heading>
           <FlatList
             data={symbolExplanation}
-            contentContainerStyle={styles.listContainer}
             ListFooterComponent={
               <Paragraph style={styles.smallText}>
-                Material hämtat från FTI, HSR, SVOA och Stockholms stad.
+                <ParagraphBold style={styles.smallText}>
+                  ÅTERVINN STAN
+                </ParagraphBold>
+                använder data och material hämtat från FTI, HSR, SVOA och
+                Stockholms stad. Bilder tagna av Någon Någonsson, Någon
+                Någonsson och Någon Någonsson.
               </Paragraph>
             }
             keyExtractor={item => item.title}
             renderItem={({ item }) => (
-              <View style={[utilityStyles.row]}>
-                <Image style={styles.image} source={{ uri: item.icon }} />
-                <SubHeading
+              <View style={[utilityStyles.row, styles.itemContainer]}>
+                <Image
                   style={[
-                    utilityStyles.capitalizeText,
-                    utilityStyles.alignSelfEnd,
-                    styles.subHeading,
+                    item.icon === 'module' ? styles.imageBig : styles.image,
                   ]}
-                >
-                  {item.title}
-                </SubHeading>
-                <Paragraph style={styles.text}>
-                  {toUpperCase(item.text)}
-                </Paragraph>
+                  source={{ uri: item.icon }}
+                />
+
+                <View style={styles.textContainer}>
+                  <SubHeading
+                    style={[utilityStyles.capitalizeText, styles.subHeading]}
+                  >
+                    {item.title}
+                  </SubHeading>
+                  <Paragraph style={styles.description}>
+                    {toUpperCase(item.text)}
+                  </Paragraph>
+                </View>
               </View>
             )}
           />
@@ -65,26 +74,49 @@ const styles = StyleSheet.create({
   screen: {
     backgroundColor: colors.whiteSmoke,
   },
-  listContainer: {
+  itemContainer: {
     backgroundColor: colors.white,
-    borderRadius: 5,
-    padding: 10,
+    borderRadius: 10,
+    padding: 15,
     margin: 15,
+    marginTop: 10,
+    shadowColor: colors.lightGrey,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowRadius: 2,
+    shadowOpacity: 0.8,
+  },
+  heading: {
+    marginLeft: 15,
+    marginRight: 15,
     marginTop: 5,
+    marginBottom: 5,
   },
   image: {
-    width: 60,
-    height: 60,
-    marginRight: 10,
+    width: 80,
+    height: 80,
+    marginRight: 15,
+  },
+  imageBig: {
+    width: 80,
+    height: 90,
+    marginRight: 15,
+  },
+  textContainer: {
+    width: '69%',
   },
   subHeading: {
-    marginTop: 10,
+    fontWeight: 'bold',
   },
-  text: {
-    margin: 10,
+  description: {
+    fontSize: 16,
+    lineHeight: 25,
   },
   smallText: {
     marginTop: 20,
     fontSize: 12,
+    margin: 15,
   },
 });
