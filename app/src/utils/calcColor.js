@@ -19,6 +19,6 @@ export const calcColor = (category: string): string => {
     case 'farligt_avfall':
       return colors.red;
     default:
-      return colors.ftiBlack;
+      return colors.black;
   }
 };
