@@ -19,46 +19,37 @@ const listItems = [
   {
     title: 'plastbestick',
     sortingType: 'plast',
-    iconCode: 'plastförpackning',
   },
-  //sorting data doesn't seperate 'ofärgat' and 'färgat'
   {
     title: 'ölflaska färgat glas ölflaska färgat glas',
     sortingType: 'glas',
-    iconCode: 'glasförpackningar',
   },
   {
     title: 'läsflaska ofärgat glas',
     sortingType: 'glas',
-    iconCode: 'glasförpackningar',
   },
   {
     title: 'kapsyl',
     sortingType: 'metall',
-    iconCode: 'metallförpackning',
   },
   {
     //sorting data spells out with / but imagetitle in xcode doesnt allow /
     // should also be translated to tidningar & returpapper in modal
     title: 'reklamblad',
     sortingType: 'tidning & returpapper',
-    iconCode: 'tidning_returpapper',
   },
   {
     title: 'Pizzakartong',
     sortingType: 'papper',
-    iconCode: 'pappersförpackning',
   },
   {
     title: 'tuggumi',
     // sorting data calls this soppåsen, convert to övrigt?
     sortingType: 'övrigt',
-    iconCode: 'ovrigt',
   },
   {
     title: 'braständare',
     sortingType: 'farligt avfall',
-    iconCode: 'farligt_avfall',
   },
 ];
 
@@ -71,12 +62,13 @@ export const SearchResultList = (props: Props) => {
   return (
     <ScrollView
       contentContainerStyle={[utilityStyles.fullWidth, styles.container]}
+      showsVerticalScrollIndicator={false}
     >
       <FlatList
         keyExtractor={item => item.title}
         data={listItems}
         renderItem={({ item }) => {
-          const backgroundColor = calcColor(item.iconCode);
+          const backgroundColor = calcColor(item.sortingType);
 
           return (
             <View>
@@ -85,7 +77,6 @@ export const SearchResultList = (props: Props) => {
                   navigation.navigate('SearchModal', {
                     title: item.title,
                     sortingType: item.sortingType,
-                    iconCode: item.iconCode,
                   })
                 }
                 style={[
