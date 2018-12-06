@@ -1,5 +1,15 @@
 export const symbolExplanation = [
   {
+    title: 'FTI station',
+    text: 'Utställda av förpackning & tidnings insamlingen.',
+    icon: 'fti-container',
+  },
+  {
+    title: 'Modul',
+    text: 'Utställda av stockholms stad april–oktober varje år sen 2015.',
+    icon: 'module',
+  },
+  {
     title: 'plast',
     text: 't.ex. plastbestick, korkar och olika plastförpackningar.',
     icon: 'plastförpackning',
