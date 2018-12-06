@@ -31,8 +31,13 @@ export const symbolExplanation = [
     icon: 'glasförpackningar',
   },
   {
+    title: 'tidningar/returpapper',
+    text: 't.ex. reklamblad, Hem & Hyra.',
+    icon: 'tidning_returpapper',
+  },
+  {
     title: 'övrigt',
-    text: 't.ex. servetter, ciggarettfimpar och tuggummi.',
+    text: 't.ex. servetter, döda djur, ciggarettfimpar och tuggummi.',
     icon: 'ovrigt',
   },
 ];
