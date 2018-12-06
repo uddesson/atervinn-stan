@@ -20,7 +20,6 @@ type Props = {
 
 export const MapModal = (props: Props) => {
   const { visible, onPress, marker } = props;
-  // how should glass be rendered?
   const sortingOptions = marker.sorting.map(option => {
     return <Image key={option} style={styles.image} source={{ uri: option }} />;
   });
@@ -49,13 +48,7 @@ export const MapModal = (props: Props) => {
                 {/* fti-positions don't have this flag so we want don't to check this
               if we don't we will get a negative false  */}
                 {marker.hasOwnProperty('locationConfirmed') ? (
-                  marker.locationConfirmed ? (
-                    // is this implicit?
-                    <View style={utilityStyles.row}>
-                      <Paragraph>Bekräftad position</Paragraph>
-                      <SuccessIcon width={20} height={20} fill={colors.green} />
-                    </View>
-                  ) : (
+                  marker.locationConfirmed ? null : (
                     <View style={utilityStyles.row}>
                       <Paragraph>Ej bekräftad position</Paragraph>
                       <WarningIcon width={20} height={20} fill={colors.red} />
