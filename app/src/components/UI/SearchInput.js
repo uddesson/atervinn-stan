@@ -70,5 +70,6 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.lightGrey,
     width: '80%',
     padding: 10,
+    fontSize: 20,
   },
 });
