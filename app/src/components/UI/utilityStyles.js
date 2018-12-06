@@ -54,6 +54,9 @@ export const utilityStyles = StyleSheet.create({
   centerText: {
     textAlign: 'center',
   },
+  lineHeightNormal: {
+    lineHeight: 25,
+  },
   absolute: {
     position: 'absolute',
   },
