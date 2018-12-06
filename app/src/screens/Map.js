@@ -1,6 +1,12 @@
 //@flow
 import React, { Component } from 'react';
-import { StyleSheet, SafeAreaView, View, Text } from 'react-native';
+import {
+  StyleSheet,
+  SafeAreaView,
+  View,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import MapView, { Marker } from 'react-native-maps';
 import { initialRegion } from '../utils';
@@ -20,8 +26,7 @@ type State = {
   isModuleVisible: boolean,
   isModalVisible: boolean,
   clickedMarker: {
-    address?: string,
-    stationName?: string,
+    locationName: string,
     sorting: [],
     locationConfirmed?: boolean,
     sortingConfirmed?: boolean,
@@ -38,6 +43,7 @@ export class Map extends Component<Props, State> {
     isModuleVisible: true,
     isModalVisible: false,
     clickedMarker: {
+      locationName: '',
       sorting: [],
     },
   };
