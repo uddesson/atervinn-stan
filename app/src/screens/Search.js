@@ -15,14 +15,15 @@ type Props = {
 };
 
 export class Search extends Component<Props> {
+  static navigationOptions = { header: null };
   render() {
     const { navigation } = this.props;
 
     return (
       <SafeAreaView style={[styles.screen]}>
         <View style={[utilityStyles.justifyCenter, styles.container]}>
-          <View style={utilityStyles.center}>
-            <SearchInput />
+          <View style={[utilityStyles.center, styles.innerContainer]}>
+            <SearchInput navigation={navigation} />
           </View>
           <SearchResultList navigation={navigation} />
         </View>
@@ -39,5 +40,8 @@ const styles = StyleSheet.create({
   },
   container: {
     padding: 20,
+  },
+  innerContainer: {
+    marginBottom: 25,
   },
 });
