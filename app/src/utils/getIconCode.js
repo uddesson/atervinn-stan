@@ -10,7 +10,7 @@ export const getIconCode = (category: String) => {
       return 'glasförpackningar';
     case 'metall':
       return 'metallförpackning';
-    case 'tidningar & returpapper':
+    case 'tidningar/returpapper':
       return 'tidning_returpapper';
     default:
       return 'ovrigt';
