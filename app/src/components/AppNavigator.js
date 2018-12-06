@@ -10,7 +10,7 @@ export const AppNavigator = createBottomTabNavigator(
     Home: {
       screen: SearchNavigator,
       navigationOptions: {
-        tabBarLabel: 'Hem',
+        tabBarLabel: 'HEM',
         tabBarIcon: ({ activeTintColor, focused }) => (
           <SearchIcon
             width={23}
@@ -23,7 +23,7 @@ export const AppNavigator = createBottomTabNavigator(
     Map: {
       screen: Map,
       navigationOptions: {
-        tabBarLabel: 'Karta',
+        tabBarLabel: 'KARTA',
         tabBarIcon: ({ focused }) => (
           <MapIcon
             width={23}
@@ -36,7 +36,7 @@ export const AppNavigator = createBottomTabNavigator(
     Info: {
       screen: Info,
       navigationOptions: {
-        tabBarLabel: 'Info',
+        tabBarLabel: 'INFO',
         tabBarIcon: ({ focused }) => (
           <InfoIcon
             width={23}
@@ -48,18 +48,19 @@ export const AppNavigator = createBottomTabNavigator(
     },
   },
   {
-    initialRouteName: 'Map',
+    initialRouteName: 'Home',
     tabBarOptions: {
-      activeTintColor: 'white',
+      activeTintColor: colors.blue,
 
       labelStyle: {
         fontSize: 12,
         marginTop: 5,
+        fontFamily: 'Jaldi',
       },
       style: {
         padding: 10,
         height: 65,
-        backgroundColor: colors.darkGrey,
+        backgroundColor: colors.white,
       },
     },
   }
