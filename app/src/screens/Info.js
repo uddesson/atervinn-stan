@@ -57,7 +57,9 @@ export class Info extends Component<Props> {
                   >
                     {item.title}
                   </SubHeading>
-                  <Paragraph style={styles.description}>
+                  <Paragraph
+                    style={[styles.description, utilityStyles.lineHeightNormal]}
+                  >
                     {toUpperCase(item.text)}
                   </Paragraph>
                 </View>
@@ -112,7 +114,6 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 16,
-    lineHeight: 25,
   },
   smallText: {
     marginTop: 20,
