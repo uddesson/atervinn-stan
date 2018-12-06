@@ -62,37 +62,41 @@ export const SearchModal = (props: Props) => {
           ) : null}
         </View>
 
-        {sortingType !== 'farligt avfall' ? (
-          <TouchableOpacity
-            style={[styles.button, utilityStyles.row, utilityStyles.center]}
-            activeOpacity={0.7}
-            onPress={() => navigation.navigate('Home')}
-          >
-            <ParagraphBold
-              style={[
-                utilityStyles.whiteText,
-                styles.buttonText,
-                utilityStyles.uppercaseText,
-              ]}
-            >
-              Hitta närmsta
-            </ParagraphBold>
-            <GpsIcon height={20} width={20} fill={colors.white} />
-          </TouchableOpacity>
-        ) : (
-          <ExternalLink url={externalUrl}>
-            <ParagraphBold
-              style={[
-                utilityStyles.greenText,
-                utilityStyles.uppercaseText,
-                styles.buttonText,
-              ]}
-            >
-              Hitta närmsta
-            </ParagraphBold>
-            <ExternalLinkIcon height={20} width={20} fill={colors.darkGreen} />
-          </ExternalLink>
-        )}
+        <TouchableOpacity
+          style={[styles.button, utilityStyles.row, utilityStyles.center]}
+          activeOpacity={0.7}
+          onPress={() => navigation.navigate('Home')}
+        >
+          {sortingType !== 'farligt avfall' ? (
+            <>
+              <ParagraphBold
+                style={[
+                  utilityStyles.whiteText,
+                  styles.buttonText,
+                  utilityStyles.uppercaseText,
+                ]}
+              >
+                Hitta närmsta
+              </ParagraphBold>
+              <GpsIcon height={20} width={20} fill={colors.white} />
+            </>
+          ) : (
+            <>
+              <ExternalLink url={externalUrl}>
+                <ParagraphBold
+                  style={[
+                    utilityStyles.whiteText,
+                    utilityStyles.uppercaseText,
+                    styles.buttonText,
+                  ]}
+                >
+                  Hitta närmsta
+                </ParagraphBold>
+                <ExternalLinkIcon height={20} width={20} fill={colors.white} />
+              </ExternalLink>
+            </>
+          )}
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
