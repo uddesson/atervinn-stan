@@ -1,25 +1,51 @@
-// @flow
+//@flow
 import React, { Component } from 'react';
-import { StyleSheet, SafeAreaView } from 'react-native';
+import {
+  StyleSheet,
+  SafeAreaView,
+  View,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 import MapView, { Marker } from 'react-native-maps';
 import { initialRegion } from '../utils';
-import { utilityStyles, FilterToggler, MarkerImage, colors, GpsIconButton } from '../components/UI';
+import {
+  utilityStyles,
+  FilterToggler,
+  MarkerImage,
+  colors,
+  GpsIconButton,
+} from '../components/UI';
 import { modulePositions } from '../data/positions';
 import { ftiPositions } from '../data/fti-positions';
+import { MapModal } from '../components/UI/MapModal';
 
 type State = {
   isFtiContainerVisible: boolean,
   isModuleVisible: boolean,
+  isModalVisible: boolean,
+  clickedMarker: {
+    locationName: string,
+    sorting: [],
+    locationConfirmed?: boolean,
+    sortingConfirmed?: boolean,
+  },
 };
 
 type Props = {
-  navigation: Object,
+  navigation: NavigationScreenProps,
 };
 
 export class Map extends Component<Props, State> {
   state = {
     isFtiContainerVisible: true,
     isModuleVisible: true,
+    isModalVisible: false,
+    clickedMarker: {
+      locationName: '',
+      sorting: [],
+    },
   };
 
   handleFtiContainerToggling = () => {
@@ -34,8 +60,20 @@ export class Map extends Component<Props, State> {
     });
   };
 
+  handleModal = () => {
+    this.setState({
+      isModalVisible: !this.state.isModalVisible,
+    });
+  };
+
+  handleMarkerInfo = (marker: Object) => {
+    this.setState({
+      clickedMarker: marker,
+    });
+  };
+
   renderModuleMarkers = () => {
-    return modulePositions.map((marker: any) => (
+    return modulePositions.map((marker: Object) => (
       <Marker
         key={marker.address}
         coordinate={{
@@ -43,6 +81,12 @@ export class Map extends Component<Props, State> {
           longitude: marker.lng,
         }}
         title={marker.title}
+        onPress={() => {
+          // save marker obj in state
+          this.handleMarkerInfo(marker);
+          // open modal
+          this.handleModal();
+        }}
       >
         <MarkerImage type={'pin-module'} />
       </Marker>
@@ -50,7 +94,7 @@ export class Map extends Component<Props, State> {
   };
 
   renderFtiMarkers = () => {
-    return ftiPositions.map((marker: any) => (
+    return ftiPositions.map((marker: Object) => (
       <Marker
         key={marker.stationName}
         coordinate={{
@@ -58,6 +102,12 @@ export class Map extends Component<Props, State> {
           longitude: marker.lng,
         }}
         title={marker.address}
+        onPress={() => {
+          // save marker obj in state
+          this.handleMarkerInfo(marker);
+          // open modal
+          this.handleModal();
+        }}
       >
         <MarkerImage type={'pin-fti-container'} />
       </Marker>
@@ -65,7 +115,12 @@ export class Map extends Component<Props, State> {
   };
 
   render() {
-    const { isFtiContainerVisible, isModuleVisible } = this.state;
+    const {
+      isFtiContainerVisible,
+      isModuleVisible,
+      isModalVisible,
+      clickedMarker,
+    } = this.state;
     return (
       <SafeAreaView>
         <MapView
@@ -87,6 +142,13 @@ export class Map extends Component<Props, State> {
           onFtiContainerPress={this.handleFtiContainerToggling}
           onModulePress={this.handleModuleToggling}
         />
+        {isModalVisible ? (
+          <MapModal
+            visible={isModalVisible}
+            onPress={this.handleModal}
+            marker={clickedMarker}
+          />
+        ) : null}
         <GpsIconButton />
       </SafeAreaView>
     );

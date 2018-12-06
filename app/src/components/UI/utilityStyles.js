@@ -18,6 +18,9 @@ export const utilityStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  justifyCenter: {
+    justifyContent: 'center',
+  },
   itemsCenter: {
     alignItems: 'center',
   },

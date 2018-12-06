@@ -222,3 +222,42 @@ export const WarningIcon = (props: Props) => {
     </Svg>
   );
 };
+
+export const CancelIcon = (props: Props) => {
+  const { width, height, fill } = props;
+
+  return (
+    <Svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={fill}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <Line x1="18" y1="6" x2="6" y2="18" />
+      <Line x1="6" y1="6" x2="18" y2="18" />
+    </Svg>
+  );
+};
+
+export const SuccessIcon = (props: Props) => {
+  const { width, height, fill } = props;
+
+  return (
+    <Svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={fill}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <Polyline points="20 6 9 17 4 12" />
+    </Svg>
+  );
+};
