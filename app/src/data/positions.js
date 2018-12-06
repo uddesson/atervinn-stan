@@ -10,8 +10,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -23,8 +23,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -36,8 +36,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -49,8 +49,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -62,8 +62,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -75,8 +75,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -88,8 +88,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -101,8 +101,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -114,8 +114,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -159,8 +159,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -204,8 +204,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -217,8 +217,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -230,8 +230,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
   {
@@ -243,8 +243,8 @@ export const modulePositions = [
     sorting: [
       'plastförpackning',
       'pappersförpackning',
-      'färgat glas',
-      'ofärgat glas',
+      'glasförpackningar',
+      'ovrigt',
     ],
   },
 ];
