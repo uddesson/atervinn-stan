@@ -7,11 +7,14 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 import { utilityStyles } from './utilityStyles';
 import { colors } from './colors';
 import { CancelIcon } from './Icons';
 
-type Props = {};
+type Props = {
+  navigation: NavigationScreenProps,
+};
 
 type State = {
   value: string | null,
@@ -30,6 +33,8 @@ export class SearchInput extends Component<Props, State> {
 
   render() {
     const { value } = this.state;
+    const { navigation } = this.props;
+
     return (
       <View
         style={[
@@ -45,7 +50,12 @@ export class SearchInput extends Component<Props, State> {
           placeholderTextColor={colors.lightGrey}
           style={styles.inputContainer}
         />
-        <CancelIcon width={25} height={25} fill={colors.blue} />
+        <TouchableOpacity
+          style={utilityStyles.alignSelfEnd}
+          onPress={() => navigation.goBack()}
+        >
+          <CancelIcon width={30} height={30} fill={colors.blue} />
+        </TouchableOpacity>
       </View>
     );
   }
