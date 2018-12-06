@@ -10,8 +10,7 @@ type Props = {
   visible: boolean,
   onPress: () => void,
   marker: {
-    address?: string,
-    stationName?: string,
+    locationName: string,
     sorting: [],
     locationConfirmed?: boolean,
     sortingConfirmed?: boolean,
@@ -43,7 +42,7 @@ export const MapModal = (props: Props) => {
             >
               <View>
                 <SubHeading style={utilityStyles.capitalizeText}>
-                  {marker.address || marker.stationName}
+                  {marker.locationName}
                 </SubHeading>
                 {/* fti-positions don't have this flag so we want don't to check this
               if we don't we will get a negative false  */}

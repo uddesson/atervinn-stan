@@ -2,10 +2,10 @@ import React from 'react';
 
 export const ftiPositions = [
   {
-    stationName: 'Abrahamsbergsvägen',
+    locationName: 'Abrahamsbergsvägen',
     lat: 59.332223,
     lng: 17.948369,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -15,10 +15,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Adolfsbergsvägen 13',
+    locationName: 'Adolfsbergsvägen 13',
     lat: 59.358219,
     lng: 17.956068,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -28,10 +28,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Alsnögatan',
+    locationName: 'Alsnögatan',
     lat: 59.312735,
     lng: 18.101793,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -41,10 +41,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Alviksvägen 1, vid Circle-K',
+    locationName: 'Alviksvägen 1, vid Circle-K',
     lat: 59.332763,
     lng: 17.975572,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -54,10 +54,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Anders Frantzens park',
+    locationName: 'Anders Frantzens park',
     lat: 59.311278,
     lng: 18.104487,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -67,10 +67,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Annebodavägen 66',
+    locationName: 'Annebodavägen 66',
     lat: 59.28779,
     lng: 18.02739,
-    location: 'Älvsjö',
+    area: 'Älvsjö',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -80,10 +80,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Artemisgatan, utanför 89:an',
+    locationName: 'Artemisgatan, utanför 89:an',
     lat: 59.354994,
     lng: 18.097574,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -93,10 +93,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Backlöksvägen 22',
+    locationName: 'Backlöksvägen 22',
     lat: 59.392847,
     lng: 17.810403,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -106,10 +106,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Backtimjegränd',
+    locationName: 'Backtimjegränd',
     lat: 59.380322,
     lng: 17.834276,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -119,10 +119,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Basgränd',
+    locationName: 'Basgränd',
     lat: 59.383856,
     lng: 17.865026,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -132,10 +132,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Bergmyntegrän Vändzon',
+    locationName: 'Bergmyntegrän Vändzon',
     lat: 59.390279,
     lng: 17.802263,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -145,10 +145,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Bergslagsvägen',
+    locationName: 'Bergslagsvägen',
     lat: 59.341914,
     lng: 17.924862,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -158,10 +158,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Bergslagsvägen/Vultejusvägen',
+    locationName: 'Bergslagsvägen/Vultejusvägen',
     lat: 59.342852,
     lng: 17.907361,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -171,10 +171,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Bersågränd 1/Åstorpsringen',
+    locationName: 'Bersågränd 1/Åstorpsringen',
     lat: 59.284283,
     lng: 18.097215,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -184,10 +184,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Bjurholmsgatan 16',
+    locationName: 'Bjurholmsgatan 16',
     lat: 59.310093,
     lng: 18.078851,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -197,10 +197,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Bjursätragränd/Lurstigen',
+    locationName: 'Bjursätragränd/Lurstigen',
     lat: 59.256448,
     lng: 18.036285,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -210,10 +210,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Björnmossevägen 5',
+    locationName: 'Björnmossevägen 5',
     lat: 59.237727,
     lng: 17.963489,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -223,10 +223,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Björnsongatan 4',
+    locationName: 'Björnsongatan 4',
     lat: 59.343816,
     lng: 17.886655,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -236,10 +236,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Blommensbergsvägen',
+    locationName: 'Blommensbergsvägen',
     lat: 59.307158,
     lng: 17.996081,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -249,10 +249,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Blåklocksvägen 3',
+    locationName: 'Blåklocksvägen 3',
     lat: 59.367962,
     lng: 17.82092,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -262,10 +262,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Bokbindarvägen/Bäckvägen',
+    locationName: 'Bokbindarvägen/Bäckvägen',
     lat: 59.300184,
     lng: 17.981744,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -275,10 +275,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Bondegatan, Mittemot nr 79',
+    locationName: 'Bondegatan, Mittemot nr 79',
     lat: 59.313165,
     lng: 18.095827,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -288,10 +288,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Borgargatan 6',
+    locationName: 'Borgargatan 6',
     lat: 59.317784,
     lng: 18.034688,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -301,10 +301,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Brantholmsgränd',
+    locationName: 'Brantholmsgränd',
     lat: 59.276796,
     lng: 17.896622,
-    location: 'Skärholmen',
+    area: 'Skärholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -314,10 +314,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Bromma kyrka',
+    locationName: 'Bromma kyrka',
     lat: 59.353723,
     lng: 17.916996,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -327,10 +327,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Brotorpsvägen-Arrendeväg',
+    locationName: 'Brotorpsvägen-Arrendeväg',
     lat: 59.365565,
     lng: 17.916865,
-    location: 'Spånga-Tensta',
+    area: 'Spånga-Tensta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -340,10 +340,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Bägersta Byväg/Sockenvägen',
+    locationName: 'Bägersta Byväg/Sockenvägen',
     lat: 59.288643,
     lng: 18.06062,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -353,10 +353,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Bägerstavägen/Herrgårdsvägen',
+    locationName: 'Bägerstavägen/Herrgårdsvägen',
     lat: 59.28998,
     lng: 18.064688,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -366,10 +366,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Bärbogränd 2',
+    locationName: 'Bärbogränd 2',
     lat: 59.271405,
     lng: 18.042651,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -379,10 +379,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Cervins Väg/Duvbovägen',
+    locationName: 'Cervins Väg/Duvbovägen',
     lat: 59.376248,
     lng: 17.91963,
-    location: 'Spånga-Tensta',
+    area: 'Spånga-Tensta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -392,10 +392,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'COOP Vinsta',
+    locationName: 'COOP Vinsta',
     lat: 59.369428,
     lng: 17.856177,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -405,10 +405,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Dagsverksvägen',
+    locationName: 'Dagsverksvägen',
     lat: 59.377893,
     lng: 17.906606,
-    location: 'Spånga-Tensta',
+    area: 'Spånga-Tensta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -418,10 +418,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Dalagatan',
+    locationName: 'Dalagatan',
     lat: 59.346227,
     lng: 18.04098,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -431,17 +431,17 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Dubbel Tidning',
+    locationName: 'Dubbel Tidning',
     lat: 59.241651,
     lng: 18.086702,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: ['tidning_returpapper'],
   },
   {
-    stationName: 'Dvärglinsgränd',
+    locationName: 'Dvärglinsgränd',
     lat: 59.392574,
     lng: 17.818967,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -451,10 +451,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Ekhagsvägen/Åminnevägen',
+    locationName: 'Ekhagsvägen/Åminnevägen',
     lat: 59.370555,
     lng: 18.053979,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -464,10 +464,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Elsa Brännströms gata',
+    locationName: 'Elsa Brännströms gata',
     lat: 59.287691,
     lng: 17.964113,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -477,10 +477,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Engelbrektsgatan',
+    locationName: 'Engelbrektsgatan',
     lat: 59.338882,
     lng: 18.069837,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -490,10 +490,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Enighetsvägen/vid vändplanen',
+    locationName: 'Enighetsvägen/vid vändplanen',
     lat: 59.361136,
     lng: 17.952449,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -503,10 +503,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Erik Dahlbergsgatan 43',
+    locationName: 'Erik Dahlbergsgatan 43',
     lat: 59.344871,
     lng: 18.09294,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -516,10 +516,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Erik Segersälls vägAspuddens centrum, vid T-banan',
+    locationName: 'Erik Segersälls vägAspuddens centrum, vid T-banan',
     lat: 59.306655,
     lng: 18.000733,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -529,10 +529,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Eriksdalsgatan 23-25',
+    locationName: 'Eriksdalsgatan 23-25',
     lat: 59.306397,
     lng: 18.068316,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -542,10 +542,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Essinge Brogatan 37',
+    locationName: 'Essinge Brogatan 37',
     lat: 59.324973,
     lng: 18.003628,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -555,10 +555,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Essinge Kyrkväg, Nedanför kyrkan',
+    locationName: 'Essinge Kyrkväg, Nedanför kyrkan',
     lat: 59.321339,
     lng: 17.990062,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -568,10 +568,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Fagersjövägen',
+    locationName: 'Fagersjövägen',
     lat: 59.25684,
     lng: 18.07985,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -581,10 +581,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Falkholmsgränd 41',
+    locationName: 'Falkholmsgränd 41',
     lat: 59.279238,
     lng: 17.896619,
-    location: 'Skärholmen',
+    area: 'Skärholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -594,10 +594,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Filipstadbacken 70, Mittemot Larsboda',
+    locationName: 'Filipstadbacken 70, Mittemot Larsboda',
     lat: 59.238324,
     lng: 18.106274,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -607,10 +607,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Fjärdholmsgränd',
+    locationName: 'Fjärdholmsgränd',
     lat: 59.276328,
     lng: 17.886584,
-    location: 'Skärholmen',
+    area: 'Skärholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -620,10 +620,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Folkskolegatan 13',
+    locationName: 'Folkskolegatan 13',
     lat: 59.316731,
     lng: 18.030593,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -633,10 +633,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Folkungagatan 141-143',
+    locationName: 'Folkungagatan 141-143',
     lat: 59.315607,
     lng: 18.092587,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -646,10 +646,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Fredrika Bremers gata 40',
+    locationName: 'Fredrika Bremers gata 40',
     lat: 59.285587,
     lng: 17.973319,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -659,10 +659,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Fregattvägen 29',
+    locationName: 'Fregattvägen 29',
     lat: 59.31412,
     lng: 18.00431,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -672,10 +672,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Frejgatan',
+    locationName: 'Frejgatan',
     lat: 59.347275,
     lng: 18.056467,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -685,10 +685,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Frejgatan, vid bryggarsalen',
+    locationName: 'Frejgatan, vid bryggarsalen',
     lat: 59.345355,
     lng: 18.049429,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -698,10 +698,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Fridhemsgatan 16',
+    locationName: 'Fridhemsgatan 16',
     lat: 59.331191,
     lng: 18.027566,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -711,10 +711,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Frimurarvägen 38',
+    locationName: 'Frimurarvägen 38',
     lat: 59.289428,
     lng: 17.938834,
-    location: 'Skärholmen',
+    area: 'Skärholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -724,10 +724,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Fågelstavägen 1',
+    locationName: 'Fågelstavägen 1',
     lat: 59.270336,
     lng: 18.046322,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -737,10 +737,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Färgarplan, Södermalm',
+    locationName: 'Färgarplan, Södermalm',
     lat: 59.310182,
     lng: 18.095126,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -750,10 +750,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Färnebogatan 66',
+    locationName: 'Färnebogatan 66',
     lat: 59.245808,
     lng: 18.097142,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -763,10 +763,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Gamla Bromstensvägen 88',
+    locationName: 'Gamla Bromstensvägen 88',
     lat: 59.36785,
     lng: 17.926023,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -776,10 +776,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Garagevägen',
+    locationName: 'Garagevägen',
     lat: 59.292615,
     lng: 18.095405,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -789,10 +789,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Gimmerstavägen 2',
+    locationName: 'Gimmerstavägen 2',
     lat: 59.280382,
     lng: 18.034811,
-    location: 'Älvsjö',
+    area: 'Älvsjö',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -802,10 +802,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Glanshammarsgatan 42',
+    locationName: 'Glanshammarsgatan 42',
     lat: 59.26458,
     lng: 18.01013,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -815,10 +815,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Grenljusbacken/Lövholmsvägen',
+    locationName: 'Grenljusbacken/Lövholmsvägen',
     lat: 59.314145,
     lng: 18.014081,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -828,10 +828,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Gröndalsvägen 118',
+    locationName: 'Gröndalsvägen 118',
     lat: 59.314809,
     lng: 17.996819,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -841,10 +841,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Gullmarsvägen 7',
+    locationName: 'Gullmarsvägen 7',
     lat: 59.298743,
     lng: 18.078542,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -854,10 +854,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Gångbro över Roslagsbanan',
+    locationName: 'Gångbro över Roslagsbanan',
     lat: 59.350303,
     lng: 18.064905,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -867,10 +867,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Götaforsvägen/Grycksbovägen vid bensinstation',
+    locationName: 'Götaforsvägen/Grycksbovägen vid bensinstation',
     lat: 59.269206,
     lng: 18.058157,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -880,10 +880,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Götalandsvägen 205',
+    locationName: 'Götalandsvägen 205',
     lat: 59.281121,
     lng: 18.015327,
-    location: 'Älvsjö',
+    area: 'Älvsjö',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -893,10 +893,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Hagsätravägen 119',
+    locationName: 'Hagsätravägen 119',
     lat: 59.261076,
     lng: 18.025826,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -906,10 +906,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Havsörnsvägen 44',
+    locationName: 'Havsörnsvägen 44',
     lat: 59.248524,
     lng: 18.056374,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -919,10 +919,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Heleneborgsgatan',
+    locationName: 'Heleneborgsgatan',
     lat: 59.319493,
     lng: 18.041017,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -932,10 +932,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Hemköps parkering Gråhundsvägen 9',
+    locationName: 'Hemköps parkering Gråhundsvägen 9',
     lat: 59.263076,
     lng: 18.123477,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -945,10 +945,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Herrängsvägen',
+    locationName: 'Herrängsvägen',
     lat: 59.280832,
     lng: 17.960256,
-    location: 'Älvsjö',
+    area: 'Älvsjö',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -958,10 +958,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Hjalmar Söderbergs Väg 14',
+    locationName: 'Hjalmar Söderbergs Väg 14',
     lat: 59.333139,
     lng: 18.001375,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -971,10 +971,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Holmögaddsvägen 1',
+    locationName: 'Holmögaddsvägen 1',
     lat: 59.283148,
     lng: 18.115122,
-    location: 'Skarpnäck',
+    area: 'Skarpnäck',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -984,10 +984,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Hornsgatan 182',
+    locationName: 'Hornsgatan 182',
     lat: 59.314998,
     lng: 18.031927,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -997,10 +997,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Hägerstens allé 5',
+    locationName: 'Hägerstens allé 5',
     lat: 59.305027,
     lng: 17.97625,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1010,10 +1010,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Hägerstensvägen 302',
+    locationName: 'Hägerstensvägen 302',
     lat: 59.300627,
     lng: 17.964064,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1023,10 +1023,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Hägerstensvägen vid T-bana Mälarhöjden',
+    locationName: 'Hägerstensvägen vid T-bana Mälarhöjden',
     lat: 59.301344,
     lng: 17.958303,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1036,10 +1036,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Högbergs gatan/Rosenlundsgatan',
+    locationName: 'Högbergs gatan/Rosenlundsgatan',
     lat: 59.314604,
     lng: 18.057219,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1049,10 +1049,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'ICA Maxi Barkarbystaden/Järfälla',
+    locationName: 'ICA Maxi Barkarbystaden/Järfälla',
     lat: 59.415075,
     lng: 17.864054,
-    location: 'Barkarbystaden/Järfälla',
+    area: 'Barkarbystaden/Järfälla',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1062,10 +1062,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Igeldammsgatan, Mittemot nr 42',
+    locationName: 'Igeldammsgatan, Mittemot nr 42',
     lat: 59.338344,
     lng: 18.022341,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1075,10 +1075,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Igeldammsgatan/Flemingatan',
+    locationName: 'Igeldammsgatan/Flemingatan',
     lat: 59.335746,
     lng: 18.025909,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1088,10 +1088,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Jyllandsgatan',
+    locationName: 'Jyllandsgatan',
     lat: 59.402342,
     lng: 17.933102,
-    location: 'Rinkeby-Kista',
+    area: 'Rinkeby-Kista',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1101,10 +1101,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Jämtlandsgatan/Håsjögränd',
+    locationName: 'Jämtlandsgatan/Håsjögränd',
     lat: 59.356086,
     lng: 17.882272,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1114,10 +1114,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Kampementsgatan 2',
+    locationName: 'Kampementsgatan 2',
     lat: 59.346439,
     lng: 18.102301,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1127,10 +1127,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Kapellgränd, Mittemot nr 15',
+    locationName: 'Kapellgränd, Mittemot nr 15',
     lat: 59.316027,
     lng: 18.074984,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1140,10 +1140,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Karlbergsv./Västmannag. (Odenplan)',
+    locationName: 'Karlbergsv./Västmannag. (Odenplan)',
     lat: 59.342975,
     lng: 18.045925,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1153,10 +1153,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Karlbergsvägen/Norra Stationsgatan',
+    locationName: 'Karlbergsvägen/Norra Stationsgatan',
     lat: 59.343341,
     lng: 18.027236,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1166,10 +1166,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Karlskronavägen 2',
+    locationName: 'Karlskronavägen 2',
     lat: 59.293333,
     lng: 18.114477,
-    location: 'Skarpnäck',
+    area: 'Skarpnäck',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1179,10 +1179,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Karossvägen/Vagnvägen',
+    locationName: 'Karossvägen/Vagnvägen',
     lat: 59.286935,
     lng: 17.980075,
-    location: 'Älvsjö',
+    area: 'Älvsjö',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1192,10 +1192,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Kirunagatan 29',
+    locationName: 'Kirunagatan 29',
     lat: 59.365419,
     lng: 17.861672,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1205,10 +1205,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Kistvägen/Herrhagsvägen Gubbängen',
+    locationName: 'Kistvägen/Herrhagsvägen Gubbängen',
     lat: 59.264499,
     lng: 18.080881,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1218,10 +1218,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Klevgränd, nedanför Mosebacke Terrass',
+    locationName: 'Klevgränd, nedanför Mosebacke Terrass',
     lat: 59.318325,
     lng: 18.075038,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1231,10 +1231,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Kronofogdevägen',
+    locationName: 'Kronofogdevägen',
     lat: 59.382186,
     lng: 17.896042,
-    location: 'Spånga-Tensta',
+    area: 'Spånga-Tensta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1244,10 +1244,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Krällingegränd 24',
+    locationName: 'Krällingegränd 24',
     lat: 59.395117,
     lng: 17.916214,
-    location: 'Spånga-Tensta',
+    area: 'Spånga-Tensta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1257,10 +1257,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Kungsholms Strand, bredvid bron',
+    locationName: 'Kungsholms Strand, bredvid bron',
     lat: 59.336888,
     lng: 18.034016,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1270,10 +1270,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Kungsklippan 6',
+    locationName: 'Kungsklippan 6',
     lat: 59.330086,
     lng: 18.048782,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1283,10 +1283,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Kungstensgatan/Drottninggatan',
+    locationName: 'Kungstensgatan/Drottninggatan',
     lat: 59.340499,
     lng: 18.054232,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1296,10 +1296,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Kvarnbacksvägen 64',
+    locationName: 'Kvarnbacksvägen 64',
     lat: 59.342165,
     lng: 17.949856,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1309,10 +1309,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Kvarnhagsgatan 54',
+    locationName: 'Kvarnhagsgatan 54',
     lat: 59.366469,
     lng: 17.850276,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1322,10 +1322,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Liljeholmsstranden',
+    locationName: 'Liljeholmsstranden',
     lat: 59.313989,
     lng: 18.0277,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1335,10 +1335,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Lindarängsvägen vid Tullvaktsvägen',
+    locationName: 'Lindarängsvägen vid Tullvaktsvägen',
     lat: 59.339538,
     lng: 18.117156,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1348,10 +1348,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Ljusnevägen, mittemot nr 15',
+    locationName: 'Ljusnevägen, mittemot nr 15',
     lat: 59.27716,
     lng: 18.141633,
-    location: 'Skarpnäck',
+    area: 'Skarpnäck',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1361,10 +1361,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Loviselundsvägen',
+    locationName: 'Loviselundsvägen',
     lat: 59.369427,
     lng: 17.835036,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1374,10 +1374,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Ludvigsbergsgatan 17',
+    locationName: 'Ludvigsbergsgatan 17',
     lat: 59.319797,
     lng: 18.054476,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1387,10 +1387,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Lugntorpsvägen 57',
+    locationName: 'Lugntorpsvägen 57',
     lat: 59.294728,
     lng: 17.964355,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1400,10 +1400,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Luntmakargatan 28',
+    locationName: 'Luntmakargatan 28',
     lat: 59.338221,
     lng: 18.062257,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1413,10 +1413,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Luntmakargatan 80/Rehnsgatan',
+    locationName: 'Luntmakargatan 80/Rehnsgatan',
     lat: 59.34272,
     lng: 18.058525,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1426,10 +1426,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Lusuddsvägen 4',
+    locationName: 'Lusuddsvägen 4',
     lat: 59.315958,
     lng: 18.015068,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1439,10 +1439,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Lyckselevägen/Kirunagatan',
+    locationName: 'Lyckselevägen/Kirunagatan',
     lat: 59.36544,
     lng: 17.861819,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1452,10 +1452,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Långsjövägen/ Pukslagargatan',
+    locationName: 'Långsjövägen/ Pukslagargatan',
     lat: 59.273485,
     lng: 17.994688,
-    location: 'Älvsjö',
+    area: 'Älvsjö',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1465,10 +1465,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Lövsätragränd/Björksätravägen',
+    locationName: 'Lövsätragränd/Björksätravägen',
     lat: 59.287216,
     lng: 17.913585,
-    location: 'Skärholmen',
+    area: 'Skärholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1478,10 +1478,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Malmövägen; mittemot nr 59',
+    locationName: 'Malmövägen; mittemot nr 59',
     lat: 59.289717,
     lng: 18.115841,
-    location: 'Skarpnäck',
+    area: 'Skarpnäck',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1491,10 +1491,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Maltesholmsvägen 85',
+    locationName: 'Maltesholmsvägen 85',
     lat: 59.365543,
     lng: 17.842952,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1504,10 +1504,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Margeretelundsvägen',
+    locationName: 'Margeretelundsvägen',
     lat: 59.337669,
     lng: 17.982677,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1517,10 +1517,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Margeretelundsvägen 10-12',
+    locationName: 'Margeretelundsvägen 10-12',
     lat: 59.334765,
     lng: 17.987241,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1530,10 +1530,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Mariehamnsgatan 11-13',
+    locationName: 'Mariehamnsgatan 11-13',
     lat: 59.415229,
     lng: 17.911361,
-    location: 'Rinkeby-Kista',
+    area: 'Rinkeby-Kista',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1543,10 +1543,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Mellanvägen/Sockenvägen',
+    locationName: 'Mellanvägen/Sockenvägen',
     lat: 59.281276,
     lng: 18.080728,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1556,10 +1556,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Messeniusgatan/ Stagneliusvägen',
+    locationName: 'Messeniusgatan/ Stagneliusvägen',
     lat: 59.330238,
     lng: 17.999901,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1569,10 +1569,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Multrågatan 142',
+    locationName: 'Multrågatan 142',
     lat: 59.360216,
     lng: 17.878509,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1582,10 +1582,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Mälartorget 17',
+    locationName: 'Mälartorget 17',
     lat: 59.322893,
     lng: 18.069114,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1595,10 +1595,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Narviksgatan 11',
+    locationName: 'Narviksgatan 11',
     lat: 59.41293,
     lng: 17.923355,
-    location: 'Rinkeby-Kista',
+    area: 'Rinkeby-Kista',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1608,10 +1608,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Nitvägen 26',
+    locationName: 'Nitvägen 26',
     lat: 59.291708,
     lng: 17.991289,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1621,10 +1621,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Norrmälarstrand mittemot nr 20',
+    locationName: 'Norrmälarstrand mittemot nr 20',
     lat: 59.326655,
     lng: 18.046386,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1634,10 +1634,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Nybrogatan 57',
+    locationName: 'Nybrogatan 57',
     lat: 59.338263,
     lng: 18.078981,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1647,10 +1647,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Olaus Magnus väg 36',
+    locationName: 'Olaus Magnus väg 36',
     lat: 59.297733,
     lng: 18.094161,
-    location: 'Skarpnäck',
+    area: 'Skarpnäck',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1660,10 +1660,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Ormängsgatan 16',
+    locationName: 'Ormängsgatan 16',
     lat: 59.363971,
     lng: 17.842065,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1673,10 +1673,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Pastellvägen 1',
+    locationName: 'Pastellvägen 1',
     lat: 59.294152,
     lng: 18.086354,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1686,10 +1686,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Pepparvägen',
+    locationName: 'Pepparvägen',
     lat: 59.2527,
     lng: 18.082826,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1699,10 +1699,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Per Ekströms väg 5',
+    locationName: 'Per Ekströms väg 5',
     lat: 59.345314,
     lng: 17.894969,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1712,10 +1712,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Perstorpsvägen 75',
+    locationName: 'Perstorpsvägen 75',
     lat: 59.255918,
     lng: 18.106811,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1725,10 +1725,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Pipersgatan 41',
+    locationName: 'Pipersgatan 41',
     lat: 59.333329,
     lng: 18.047458,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1738,10 +1738,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Pokalvägen',
+    locationName: 'Pokalvägen',
     lat: 59.31809,
     lng: 18.022851,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1751,10 +1751,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Polhemsgatan 23 mitt emot polishus',
+    locationName: 'Polhemsgatan 23 mitt emot polishus',
     lat: 59.331096,
     lng: 18.036797,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1764,10 +1764,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Polhemsgatan/P O Hallmans gata',
+    locationName: 'Polhemsgatan/P O Hallmans gata',
     lat: 59.334677,
     lng: 18.038843,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1777,10 +1777,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Pontonjärgatan 19',
+    locationName: 'Pontonjärgatan 19',
     lat: 59.328994,
     lng: 18.032909,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1790,10 +1790,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Ragvaldsgatan 9',
+    locationName: 'Ragvaldsgatan 9',
     lat: 59.31871,
     lng: 18.068188,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1803,10 +1803,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Ramvägen 23',
+    locationName: 'Ramvägen 23',
     lat: 59.263725,
     lng: 18.089686,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1816,10 +1816,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Renstiernas Gata/Skånegatan',
+    locationName: 'Renstiernas Gata/Skånegatan',
     lat: 59.312824,
     lng: 18.084946,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1829,10 +1829,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Ringvägen 163',
+    locationName: 'Ringvägen 163',
     lat: 59.31036,
     lng: 18.087256,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1842,10 +1842,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Ripsavägen 34',
+    locationName: 'Ripsavägen 34',
     lat: 59.266888,
     lng: 18.0316,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1855,10 +1855,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Runebergsgatan 1',
+    locationName: 'Runebergsgatan 1',
     lat: 59.340869,
     lng: 18.066169,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1868,10 +1868,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Rusthållarvägen, vid nr 38',
+    locationName: 'Rusthållarvägen, vid nr 38',
     lat: 59.274952,
     lng: 18.130919,
-    location: 'Skarpnäck',
+    area: 'Skarpnäck',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1881,10 +1881,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Rusthållarvägen-Fogdevägen',
+    locationName: 'Rusthållarvägen-Fogdevägen',
     lat: 59.276874,
     lng: 18.12709,
-    location: 'Skarpnäck',
+    area: 'Skarpnäck',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1894,10 +1894,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Rågsveds Skolgränd 6',
+    locationName: 'Rågsveds Skolgränd 6',
     lat: 59.257102,
     lng: 18.024645,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1907,10 +1907,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Rålambsvägen 30, Mittemot Marieberg',
+    locationName: 'Rålambsvägen 30, Mittemot Marieberg',
     lat: 59.328466,
     lng: 18.010519,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1920,10 +1920,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Rättar Vigs väg 93',
+    locationName: 'Rättar Vigs väg 93',
     lat: 59.371532,
     lng: 17.88555,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1933,10 +1933,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Rödkindavägen 18',
+    locationName: 'Rödkindavägen 18',
     lat: 59.23604,
     lng: 18.086964,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1946,10 +1946,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Rörstrandsgatan 32',
+    locationName: 'Rörstrandsgatan 32',
     lat: 59.340772,
     lng: 18.029544,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1959,10 +1959,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'S:t Göransgatan 152',
+    locationName: 'S:t Göransgatan 152',
     lat: 59.338166,
     lng: 18.014585,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1972,10 +1972,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sandjärdsgatan, mittemot Årsta Värdshus',
+    locationName: 'Sandjärdsgatan, mittemot Årsta Värdshus',
     lat: 59.295331,
     lng: 18.043652,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1985,10 +1985,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sandviksvägen/Lövsta vägen',
+    locationName: 'Sandviksvägen/Lövsta vägen',
     lat: 59.378308,
     lng: 17.816032,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -1998,10 +1998,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Segeltorpsvägen 37',
+    locationName: 'Segeltorpsvägen 37',
     lat: 59.272945,
     lng: 17.961644,
-    location: 'Älvsjö',
+    area: 'Älvsjö',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2011,10 +2011,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Siljansvägen 75',
+    locationName: 'Siljansvägen 75',
     lat: 59.299375,
     lng: 18.041223,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2024,31 +2024,31 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sandhamnsgatan 4',
+    locationName: 'Sandhamnsgatan 4',
     lat: 59.347226,
     lng: 18.102734,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: ['tidning_returpapper'],
   },
   {
-    stationName: 'Abiskovägen 30',
+    locationName: 'Abiskovägen 30',
     lat: 59.365558,
     lng: 17.86667,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: ['tidning_returpapper'],
   },
   {
-    stationName: 'Fågelstavägen 8',
+    locationName: 'Fågelstavägen 8',
     lat: 59.27031,
     lng: 18.046306,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: ['tidning_returpapper'],
   },
   {
-    stationName: 'Skebokvarnsvägen 159',
+    locationName: 'Skebokvarnsvägen 159',
     lat: 59.266755,
     lng: 18.036339,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2058,10 +2058,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Skebokvarnsvägen 337',
+    locationName: 'Skebokvarnsvägen 337',
     lat: 59.262813,
     lng: 18.040592,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2071,10 +2071,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Skrubba koloniområde',
+    locationName: 'Skrubba koloniområde',
     lat: 59.325369,
     lng: 18.076084,
-    location: 'Skarpnäck',
+    area: 'Skarpnäck',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2084,10 +2084,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Skälderviksplan 3',
+    locationName: 'Skälderviksplan 3',
     lat: 59.298751,
     lng: 18.033667,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2097,10 +2097,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sköndalsvägen 82-86',
+    locationName: 'Sköndalsvägen 82-86',
     lat: 59.254794,
     lng: 18.114557,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2110,10 +2110,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sköntorpsvägen 18',
+    locationName: 'Sköntorpsvägen 18',
     lat: 59.298236,
     lng: 18.066612,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2123,10 +2123,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Skönviksvägen/Munksjövägen',
+    locationName: 'Skönviksvägen/Munksjövägen',
     lat: 59.274739,
     lng: 18.058385,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2136,10 +2136,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Snöripsvägen, vid dagis och Thaikiosk',
+    locationName: 'Snöripsvägen, vid dagis och Thaikiosk',
     lat: 59.272874,
     lng: 17.977973,
-    location: 'Älvsjö',
+    area: 'Älvsjö',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2149,10 +2149,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Solhems Hagväg 8',
+    locationName: 'Solhems Hagväg 8',
     lat: 59.386646,
     lng: 17.902924,
-    location: 'Spånga-Tensta',
+    area: 'Spånga-Tensta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2162,10 +2162,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Solleftegatan',
+    locationName: 'Solleftegatan',
     lat: 59.357984,
     lng: 17.888614,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2175,10 +2175,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sparbanksvägen, vid Mellanbergsvägen',
+    locationName: 'Sparbanksvägen, vid Mellanbergsvägen',
     lat: 59.29274,
     lng: 17.984919,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2188,10 +2188,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sparreholmsvägen/vid Tussmötesvägen',
+    locationName: 'Sparreholmsvägen/vid Tussmötesvägen',
     lat: 59.283097,
     lng: 18.042818,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2201,10 +2201,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Spångavägen 353',
+    locationName: 'Spångavägen 353',
     lat: 59.373256,
     lng: 17.900456,
-    location: 'Spånga-Tensta',
+    area: 'Spånga-Tensta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2214,10 +2214,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Spångavägen/Vinbärsvägen Eneby',
+    locationName: 'Spångavägen/Vinbärsvägen Eneby',
     lat: 59.361562,
     lng: 17.905338,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2227,10 +2227,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Stadshagsvägen 14',
+    locationName: 'Stadshagsvägen 14',
     lat: 59.336448,
     lng: 18.021324,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2240,10 +2240,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vinstavägen',
+    locationName: 'Vinstavägen',
     lat: 59.380539,
     lng: 17.885086,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2253,10 +2253,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Stenkilsgatan',
+    locationName: 'Stenkilsgatan',
     lat: 59.307958,
     lng: 17.989233,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2266,10 +2266,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Stenkullavägen/Essingestråket',
+    locationName: 'Stenkullavägen/Essingestråket',
     lat: 59.318568,
     lng: 17.990031,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2279,10 +2279,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Stjärnsundsgatan/Glanshammarsgatan',
+    locationName: 'Stjärnsundsgatan/Glanshammarsgatan',
     lat: 59.262086,
     lng: 18.00283,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2292,10 +2292,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Stockholmsvägen 3',
+    locationName: 'Stockholmsvägen 3',
     lat: 59.286068,
     lng: 18.087396,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2305,10 +2305,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Storforsplan Larsbodavägen',
+    locationName: 'Storforsplan Larsbodavägen',
     lat: 59.24117,
     lng: 18.094251,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2318,10 +2318,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Strandvägen',
+    locationName: 'Strandvägen',
     lat: 59.331481,
     lng: 18.089581,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2331,10 +2331,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Studentbacken 2',
+    locationName: 'Studentbacken 2',
     lat: 59.348544,
     lng: 18.095725,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2344,10 +2344,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sundbyvägen',
+    locationName: 'Sundbyvägen',
     lat: 59.363783,
     lng: 17.904167,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2357,10 +2357,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Svartlösavägen/Strandängsstigen',
+    locationName: 'Svartlösavägen/Strandängsstigen',
     lat: 59.265828,
     lng: 17.976289,
-    location: 'Älvsjö',
+    area: 'Älvsjö',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2370,10 +2370,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sveavägen 143',
+    locationName: 'Sveavägen 143',
     lat: 59.349877,
     lng: 18.048569,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2383,10 +2383,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sågverksgatan vid Korsnäsvägen',
+    locationName: 'Sågverksgatan vid Korsnäsvägen',
     lat: 59.277334,
     lng: 18.048126,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2396,10 +2396,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sätra Gårdsväg',
+    locationName: 'Sätra Gårdsväg',
     lat: 59.288062,
     lng: 17.912389,
-    location: 'Skärholmen',
+    area: 'Skärholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2409,10 +2409,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sätra Torg',
+    locationName: 'Sätra Torg',
     lat: 59.284846,
     lng: 17.923583,
-    location: 'Skärholmen',
+    area: 'Skärholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2422,10 +2422,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Södermannagatan 2',
+    locationName: 'Södermannagatan 2',
     lat: 59.315619,
     lng: 18.079353,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2435,10 +2435,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Sörgårdsvägen/Tenorgränd',
+    locationName: 'Sörgårdsvägen/Tenorgränd',
     lat: 59.383265,
     lng: 17.858663,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2448,10 +2448,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Tackjärnsvägen 6',
+    locationName: 'Tackjärnsvägen 6',
     lat: 59.345235,
     lng: 17.971696,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2461,10 +2461,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Tallkrogsvägen 41',
+    locationName: 'Tallkrogsvägen 41',
     lat: 59.274578,
     lng: 18.091538,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2474,10 +2474,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Tankebyggarbacken',
+    locationName: 'Tankebyggarbacken',
     lat: 59.290878,
     lng: 17.93058,
-    location: 'Skärholmen',
+    area: 'Skärholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2487,10 +2487,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Tantogatan 12',
+    locationName: 'Tantogatan 12',
     lat: 59.311459,
     lng: 18.051973,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2500,10 +2500,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Tegelbruksvägen 17',
+    locationName: 'Tegelbruksvägen 17',
     lat: 59.302832,
     lng: 18.012057,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2513,10 +2513,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Tegnérgatan 27/Sveavägen',
+    locationName: 'Tegnérgatan 27/Sveavägen',
     lat: 59.339604,
     lng: 18.060189,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2526,10 +2526,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Tellusborgsvägen 53',
+    locationName: 'Tellusborgsvägen 53',
     lat: 59.301783,
     lng: 18.005115,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2539,10 +2539,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Thorildsplans gymnasium',
+    locationName: 'Thorildsplans gymnasium',
     lat: 59.332708,
     lng: 18.011971,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2552,10 +2552,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Timmermansgatan 27',
+    locationName: 'Timmermansgatan 27',
     lat: 59.316943,
     lng: 18.061023,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2565,10 +2565,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Tjurbergsgatan 23-25 på torget',
+    locationName: 'Tjurbergsgatan 23-25 på torget',
     lat: 59.311155,
     lng: 18.072793,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2578,10 +2578,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Tomtebogatan',
+    locationName: 'Tomtebogatan',
     lat: 59.341307,
     lng: 18.035703,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2591,10 +2591,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Torkel Knutssonsgatan',
+    locationName: 'Torkel Knutssonsgatan',
     lat: 59.319002,
     lng: 18.056525,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2604,10 +2604,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Trollesundsvägen 63',
+    locationName: 'Trollesundsvägen 63',
     lat: 59.263297,
     lng: 18.051913,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2617,10 +2617,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Trollesundsvägen/Skeppstavägen',
+    locationName: 'Trollesundsvägen/Skeppstavägen',
     lat: 59.266296,
     lng: 18.056123,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2630,10 +2630,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Trädskolevägen (mitt emot nr 17 i Johanneshov)',
+    locationName: 'Trädskolevägen (mitt emot nr 17 i Johanneshov)',
     lat: 59.287661,
     lng: 18.080737,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2643,10 +2643,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Tussmötevägen/Bandhagsvägen',
+    locationName: 'Tussmötevägen/Bandhagsvägen',
     lat: 59.279986,
     lng: 18.056535,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2656,10 +2656,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Tättorpsvägen/Pilotgatan',
+    locationName: 'Tättorpsvägen/Pilotgatan',
     lat: 59.267234,
     lng: 18.139363,
-    location: 'Skarpnäck',
+    area: 'Skarpnäck',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2669,10 +2669,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Ugglemossevägen 61-65',
+    locationName: 'Ugglemossevägen 61-65',
     lat: 59.293432,
     lng: 17.946694,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2682,10 +2682,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Upplandsgatan',
+    locationName: 'Upplandsgatan',
     lat: 59.340157,
     lng: 18.051175,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2695,10 +2695,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Upplandsgatan 1',
+    locationName: 'Upplandsgatan 1',
     lat: 59.33595,
     lng: 18.055272,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2708,10 +2708,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Valhallavägen 16',
+    locationName: 'Valhallavägen 16',
     lat: 59.349065,
     lng: 18.062207,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2721,10 +2721,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Valhallavägen/Oxenstiernsgatan',
+    locationName: 'Valhallavägen/Oxenstiernsgatan',
     lat: 59.337624,
     lng: 18.103632,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2734,10 +2734,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Valla Torg 63',
+    locationName: 'Valla Torg 63',
     lat: 59.293616,
     lng: 18.050355,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2747,10 +2747,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vantörsvägen',
+    locationName: 'Vantörsvägen',
     lat: 59.276007,
     lng: 17.982258,
-    location: 'Älvsjö',
+    area: 'Älvsjö',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2760,10 +2760,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Varvsgatan (mittemot nr 21)',
+    locationName: 'Varvsgatan (mittemot nr 21)',
     lat: 59.316945,
     lng: 18.040008,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2773,10 +2773,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vejlegatan Kista C',
+    locationName: 'Vejlegatan Kista C',
     lat: 59.401594,
     lng: 17.943937,
-    location: 'Rinkeby-Kista',
+    area: 'Rinkeby-Kista',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2786,10 +2786,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Wennerbergsgatan 9, Vändzon',
+    locationName: 'Wennerbergsgatan 9, Vändzon',
     lat: 59.326926,
     lng: 18.013131,
-    location: 'Kungsholmen',
+    area: 'Kungsholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2799,10 +2799,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vid butiken Ekodirekt',
+    locationName: 'Vid butiken Ekodirekt',
     lat: 59.279756,
     lng: 18.108714,
-    location: 'Skarpnäck',
+    area: 'Skarpnäck',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2812,10 +2812,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vidholmsbackarna 102/Riddersviksvägen',
+    locationName: 'Vidholmsbackarna 102/Riddersviksvägen',
     lat: 59.379955,
     lng: 17.803236,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2825,10 +2825,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vidängsvägen',
+    locationName: 'Vidängsvägen',
     lat: 59.336856,
     lng: 17.979121,
-    location: 'Bromma',
+    area: 'Bromma',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2838,10 +2838,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vikingagatan',
+    locationName: 'Vikingagatan',
     lat: 59.343482,
     lng: 18.033827,
-    location: 'Norrmalm',
+    area: 'Norrmalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2851,10 +2851,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Villmanstrandsgatan/Ainogången',
+    locationName: 'Villmanstrandsgatan/Ainogången',
     lat: 59.413478,
     lng: 17.917145,
-    location: 'Rinkeby-Kista',
+    area: 'Rinkeby-Kista',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2864,10 +2864,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Willy Brandts Park/Fotbollsplanen',
+    locationName: 'Willy Brandts Park/Fotbollsplanen',
     lat: 59.295372,
     lng: 18.10748,
-    location: 'Skarpnäck',
+    area: 'Skarpnäck',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2877,10 +2877,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vingåkersplan, vid fotbollsplanen',
+    locationName: 'Vingåkersplan, vid fotbollsplanen',
     lat: 59.275282,
     lng: 18.0293,
-    location: 'Älvsjö',
+    area: 'Älvsjö',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2890,10 +2890,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vinstavägen/Sörgårdsvägen',
+    locationName: 'Vinstavägen/Sörgårdsvägen',
     lat: 59.37599,
     lng: 17.874302,
-    location: 'Spånga-Tensta',
+    area: 'Spånga-Tensta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2903,10 +2903,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vintrosagatan/Olshammarsgatan',
+    locationName: 'Vintrosagatan/Olshammarsgatan',
     lat: 59.261987,
     lng: 18.018061,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2916,10 +2916,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vårbergsvägen 135',
+    locationName: 'Vårbergsvägen 135',
     lat: 59.277311,
     lng: 17.878798,
-    location: 'Skärholmen',
+    area: 'Skärholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2929,10 +2929,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vällingbyvägen / Tornedalsgatan',
+    locationName: 'Vällingbyvägen / Tornedalsgatan',
     lat: 59.366255,
     lng: 17.883392,
-    location: 'Hässelby-Vällingby',
+    area: 'Hässelby-Vällingby',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2942,10 +2942,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Väpnargatan',
+    locationName: 'Väpnargatan',
     lat: 59.332778,
     lng: 18.078261,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2955,10 +2955,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Värmlandsvägen snett emot bollplan',
+    locationName: 'Värmlandsvägen snett emot bollplan',
     lat: 59.247786,
     lng: 18.084878,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2968,10 +2968,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Värmlandsvägen, mitt emot 410',
+    locationName: 'Värmlandsvägen, mitt emot 410',
     lat: 59.244743,
     lng: 18.078653,
-    location: 'Farsta',
+    area: 'Farsta',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2981,10 +2981,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Västertorpsvägen/ Broddgränd',
+    locationName: 'Västertorpsvägen/ Broddgränd',
     lat: 59.292051,
     lng: 17.977941,
-    location: 'Hägersten-Liljeholmen',
+    area: 'Hägersten-Liljeholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -2994,10 +2994,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Västgötagatan 5',
+    locationName: 'Västgötagatan 5',
     lat: 59.313192,
     lng: 18.071469,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -3007,10 +3007,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Vättersvägen; efter Bolmensvägen',
+    locationName: 'Vättersvägen; efter Bolmensvägen',
     lat: 59.295242,
     lng: 18.058831,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -3020,10 +3020,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Zinkensdamms IP, kiosken',
+    locationName: 'Zinkensdamms IP, kiosken',
     lat: 59.31642,
     lng: 18.050923,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -3033,10 +3033,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Ålgrytevägen 90',
+    locationName: 'Ålgrytevägen 90',
     lat: 59.301275,
     lng: 17.936295,
-    location: 'Skärholmen',
+    area: 'Skärholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -3046,10 +3046,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Åmänningevägen; vid tvärbanans station',
+    locationName: 'Åmänningevägen; vid tvärbanans station',
     lat: 59.296557,
     lng: 18.040427,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -3059,10 +3059,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Åsögatan 113-121',
+    locationName: 'Åsögatan 113-121',
     lat: 59.313432,
     lng: 18.074638,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -3072,10 +3072,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Älvsborgsgatan 6',
+    locationName: 'Älvsborgsgatan 6',
     lat: 59.308994,
     lng: 18.073144,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -3085,10 +3085,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Älvsjövägen 90',
+    locationName: 'Älvsjövägen 90',
     lat: 59.285056,
     lng: 17.993259,
-    location: 'Älvsjö',
+    area: 'Älvsjö',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -3098,10 +3098,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Ängsholmsgränd, bredvid lekplatsen',
+    locationName: 'Ängsholmsgränd, bredvid lekplatsen',
     lat: 59.275321,
     lng: 17.879727,
-    location: 'Skärholmen',
+    area: 'Skärholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -3111,10 +3111,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Ängsholmsgränd; vid vändplanen',
+    locationName: 'Ängsholmsgränd; vid vändplanen',
     lat: 59.275412,
     lng: 17.882989,
-    location: 'Skärholmen',
+    area: 'Skärholmen',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -3124,10 +3124,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Östbergabackarna, infarten från Årstafältet',
+    locationName: 'Östbergabackarna, infarten från Årstafältet',
     lat: 59.288687,
     lng: 18.037305,
-    location: 'Enskede-Årsta-Vantör',
+    area: 'Enskede-Årsta-Vantör',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -3137,10 +3137,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Östermalmsgatan 88',
+    locationName: 'Östermalmsgatan 88',
     lat: 59.339894,
     lng: 18.087106,
-    location: 'Östermalm',
+    area: 'Östermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',
@@ -3150,10 +3150,10 @@ export const ftiPositions = [
     ],
   },
   {
-    stationName: 'Östgötagatan, vid nr 97',
+    locationName: 'Östgötagatan, vid nr 97',
     lat: 59.306281,
     lng: 18.081095,
-    location: 'Södermalm',
+    area: 'Södermalm',
     sorting: [
       'glasförpackningar',
       'pappersförpackning',

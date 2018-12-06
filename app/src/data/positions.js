@@ -2,7 +2,7 @@ import React from 'react';
 
 export const modulePositions = [
   {
-    address: 'sätrastrandsbadet',
+    locationName: 'sätrastrandsbadet',
     lat: 59.285673,
     lng: 17.893287,
     locationConfirmed: true,
@@ -15,7 +15,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'odenplan',
+    locationName: 'odenplan',
     lat: 59.343329,
     lng: 18.050498,
     locationConfirmed: true,
@@ -28,7 +28,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'rörstrandsgatan',
+    locationName: 'rörstrandsgatan',
     lat: 59.340398,
     lng: 18.031643,
     locationConfirmed: true,
@@ -41,7 +41,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'vanadislunden',
+    locationName: 'vanadislunden',
     lat: 59.348332,
     lng: 18.054233,
     locationConfirmed: true,
@@ -54,7 +54,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'nytorget',
+    locationName: 'nytorget',
     lat: 59.312262,
     lng: 18.083158,
     locationConfirmed: true,
@@ -67,7 +67,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'hökarängsbadet',
+    locationName: 'hökarängsbadet',
     lat: 18.107582,
     lng: 59.246874,
     locationConfirmed: true,
@@ -80,7 +80,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'hornsbergs strand',
+    locationName: 'hornsbergs strand',
     lat: 59.339924,
     lng: 18.005062,
     locationConfirmed: true,
@@ -93,7 +93,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'sjövikstorget',
+    locationName: 'sjövikstorget',
     lat: 59.308275,
     lng: 18.029648,
     locationConfirmed: true,
@@ -106,7 +106,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'trekanten',
+    locationName: 'trekanten',
     lat: 59.311022,
     lng: 18.021919,
     locationConfirmed: true,
@@ -119,7 +119,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'aspudden',
+    locationName: 'aspudden',
     lat: 59.308615,
     lng: 17.995335,
     locationConfirmed: true,
@@ -127,7 +127,7 @@ export const modulePositions = [
     sorting: [],
   },
   {
-    address: 'lugnet',
+    locationName: 'lugnet',
     lat: 59.294426,
     lng: 17.970653,
     locationConfirmed: true,
@@ -135,7 +135,7 @@ export const modulePositions = [
     sorting: [],
   },
   {
-    address: 'sannadalsparken',
+    locationName: 'sannadalsparken',
     lat: 59.315508,
     lng: 18.00924,
     locationConfirmed: true,
@@ -143,7 +143,7 @@ export const modulePositions = [
     sorting: [],
   },
   {
-    address: 'parkleken vippan',
+    locationName: 'parkleken vippan',
     lat: 59.286872,
     lng: 17.970455,
     locationConfirmed: true,
@@ -151,7 +151,7 @@ export const modulePositions = [
     sorting: [],
   },
   {
-    address: 'vinterviken',
+    locationName: 'vinterviken',
     lat: 59.311537,
     lng: 17.982034,
     locationConfirmed: true,
@@ -164,7 +164,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'ängby camping',
+    locationName: 'ängby camping',
     lat: 59.33772,
     lng: 17.901067,
     locationConfirmed: false,
@@ -172,7 +172,7 @@ export const modulePositions = [
     sorting: [],
   },
   {
-    address: 'raul wallenbergs torg',
+    locationName: 'raul wallenbergs torg',
     lat: 59.332182,
     lng: 18.0757,
     locationConfirmed: false,
@@ -180,7 +180,7 @@ export const modulePositions = [
     sorting: [],
   },
   {
-    address: 'strömgatan',
+    locationName: 'strömgatan',
     lat: 59.32894,
     lng: 18.068406,
     locationConfirmed: false,
@@ -188,7 +188,7 @@ export const modulePositions = [
     sorting: [],
   },
   {
-    address: 'tegelbacken',
+    locationName: 'tegelbacken',
     lat: 59.328588,
     lng: 18.061473,
     locationConfirmed: false,
@@ -196,7 +196,7 @@ export const modulePositions = [
     sorting: [],
   },
   {
-    address: 'flatenvägen/kasbyvägen',
+    locationName: 'flatenvägen/kasbyvägen',
     lat: 59.260424,
     lng: 18.158637,
     locationConfirmed: false,
@@ -209,7 +209,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'hammarby kaj',
+    locationName: 'hammarby kaj',
     lat: 59.3048,
     lng: 18.088393,
     locationConfirmed: false,
@@ -222,7 +222,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'skeppsbrokajen',
+    locationName: 'skeppsbrokajen',
     lat: 59.325465,
     lng: 18.076172,
     locationConfirmed: false,
@@ -235,7 +235,7 @@ export const modulePositions = [
     ],
   },
   {
-    address: 'östberga torg',
+    locationName: 'östberga torg',
     lat: 59.288683,
     lng: 18.032704,
     locationConfirmed: false,
