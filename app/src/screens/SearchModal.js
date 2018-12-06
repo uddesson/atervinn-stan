@@ -13,7 +13,7 @@ import {
   ExternalLink,
   ExternalLinkIcon,
 } from '../components/UI';
-import { toUpperCase } from '../utils';
+import { toUpperCase, getIconCode } from '../utils';
 
 type Props = {
   navigation: NavigationScreenProps,
@@ -24,7 +24,7 @@ export const SearchModal = (props: Props) => {
 
   const title = toUpperCase(navigation.getParam('title'));
   const sortingType = navigation.getParam('sortingType');
-  const iconCode = navigation.getParam('iconCode');
+  const iconCode = getIconCode(sortingType);
 
   const messageIfAvailable = 'kan återvinnas i stan. Sorteras som';
   const messageIfUnavailable =
