@@ -7,12 +7,7 @@ export const modulePositions = [
     lng: 17.893287,
     locationConfirmed: true,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'odenplan',
@@ -20,12 +15,7 @@ export const modulePositions = [
     lng: 18.050498,
     locationConfirmed: true,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'rörstrandsgatan',
@@ -33,12 +23,7 @@ export const modulePositions = [
     lng: 18.031643,
     locationConfirmed: true,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'vanadislunden',
@@ -46,12 +31,7 @@ export const modulePositions = [
     lng: 18.054233,
     locationConfirmed: true,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'nytorget',
@@ -59,12 +39,7 @@ export const modulePositions = [
     lng: 18.083158,
     locationConfirmed: true,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'hökarängsbadet',
@@ -72,12 +47,7 @@ export const modulePositions = [
     lng: 59.246874,
     locationConfirmed: true,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'hornsbergs strand',
@@ -85,12 +55,7 @@ export const modulePositions = [
     lng: 18.005062,
     locationConfirmed: true,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'sjövikstorget',
@@ -98,12 +63,7 @@ export const modulePositions = [
     lng: 18.029648,
     locationConfirmed: true,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'trekanten',
@@ -111,12 +71,7 @@ export const modulePositions = [
     lng: 18.021919,
     locationConfirmed: true,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'aspudden',
@@ -156,12 +111,7 @@ export const modulePositions = [
     lng: 17.982034,
     locationConfirmed: true,
     locationConfirmedSorting: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'ängby camping',
@@ -201,12 +151,7 @@ export const modulePositions = [
     lng: 18.158637,
     locationConfirmed: false,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'hammarby kaj',
@@ -214,12 +159,7 @@ export const modulePositions = [
     lng: 18.088393,
     locationConfirmed: false,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'skeppsbrokajen',
@@ -227,12 +167,7 @@ export const modulePositions = [
     lng: 18.076172,
     locationConfirmed: false,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
   {
     locationName: 'östberga torg',
@@ -240,11 +175,6 @@ export const modulePositions = [
     lng: 18.032704,
     locationConfirmed: false,
     sortingConfirmed: true,
-    sorting: [
-      'plastförpackning',
-      'pappersförpackning',
-      'glasförpackningar',
-      'ovrigt',
-    ],
+    sorting: ['plast', 'papper', 'glas', 'övrigt avfall'],
   },
 ];
