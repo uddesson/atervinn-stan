@@ -1,6 +1,13 @@
 //@flow
 import React, { Component } from 'react';
-import { StyleSheet, SafeAreaView, ImageBackground, View } from 'react-native';
+import {
+  StyleSheet,
+  SafeAreaView,
+  ImageBackground,
+  View,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import {
   Heading,
@@ -8,6 +15,11 @@ import {
   SearchInput,
   SearchResultList,
   ShortcutBanner,
+  colors,
+  Paragraph,
+  SearchIcon,
+  StaticSearchInput,
+  HomeMessage,
 } from '../components/UI';
 
 type Props = {
@@ -21,20 +33,30 @@ export class Home extends Component<Props> {
 
     return (
       <SafeAreaView style={[styles.screen, utilityStyles.center]}>
-        <View style={[utilityStyles.flex1, utilityStyles.fullWidth]}>
+        <View
+          style={[
+            styles.container,
+            utilityStyles.flex1,
+            utilityStyles.fullWidth,
+          ]}
+        >
           <ShortcutBanner navigation={navigation} />
-
           <ImageBackground
             source={{ uri: 'header-city' }}
-            style={[styles.headerImage, utilityStyles.center]}
+            style={[styles.headerImage]}
           >
-            <Heading style={utilityStyles.whiteText}>
-              Vad vill du återvinna?
-            </Heading>
-            <SearchInput />
+            <View
+              style={[
+                utilityStyles.col,
+                utilityStyles.justifyAround,
+                utilityStyles.flex1,
+                utilityStyles.itemsCenter,
+              ]}
+            >
+              <StaticSearchInput navigation={navigation} />
+              <HomeMessage />
+            </View>
           </ImageBackground>
-
-          <SearchResultList navigation={navigation} />
         </View>
       </SafeAreaView>
     );
@@ -46,8 +68,12 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
   },
+  container: {
+    marginBottom: 50,
+  },
   headerImage: {
     width: '100%',
-    height: 150,
+    height: '100%',
+    padding: 25,
   },
 });
