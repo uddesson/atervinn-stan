@@ -23,7 +23,7 @@ const listItems = [
   },
   //sorting data doesn't seperate 'ofärgat' and 'färgat'
   {
-    title: 'ölflaska färgat glas',
+    title: 'ölflaska färgat glas ölflaska färgat glas',
     sortingType: 'glas',
     iconCode: 'glasförpackningar',
   },
@@ -93,20 +93,25 @@ export const SearchResultList = (props: Props) => {
                   utilityStyles.justifyBetween,
                   styles.wrapper,
                 ]}
+                activeOpacity={0.7}
               >
                 <View style={utilityStyles.row}>
                   {item.iconCode !== 'farligt_avfall' ? (
                     <View style={[styles.circle, { backgroundColor }]} />
                   ) : (
-                    <WarningIcon width={40} height={30} fill={colors.red} />
+                    <WarningIcon width={20} height={20} fill={colors.red} />
                   )}
-                  <Paragraph style={utilityStyles.capitalizeText}>
+                  <Paragraph
+                    style={[utilityStyles.capitalizeText, styles.itemText]}
+                    numberOfLines={1}
+                  >
                     {item.title}
                   </Paragraph>
                 </View>
-                <View>
+                <View style={utilityStyles.row}>
+                  <Image style={styles.image} source={{ uri: 'module' }} />
                   <Image
-                    style={styles.image}
+                    style={[styles.imageSmall, utilityStyles.alignSelfEnd]}
                     source={{ uri: 'fti-container' }}
                   />
                 </View>
@@ -142,8 +147,15 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginRight: 10,
   },
+  itemText: {
+    maxWidth: 200,
+  },
+  imageSmall: {
+    width: 40,
+    height: 30,
+  },
   image: {
     width: 30,
-    height: 30,
+    height: 35,
   },
 });
