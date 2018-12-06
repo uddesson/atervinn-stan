@@ -28,8 +28,8 @@ export const MapModal = (props: Props) => {
       <Modal visible={visible} transparent={true} animationType={'none'}>
         <View style={[utilityStyles.flex1, utilityStyles.center]}>
           <View style={styles.modalContent}>
-            {/* should user also be able to press background to close? */}
-            <TouchableOpacity onPress={onPress} style={styles.button}>
+            {/* TODO: user should also be able to close by press on map */}
+            <TouchableOpacity onPress={() => onPress()} style={styles.button}>
               <CancelIcon width={20} height={20} fill={colors.darkGreen} />
             </TouchableOpacity>
 
@@ -45,7 +45,7 @@ export const MapModal = (props: Props) => {
                   {marker.locationName}
                 </SubHeading>
                 {/* fti-positions don't have this flag so we want don't to check this
-              if we don't we will get a negative false  */}
+                if we don't we will get a negative false  */}
                 {marker.hasOwnProperty('locationConfirmed') ? (
                   marker.locationConfirmed ? null : (
                     <View style={utilityStyles.row}>
