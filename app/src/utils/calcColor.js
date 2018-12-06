@@ -11,7 +11,7 @@ export const calcColor = (category: string): string => {
       return colors.ftiGreen;
     case 'metall':
       return colors.ftiGrey;
-    case 'tidningar & returpapper':
+    case 'tidningar/returpapper':
       return colors.ftiBlue;
     case 'farligt_avfall':
       return colors.red;
