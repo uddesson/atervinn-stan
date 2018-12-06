@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   FlatList,
   StyleSheet,
+  Image,
 } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import { Paragraph } from './Types';
@@ -93,15 +94,22 @@ export const SearchResultList = (props: Props) => {
                   styles.wrapper,
                 ]}
               >
-                <Paragraph style={utilityStyles.capitalizeText}>
-                  {item.title}
-                </Paragraph>
-
-                {item.iconCode !== 'farligt_avfall' ? (
-                  <View style={[styles.circle, { backgroundColor }]} />
-                ) : (
-                  <WarningIcon width={23} height={23} fill={colors.red} />
-                )}
+                <View style={utilityStyles.row}>
+                  {item.iconCode !== 'farligt_avfall' ? (
+                    <View style={[styles.circle, { backgroundColor }]} />
+                  ) : (
+                    <WarningIcon width={40} height={30} fill={colors.red} />
+                  )}
+                  <Paragraph style={utilityStyles.capitalizeText}>
+                    {item.title}
+                  </Paragraph>
+                </View>
+                <View>
+                  <Image
+                    style={styles.image}
+                    source={{ uri: 'fti-container' }}
+                  />
+                </View>
               </TouchableOpacity>
             </View>
           );
@@ -118,10 +126,24 @@ const styles = StyleSheet.create({
   wrapper: {
     padding: 10,
     marginTop: 10,
+    backgroundColor: colors.white,
+    borderRadius: 6,
+    shadowColor: colors.lightGrey,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowRadius: 2,
+    shadowOpacity: 0.8,
   },
   circle: {
     width: 20,
     height: 20,
     borderRadius: 10,
+    marginRight: 10,
+  },
+  image: {
+    width: 30,
+    height: 30,
   },
 });
