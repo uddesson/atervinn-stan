@@ -1,0 +1,13 @@
+{
+  "name": "atervinnstan",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "server": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "cors": "^2.8.4"
+  }
+}
