@@ -29,23 +29,6 @@ type Props = {
 export class Home extends Component<Props> {
   static navigationOptions = { header: null };
 
-  /**
-   * Temporary testing of backend.
-   */
-  callBackendAPI = async () => {
-    try {
-      const responseFromDB = await fetch('http://localhost:5000/api/stations');
-      const stationsInDB = await responseFromDB.json();
-      console.log({ stationsInDB });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  componentDidMount() {
-    this.callBackendAPI();
-  }
-
   render() {
     const { navigation } = this.props;
 
