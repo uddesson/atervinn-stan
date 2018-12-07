@@ -5,7 +5,7 @@ import { TouchableOpacity, View, Alert, StyleSheet } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import LinearGradient from 'react-native-linear-gradient';
 import Permissions from 'react-native-permissions';
-import { Paragraph } from './Types';
+import { Paragraph, ParagraphBold } from './Types';
 import { gradients, colors } from './colors';
 import { utilityStyles } from './utilityStyles';
 import { Pulse } from './Pulse';
@@ -62,43 +62,50 @@ export class ShortcutBanner extends Component<Props> {
       <TouchableOpacity
         activeOpacity={0.9}
         onPress={this.checkForPermissionStatus}
-        style={utilityStyles.fullWidth}
+        style={[utilityStyles.fullWidth, styles.container]}
       >
-        <LinearGradient
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 0 }}
-          colors={gradients.greenToBlue}
-          style={styles.gradientContainer}
+        <View
+          style={[
+            utilityStyles.row,
+            utilityStyles.center,
+            styles.innerContainer,
+          ]}
         >
-          <View
+          <Pulse
+            size={5}
+            pulseMaxSize={50}
+            interval={2000}
+            backgroundColor={colors.transparentWhite}
+            borderColor={colors.transparentWhite}
+            icon={<View style={styles.circle} />}
+          />
+          <ParagraphBold
             style={[
-              utilityStyles.row,
-              utilityStyles.center,
-              styles.innerContainer,
+              utilityStyles.whiteText,
+              styles.textMargin,
+              utilityStyles.uppercaseText,
             ]}
           >
-            <Pulse
-              size={5}
-              pulseMaxSize={50}
-              interval={2000}
-              backgroundColor="rgba(255,255,255,0.4)"
-              borderColor="rgba(255,255,255,0.4)"
-              icon={<View style={styles.circle} />}
-            />
-            <Paragraph style={[utilityStyles.whiteText, styles.textMargin]}>
-              Hitta närmsta station
-            </Paragraph>
-          </View>
-        </LinearGradient>
+            Hitta närmsta station
+          </ParagraphBold>
+        </View>
       </TouchableOpacity>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  gradientContainer: {
+  container: {
     width: '100%',
     height: 65,
+    backgroundColor: colors.blue,
+    shadowColor: colors.lightGrey,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowRadius: 2,
+    shadowOpacity: 0.8,
   },
   innerContainer: {
     alignSelf: 'center',

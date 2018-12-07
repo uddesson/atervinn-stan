@@ -14,6 +14,9 @@ export const utilityStyles = StyleSheet.create({
   justifyBetween: {
     justifyContent: 'space-between',
   },
+  justifyAround: {
+    justifyContent: 'space-around',
+  },
   center: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -45,8 +48,14 @@ export const utilityStyles = StyleSheet.create({
   capitalizeText: {
     textTransform: 'capitalize',
   },
+  uppercaseText: {
+    textTransform: 'uppercase',
+  },
   centerText: {
     textAlign: 'center',
+  },
+  lineHeightNormal: {
+    lineHeight: 25,
   },
   absolute: {
     position: 'absolute',

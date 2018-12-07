@@ -1,23 +1,29 @@
 //@flow
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
+import { colors } from './colors';
 
 type TextProps = React$ElementProps<typeof Text>;
 
 export const Heading = ({ style, ...props }: TextProps) => {
-  return <Text style={[styles.heading, style]} {...props} />;
+  return <Text style={[styles.heading, styles.black, style]} {...props} />;
 };
 
 export const SubHeading = ({ style, ...props }: TextProps) => {
-  return <Text style={[styles.subHeading, style]} {...props} />;
+  return <Text style={[styles.subHeading, styles.black, style]} {...props} />;
 };
 
 export const Paragraph = ({ style, ...props }: TextProps) => {
-  return <Text style={[styles.paragraph, style]} {...props} />;
+  return <Text style={[styles.paragraph, styles.black, style]} {...props} />;
 };
 
 export const ParagraphBold = ({ style, ...props }: TextProps) => {
-  return <Text style={[styles.paragraph, styles.bold, style]} {...props} />;
+  return (
+    <Text
+      style={[styles.paragraph, styles.bold, styles.black, style]}
+      {...props}
+    />
+  );
 };
 
 const styles = StyleSheet.create({
@@ -35,5 +41,8 @@ const styles = StyleSheet.create({
   },
   bold: {
     fontWeight: '700',
+  },
+  black: {
+    color: colors.black,
   },
 });

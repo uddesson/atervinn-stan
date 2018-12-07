@@ -1,3 +1,4 @@
 export { calcColor } from './calcColor';
 export { toUpperCase } from './toUpperCase';
 export { initialRegion } from './getRegion';
+export { getIconCode } from './getIconCode';

@@ -7,10 +7,14 @@ import {
   Text,
   StyleSheet,
 } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 import { utilityStyles } from './utilityStyles';
 import { colors } from './colors';
+import { CancelIcon } from './Icons';
 
-type Props = {};
+type Props = {
+  navigation: NavigationScreenProps,
+};
 
 type State = {
   value: string | null,
@@ -29,17 +33,28 @@ export class SearchInput extends Component<Props, State> {
 
   render() {
     const { value } = this.state;
+    const { navigation } = this.props;
+
     return (
-      <View style={[utilityStyles.row, styles.container]}>
+      <View
+        style={[
+          utilityStyles.row,
+          styles.container,
+          utilityStyles.justifyBetween,
+        ]}
+      >
         <TextInput
           onChangeText={text => this.handleInput(text)}
-          placeholder={'T.ex pizzakartong'}
+          placeholder={'Jag vill återvinna...'}
           value={value}
-          placeholderTextColor={colors.darkGrey}
+          placeholderTextColor={colors.lightGrey}
           style={styles.inputContainer}
         />
-        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
-          <Text style={utilityStyles.whiteText}>Sök</Text>
+        <TouchableOpacity
+          style={utilityStyles.alignSelfEnd}
+          onPress={() => navigation.goBack()}
+        >
+          <CancelIcon width={30} height={30} fill={colors.blue} />
         </TouchableOpacity>
       </View>
     );
@@ -48,26 +63,13 @@ export class SearchInput extends Component<Props, State> {
 
 const styles = StyleSheet.create({
   container: {
-    width: '80%',
+    width: '100%',
   },
   inputContainer: {
-    borderWidth: 1,
-    borderColor: colors.green,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.lightGrey,
     width: '80%',
-    borderTopLeftRadius: 30,
-    borderBottomLeftRadius: 30,
     padding: 10,
-    backgroundColor: colors.white,
-    opacity: 0.8,
-  },
-  button: {
-    borderWidth: 1,
-    borderColor: colors.green,
-    backgroundColor: colors.green,
-    color: 'white',
-    width: '20%',
-    borderTopRightRadius: 30,
-    borderBottomRightRadius: 30,
-    padding: 10,
+    fontSize: 20,
   },
 });

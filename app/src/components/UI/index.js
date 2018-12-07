@@ -1,9 +1,7 @@
 export { SearchInput } from './SearchInput';
 export { colors, gradients } from './colors';
 export { utilityStyles } from './utilityStyles';
-export {
-  Heading, SubHeading, Paragraph, ParagraphBold,
-} from './Types';
+export { Heading, SubHeading, Paragraph, ParagraphBold } from './Types';
 export { Message } from './Message';
 export {
   HeartIcon,
@@ -22,3 +20,5 @@ export { ExternalLink } from './ExternalLink';
 export { FilterToggler } from './FilterToggler';
 export { MarkerImage } from './MarkerImage';
 export { GpsIconButton } from './GpsIconButton';
+export { StaticSearchInput } from './StaticSearchInput';
+export { HomeMessage } from './HomeMessage';

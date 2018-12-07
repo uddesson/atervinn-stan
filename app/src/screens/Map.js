@@ -27,7 +27,7 @@ type State = {
   isModalVisible: boolean,
   clickedMarker: {
     locationName: string,
-    sorting: [],
+    sorting: string[],
     locationConfirmed?: boolean,
     sortingConfirmed?: boolean,
   },
@@ -75,7 +75,7 @@ export class Map extends Component<Props, State> {
   renderModuleMarkers = () => {
     return modulePositions.map((marker: Object) => (
       <Marker
-        key={marker.address}
+        key={marker.locationName}
         coordinate={{
           latitude: marker.lat,
           longitude: marker.lng,
@@ -96,7 +96,7 @@ export class Map extends Component<Props, State> {
   renderFtiMarkers = () => {
     return ftiPositions.map((marker: Object) => (
       <Marker
-        key={marker.stationName}
+        key={marker.locationName}
         coordinate={{
           latitude: marker.lat,
           longitude: marker.lng,

@@ -1,5 +1,15 @@
 export const symbolExplanation = [
   {
+    title: 'FTI station',
+    text: 'Utställda av förpackning & tidnings insamlingen.',
+    icon: 'fti-container',
+  },
+  {
+    title: 'Modul',
+    text: 'Utställda av stockholms stad april–oktober varje år sen 2015.',
+    icon: 'module',
+  },
+  {
     title: 'plast',
     text: 't.ex. plastbestick, korkar och olika plastförpackningar.',
     icon: 'plastförpackning',
@@ -21,8 +31,13 @@ export const symbolExplanation = [
     icon: 'glasförpackningar',
   },
   {
+    title: 'tidningar/returpapper',
+    text: 't.ex. reklamblad, Hem & Hyra.',
+    icon: 'tidning_returpapper',
+  },
+  {
     title: 'övrigt',
-    text: 't.ex. servetter, ciggarettfimpar och tuggummi.',
+    text: 't.ex. servetter, döda djur, ciggarettfimpar och tuggummi.',
     icon: 'ovrigt',
   },
 ];
