@@ -36,7 +36,7 @@ const listItems = [
     //sorting data spells out with / but imagetitle in xcode doesnt allow /
     // should also be translated to tidningar & returpapper in modal
     title: 'reklamblad',
-    sortingType: 'tidning & returpapper',
+    sortingType: 'tidning_returpapper',
   },
   {
     title: 'Pizzakartong',
