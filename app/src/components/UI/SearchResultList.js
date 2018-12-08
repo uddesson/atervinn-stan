@@ -15,58 +15,26 @@ import { calcColor } from '../../utils';
 import { WarningIcon } from './Icons';
 import { colors } from './colors';
 
-const listItems = [
-  {
-    title: 'plastbestick',
-    sortingType: 'plast',
-  },
-  {
-    title: 'ölflaska färgat glas ölflaska färgat glas',
-    sortingType: 'glas',
-  },
-  {
-    title: 'läsflaska ofärgat glas',
-    sortingType: 'glas',
-  },
-  {
-    title: 'kapsyl',
-    sortingType: 'metall',
-  },
-  {
-    //sorting data spells out with / but imagetitle in xcode doesnt allow /
-    // should also be translated to tidningar & returpapper in modal
-    title: 'reklamblad',
-    sortingType: 'tidning_returpapper',
-  },
-  {
-    title: 'Pizzakartong',
-    sortingType: 'papper',
-  },
-  {
-    title: 'tuggumi',
-    // sorting data calls this soppåsen, convert to övrigt?
-    sortingType: 'övrigt',
-  },
-  {
-    title: 'braständare',
-    sortingType: 'farligt avfall',
-  },
-];
-
 type Props = {
+  results: Object[],
   navigation: NavigationScreenProps,
 };
 
+/**
+ * TODOS:
+ * Handle output according to fti data structure.
+ */
+
 export const SearchResultList = (props: Props) => {
-  const { navigation } = props;
+  const { navigation, results } = props;
   return (
     <ScrollView
       contentContainerStyle={[utilityStyles.fullWidth, styles.container]}
       showsVerticalScrollIndicator={false}
     >
       <FlatList
-        keyExtractor={item => item.title}
-        data={listItems}
+        keyExtractor={item => item.id}
+        data={results}
         renderItem={({ item }) => {
           const backgroundColor = calcColor(item.sortingType);
 
@@ -75,15 +43,11 @@ export const SearchResultList = (props: Props) => {
               <TouchableOpacity
                 onPress={() =>
                   navigation.navigate('SearchModal', {
-                    title: item.title,
-                    sortingType: item.sortingType,
+                    title: item.name,
+                    sortingType: item.type,
                   })
                 }
-                style={[
-                  utilityStyles.row,
-                  utilityStyles.justifyBetween,
-                  styles.wrapper,
-                ]}
+                style={[utilityStyles.row, utilityStyles.justifyBetween, styles.wrapper]}
                 activeOpacity={0.7}
               >
                 <View style={utilityStyles.row}>
@@ -96,7 +60,7 @@ export const SearchResultList = (props: Props) => {
                     style={[utilityStyles.capitalizeText, styles.itemText]}
                     numberOfLines={1}
                   >
-                    {item.title}
+                    {item.name}
                   </Paragraph>
                 </View>
                 <View style={utilityStyles.row}>
