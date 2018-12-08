@@ -8,6 +8,7 @@ import {
   SearchInput,
   SearchResultList,
   colors,
+  CloseButton,
 } from '../components/UI';
 
 type Props = {
@@ -51,9 +52,11 @@ export class Search extends Component<Props, State> {
     return (
       <SafeAreaView style={[styles.screen]}>
         <View style={[utilityStyles.justifyCenter, styles.container]}>
-          <View style={[utilityStyles.center, styles.innerContainer]}>
+          <View style={[utilityStyles.row, styles.innerContainer]}>
             <SearchInput navigation={navigation} onChangeText={this.handleSearchInput} />
+            <CloseButton onPress={() => navigation.goBack()} />
           </View>
+
           <SearchResultList results={searchResults} navigation={navigation} />
         </View>
       </SafeAreaView>
@@ -71,6 +74,8 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   innerContainer: {
+    width: '100%',
+    justifyContent: 'space-around',
     marginBottom: 25,
   },
 });
