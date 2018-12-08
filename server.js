@@ -18,18 +18,26 @@ app.listen(port, () => console.log(`Server listening on port ${port}`));
 
 // Search in sortingdata.
 app.get("/api/sorting/search/:query", (req, res) => {
-  const query = req.params.query;
+  let query = req.params.query;
+  let results = [];
 
   const matchesQuery = itemToMatch => {
     return itemToMatch.toLowerCase().includes(query.toLowerCase());
   };
 
-  // Check if query string matches either item.name or one of the item synonyms.
-  const results = sortingData.items.filter(
-    item =>
-      matchesQuery(item.name) ||
-      item.synonyms.some(synonym => matchesQuery(synonym.value))
-  );
+  /*
+   * Wait till query is more than 2 characters, to avoid autocomplete
+   * on only one or two letters (will return too many irrelevant results.)
+   */
+
+  if (query.length > 2) {
+    // Check if query string matches either item.name or one of the item synonyms.
+    results = sortingData.items.filter(
+      item =>
+        matchesQuery(item.name) ||
+        item.synonyms.some(synonym => matchesQuery(synonym.value))
+    );
+  }
 
   res.send(results);
 });
