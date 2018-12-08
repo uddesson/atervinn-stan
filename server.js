@@ -12,9 +12,26 @@ app.use(cors());
 const port = process.env.port || 5000;
 app.listen(port, () => console.log(`Server listening on port ${port}`));
 
-// Get all sortingdata.
-app.get("/api/sorting", (req, res) => {
-  res.send(sortingData);
+/**
+ * TODO: Handle errors for all endpoints.
+ */
+
+// Search in sortingdata.
+app.get("/api/sorting/search/:query", (req, res) => {
+  const query = req.params.query;
+
+  const matchesQuery = itemToMatch => {
+    return itemToMatch.toLowerCase().includes(query.toLowerCase());
+  };
+
+  // Check if query string matches either item.name or one of the item synonyms.
+  const results = sortingData.items.filter(
+    item =>
+      matchesQuery(item.name) ||
+      item.synonyms.some(synonym => matchesQuery(synonym.value))
+  );
+
+  res.send(results);
 });
 
 // Get all modules.
