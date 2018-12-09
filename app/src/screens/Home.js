@@ -28,6 +28,7 @@ type Props = {
 
 export class Home extends Component<Props> {
   static navigationOptions = { header: null };
+
   render() {
     const { navigation } = this.props;
 
