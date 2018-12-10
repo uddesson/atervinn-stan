@@ -1,25 +1,10 @@
 import React from 'react';
 import { Image, View, StyleSheet } from 'react-native';
 import { utilityStyles } from '../components/UI';
+import { moduleSorting, ftiStationSorting } from './sortingTypes';
 
 export const getStationSymbol = (sortingType: string) => {
   const type = sortingType.toLowerCase();
-
-  const moduleSorting = [
-    'pappersförpackning',
-    'plastförpackning',
-    'glasförpackning',
-    'metallförpackning',
-    'ovrigt',
-  ];
-
-  const ftiStationSorting = [
-    'pappersförpackning',
-    'plastförpackning',
-    'glasförpackning',
-    'metallförpackning',
-    'tidning/returpapper',
-  ];
 
   const moduleSymbol = (
     <Image style={styles.image} source={{ uri: 'module' }} />
