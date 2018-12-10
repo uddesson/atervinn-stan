@@ -1,13 +1,15 @@
 //@flow
 import React, { Component } from 'react';
-import { StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, SafeAreaView, View, Alert, Text, TouchableOpacity } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
+import Permissions from 'react-native-permissions';
 import MapView, { Marker } from 'react-native-maps';
 import { initialRegion } from '../utils';
 import { utilityStyles, FilterToggler, MarkerImage, colors, GpsIconButton } from '../components/UI';
 import { MapModal } from '../components/UI/MapModal';
 
 type State = {
+  region: Object,
   ftiPositions: Object[],
   modulePositions: Object[],
   isFtiContainerVisible: boolean,
@@ -35,6 +37,7 @@ type Props = {
 
 export class Map extends Component<Props, State> {
   state = {
+    region: initialRegion,
     ftiPositions: [],
     modulePositions: [],
     isFtiContainerVisible: true,
@@ -45,6 +48,8 @@ export class Map extends Component<Props, State> {
       sorting: [],
     },
   };
+
+  map: ?React$Element<any>;
 
   getFtiPositions = async () => {
     const res = await fetch('http://localhost:5000/api/fti');
@@ -133,8 +138,50 @@ export class Map extends Component<Props, State> {
     ));
   };
 
+  handleMapRegionChange = (region: Object) => {
+    this.setState({ region });
+  };
+
+  alertForLocationPermission = async () => {
+    const permissionStatus = await Permissions.check('location');
+    Alert.alert(
+      'Appen har inte åtkomst till din plats',
+      'För att kunna guida dig på bästa sätt behöver appen känna till vart du befinner dig. Vill du ge åtkomst?',
+      [
+        {
+          text: 'Nej, jag hittar själv',
+          onPress: () => {},
+          style: 'cancel',
+        },
+
+        permissionStatus === 'undetermined'
+          ? { text: 'Ja, det går bra', onPress: await Permissions.request('location') } // Send a permission request.
+          : {
+              text: 'Ja, ändra inställningar',
+              onPress: Permissions.openSettings,
+            },
+      ],
+    );
+  };
+
+  showCurrentLocation = () => {
+    const onLocationRecived = position => {
+      const region = {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+        latitudeDelta: 0.003,
+        longitudeDelta: 0.003,
+      };
+      this.map.animateToRegion(region);
+    };
+    const onLocationDenied = () => this.alertForLocationPermission();
+
+    navigator.geolocation.getCurrentPosition(onLocationRecived, onLocationDenied);
+  };
+
   render() {
     const {
+      region,
       modulePositions,
       ftiPositions,
       isFtiContainerVisible,
@@ -142,14 +189,18 @@ export class Map extends Component<Props, State> {
       isModalVisible,
       clickedMarker,
     } = this.state;
+
     return (
       <SafeAreaView>
         <MapView
+          ref={map => (this.map = map)}
           style={styles.map}
-          initialRegion={initialRegion}
-          loadingEnabled={true}
-          showsUserLocation={true}
-          followsUserLocation={true}
+          initialRegion={region}
+          showsUserLocation
+          userLocationAnnotationTitle={'Min plats'}
+          onMapReady={this.showCurrentLocation}
+          onRegionChange={this.handleMapRegionChange}
+          loadingEnabled
           loadingIndicatorColor={colors.blue}
           loadingBackgroundColor={colors.whiteSmoke}
         >
@@ -166,7 +217,7 @@ export class Map extends Component<Props, State> {
         {isModalVisible ? (
           <MapModal visible={isModalVisible} onPress={this.handleModal} marker={clickedMarker} />
         ) : null}
-        <GpsIconButton />
+        <GpsIconButton onPress={this.showCurrentLocation} />
       </SafeAreaView>
     );
   }
