@@ -27,6 +27,7 @@ export const MapModal = (props: Props) => {
     return <View key={option} style={[styles.circle, { backgroundColor }]} />;
   });
 
+  // TODO: move to utils
   const getOptions = (arr: string[]) => {
     if (arr.length === 0) {
       return '';
