@@ -1,9 +1,7 @@
 export { SearchInput } from './SearchInput';
 export { colors, gradients } from './colors';
 export { utilityStyles } from './utilityStyles';
-export {
-  Heading, SubHeading, Paragraph, ParagraphBold,
-} from './Types';
+export { Heading, SubHeading, Paragraph, ParagraphBold } from './Types';
 export { Message } from './Message';
 export {
   HeartIcon,
@@ -14,6 +12,7 @@ export {
   GpsIcon,
   ExternalLinkIcon,
   CancelIcon,
+  WarningIcon,
 } from './Icons';
 export { SearchResultList } from './SearchResultList';
 export { ShortcutBanner } from './ShortcutBanner';

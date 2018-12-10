@@ -3,15 +3,15 @@ import { colors } from '../components/UI';
 
 export const calcColor = (category: string): string => {
   switch (category) {
-    case 'papper':
+    case 'pappersförpackning':
       return colors.ftiYellow;
-    case 'plast':
+    case 'plastförpackning':
       return colors.ftiOrange;
-    case 'glas':
+    case 'glasförpackningar':
       return colors.ftiGreen;
-    case 'metall':
+    case 'metallförpackning':
       return colors.ftiGrey;
-    case 'tidningar/returpapper':
+    case 'tidning/returpapper':
       return colors.ftiBlue;
     case 'farligt_avfall':
       return colors.red;
