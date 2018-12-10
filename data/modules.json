@@ -1,0 +1,178 @@
+[
+  {
+    "locationName": "sätrastrandsbadet",
+    "lat": 59.285673,
+    "lng": 17.893287,
+    "locationConfirmed": true,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "odenplan",
+    "lat": 59.343329,
+    "lng": 18.050498,
+    "locationConfirmed": true,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "rörstrandsgatan",
+    "lat": 59.340398,
+    "lng": 18.031643,
+    "locationConfirmed": true,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "vanadislunden",
+    "lat": 59.348332,
+    "lng": 18.054233,
+    "locationConfirmed": true,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "nytorget",
+    "lat": 59.312262,
+    "lng": 18.083158,
+    "locationConfirmed": true,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "hökarängsbadet",
+    "lat": 18.107582,
+    "lng": 59.246874,
+    "locationConfirmed": true,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "hornsbergs strand",
+    "lat": 59.339924,
+    "lng": 18.005062,
+    "locationConfirmed": true,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "sjövikstorget",
+    "lat": 59.308275,
+    "lng": 18.029648,
+    "locationConfirmed": true,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "trekanten",
+    "lat": 59.311022,
+    "lng": 18.021919,
+    "locationConfirmed": true,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "aspudden",
+    "lat": 59.308615,
+    "lng": 17.995335,
+    "locationConfirmed": true,
+    "sortingConfirmed": false,
+    "sorting": []
+  },
+  {
+    "locationName": "lugnet",
+    "lat": 59.294426,
+    "lng": 17.970653,
+    "locationConfirmed": true,
+    "sortingConfirmed": false,
+    "sorting": []
+  },
+  {
+    "locationName": "sannadalsparken",
+    "lat": 59.315508,
+    "lng": 18.00924,
+    "locationConfirmed": true,
+    "sortingConfirmed": false,
+    "sorting": []
+  },
+  {
+    "locationName": "parkleken vippan",
+    "lat": 59.286872,
+    "lng": 17.970455,
+    "locationConfirmed": true,
+    "sortingConfirmed": false,
+    "sorting": []
+  },
+  {
+    "locationName": "vinterviken",
+    "lat": 59.311537,
+    "lng": 17.982034,
+    "locationConfirmed": true,
+    "locationConfirmedSorting": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "ängby camping",
+    "lat": 59.33772,
+    "lng": 17.901067,
+    "locationConfirmed": false,
+    "sortingConfirmed": false,
+    "sorting": []
+  },
+  {
+    "locationName": "raul wallenbergs torg",
+    "lat": 59.332182,
+    "lng": 18.0757,
+    "locationConfirmed": false,
+    "sortingConfirmed": false,
+    "sorting": []
+  },
+  {
+    "locationName": "strömgatan",
+    "lat": 59.32894,
+    "lng": 18.068406,
+    "locationConfirmed": false,
+    "sortingConfirmed": false,
+    "sorting": []
+  },
+  {
+    "locationName": "tegelbacken",
+    "lat": 59.328588,
+    "lng": 18.061473,
+    "locationConfirmed": false,
+    "sortingConfirmed": false,
+    "sorting": []
+  },
+  {
+    "locationName": "flatenvägen/kasbyvägen",
+    "lat": 59.260424,
+    "lng": 18.158637,
+    "locationConfirmed": false,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "hammarby kaj",
+    "lat": 59.3048,
+    "lng": 18.088393,
+    "locationConfirmed": false,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "skeppsbrokajen",
+    "lat": 59.325465,
+    "lng": 18.076172,
+    "locationConfirmed": false,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  },
+  {
+    "locationName": "östberga torg",
+    "lat": 59.288683,
+    "lng": 18.032704,
+    "locationConfirmed": false,
+    "sortingConfirmed": true,
+    "sorting": ["plast", "papper", "glas", "övrigt avfall"]
+  }
+]

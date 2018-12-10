@@ -1,16 +1,14 @@
 //@flow
 import React, { Component } from 'react';
-import {
-  TextInput,
-  View,
-  TouchableOpacity,
-  Text,
-  StyleSheet,
-} from 'react-native';
+import { TextInput, View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
 import { utilityStyles } from './utilityStyles';
 import { colors } from './colors';
 
-type Props = {};
+type Props = {
+  navigation: NavigationScreenProps,
+  onChangeText: Function,
+};
 
 type State = {
   value: string | null,
@@ -21,53 +19,39 @@ export class SearchInput extends Component<Props, State> {
     value: null,
   };
 
-  handleInput = (value: string) => {
-    // const { handleSearchInput } = this.props;
+  handleChangeText = (value: string) => {
+    const { onChangeText } = this.props;
     this.setState({ value });
-    // handleSearchInput(value);
+
+    // Call onChangeText from parent to send up search input.
+    if (onChangeText) {
+      onChangeText(value);
+    }
   };
 
   render() {
     const { value } = this.state;
+    const { navigation } = this.props;
+
     return (
-      <View style={[utilityStyles.row, styles.container]}>
-        <TextInput
-          onChangeText={text => this.handleInput(text)}
-          placeholder={'T.ex pizzakartong'}
-          value={value}
-          placeholderTextColor={colors.darkGrey}
-          style={styles.inputContainer}
-        />
-        <TouchableOpacity activeOpacity={0.7} style={styles.button}>
-          <Text style={utilityStyles.whiteText}>Sök</Text>
-        </TouchableOpacity>
-      </View>
+      <TextInput
+        autoFocus={true}
+        onChangeText={text => this.handleChangeText(text)}
+        placeholder={'Jag vill återvinna...'}
+        value={value}
+        placeholderTextColor={colors.lightGrey}
+        style={styles.inputContainer}
+      />
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    width: '80%',
-  },
   inputContainer: {
-    borderWidth: 1,
-    borderColor: colors.green,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.lightGrey,
     width: '80%',
-    borderTopLeftRadius: 30,
-    borderBottomLeftRadius: 30,
     padding: 10,
-    backgroundColor: colors.white,
-    opacity: 0.8,
-  },
-  button: {
-    borderWidth: 1,
-    borderColor: colors.green,
-    backgroundColor: colors.green,
-    color: 'white',
-    width: '20%',
-    borderTopRightRadius: 30,
-    borderBottomRightRadius: 30,
-    padding: 10,
+    fontSize: 20,
   },
 });

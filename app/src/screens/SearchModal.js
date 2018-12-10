@@ -13,7 +13,7 @@ import {
   ExternalLink,
   ExternalLinkIcon,
 } from '../components/UI';
-import { toUpperCase } from '../utils';
+import { toUpperCase, getIconCode } from '../utils';
 
 type Props = {
   navigation: NavigationScreenProps,
@@ -24,7 +24,7 @@ export const SearchModal = (props: Props) => {
 
   const title = toUpperCase(navigation.getParam('title'));
   const sortingType = navigation.getParam('sortingType');
-  const iconCode = navigation.getParam('iconCode');
+  const iconCode = getIconCode(sortingType);
 
   const messageIfAvailable = 'kan återvinnas i stan. Sorteras som';
   const messageIfUnavailable =
@@ -42,50 +42,61 @@ export const SearchModal = (props: Props) => {
     <SafeAreaView style={styles.wrapper}>
       <View style={[utilityStyles.justifyBetween, utilityStyles.flex1]}>
         <View>
-          <View style={[utilityStyles.row, utilityStyles.justifyBetween]}>
-            <SubHeading
-              style={[
-                utilityStyles.capitalizeText,
-                utilityStyles.greenText,
-                utilityStyles.alignSelfEnd,
-              ]}
-            >
-              {title}
-            </SubHeading>
+          <View style={[utilityStyles.center, styles.imageContainer]}>
             {sortingType !== 'farligt avfall' ? (
               <Image style={styles.image} source={{ uri: iconCode }} />
             ) : null}
           </View>
-          <Paragraph style={styles.paragraph}>
+
+          <SubHeading style={utilityStyles.capitalizeText}>{title}</SubHeading>
+          <Paragraph style={[styles.paragraph, utilityStyles.lineHeightNormal]}>
             {title + ' ' + message + ' ' + sortingType + '.'}
           </Paragraph>
           {sortingType !== 'farligt avfall' ? (
-            <Paragraph style={styles.paragraph}>
+            <Paragraph
+              style={[styles.paragraph, utilityStyles.lineHeightNormal]}
+            >
               {title} Kan både återvinnas på en FTI-station eller
               återvinningsmodul.
             </Paragraph>
           ) : null}
         </View>
 
-        {sortingType !== 'farligt avfall' ? (
-          <TouchableOpacity
-            style={[styles.button, utilityStyles.row]}
-            activeOpacity={0.7}
-            onPress={() => navigation.navigate('Home')}
-          >
-            <ParagraphBold style={[utilityStyles.whiteText, styles.buttonText]}>
-              Hitta närmsta återvinningskärl
-            </ParagraphBold>
-            <GpsIcon height={20} width={20} fill={colors.white} />
-          </TouchableOpacity>
-        ) : (
-          <ExternalLink url={externalUrl}>
-            <ParagraphBold style={[utilityStyles.greenText, styles.buttonText]}>
-              Hitta en återvinningscentral
-            </ParagraphBold>
-            <ExternalLinkIcon height={20} width={20} fill={colors.darkGreen} />
-          </ExternalLink>
-        )}
+        <TouchableOpacity
+          style={[styles.button, utilityStyles.row, utilityStyles.center]}
+          activeOpacity={0.7}
+          onPress={() => navigation.navigate('Home')}
+        >
+          {sortingType !== 'farligt avfall' ? (
+            <>
+              <ParagraphBold
+                style={[
+                  utilityStyles.whiteText,
+                  styles.buttonText,
+                  utilityStyles.uppercaseText,
+                ]}
+              >
+                Hitta närmsta
+              </ParagraphBold>
+              <GpsIcon height={20} width={20} fill={colors.white} />
+            </>
+          ) : (
+            <>
+              <ExternalLink url={externalUrl}>
+                <ParagraphBold
+                  style={[
+                    utilityStyles.whiteText,
+                    utilityStyles.uppercaseText,
+                    styles.buttonText,
+                  ]}
+                >
+                  Hitta närmsta
+                </ParagraphBold>
+                <ExternalLinkIcon height={20} width={20} fill={colors.white} />
+              </ExternalLink>
+            </>
+          )}
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -93,15 +104,15 @@ export const SearchModal = (props: Props) => {
 
 const styles = StyleSheet.create({
   wrapper: {
-    marginTop: 20,
-    marginRight: 10,
-    marginLeft: 10,
-    padding: 10,
     height: '90%',
+    margin: 20,
+  },
+  imageContainer: {
+    marginBottom: 20,
   },
   image: {
-    width: 60,
-    height: 60,
+    width: 190,
+    height: 190,
   },
   paragraph: {
     marginTop: 5,
@@ -111,7 +122,7 @@ const styles = StyleSheet.create({
     borderColor: colors.darkGreen,
     backgroundColor: colors.darkGreen,
     borderRadius: 5,
-    padding: 5,
+    padding: 15,
     marginTop: 15,
   },
   buttonText: {

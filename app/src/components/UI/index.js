@@ -13,6 +13,7 @@ export {
   InfoIcon,
   GpsIcon,
   ExternalLinkIcon,
+  CancelIcon,
 } from './Icons';
 export { SearchResultList } from './SearchResultList';
 export { ShortcutBanner } from './ShortcutBanner';
@@ -22,3 +23,6 @@ export { ExternalLink } from './ExternalLink';
 export { FilterToggler } from './FilterToggler';
 export { MarkerImage } from './MarkerImage';
 export { GpsIconButton } from './GpsIconButton';
+export { CloseButton } from './CloseButton';
+export { StaticSearchInput } from './StaticSearchInput';
+export { HomeMessage } from './HomeMessage';

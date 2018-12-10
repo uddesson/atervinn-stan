@@ -1,33 +1,21 @@
 //@flow
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  SafeAreaView,
-  View,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import { StyleSheet, SafeAreaView, View, Text, TouchableOpacity } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import MapView, { Marker } from 'react-native-maps';
 import { initialRegion } from '../utils';
-import {
-  utilityStyles,
-  FilterToggler,
-  MarkerImage,
-  colors,
-  GpsIconButton,
-} from '../components/UI';
-import { modulePositions } from '../data/positions';
-import { ftiPositions } from '../data/fti-positions';
+import { utilityStyles, FilterToggler, MarkerImage, colors, GpsIconButton } from '../components/UI';
 import { MapModal } from '../components/UI/MapModal';
 
 type State = {
+  ftiPositions: Object[],
+  modulePositions: Object[],
   isFtiContainerVisible: boolean,
   isModuleVisible: boolean,
   isModalVisible: boolean,
   clickedMarker: {
     locationName: string,
-    sorting: [],
+    sorting: string[],
     locationConfirmed?: boolean,
     sortingConfirmed?: boolean,
   },
@@ -37,8 +25,18 @@ type Props = {
   navigation: NavigationScreenProps,
 };
 
+/**
+ * Note: Annotation for postitions in map-functions should be ..positions: Object[], and ..Object.
+ * But this causes error "Missing type annotation for U" with no obvious solution.
+ * If there is time, try to find an answer to this. Seems to be a flow issue.
+ *
+ * Ref: https://github.com/facebook/flow/issues/6151
+ */
+
 export class Map extends Component<Props, State> {
   state = {
+    ftiPositions: [],
+    modulePositions: [],
     isFtiContainerVisible: true,
     isModuleVisible: true,
     isModalVisible: false,
@@ -47,6 +45,27 @@ export class Map extends Component<Props, State> {
       sorting: [],
     },
   };
+
+  getFtiPositions = async () => {
+    const res = await fetch('http://localhost:5000/api/fti');
+    const ftiPositions: Array<Object> = await res.json();
+    return ftiPositions;
+  };
+
+  getModulePositions = async () => {
+    const res = await fetch('http://localhost:5000/api/modules');
+    const modulePositions: Array<Object> = await res.json();
+    return modulePositions;
+  };
+
+  componentDidMount() {
+    Promise.all([this.getFtiPositions(), this.getModulePositions()]).then(stations =>
+      this.setState({
+        ftiPositions: stations[0],
+        modulePositions: stations[1],
+      }),
+    );
+  }
 
   handleFtiContainerToggling = () => {
     this.setState({
@@ -72,10 +91,10 @@ export class Map extends Component<Props, State> {
     });
   };
 
-  renderModuleMarkers = () => {
-    return modulePositions.map((marker: Object) => (
+  renderModuleMarkers = (modulePositions: any) => {
+    return modulePositions.map((marker: any) => (
       <Marker
-        key={marker.address}
+        key={marker.locationName}
         coordinate={{
           latitude: marker.lat,
           longitude: marker.lng,
@@ -93,10 +112,10 @@ export class Map extends Component<Props, State> {
     ));
   };
 
-  renderFtiMarkers = () => {
-    return ftiPositions.map((marker: Object) => (
+  renderFtiMarkers = (ftiPositions: any) => {
+    return ftiPositions.map((marker: any) => (
       <Marker
-        key={marker.stationName}
+        key={marker.locationName}
         coordinate={{
           latitude: marker.lat,
           longitude: marker.lng,
@@ -116,6 +135,8 @@ export class Map extends Component<Props, State> {
 
   render() {
     const {
+      modulePositions,
+      ftiPositions,
       isFtiContainerVisible,
       isModuleVisible,
       isModalVisible,
@@ -132,8 +153,8 @@ export class Map extends Component<Props, State> {
           loadingIndicatorColor={colors.blue}
           loadingBackgroundColor={colors.whiteSmoke}
         >
-          {isModuleVisible ? this.renderModuleMarkers() : null}
-          {isFtiContainerVisible ? this.renderFtiMarkers() : null}
+          {isModuleVisible ? this.renderModuleMarkers(modulePositions) : null}
+          {isFtiContainerVisible ? this.renderFtiMarkers(ftiPositions) : null}
         </MapView>
         <FilterToggler
           style={utilityStyles.absolute}
@@ -143,11 +164,7 @@ export class Map extends Component<Props, State> {
           onModulePress={this.handleModuleToggling}
         />
         {isModalVisible ? (
-          <MapModal
-            visible={isModalVisible}
-            onPress={this.handleModal}
-            marker={clickedMarker}
-          />
+          <MapModal visible={isModalVisible} onPress={this.handleModal} marker={clickedMarker} />
         ) : null}
         <GpsIconButton />
       </SafeAreaView>
