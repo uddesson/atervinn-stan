@@ -159,17 +159,21 @@ export const GpsIcon = (props: Props) => {
   const { width, height, fill } = props;
 
   return (
-    <Svg
-      width={width}
-      height={height}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke={fill}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <Polygon points="3 11 22 2 13 21 11 13 3 11" />
+    <Svg viewBox="0 0 40 40" width={width} height={height}>
+      <Path
+        fill={fill}
+        d="M20 26.5c-3.6 0-6.5-2.9-6.5-6.5s2.9-6.5 6.5-6.5 6.5 2.9 6.5 6.5-2.9 6.5-6.5 6.5zm0-12c-3 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5 5.5-2.5 5.5-5.5-2.5-5.5-5.5-5.5z"
+      />
+      <Path
+        fill={fill}
+        d="M20 16.5c-.3 0-.5-.2-.5-.5v-4c0-.3.2-.5.5-.5s.5.2.5.5v4c0 .3-.2.5-.5.5zM20 28.5c-.3 0-.5-.2-.5-.5v-4c0-.3.2-.5.5-.5s.5.2.5.5v4c0 .3-.2.5-.5.5z"
+      />
+      <G>
+        <Path
+          fill={fill}
+          d="M28 20.5h-4c-.3 0-.5-.2-.5-.5s.2-.5.5-.5h4c.3 0 .5.2.5.5s-.2.5-.5.5zM16 20.5h-4c-.3 0-.5-.2-.5-.5s.2-.5.5-.5h4c.3 0 .5.2.5.5s-.2.5-.5.5z"
+        />
+      </G>
     </Svg>
   );
 };
