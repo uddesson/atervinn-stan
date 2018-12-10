@@ -36,7 +36,7 @@ export const SearchResultList = (props: Props) => {
         keyExtractor={item => item.id}
         data={results}
         renderItem={({ item }) => {
-          const backgroundColor = calcColor(item.sortingType);
+          const backgroundColor = calcColor(item.type.toLowerCase());
 
           return (
             <View>
@@ -47,13 +47,18 @@ export const SearchResultList = (props: Props) => {
                     sortingType: item.type,
                   })
                 }
-                style={[utilityStyles.row, utilityStyles.justifyBetween, styles.wrapper]}
+                style={[
+                  utilityStyles.row,
+                  utilityStyles.justifyBetween,
+                  styles.wrapper,
+                ]}
                 activeOpacity={0.7}
               >
                 <View style={utilityStyles.row}>
                   {item.iconCode !== 'farligt_avfall' ? (
                     <View style={[styles.circle, { backgroundColor }]} />
                   ) : (
+                    // TOOD: add icon
                     <WarningIcon width={20} height={20} fill={colors.red} />
                   )}
                   <Paragraph
