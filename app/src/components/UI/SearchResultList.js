@@ -6,12 +6,16 @@ import {
   TouchableOpacity,
   FlatList,
   StyleSheet,
-  Image,
 } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
-import { calcColor, getStationSymbol } from '../../utils';
+import {
+  calcColor,
+  getStationSymbol,
+  toUpperCase,
+  allSortingTypes,
+} from '../../utils';
 import { WarningIcon } from './Icons';
 import { colors } from './colors';
 
@@ -22,6 +26,7 @@ type Props = {
 
 export const SearchResultList = (props: Props) => {
   const { navigation, results } = props;
+
   return (
     <ScrollView
       contentContainerStyle={[utilityStyles.fullWidth, styles.container]}
@@ -32,6 +37,9 @@ export const SearchResultList = (props: Props) => {
         data={results}
         renderItem={({ item }) => {
           const backgroundColor = calcColor(item.type.toLowerCase());
+          const sortingUnavailable = allSortingTypes.includes(
+            item.type.toLowerCase()
+          );
 
           return (
             <View>
@@ -50,18 +58,26 @@ export const SearchResultList = (props: Props) => {
                 activeOpacity={0.7}
               >
                 <View style={utilityStyles.row}>
-                  {/* TODO: handle cases with blank types */}
-                  {item.iconCode !== 'farligt_avfall' ? (
-                    <View style={[styles.circle, { backgroundColor }]} />
+                  {sortingUnavailable ? (
+                    <View
+                      style={[
+                        styles.circle,
+                        styles.iconMargin,
+                        { backgroundColor },
+                      ]}
+                    />
                   ) : (
-                    // TOOD: add icon
-                    <WarningIcon width={20} height={20} fill={colors.red} />
+                    <View style={styles.iconMargin}>
+                      <WarningIcon width={20} height={40} fill={colors.red} />
+                    </View>
                   )}
                   <Paragraph
-                    style={[utilityStyles.capitalizeText, styles.itemText]}
+                    style={
+                      sortingUnavailable ? styles.shortText : styles.longText
+                    }
                     numberOfLines={1}
                   >
-                    {item.name}
+                    {toUpperCase(item.name)}
                   </Paragraph>
                 </View>
                 <View style={utilityStyles.row}>
@@ -97,9 +113,14 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     borderRadius: 10,
+  },
+  iconMargin: {
     marginRight: 10,
   },
-  itemText: {
-    maxWidth: 200,
+  shortText: {
+    maxWidth: 150,
+  },
+  longText: {
+    maxWidth: 270,
   },
 });
