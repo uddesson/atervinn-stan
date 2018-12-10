@@ -6,12 +6,16 @@ import {
   TouchableOpacity,
   FlatList,
   StyleSheet,
-  Image,
 } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
-import { calcColor } from '../../utils';
+import {
+  calcColor,
+  getStationSymbol,
+  toUpperCase,
+  allSortingTypes,
+} from '../../utils';
 import { WarningIcon } from './Icons';
 import { colors } from './colors';
 
@@ -20,13 +24,9 @@ type Props = {
   navigation: NavigationScreenProps,
 };
 
-/**
- * TODOS:
- * Handle output according to fti data structure.
- */
-
 export const SearchResultList = (props: Props) => {
   const { navigation, results } = props;
+
   return (
     <ScrollView
       contentContainerStyle={[utilityStyles.fullWidth, styles.container]}
@@ -36,7 +36,10 @@ export const SearchResultList = (props: Props) => {
         keyExtractor={item => item.id}
         data={results}
         renderItem={({ item }) => {
-          const backgroundColor = calcColor(item.sortingType);
+          const backgroundColor = calcColor(item.type.toLowerCase());
+          const sortingUnavailable = allSortingTypes.includes(
+            item.type.toLowerCase()
+          );
 
           return (
             <View>
@@ -47,28 +50,38 @@ export const SearchResultList = (props: Props) => {
                     sortingType: item.type,
                   })
                 }
-                style={[utilityStyles.row, utilityStyles.justifyBetween, styles.wrapper]}
+                style={[
+                  utilityStyles.row,
+                  utilityStyles.justifyBetween,
+                  styles.wrapper,
+                ]}
                 activeOpacity={0.7}
               >
                 <View style={utilityStyles.row}>
-                  {item.iconCode !== 'farligt_avfall' ? (
-                    <View style={[styles.circle, { backgroundColor }]} />
+                  {sortingUnavailable ? (
+                    <View
+                      style={[
+                        styles.circle,
+                        styles.iconMargin,
+                        { backgroundColor },
+                      ]}
+                    />
                   ) : (
-                    <WarningIcon width={20} height={20} fill={colors.red} />
+                    <View style={styles.iconMargin}>
+                      <WarningIcon width={20} height={40} fill={colors.red} />
+                    </View>
                   )}
                   <Paragraph
-                    style={[utilityStyles.capitalizeText, styles.itemText]}
+                    style={
+                      sortingUnavailable ? styles.shortText : styles.longText
+                    }
                     numberOfLines={1}
                   >
-                    {item.name}
+                    {toUpperCase(item.name)}
                   </Paragraph>
                 </View>
                 <View style={utilityStyles.row}>
-                  <Image style={styles.image} source={{ uri: 'module' }} />
-                  <Image
-                    style={[styles.imageSmall, utilityStyles.alignSelfEnd]}
-                    source={{ uri: 'fti-container' }}
-                  />
+                  {getStationSymbol(item.type)}
                 </View>
               </TouchableOpacity>
             </View>
@@ -100,17 +113,14 @@ const styles = StyleSheet.create({
     width: 20,
     height: 20,
     borderRadius: 10,
+  },
+  iconMargin: {
     marginRight: 10,
   },
-  itemText: {
-    maxWidth: 200,
+  shortText: {
+    maxWidth: 150,
   },
-  imageSmall: {
-    width: 40,
-    height: 30,
-  },
-  image: {
-    width: 30,
-    height: 35,
+  longText: {
+    maxWidth: 270,
   },
 });

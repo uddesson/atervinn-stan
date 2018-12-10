@@ -12,8 +12,15 @@ import {
   GpsIcon,
   ExternalLink,
   ExternalLinkIcon,
+  WarningIcon,
 } from '../components/UI';
-import { toUpperCase, getIconCode } from '../utils';
+import {
+  toUpperCase,
+  getIconCode,
+  allSortingTypes,
+  getSearchModalMessage,
+} from '../utils';
+import { moduleSorting, ftiStationSorting } from '../utils/sortingTypes';
 
 type Props = {
   navigation: NavigationScreenProps,
@@ -21,20 +28,12 @@ type Props = {
 
 export const SearchModal = (props: Props) => {
   const { navigation } = props;
-
   const title = toUpperCase(navigation.getParam('title'));
-  const sortingType = navigation.getParam('sortingType');
-  const iconCode = getIconCode(sortingType);
-
-  const messageIfAvailable = 'kan återvinnas i stan. Sorteras som';
-  const messageIfUnavailable =
-    'måste återvinnas på återvinningscentral och sorteras där som';
-
-  const message =
-    sortingType === 'farligt avfall'
-      ? messageIfUnavailable
-      : messageIfAvailable;
-
+  // TODO: sometimes type is missing, how do we handle this?
+  const sortingType = navigation.getParam('sortingType').toLowerCase();
+  const sortingTypeSymbol = getIconCode(sortingType);
+  const sortingAvailability = allSortingTypes.includes(sortingType);
+  const message = getSearchModalMessage(sortingType);
   // url to list of recyclingcentrals in stockholm on SVOA's webpage
   const externalUrl = 'https://tinyurl.com/y9sast9a';
 
@@ -42,24 +41,28 @@ export const SearchModal = (props: Props) => {
     <SafeAreaView style={styles.wrapper}>
       <View style={[utilityStyles.justifyBetween, utilityStyles.flex1]}>
         <View>
-          <View style={[utilityStyles.center, styles.imageContainer]}>
-            {sortingType !== 'farligt avfall' ? (
-              <Image style={styles.image} source={{ uri: iconCode }} />
-            ) : null}
-          </View>
+          {sortingAvailability ? (
+            <>
+              <View style={[utilityStyles.center, styles.imageContainer]}>
+                <Image
+                  style={styles.image}
+                  source={{ uri: sortingTypeSymbol }}
+                />
+              </View>
+              <SubHeading>{toUpperCase(title)}</SubHeading>
+            </>
+          ) : (
+            <View style={utilityStyles.row}>
+              <SubHeading>{toUpperCase(title)}</SubHeading>
+              <View style={[utilityStyles.center, styles.iconCircle]}>
+                <WarningIcon width={20} height={20} fill={colors.red} />
+              </View>
+            </View>
+          )}
 
-          <SubHeading style={utilityStyles.capitalizeText}>{title}</SubHeading>
           <Paragraph style={[styles.paragraph, utilityStyles.lineHeightNormal]}>
             {title + ' ' + message + ' ' + sortingType + '.'}
           </Paragraph>
-          {sortingType !== 'farligt avfall' ? (
-            <Paragraph
-              style={[styles.paragraph, utilityStyles.lineHeightNormal]}
-            >
-              {title} Kan både återvinnas på en FTI-station eller
-              återvinningsmodul.
-            </Paragraph>
-          ) : null}
         </View>
 
         <TouchableOpacity
@@ -67,7 +70,7 @@ export const SearchModal = (props: Props) => {
           activeOpacity={0.7}
           onPress={() => navigation.navigate('Home')}
         >
-          {sortingType !== 'farligt avfall' ? (
+          {sortingAvailability ? (
             <>
               <ParagraphBold
                 style={[
@@ -113,6 +116,14 @@ const styles = StyleSheet.create({
   image: {
     width: 190,
     height: 190,
+  },
+  iconCircle: {
+    width: 25,
+    height: 25,
+    borderRadius: 12.5,
+    borderWidth: 1,
+    borderColor: colors.red,
+    marginLeft: 10,
   },
   paragraph: {
     marginTop: 5,

@@ -1,6 +1,13 @@
 //@flow
 import React from 'react';
-import Svg, { G, Path, Polygon, Circle, Line, Polyline } from 'react-native-svg';
+import Svg, {
+  G,
+  Path,
+  Polygon,
+  Circle,
+  Line,
+  Polyline,
+} from 'react-native-svg';
 
 type Props = {
   width: number,
@@ -199,25 +206,10 @@ export const WarningIcon = (props: Props) => {
   const { width, height, fill } = props;
 
   return (
-    <Svg width={width} height={height} fill={fill}>
-      <Path
-        fill={fill}
-        d="M131.149 198a2 2 0 0 1-1.993-1.829l-16.149-188a2.003 2.003 0 0 1 .519-1.524A2.004 2.004 0 0 1 115 6h81a1.999 1.999 0 0 1 1.996 2.118l-11.132 188a2 2 0 0 1-1.996 1.882h-53.719z"
-      />
-      <Path
-        fill={fill}
-        d="M196 8l-11.132 188h-53.719L115 8h81m0-4h-81a4.001 4.001 0 0 0-3.986 4.342l16.149 188a4 4 0 0 0 3.985 3.657h53.719a4 4 0 0 0 3.993-3.764l11.132-188A4 4 0 0 0 196 4z"
-      />
-      <Circle
-        fill={fill}
-        stroke={fill}
-        strokeWidth={4}
-        strokeLinejoin="round"
-        strokeMiterlimit={10}
-        cx={158.273}
-        cy={255.05}
-        r={37.603}
-      />
+    <Svg width={width} height={height} viewBox="0 0 24 24" fill="none">
+      <Path  d="M0 0h24v24H0V0z" />
+      <Circle fill={fill} cx="12" cy="19" r="2" />
+      <Path fill={fill} d="M12 3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2s2-.9 2-2V5c0-1.1-.9-2-2-2z" />
     </Svg>
   );
 };
