@@ -11,7 +11,7 @@ import {
 import { NavigationScreenProps } from 'react-navigation';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
-import { calcColor } from '../../utils';
+import { calcColor, getStationSymbol } from '../../utils';
 import { WarningIcon } from './Icons';
 import { colors } from './colors';
 
@@ -19,11 +19,6 @@ type Props = {
   results: Object[],
   navigation: NavigationScreenProps,
 };
-
-/**
- * TODOS:
- * Handle output according to fti data structure.
- */
 
 export const SearchResultList = (props: Props) => {
   const { navigation, results } = props;
@@ -55,6 +50,7 @@ export const SearchResultList = (props: Props) => {
                 activeOpacity={0.7}
               >
                 <View style={utilityStyles.row}>
+                  {/* TODO: handle cases with blank types */}
                   {item.iconCode !== 'farligt_avfall' ? (
                     <View style={[styles.circle, { backgroundColor }]} />
                   ) : (
@@ -69,11 +65,7 @@ export const SearchResultList = (props: Props) => {
                   </Paragraph>
                 </View>
                 <View style={utilityStyles.row}>
-                  <Image style={styles.image} source={{ uri: 'module' }} />
-                  <Image
-                    style={[styles.imageSmall, utilityStyles.alignSelfEnd]}
-                    source={{ uri: 'fti-container' }}
-                  />
+                  {getStationSymbol(item.type)}
                 </View>
               </TouchableOpacity>
             </View>
@@ -109,13 +101,5 @@ const styles = StyleSheet.create({
   },
   itemText: {
     maxWidth: 200,
-  },
-  imageSmall: {
-    width: 40,
-    height: 30,
-  },
-  image: {
-    width: 30,
-    height: 35,
   },
 });
