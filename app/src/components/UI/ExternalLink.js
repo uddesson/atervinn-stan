@@ -7,12 +7,11 @@ import { colors } from './colors';
 
 type Props = {
   url: string,
-  children: string,
-  style: {},
+  children: React$Element<any>,
 };
 
 export const ExternalLink = (props: Props) => {
-  const { url, children, style } = props;
+  const { url, children } = props;
 
   const onPress = () =>
     Linking.canOpenURL(url).then(() => {
@@ -33,6 +32,7 @@ const styles = StyleSheet.create({
   button: {
     borderWidth: 1,
     borderColor: colors.darkGreen,
+    backgroundColor: colors.darkGreen,
     borderRadius: 5,
     padding: 5,
   },

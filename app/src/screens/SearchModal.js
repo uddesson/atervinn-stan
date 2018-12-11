@@ -29,12 +29,11 @@ type Props = {
 export const SearchModal = (props: Props) => {
   const { navigation } = props;
   const title = toUpperCase(navigation.getParam('title'));
-  // TODO: sometimes type is missing, how do we handle this?
   const sortingType = navigation.getParam('sortingType').toLowerCase();
   const sortingTypeSymbol = getIconCode(sortingType);
   const sortingAvailability = allSortingTypes.includes(sortingType);
-  const message = getSearchModalMessage(sortingType);
-  // url to list of recyclingcentrals in stockholm on SVOA's webpage
+  const message = getSearchModalMessage(sortingType, title);
+  /* url to list of recyclingcentrals in stockholm on SVOA's webpage */
   const externalUrl = 'https://tinyurl.com/y9sast9a';
 
   return (
@@ -61,7 +60,7 @@ export const SearchModal = (props: Props) => {
           )}
 
           <Paragraph style={[styles.paragraph, utilityStyles.lineHeightNormal]}>
-            {title + ' ' + message + ' ' + sortingType + '.'}
+            {message}
           </Paragraph>
         </View>
 
@@ -70,6 +69,8 @@ export const SearchModal = (props: Props) => {
           activeOpacity={0.7}
           onPress={() => navigation.navigate('Home')}
         >
+          {/* TODO: this could probably be more DRY and isoldated into 
+          component file */}
           {sortingAvailability ? (
             <>
               <ParagraphBold
@@ -79,7 +80,7 @@ export const SearchModal = (props: Props) => {
                   utilityStyles.uppercaseText,
                 ]}
               >
-                Hitta närmsta
+                Hitta station
               </ParagraphBold>
               <GpsIcon height={20} width={20} fill={colors.white} />
             </>
@@ -93,7 +94,7 @@ export const SearchModal = (props: Props) => {
                     styles.buttonText,
                   ]}
                 >
-                  Hitta närmsta
+                  Hitta central
                 </ParagraphBold>
                 <ExternalLinkIcon height={20} width={20} fill={colors.white} />
               </ExternalLink>
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
     width: 25,
     height: 25,
     borderRadius: 12.5,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.red,
     marginLeft: 10,
   },

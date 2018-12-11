@@ -34,11 +34,12 @@ export class Info extends Component<Props> {
             ListFooterComponent={
               <Paragraph style={styles.smallText}>
                 <ParagraphBold style={styles.smallText}>
-                  ÅTERVINN STAN
+                  {`ÅTERVINN STAN `}
                 </ParagraphBold>
-                använder data och material hämtat från FTI, HSR, SVOA och
-                Stockholms stad. Bilder tagna av Någon Någonsson, Någon
-                Någonsson och Någon Någonsson.
+                använder data och material hämtat från FTI (Förpackning och
+                tidnings insamlingen), HSR (Håll sverige rent), SVOA (Stockholm
+                vatten och avfall) och Stockholms stad. Bilder tagna av Någon
+                Någonsson, Någon Någonsson och Någon Någonsson.
               </Paragraph>
             }
             keyExtractor={item => item.title}
@@ -52,9 +53,7 @@ export class Info extends Component<Props> {
                 />
 
                 <View style={styles.textContainer}>
-                  <SubHeading
-                    style={[utilityStyles.capitalizeText, styles.subHeading]}
-                  >
+                  <SubHeading style={styles.subHeading}>
                     {item.title}
                   </SubHeading>
                   <Paragraph

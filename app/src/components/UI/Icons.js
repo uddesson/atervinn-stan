@@ -85,12 +85,12 @@ export const HeartIcon = (props: Props) => {
         fill="none"
         viewBox="0 0 24 24"
         stroke={fill}
-        stroke-width="2"
+        stroke-width="4"
         stroke-miterlimit="10"
         points="32,47 63,47 63,5 1,5 1,47 18,47 18,59 "
       />
       <Path
-        fill="none"
+        fill={fill}
         stroke={fill}
         stroke-width="2"
         stroke-miterlimit="10"
@@ -211,9 +211,12 @@ export const WarningIcon = (props: Props) => {
 
   return (
     <Svg width={width} height={height} viewBox="0 0 24 24" fill="none">
-      <Path  d="M0 0h24v24H0V0z" />
+      <Path d="M0 0h24v24H0V0z" />
       <Circle fill={fill} cx="12" cy="19" r="2" />
-      <Path fill={fill} d="M12 3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2s2-.9 2-2V5c0-1.1-.9-2-2-2z" />
+      <Path
+        fill={fill}
+        d="M12 3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2s2-.9 2-2V5c0-1.1-.9-2-2-2z"
+      />
     </Svg>
   );
 };
