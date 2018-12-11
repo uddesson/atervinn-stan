@@ -1,6 +1,6 @@
 export const symbolExplanation = [
   {
-    title: 'FTI station',
+    title: 'FTI Station',
     text:
       'Återvinningstationer utställda av förpackning & tidnings insamlingen.',
     icon: 'fti-container',
@@ -12,33 +12,33 @@ export const symbolExplanation = [
     icon: 'module',
   },
   {
-    title: 'plast',
+    title: 'Plast',
     text:
       'Här återvinner du bland annat ketchupflaskan och plastflaskor utan pant',
     icon: 'plastförpackning',
   },
   {
-    title: 'papper',
+    title: 'Papper',
     text: 'Här återvinner du bland annat take-away muggar och juicekartonger.',
     icon: 'pappersförpackning',
   },
   {
-    title: 'metall',
+    title: 'Metall',
     text: 'Här återvinner du bland annat kapsyler och aluminiumfolie',
     icon: 'metallförpackning',
   },
   {
-    title: 'glas',
+    title: 'Glas',
     text: 'Här återvinner du flaskor i glas.',
     icon: 'glasförpackningar',
   },
   {
-    title: 'tidningar/returpapper',
+    title: 'Tidningar/returpapper',
     text: 'Här återvinner reklamblad och tidningar',
     icon: 'tidning_returpapper',
   },
   {
-    title: 'övrigt',
+    title: 'Övrigt',
     text: 'Här återvinner du bland annat tuggumi och ciggarettfimpar.',
     icon: 'ovrigt',
   },
