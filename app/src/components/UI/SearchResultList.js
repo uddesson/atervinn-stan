@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   shortText: {
-    maxWidth: 150,
+    maxWidth: 200,
   },
   longText: {
     maxWidth: 270,
