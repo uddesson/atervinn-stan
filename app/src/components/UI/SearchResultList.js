@@ -28,21 +28,16 @@ export const SearchResultList = (props: Props) => {
   const { navigation, results } = props;
 
   return (
-    <ScrollView
-      contentContainerStyle={[utilityStyles.fullWidth, styles.container]}
-      showsVerticalScrollIndicator={false}
-    >
+    <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
       <FlatList
         keyExtractor={item => item.id}
         data={results}
         renderItem={({ item }) => {
           const backgroundColor = calcColor(item.type.toLowerCase());
-          const sortingUnavailable = allSortingTypes.includes(
-            item.type.toLowerCase()
-          );
+          const sortingTypeAvailable = allSortingTypes.includes(item.type.toLowerCase());
 
           return (
-            <View>
+            <View style={styles.result}>
               <TouchableOpacity
                 onPress={() =>
                   navigation.navigate('SearchModal', {
@@ -50,39 +45,26 @@ export const SearchResultList = (props: Props) => {
                     sortingType: item.type,
                   })
                 }
-                style={[
-                  utilityStyles.row,
-                  utilityStyles.justifyBetween,
-                  styles.wrapper,
-                ]}
+                style={[utilityStyles.row, utilityStyles.justifyBetween, styles.wrapper]}
                 activeOpacity={0.7}
               >
                 <View style={utilityStyles.row}>
-                  {sortingUnavailable ? (
-                    <View
-                      style={[
-                        styles.circle,
-                        styles.iconMargin,
-                        { backgroundColor },
-                      ]}
-                    />
+                  {sortingTypeAvailable ? (
+                    <View style={[styles.circle, styles.iconMargin, { backgroundColor }]} />
                   ) : (
                     <View style={styles.iconMargin}>
                       <WarningIcon width={20} height={40} fill={colors.red} />
                     </View>
                   )}
                   <Paragraph
-                    style={
-                      sortingUnavailable ? styles.shortText : styles.longText
-                    }
+                    style={sortingTypeAvailable ? styles.shortText : styles.longText}
                     numberOfLines={1}
                   >
                     {toUpperCase(item.name)}
                   </Paragraph>
                 </View>
-                <View style={utilityStyles.row}>
-                  {getStationSymbol(item.type)}
-                </View>
+
+                <View style={utilityStyles.row}>{getStationSymbol(item.type)}</View>
               </TouchableOpacity>
             </View>
           );
@@ -94,11 +76,15 @@ export const SearchResultList = (props: Props) => {
 
 const styles = StyleSheet.create({
   container: {
-    height: '100%',
+    paddingBottom: 40,
+  },
+  result: {
+    paddingTop: 15,
+    paddingLeft: 4,
+    paddingRight: 4,
   },
   wrapper: {
     padding: 10,
-    marginTop: 10,
     backgroundColor: colors.white,
     borderRadius: 6,
     shadowColor: colors.lightGrey,

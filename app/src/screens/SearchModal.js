@@ -14,12 +14,7 @@ import {
   ExternalLinkIcon,
   WarningIcon,
 } from '../components/UI';
-import {
-  toUpperCase,
-  getIconCode,
-  allSortingTypes,
-  getSearchModalMessage,
-} from '../utils';
+import { toUpperCase, allSortingTypes, getSearchModalMessage } from '../utils';
 import { moduleSorting, ftiStationSorting } from '../utils/sortingTypes';
 
 type Props = {
@@ -29,11 +24,13 @@ type Props = {
 export const SearchModal = (props: Props) => {
   const { navigation } = props;
   const title = toUpperCase(navigation.getParam('title'));
+
   // TODO: sometimes type is missing, how do we handle this?
   const sortingType = navigation.getParam('sortingType').toLowerCase();
-  const sortingTypeSymbol = getIconCode(sortingType);
+
   const sortingAvailability = allSortingTypes.includes(sortingType);
   const message = getSearchModalMessage(sortingType);
+
   // url to list of recyclingcentrals in stockholm on SVOA's webpage
   const externalUrl = 'https://tinyurl.com/y9sast9a';
 
@@ -44,10 +41,7 @@ export const SearchModal = (props: Props) => {
           {sortingAvailability ? (
             <>
               <View style={[utilityStyles.center, styles.imageContainer]}>
-                <Image
-                  style={styles.image}
-                  source={{ uri: sortingTypeSymbol }}
-                />
+                <Image style={styles.image} source={{ uri: sortingType }} />
               </View>
               <SubHeading>{toUpperCase(title)}</SubHeading>
             </>
@@ -61,7 +55,7 @@ export const SearchModal = (props: Props) => {
           )}
 
           <Paragraph style={[styles.paragraph, utilityStyles.lineHeightNormal]}>
-            {title + ' ' + message + ' ' + sortingType + '.'}
+            {`${message} ${sortingType}.`}
           </Paragraph>
         </View>
 

@@ -76,6 +76,5 @@ const styles = StyleSheet.create({
   innerContainer: {
     width: '100%',
     justifyContent: 'space-around',
-    marginBottom: 25,
   },
 });

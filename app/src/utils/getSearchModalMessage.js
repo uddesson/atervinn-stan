@@ -6,12 +6,10 @@ export const getSearchModalMessage = (sortingType: string) => {
   const ftiStationSortingAvailable = ftiStationSorting.includes(sortingType);
 
   const messageIfBothAvailable =
-    'kan återvinnas i stan, både på en modul och på en fti station och sorteras som';
-  const messageIfModule = 'kan återvinnas i stan vid en modul och sorteras som';
-  const messageIfFti =
-    'kan återvinnas i stan vid en fti station och sorteras som';
-  const messageIfUnavailable =
-    'måste återvinnas på återvinningscentral och sorteras där som';
+    'Kan återvinnas i stan, både på en modul och på en fti station och sorteras som';
+  const messageIfModule = 'Kan återvinnas i stan vid en modul och sorteras som';
+  const messageIfFti = 'Kan återvinnas i stan vid en fti station och sorteras som';
+  const messageIfUnavailable = 'Måste återvinnas på återvinningscentral och sorteras där som';
 
   if (moduleSortingAvailable && ftiStationSortingAvailable) {
     return messageIfBothAvailable;

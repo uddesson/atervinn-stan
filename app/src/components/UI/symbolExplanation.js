@@ -12,32 +12,31 @@ export const symbolExplanation = [
   {
     title: 'plast',
     text: 't.ex. plastbestick, korkar och olika plastförpackningar.',
-    icon: 'plastförpackning',
+    icon: 'plast',
   },
   {
     title: 'papper',
-    text:
-      't.ex. kaffemuggar, pappersbestick och andra typer av pappersförpackningar.',
-    icon: 'pappersförpackning',
+    text: 't.ex. kaffemuggar, pappersbestick och andra typer av pappersförpackningar.',
+    icon: 'papper',
   },
   {
     title: 'metall',
     text: 't.ex. kapsyler, aluminiumfolie.',
-    icon: 'metallförpackning',
+    icon: 'metall',
   },
   {
     title: 'glas',
     text: 't.ex. glasflaskor och glasburkar.',
-    icon: 'glasförpackningar',
+    icon: 'glas',
   },
   {
-    title: 'tidningar/returpapper',
+    title: 'tidningar & returpapper',
     text: 't.ex. reklamblad, Hem & Hyra.',
-    icon: 'tidning_returpapper',
+    icon: 'tidningar',
   },
   {
     title: 'övrigt',
     text: 't.ex. servetter, döda djur, ciggarettfimpar och tuggummi.',
-    icon: 'ovrigt',
+    icon: 'övrigt',
   },
 ];
