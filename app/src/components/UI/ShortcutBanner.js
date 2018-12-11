@@ -6,7 +6,7 @@ import { NavigationScreenProps } from 'react-navigation';
 import LinearGradient from 'react-native-linear-gradient';
 import Permissions from 'react-native-permissions';
 import { Paragraph, ParagraphBold } from './Types';
-import { gradients, colors } from './colors';
+import { colors } from './colors';
 import { utilityStyles } from './utilityStyles';
 import { Pulse } from './Pulse';
 
