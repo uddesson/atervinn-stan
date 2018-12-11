@@ -6,6 +6,7 @@ import { colors } from './colors';
 import { utilityStyles } from './utilityStyles';
 import { GpsIcon } from './Icons';
 
+/* Should this be () => void?? See filterToggler.js as ref */
 type Props = {
   onPress: Function,
 };
