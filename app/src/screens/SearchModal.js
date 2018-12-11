@@ -84,7 +84,7 @@ export const SearchModal = (props: Props) => {
             </>
           ) : (
             <>
-              <ExternalLink url={externalUrl}>
+              <ExternalLink url={externalUrl} style={styles.button}>
                 <ParagraphBold
                   style={[
                     utilityStyles.whiteText,
