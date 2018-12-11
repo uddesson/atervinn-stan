@@ -2,6 +2,7 @@
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
 import { colors } from './colors';
+import { utilityStyles } from './utilityStyles';
 
 type Props = {
   type: string,
@@ -9,7 +10,12 @@ type Props = {
 export const MarkerImage = (props: Props) => {
   const { type } = props;
 
-  return <Image source={{ uri: type }} style={styles.image} />;
+  return (
+    <Image
+      source={{ uri: type }}
+      style={[utilityStyles.boxShadow, styles.image]}
+    />
+  );
 };
 
 const styles = StyleSheet.create({
@@ -17,12 +23,5 @@ const styles = StyleSheet.create({
     height: 70,
     width: 60,
     resizeMode: 'contain',
-    shadowColor: colors.lightGrey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.9,
   },
 });

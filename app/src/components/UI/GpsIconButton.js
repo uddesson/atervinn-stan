@@ -16,7 +16,12 @@ export const GpsIconButton = (props: Props) => {
     <TouchableOpacity
       onPress={onPress}
       activeOpacity={0.6}
-      style={[utilityStyles.absolute, utilityStyles.center, styles.container]}
+      style={[
+        utilityStyles.absolute,
+        utilityStyles.center,
+        utilityStyles.boxShadow,
+        styles.container,
+      ]}
     >
       <GpsIcon height={70} width={70} fill={colors.white} />
     </TouchableOpacity>
@@ -31,12 +36,5 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 50 / 2,
-    shadowColor: colors.lightGrey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.8,
   },
 });

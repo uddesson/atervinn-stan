@@ -62,7 +62,11 @@ export class ShortcutBanner extends Component<Props> {
       <TouchableOpacity
         activeOpacity={0.9}
         onPress={this.checkForPermissionStatus}
-        style={[utilityStyles.fullWidth, styles.container]}
+        style={[
+          utilityStyles.fullWidth,
+          utilityStyles.boxShadow,
+          styles.container,
+        ]}
       >
         <View
           style={[
@@ -99,13 +103,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 65,
     backgroundColor: colors.blue,
-    shadowColor: colors.lightGrey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.8,
   },
   innerContainer: {
     alignSelf: 'center',

@@ -21,6 +21,7 @@ export const StaticSearchInput = (props: Props) => {
           utilityStyles.row,
           utilityStyles.justifyBetween,
           utilityStyles.fullWidth,
+          utilityStyles.boxShadow,
         ]}
         onPress={() => navigation.navigate('Search')}
         activeOpacity={1}
@@ -42,13 +43,6 @@ const styles = StyleSheet.create({
     paddingLeft: 25,
     paddingRight: 25,
     backgroundColor: colors.white,
-    shadowColor: colors.lightGrey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.8,
   },
   searchText: {
     color: colors.lightGrey,

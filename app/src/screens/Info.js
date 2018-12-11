@@ -44,7 +44,13 @@ export class Info extends Component<Props> {
             }
             keyExtractor={item => item.title}
             renderItem={({ item }) => (
-              <View style={[utilityStyles.row, styles.itemContainer]}>
+              <View
+                style={[
+                  utilityStyles.row,
+                  utilityStyles.boxShadow,
+                  styles.itemContainer,
+                ]}
+              >
                 <Image
                   style={[
                     item.icon === 'module' ? styles.imageBig : styles.image,
@@ -81,13 +87,6 @@ const styles = StyleSheet.create({
     padding: 15,
     margin: 15,
     marginTop: 10,
-    shadowColor: colors.lightGrey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.8,
   },
   heading: {
     marginLeft: 15,

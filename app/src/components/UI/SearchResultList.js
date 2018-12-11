@@ -53,6 +53,7 @@ export const SearchResultList = (props: Props) => {
                 style={[
                   utilityStyles.row,
                   utilityStyles.justifyBetween,
+                  utilityStyles.boxShadow,
                   styles.wrapper,
                 ]}
                 activeOpacity={0.7}
@@ -101,13 +102,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     backgroundColor: colors.white,
     borderRadius: 6,
-    shadowColor: colors.lightGrey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.8,
   },
   circle: {
     width: 20,

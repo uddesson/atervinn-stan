@@ -27,6 +27,7 @@ export const FilterToggler = (props: Props) => {
         utilityStyles.justifyBetween,
         utilityStyles.itemsCenter,
         utilityStyles.absolute,
+        utilityStyles.boxShadow,
       ]}
     >
       <TouchableOpacity onPress={onFtiContainerPress}>
@@ -62,13 +63,6 @@ const styles = StyleSheet.create({
     height: 110,
     padding: 10,
     borderRadius: 5,
-    shadowColor: colors.lightGrey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.8,
   },
   icon: {
     width: 40,
