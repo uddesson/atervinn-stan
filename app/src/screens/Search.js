@@ -35,9 +35,7 @@ export class Search extends Component<Props, State> {
 
   getSearchResuts = async (searchInput: string) => {
     try {
-      const res = await fetch(
-        `http://localhost:5000/api/sorting/search/${searchInput}`
-      );
+      const res = await fetch(`http://localhost:5000/api/sorting/search/${searchInput}`);
       const searchResults = await res.json();
       // Store searchresults in state
       this.setState({ searchResults });
@@ -52,7 +50,7 @@ export class Search extends Component<Props, State> {
     const { searchInput, searchResults } = this.state;
 
     return (
-      <SafeAreaView style={[utilityStyles.flex1, utilityStyles.fullWidth]}>
+      <SafeAreaView style={[utilityStyles.flex1, utilityStyles.fullWidth, styles.screen]}>
         <View style={[utilityStyles.justifyCenter, styles.container]}>
           <View
             style={[
@@ -62,10 +60,7 @@ export class Search extends Component<Props, State> {
               styles.innerContainer,
             ]}
           >
-            <SearchInput
-              navigation={navigation}
-              onChangeText={this.handleSearchInput}
-            />
+            <SearchInput navigation={navigation} onChangeText={this.handleSearchInput} />
             <CloseButton onPress={() => navigation.goBack()} />
           </View>
           {searchInput.length === 0 ? (
@@ -86,7 +81,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.whiteSmoke,
   },
   container: {
-    padding: 20,
+    paddingLeft: 20,
+    paddingRight: 20,
   },
   innerContainer: {
     width: '100%',

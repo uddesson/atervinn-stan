@@ -1,21 +1,10 @@
 //@flow
 import React from 'react';
-import {
-  View,
-  ScrollView,
-  TouchableOpacity,
-  FlatList,
-  StyleSheet,
-} from 'react-native';
+import { View, ScrollView, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
-import {
-  calcColor,
-  getStationSymbol,
-  toUpperCase,
-  allSortingTypes,
-} from '../../utils';
+import { calcColor, getStationSymbol, toUpperCase, allSortingTypes } from '../../utils';
 import { WarningIcon } from './Icons';
 import { colors } from './colors';
 
@@ -45,7 +34,12 @@ export const SearchResultList = (props: Props) => {
                     sortingType: item.type,
                   })
                 }
-                style={[utilityStyles.row, utilityStyles.justifyBetween, styles.wrapper]}
+                style={[
+                  utilityStyles.row,
+                  utilityStyles.boxShadow,
+                  utilityStyles.justifyBetween,
+                  styles.wrapper,
+                ]}
                 activeOpacity={0.7}
               >
                 <View style={utilityStyles.row}>
@@ -79,7 +73,8 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
   },
   result: {
-    paddingTop: 15,
+    paddingTop: 10,
+    paddingBottom: 5,
     paddingLeft: 4,
     paddingRight: 4,
   },
