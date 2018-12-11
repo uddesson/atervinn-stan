@@ -21,7 +21,3 @@ export const colors = {
   transparentBlack: 'rgba(0,0,0,0.4)',
   transparentWhite: 'rgba(255,255,255,0.7)',
 };
-
-export const gradients = {
-  greenToBlue: [colors.blue, colors.green],
-};

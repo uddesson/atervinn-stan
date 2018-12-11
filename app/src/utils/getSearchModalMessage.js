@@ -1,7 +1,12 @@
+//@flow
 import React from 'react';
 import { moduleSorting, ftiStationSorting } from './sortingTypes';
 
-export const getSearchModalMessage = (sortingType: string) => {
+export const getSearchModalMessage = (sortingType: string, title: string) => {
+  /* 
+    if sortingType matches moduleSorting and/or ftiStationSorting
+    it can be recycled at the stations we map out.
+  */
   const moduleSortingAvailable = moduleSorting.includes(sortingType);
   const ftiStationSortingAvailable = ftiStationSorting.includes(sortingType);
 
@@ -12,12 +17,12 @@ export const getSearchModalMessage = (sortingType: string) => {
   const messageIfUnavailable = 'Måste återvinnas på återvinningscentral och sorteras där som';
 
   if (moduleSortingAvailable && ftiStationSortingAvailable) {
-    return messageIfBothAvailable;
+    return availableMessage;
   } else if (moduleSortingAvailable) {
-    return messageIfModule;
+    return moduleMessage;
   } else if (ftiStationSortingAvailable) {
-    return messageIfFti;
+    return ftiMessage;
   } else {
-    return messageIfUnavailable;
+    return unavailableMessage;
   }
 };

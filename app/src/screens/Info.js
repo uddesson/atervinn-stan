@@ -33,16 +33,23 @@ export class Info extends Component<Props> {
             ListFooterComponent={
               <Paragraph style={styles.smallText}>
                 <ParagraphBold style={styles.smallText}>
-                  ÅTERVINN STAN
+                  {`ÅTERVINN STAN `}
                 </ParagraphBold>
-                använder data och material hämtat från FTI, HSR, SVOA och
-                Stockholms stad. Bilder tagna av Någon Någonsson, Någon
-                Någonsson och Någon Någonsson.
+                använder data och material hämtat från FTI (Förpackning och
+                tidnings insamlingen), HSR (Håll sverige rent), SVOA (Stockholm
+                vatten och avfall) och Stockholms stad. Bilder tagna av Någon
+                Någonsson, Någon Någonsson och Någon Någonsson.
               </Paragraph>
             }
             keyExtractor={item => item.title}
             renderItem={({ item }) => (
-              <View style={[utilityStyles.row, styles.itemContainer]}>
+              <View
+                style={[
+                  utilityStyles.row,
+                  utilityStyles.boxShadow,
+                  styles.itemContainer,
+                ]}
+              >
                 <Image
                   style={[
                     item.icon === 'module' ? styles.imageBig : styles.image,
@@ -51,9 +58,7 @@ export class Info extends Component<Props> {
                 />
 
                 <View style={styles.textContainer}>
-                  <SubHeading
-                    style={[utilityStyles.capitalizeText, styles.subHeading]}
-                  >
+                  <SubHeading style={styles.subHeading}>
                     {item.title}
                   </SubHeading>
                   <Paragraph
@@ -81,13 +86,6 @@ const styles = StyleSheet.create({
     padding: 15,
     margin: 15,
     marginTop: 10,
-    shadowColor: colors.lightGrey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.8,
   },
   heading: {
     marginLeft: 15,

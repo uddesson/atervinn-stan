@@ -1,23 +1,11 @@
 //@flow
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  SafeAreaView,
-  ImageBackground,
-  View,
-  TouchableOpacity,
-  Text,
-} from 'react-native';
+import { StyleSheet, SafeAreaView, ImageBackground, View } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import {
-  Heading,
   utilityStyles,
-  SearchInput,
-  SearchResultList,
   ShortcutBanner,
   colors,
-  Paragraph,
-  SearchIcon,
   StaticSearchInput,
   HomeMessage,
 } from '../components/UI';
@@ -33,7 +21,13 @@ export class Home extends Component<Props> {
     const { navigation } = this.props;
 
     return (
-      <SafeAreaView style={[styles.screen, utilityStyles.center]}>
+      <SafeAreaView
+        style={[
+          utilityStyles.flex1,
+          utilityStyles.fullWidth,
+          utilityStyles.center,
+        ]}
+      >
         <View
           style={[
             styles.container,
@@ -44,7 +38,11 @@ export class Home extends Component<Props> {
           <ShortcutBanner navigation={navigation} />
           <ImageBackground
             source={{ uri: 'header-city' }}
-            style={[styles.headerImage]}
+            style={[
+              utilityStyles.fullWidth,
+              utilityStyles.fullHeight,
+              styles.headerImage,
+            ]}
           >
             <View
               style={[
@@ -55,7 +53,10 @@ export class Home extends Component<Props> {
               ]}
             >
               <StaticSearchInput navigation={navigation} />
-              <HomeMessage />
+              <HomeMessage>
+                Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper
+                dig.
+              </HomeMessage>
             </View>
           </ImageBackground>
         </View>
@@ -65,16 +66,10 @@ export class Home extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    width: '100%',
-  },
   container: {
     marginBottom: 50,
   },
   headerImage: {
-    width: '100%',
-    height: '100%',
     padding: 25,
   },
 });

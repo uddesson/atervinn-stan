@@ -64,6 +64,7 @@ export const SearchModal = (props: Props) => {
           activeOpacity={0.7}
           onPress={() => navigation.navigate('Home')}
         >
+          {/* TODO: try to make more DRY */}
           {sortingAvailability ? (
             <>
               <ParagraphBold
@@ -73,13 +74,13 @@ export const SearchModal = (props: Props) => {
                   utilityStyles.uppercaseText,
                 ]}
               >
-                Hitta närmsta
+                Hitta station
               </ParagraphBold>
               <GpsIcon height={20} width={20} fill={colors.white} />
             </>
           ) : (
             <>
-              <ExternalLink url={externalUrl}>
+              <ExternalLink url={externalUrl} style={styles.button}>
                 <ParagraphBold
                   style={[
                     utilityStyles.whiteText,
@@ -87,7 +88,7 @@ export const SearchModal = (props: Props) => {
                     styles.buttonText,
                   ]}
                 >
-                  Hitta närmsta
+                  Hitta central
                 </ParagraphBold>
                 <ExternalLinkIcon height={20} width={20} fill={colors.white} />
               </ExternalLink>

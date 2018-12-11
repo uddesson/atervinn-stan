@@ -1,14 +1,14 @@
 //@flow
 import React, { Component } from 'react';
-import { StyleSheet, SafeAreaView, ImageBackground, View } from 'react-native';
+import { StyleSheet, SafeAreaView, View } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import {
-  Heading,
   utilityStyles,
   SearchInput,
   SearchResultList,
   colors,
   CloseButton,
+  Message,
 } from '../components/UI';
 
 type Props = {
@@ -35,7 +35,9 @@ export class Search extends Component<Props, State> {
 
   getSearchResuts = async (searchInput: string) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/sorting/search/${searchInput}`);
+      const res = await fetch(
+        `http://localhost:5000/api/sorting/search/${searchInput}`
+      );
       const searchResults = await res.json();
       // Store searchresults in state
       this.setState({ searchResults });
@@ -50,14 +52,29 @@ export class Search extends Component<Props, State> {
     const { searchInput, searchResults } = this.state;
 
     return (
-      <SafeAreaView style={[styles.screen]}>
+      <SafeAreaView style={[utilityStyles.flex1, utilityStyles.fullWidth]}>
         <View style={[utilityStyles.justifyCenter, styles.container]}>
-          <View style={[utilityStyles.row, styles.innerContainer]}>
-            <SearchInput navigation={navigation} onChangeText={this.handleSearchInput} />
+          <View
+            style={[
+              utilityStyles.row,
+              utilityStyles.fullWidth,
+              utilityStyles.justifyAround,
+              styles.innerContainer,
+            ]}
+          >
+            <SearchInput
+              navigation={navigation}
+              onChangeText={this.handleSearchInput}
+            />
             <CloseButton onPress={() => navigation.goBack()} />
           </View>
-
-          <SearchResultList results={searchResults} navigation={navigation} />
+          {searchInput.length === 0 ? (
+            <Message type={'examples'} />
+          ) : searchResults.length === 0 ? (
+            <Message type={'no results'} />
+          ) : (
+            <SearchResultList results={searchResults} navigation={navigation} />
+          )}
         </View>
       </SafeAreaView>
     );
@@ -66,8 +83,6 @@ export class Search extends Component<Props, State> {
 
 const styles = StyleSheet.create({
   screen: {
-    flex: 1,
-    width: '100%',
     backgroundColor: colors.whiteSmoke,
   },
   container: {

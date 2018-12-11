@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { View, StyleSheet, Animated, Easing } from 'react-native';
+import { utilityStyles } from './utilityStyles';
 
 /**
  * Credit for pulse and animation goes to https://github.com/mastermoo/react-native-pulse-loader.
@@ -44,7 +45,8 @@ export class PulseAnimation extends Component<Props> {
     return (
       <View
         style={[
-          styles.circleWrapper,
+          utilityStyles.center,
+          utilityStyles.absolute,
           {
             width: pulseMaxSize,
             height: pulseMaxSize,
@@ -82,11 +84,6 @@ export class PulseAnimation extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-  circleWrapper: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    position: 'absolute',
-  },
   circle: {
     borderWidth: 4 * StyleSheet.hairlineWidth,
   },

@@ -40,7 +40,7 @@ export const MapModal = (props: Props) => {
     <View style={[utilityStyles.flex1, utilityStyles.justifyCenter]}>
       <Modal visible={visible} transparent={true} animationType={'none'}>
         <View style={[utilityStyles.flex1, utilityStyles.center]}>
-          <View style={styles.modalContent}>
+          <View style={[utilityStyles.boxShadow, styles.modalContent]}>
             <View
               style={[
                 styles.modalHeader,
@@ -106,13 +106,6 @@ export const MapModal = (props: Props) => {
 const styles = StyleSheet.create({
   modalContent: {
     backgroundColor: colors.white,
-    shadowColor: colors.lightGrey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.8,
     maxHeight: 500,
     width: '90%',
     borderBottomRightRadius: 5,

@@ -1,10 +1,17 @@
+//@flow
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { utilityStyles } from './utilityStyles';
 import { colors } from './colors';
 import { Paragraph } from './Types';
 
-export const HomeMessage = () => {
+type Props = {
+  children: string,
+};
+
+/* Should this have a more generic name for scaleability? */
+export const HomeMessage = (props: Props) => {
+  const { children } = props;
   return (
     <View style={[styles.container, utilityStyles.fullWidth]}>
       <Paragraph
@@ -14,7 +21,7 @@ export const HomeMessage = () => {
           utilityStyles.centerText,
         ]}
       >
-        Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper dig.
+        {children}
       </Paragraph>
     </View>
   );

@@ -87,13 +87,6 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: colors.white,
     borderRadius: 6,
-    shadowColor: colors.lightGrey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.8,
   },
   circle: {
     width: 20,
@@ -104,7 +97,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   shortText: {
-    maxWidth: 150,
+    maxWidth: 200,
   },
   longText: {
     maxWidth: 270,
