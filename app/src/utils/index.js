@@ -6,3 +6,4 @@ export { getStationSymbol } from './getStationSymbol';
 export { allSortingTypes } from './sortingTypes';
 export { getSearchModalMessage } from './getSearchModalMessage';
 export { parseArray } from './parseArray';
+export { symbolExplanation } from './symbolExplanation';
