@@ -66,7 +66,7 @@ export class Search extends Component<Props, State> {
           {searchInput.length === 0 ? (
             <Message type={'examples'} />
           ) : searchResults.length === 0 ? (
-            <Message type={'error'} />
+            <Message type={'no results'} />
           ) : (
             <SearchResultList results={searchResults} navigation={navigation} />
           )}
