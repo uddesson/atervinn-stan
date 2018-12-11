@@ -16,8 +16,7 @@ import {
   colors,
   ParagraphBold,
 } from '../components/UI';
-import { symbolExplanation } from '../components/UI';
-import { toUpperCase } from '../utils';
+import { symbolExplanations, toUpperCase } from '../utils';
 
 type Props = {};
 
@@ -30,7 +29,7 @@ export class Info extends Component<Props> {
         >
           <Heading style={styles.heading}>Symbolförklaring</Heading>
           <FlatList
-            data={symbolExplanation}
+            data={symbolExplanations}
             ListFooterComponent={
               <Paragraph style={styles.smallText}>
                 <ParagraphBold style={styles.smallText}>

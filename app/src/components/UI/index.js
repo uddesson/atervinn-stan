@@ -16,7 +16,6 @@ export {
 } from './Icons';
 export { SearchResultList } from './SearchResultList';
 export { ShortcutBanner } from './ShortcutBanner';
-export { symbolExplanation } from './symbolExplanation';
 export { Pulse } from './Pulse';
 export { ExternalLink } from './ExternalLink';
 export { FilterToggler } from './FilterToggler';

@@ -1,4 +1,4 @@
-export const symbolExplanation = [
+export const symbolExplanations = [
   {
     title: 'FTI station',
     text: 'Utställda av förpackning & tidnings insamlingen.',
