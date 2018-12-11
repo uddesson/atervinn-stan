@@ -63,6 +63,7 @@ export class ShortcutBanner extends Component<Props> {
         style={[
           utilityStyles.fullWidth,
           utilityStyles.boxShadow,
+          utilityStyles.fullWidth,
           styles.container,
         ]}
       >
@@ -70,6 +71,7 @@ export class ShortcutBanner extends Component<Props> {
           style={[
             utilityStyles.row,
             utilityStyles.center,
+            utilityStyles.fullHeight,
             styles.innerContainer,
           ]}
         >
@@ -98,13 +100,11 @@ export class ShortcutBanner extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
     height: 65,
     backgroundColor: colors.blue,
   },
   innerContainer: {
     alignSelf: 'center',
-    height: '100%',
   },
   textMargin: {
     marginRight: 10,

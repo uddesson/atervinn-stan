@@ -29,7 +29,10 @@ export const SearchResultList = (props: Props) => {
 
   return (
     <ScrollView
-      contentContainerStyle={[utilityStyles.fullWidth, styles.container]}
+      contentContainerStyle={[
+        utilityStyles.fullWidth,
+        utilityStyles.fullHeight,
+      ]}
       showsVerticalScrollIndicator={false}
     >
       <FlatList
@@ -94,9 +97,6 @@ export const SearchResultList = (props: Props) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    height: '100%',
-  },
   wrapper: {
     padding: 10,
     marginTop: 10,
