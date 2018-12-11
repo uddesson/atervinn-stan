@@ -1,7 +1,9 @@
 export { SearchInput } from './SearchInput';
 export { colors } from './colors';
 export { utilityStyles } from './utilityStyles';
-export { Heading, SubHeading, Paragraph, ParagraphBold } from './Types';
+export {
+  Heading, SubHeading, Paragraph, ParagraphBold,
+} from './Types';
 export { Message } from './Message';
 export {
   HeartIcon,
@@ -16,7 +18,6 @@ export {
 } from './Icons';
 export { SearchResultList } from './SearchResultList';
 export { ShortcutBanner } from './ShortcutBanner';
-export { symbolExplanation } from '../../utils/symbolExplanation';
 export { Pulse } from './Pulse';
 export { ExternalLink } from './ExternalLink';
 export { FilterToggler } from './FilterToggler';

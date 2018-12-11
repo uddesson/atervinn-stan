@@ -1,26 +1,5 @@
-export const allSortingTypes = [
-  'pappersförpackning',
-  'plastförpackning',
-  'glasförpackning',
-  'metallförpackning',
-  'tidning/returpapper',
-  'ovrigt',
-  'soppåsen',
-];
+export const allSortingTypes = ['papper', 'plast', 'glas', 'metall', 'tidningar', 'övrigt'];
 
-export const moduleSorting = [
-  'pappersförpackning',
-  'plastförpackning',
-  'glasförpackning',
-  'metallförpackning',
-  'ovrigt',
-  'soppåsen',
-];
+export const moduleSorting = ['papper', 'plast', 'glas', 'metall', 'övrigt'];
 
-export const ftiStationSorting = [
-  'pappersförpackning',
-  'plastförpackning',
-  'glasförpackning',
-  'metallförpackning',
-  'tidning/returpapper',
-];
+export const ftiStationSorting = ['papper', 'plast', 'glas', 'metall', 'tidningar'];

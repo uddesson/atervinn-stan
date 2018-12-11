@@ -5,7 +5,7 @@ import { colors } from './colors';
 import { utilityStyles } from './utilityStyles';
 import { SubHeading, Paragraph, ParagraphBold } from './Types';
 import { CancelIcon, SuccessIcon, WarningIcon } from './Icons';
-import { calcColor, getIconCode, toUpperCase, parseArray } from '../../utils';
+import { calcColor, toUpperCase, parseArray } from '../../utils';
 
 type Props = {
   visible: boolean,
@@ -23,8 +23,7 @@ export const MapModal = (props: Props) => {
 
   // returns circles with color symbolizing the sortingtype
   const sortingSymbols = marker.sorting.map(option => {
-    const colorCode = getIconCode(option);
-    const backgroundColor = calcColor(colorCode);
+    const backgroundColor = calcColor(option);
     return <View key={option} style={[styles.circle, { backgroundColor }]} />;
   });
 
