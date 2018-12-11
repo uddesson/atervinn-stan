@@ -39,6 +39,9 @@ export const utilityStyles = StyleSheet.create({
   fullWidth: {
     width: '100%',
   },
+  fullHeight: {
+    height: '100%',
+  },
   whiteText: {
     color: 'white',
   },
