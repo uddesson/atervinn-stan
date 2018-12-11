@@ -10,6 +10,10 @@ type Props = {
   type: string,
 };
 
+/* 
+  this should probably have a less generic name since its 
+  usecase is limited to the search screen 
+*/
 export const Message = (props: Props) => {
   const { type } = props;
 
@@ -36,9 +40,6 @@ export const Message = (props: Props) => {
 };
 
 const styles = StyleSheet.create({
-  wrapper: {
-    justifyContent: 'center',
-  },
   message: {
     margin: 8,
   },

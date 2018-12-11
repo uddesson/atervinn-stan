@@ -1,9 +1,7 @@
 //@flow
-
 import React, { Component } from 'react';
 import { TouchableOpacity, View, Alert, StyleSheet } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
-import LinearGradient from 'react-native-linear-gradient';
 import Permissions from 'react-native-permissions';
 import { Paragraph, ParagraphBold } from './Types';
 import { colors } from './colors';

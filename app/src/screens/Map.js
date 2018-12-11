@@ -1,11 +1,23 @@
 //@flow
 import React, { Component } from 'react';
-import { StyleSheet, SafeAreaView, View, Alert, Text, TouchableOpacity } from 'react-native';
+import {
+  SafeAreaView,
+  View,
+  Alert,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import Permissions from 'react-native-permissions';
 import MapView, { Marker } from 'react-native-maps';
 import { initialRegion } from '../utils';
-import { utilityStyles, FilterToggler, MarkerImage, colors, GpsIconButton } from '../components/UI';
+import {
+  utilityStyles,
+  FilterToggler,
+  MarkerImage,
+  colors,
+  GpsIconButton,
+} from '../components/UI';
 import { MapModal } from '../components/UI/MapModal';
 
 type State = {
@@ -64,11 +76,12 @@ export class Map extends Component<Props, State> {
   };
 
   componentDidMount() {
-    Promise.all([this.getFtiPositions(), this.getModulePositions()]).then(stations =>
-      this.setState({
-        ftiPositions: stations[0],
-        modulePositions: stations[1],
-      }),
+    Promise.all([this.getFtiPositions(), this.getModulePositions()]).then(
+      stations =>
+        this.setState({
+          ftiPositions: stations[0],
+          modulePositions: stations[1],
+        })
     );
   }
 
@@ -155,12 +168,15 @@ export class Map extends Component<Props, State> {
         },
 
         permissionStatus === 'undetermined'
-          ? { text: 'Ja, det går bra', onPress: await Permissions.request('location') } // Send a permission request.
+          ? {
+              text: 'Ja, det går bra',
+              onPress: await Permissions.request('location'),
+            } // Send a permission request.
           : {
               text: 'Ja, ändra inställningar',
               onPress: Permissions.openSettings,
             },
-      ],
+      ]
     );
   };
 
@@ -179,11 +195,15 @@ export class Map extends Component<Props, State> {
       this.alertForLocationPermission();
     };
 
-    navigator.geolocation.getCurrentPosition(onLocationRecived, onLocationDenied, {
-      timeout: 200,
-      enableHighAccuracy: true,
-      maximumAge: 0,
-    });
+    navigator.geolocation.getCurrentPosition(
+      onLocationRecived,
+      onLocationDenied,
+      {
+        timeout: 200,
+        enableHighAccuracy: true,
+        maximumAge: 0,
+      }
+    );
   };
 
   render() {
@@ -201,7 +221,7 @@ export class Map extends Component<Props, State> {
       <SafeAreaView>
         <MapView
           ref={map => (this.map = map)}
-          style={styles.map}
+          style={[utilityStyles.fullWidth, utilityStyles.fullHeight]}
           initialRegion={region}
           showsUserLocation
           userLocationAnnotationTitle={'Min plats'}
@@ -222,20 +242,14 @@ export class Map extends Component<Props, State> {
           onModulePress={this.handleModuleToggling}
         />
         {isModalVisible ? (
-          <MapModal visible={isModalVisible} onPress={this.handleModal} marker={clickedMarker} />
+          <MapModal
+            visible={isModalVisible}
+            onPress={this.handleModal}
+            marker={clickedMarker}
+          />
         ) : null}
         <GpsIconButton onPress={this.showCurrentLocation} />
       </SafeAreaView>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-  },
-  map: {
-    width: '100%',
-    height: '100%',
-  },
-});

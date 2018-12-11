@@ -1,12 +1,12 @@
 // @flow
 import React from 'react';
 import { Image, StyleSheet } from 'react-native';
-import { colors } from './colors';
 import { utilityStyles } from './utilityStyles';
 
 type Props = {
   type: string,
 };
+
 export const MarkerImage = (props: Props) => {
   const { type } = props;
 

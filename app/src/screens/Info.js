@@ -16,8 +16,7 @@ import {
   colors,
   ParagraphBold,
 } from '../components/UI';
-import { symbolExplanation } from '../components/UI';
-import { toUpperCase } from '../utils';
+import { symbolExplanation, toUpperCase } from '../utils';
 
 type Props = {};
 
