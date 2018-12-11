@@ -9,12 +9,13 @@ type Props = {
 
 export const Message = (props: Props) => {
   const { type } = props;
-  const instructions = `Osäker på var eller hur ditt skräp ska återvinnas? Använd sökfunktionen. Du kan också gå direkt till närmsta station.`;
-  const error = `Hm, den var klurig. Försök återvinna det så gott du kan – så jobbar vi vidare på att utöka databasen!`;
-  const message = type === 'instructions' ? instructions : error;
+  const examples = 'Ett sökord kan t.ex. vara...';
+  const error = 'Vi hittar tyvärr inte det du söker.';
+  const message = type === 'examples' ? examples : error;
 
+  const externalUrl = 'https://tinyurl.com/y99gjgz4';
   return (
-    <View style={styles.wrapper}>
+    <View>
       <Paragraph>{message}</Paragraph>
     </View>
   );
@@ -23,6 +24,5 @@ export const Message = (props: Props) => {
 const styles = StyleSheet.create({
   wrapper: {
     justifyContent: 'center',
-    alignItems: 'center',
   },
 });
