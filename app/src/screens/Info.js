@@ -53,9 +53,7 @@ export class Info extends Component<Props> {
                 />
 
                 <View style={styles.textContainer}>
-                  <SubHeading
-                    style={[utilityStyles.capitalizeText, styles.subHeading]}
-                  >
+                  <SubHeading style={styles.subHeading}>
                     {item.title}
                   </SubHeading>
                   <Paragraph
