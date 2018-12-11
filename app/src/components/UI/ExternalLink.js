@@ -1,17 +1,16 @@
 //@flow
 import React from 'react';
-import { TouchableOpacity, StyleSheet, Linking } from 'react-native';
-import { ParagraphBold } from './Types';
+import { TouchableOpacity, Linking } from 'react-native';
 import { utilityStyles } from './utilityStyles';
-import { colors } from './colors';
 
 type Props = {
   url: string,
   children: React$Element<any>,
+  styles: Object,
 };
 
 export const ExternalLink = (props: Props) => {
-  const { url, children } = props;
+  const { url, children, styles } = props;
 
   const onPress = () =>
     Linking.canOpenURL(url).then(() => {
@@ -19,21 +18,8 @@ export const ExternalLink = (props: Props) => {
     });
 
   return (
-    <TouchableOpacity
-      onPress={onPress}
-      style={[utilityStyles.row, styles.button]}
-    >
+    <TouchableOpacity onPress={onPress} style={[utilityStyles.row, styles]}>
       {children}
     </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  button: {
-    borderWidth: 1,
-    borderColor: colors.darkGreen,
-    backgroundColor: colors.darkGreen,
-    borderRadius: 5,
-    padding: 5,
-  },
-});

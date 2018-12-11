@@ -1,12 +1,10 @@
 //@flow
-
 import React, { Component } from 'react';
 import { TouchableOpacity, View, Alert, StyleSheet } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
-import LinearGradient from 'react-native-linear-gradient';
 import Permissions from 'react-native-permissions';
 import { Paragraph, ParagraphBold } from './Types';
-import { gradients, colors } from './colors';
+import { colors } from './colors';
 import { utilityStyles } from './utilityStyles';
 import { Pulse } from './Pulse';
 
@@ -62,12 +60,18 @@ export class ShortcutBanner extends Component<Props> {
       <TouchableOpacity
         activeOpacity={0.9}
         onPress={this.checkForPermissionStatus}
-        style={[utilityStyles.fullWidth, styles.container]}
+        style={[
+          utilityStyles.fullWidth,
+          utilityStyles.boxShadow,
+          utilityStyles.fullWidth,
+          styles.container,
+        ]}
       >
         <View
           style={[
             utilityStyles.row,
             utilityStyles.center,
+            utilityStyles.fullHeight,
             styles.innerContainer,
           ]}
         >
@@ -96,20 +100,11 @@ export class ShortcutBanner extends Component<Props> {
 
 const styles = StyleSheet.create({
   container: {
-    width: '100%',
     height: 65,
     backgroundColor: colors.blue,
-    shadowColor: colors.lightGrey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.8,
   },
   innerContainer: {
     alignSelf: 'center',
-    height: '100%',
   },
   textMargin: {
     marginRight: 10,

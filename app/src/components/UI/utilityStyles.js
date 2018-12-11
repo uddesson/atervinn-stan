@@ -39,6 +39,9 @@ export const utilityStyles = StyleSheet.create({
   fullWidth: {
     width: '100%',
   },
+  fullHeight: {
+    height: '100%',
+  },
   whiteText: {
     color: 'white',
   },
@@ -62,5 +65,14 @@ export const utilityStyles = StyleSheet.create({
   },
   relative: {
     position: 'relative',
+  },
+  boxShadow: {
+    shadowColor: colors.lightGrey,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowRadius: 2,
+    shadowOpacity: 0.8,
   },
 });

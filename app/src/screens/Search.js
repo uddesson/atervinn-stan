@@ -1,16 +1,14 @@
 //@flow
 import React, { Component } from 'react';
-import { StyleSheet, SafeAreaView, ImageBackground, View } from 'react-native';
+import { StyleSheet, SafeAreaView, View } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import {
-  Heading,
   utilityStyles,
   SearchInput,
   SearchResultList,
   colors,
   CloseButton,
   Message,
-  Paragraph,
 } from '../components/UI';
 
 type Props = {
@@ -54,9 +52,16 @@ export class Search extends Component<Props, State> {
     const { searchInput, searchResults } = this.state;
 
     return (
-      <SafeAreaView style={[styles.screen]}>
+      <SafeAreaView style={[utilityStyles.flex1, utilityStyles.fullWidth]}>
         <View style={[utilityStyles.justifyCenter, styles.container]}>
-          <View style={[utilityStyles.row, styles.innerContainer]}>
+          <View
+            style={[
+              utilityStyles.row,
+              utilityStyles.fullWidth,
+              utilityStyles.justifyAround,
+              styles.innerContainer,
+            ]}
+          >
             <SearchInput
               navigation={navigation}
               onChangeText={this.handleSearchInput}
@@ -78,16 +83,12 @@ export class Search extends Component<Props, State> {
 
 const styles = StyleSheet.create({
   screen: {
-    flex: 1,
-    width: '100%',
     backgroundColor: colors.whiteSmoke,
   },
   container: {
     padding: 20,
   },
   innerContainer: {
-    width: '100%',
-    justifyContent: 'space-around',
     marginBottom: 25,
   },
 });

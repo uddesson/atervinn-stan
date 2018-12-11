@@ -33,7 +33,7 @@ export const SearchModal = (props: Props) => {
   const sortingTypeSymbol = getIconCode(sortingType);
   const sortingAvailability = allSortingTypes.includes(sortingType);
   const message = getSearchModalMessage(sortingType, title);
-  /* url to list of recyclingcentrals in stockholm on SVOA's webpage */
+  // url to list of recyclingcentrals in stockholm on SVOA's webpage
   const externalUrl = 'https://tinyurl.com/y9sast9a';
 
   return (
@@ -69,8 +69,7 @@ export const SearchModal = (props: Props) => {
           activeOpacity={0.7}
           onPress={() => navigation.navigate('Home')}
         >
-          {/* TODO: this could probably be more DRY and isoldated into 
-          component file */}
+          {/* TODO: try to make more DRY */}
           {sortingAvailability ? (
             <>
               <ParagraphBold
@@ -86,7 +85,7 @@ export const SearchModal = (props: Props) => {
             </>
           ) : (
             <>
-              <ExternalLink url={externalUrl}>
+              <ExternalLink url={externalUrl} style={styles.button}>
                 <ParagraphBold
                   style={[
                     utilityStyles.whiteText,
@@ -122,7 +121,7 @@ const styles = StyleSheet.create({
     width: 25,
     height: 25,
     borderRadius: 12.5,
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: colors.red,
     marginLeft: 10,
   },

@@ -1,8 +1,7 @@
 //@flow
 import React, { Component } from 'react';
-import { TextInput, View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { TextInput, StyleSheet } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
-import { utilityStyles } from './utilityStyles';
 import { colors } from './colors';
 
 type Props = {

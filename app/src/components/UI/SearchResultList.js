@@ -29,7 +29,10 @@ export const SearchResultList = (props: Props) => {
 
   return (
     <ScrollView
-      contentContainerStyle={[utilityStyles.fullWidth, styles.container]}
+      contentContainerStyle={[
+        utilityStyles.fullWidth,
+        utilityStyles.fullHeight,
+      ]}
       showsVerticalScrollIndicator={false}
     >
       <FlatList
@@ -53,6 +56,7 @@ export const SearchResultList = (props: Props) => {
                 style={[
                   utilityStyles.row,
                   utilityStyles.justifyBetween,
+                  utilityStyles.boxShadow,
                   styles.wrapper,
                 ]}
                 activeOpacity={0.7}
@@ -93,21 +97,11 @@ export const SearchResultList = (props: Props) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    height: '100%',
-  },
   wrapper: {
     padding: 10,
     marginTop: 10,
     backgroundColor: colors.white,
     borderRadius: 6,
-    shadowColor: colors.lightGrey,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowRadius: 2,
-    shadowOpacity: 0.8,
   },
   circle: {
     width: 20,
