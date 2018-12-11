@@ -79,7 +79,7 @@ export const SearchModal = (props: Props) => {
                   utilityStyles.uppercaseText,
                 ]}
               >
-                Hitta närmsta
+                Hitta station
               </ParagraphBold>
               <GpsIcon height={20} width={20} fill={colors.white} />
             </>
@@ -93,7 +93,7 @@ export const SearchModal = (props: Props) => {
                     styles.buttonText,
                   ]}
                 >
-                  Hitta närmsta
+                  Hitta central
                 </ParagraphBold>
                 <ExternalLinkIcon height={20} width={20} fill={colors.white} />
               </ExternalLink>
