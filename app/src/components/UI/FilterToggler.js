@@ -7,8 +7,8 @@ import { utilityStyles } from './utilityStyles';
 type Props = {
   isFtiContainerVisible: boolean,
   isModuleVisible: boolean,
-  onFtiContainerPress: () => boolean,
-  onModulePress: () => boolean,
+  onFtiContainerPress: () => void,
+  onModulePress: () => void,
 };
 
 export const FilterToggler = (props: Props) => {
