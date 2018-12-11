@@ -174,9 +174,16 @@ export class Map extends Component<Props, State> {
       };
       this.map.animateToRegion(region);
     };
-    const onLocationDenied = () => this.alertForLocationPermission();
 
-    navigator.geolocation.getCurrentPosition(onLocationRecived, onLocationDenied);
+    const onLocationDenied = error => {
+      this.alertForLocationPermission();
+    };
+
+    navigator.geolocation.getCurrentPosition(onLocationRecived, onLocationDenied, {
+      timeout: 200,
+      enableHighAccuracy: true,
+      maximumAge: 0,
+    });
   };
 
   render() {
