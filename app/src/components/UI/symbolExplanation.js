@@ -1,43 +1,45 @@
 export const symbolExplanation = [
   {
     title: 'FTI station',
-    text: 'Utställda av förpackning & tidnings insamlingen.',
+    text:
+      'Återvinningstationer utställda av förpackning & tidnings insamlingen.',
     icon: 'fti-container',
   },
   {
     title: 'Modul',
-    text: 'Utställda av stockholms stad april–oktober varje år sen 2015.',
+    text:
+      'Mobila återvinningskärl utställda av stockholms stad april–oktober varje år.',
     icon: 'module',
   },
   {
     title: 'plast',
-    text: 't.ex. plastbestick, korkar och olika plastförpackningar.',
+    text:
+      'Här återvinner du bland annat ketchupflaskan och plastflaskor utan pant',
     icon: 'plastförpackning',
   },
   {
     title: 'papper',
-    text:
-      't.ex. kaffemuggar, pappersbestick och andra typer av pappersförpackningar.',
+    text: 'Här återvinner du bland annat take-away muggar och juicekartonger.',
     icon: 'pappersförpackning',
   },
   {
     title: 'metall',
-    text: 't.ex. kapsyler, aluminiumfolie.',
+    text: 'Här återvinner du bland annat kapsyler och aluminiumfolie',
     icon: 'metallförpackning',
   },
   {
     title: 'glas',
-    text: 't.ex. glasflaskor och glasburkar.',
+    text: 'Här återvinner du flaskor i glas.',
     icon: 'glasförpackningar',
   },
   {
     title: 'tidningar/returpapper',
-    text: 't.ex. reklamblad, Hem & Hyra.',
+    text: 'Här återvinner reklamblad och tidningar',
     icon: 'tidning_returpapper',
   },
   {
     title: 'övrigt',
-    text: 't.ex. servetter, döda djur, ciggarettfimpar och tuggummi.',
+    text: 'Här återvinner du bland annat tuggumi och ciggarettfimpar.',
     icon: 'ovrigt',
   },
 ];
