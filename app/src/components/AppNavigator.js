@@ -1,8 +1,10 @@
-//@flow
+// @flow
 import React from 'react';
 import { createBottomTabNavigator } from 'react-navigation';
 import { Home, Map, Info } from '../screens';
-import { colors, SearchIcon, MapIcon, InfoIcon } from './UI';
+import {
+  colors, SearchIcon, MapIcon, InfoIcon,
+} from './UI';
 import { SearchNavigator } from './SearchNavigator';
 
 export const AppNavigator = createBottomTabNavigator(
@@ -12,11 +14,7 @@ export const AppNavigator = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'HEM',
         tabBarIcon: ({ activeTintColor, focused }) => (
-          <SearchIcon
-            width={23}
-            height={23}
-            fill={focused ? colors.blue : 'grey'}
-          />
+          <SearchIcon width={25} height={25} fill={focused ? colors.blue : colors.darkGrey} />
         ),
       },
     },
@@ -25,11 +23,7 @@ export const AppNavigator = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'KARTA',
         tabBarIcon: ({ focused }) => (
-          <MapIcon
-            width={23}
-            height={23}
-            fill={focused ? colors.blue : 'grey'}
-          />
+          <MapIcon width={25} height={25} fill={focused ? colors.blue : colors.darkGrey} />
         ),
       },
     },
@@ -38,11 +32,7 @@ export const AppNavigator = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'INFO',
         tabBarIcon: ({ focused }) => (
-          <InfoIcon
-            width={23}
-            height={23}
-            fill={focused ? colors.blue : 'grey'}
-          />
+          <InfoIcon width={25} height={25} fill={focused ? colors.blue : colors.darkGrey} />
         ),
       },
     },
@@ -50,18 +40,18 @@ export const AppNavigator = createBottomTabNavigator(
   {
     initialRouteName: 'Home',
     tabBarOptions: {
+      inactiveTintColor: colors.darkGrey,
       activeTintColor: colors.blue,
-
       labelStyle: {
-        fontSize: 12,
-        marginTop: 5,
-        fontFamily: 'Jaldi',
+        fontSize: 13,
+        fontWeight: '600',
+        fontFamily: 'Roboto',
       },
       style: {
-        padding: 10,
-        height: 65,
+        padding: 8,
+        height: 68,
         backgroundColor: colors.white,
       },
     },
-  }
+  },
 );
