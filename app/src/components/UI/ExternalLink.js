@@ -20,7 +20,7 @@ export const ExternalLink = (props: Props) => {
     });
 
   return (
-    <TouchableOpacity onPress={onPress} style={styles}>
+    <TouchableOpacity onPress={onPress} style={[utilityStyles.row, styles]}>
       {children}
     </TouchableOpacity>
   );
