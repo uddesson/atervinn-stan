@@ -69,6 +69,7 @@ export const SearchModal = (props: Props) => {
           activeOpacity={0.7}
           onPress={() => navigation.navigate('Home')}
         >
+          {/* TODO: try to make more DRY */}
           {sortingAvailability ? (
             <>
               <ParagraphBold
