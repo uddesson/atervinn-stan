@@ -29,12 +29,11 @@ type Props = {
 export const SearchModal = (props: Props) => {
   const { navigation } = props;
   const title = toUpperCase(navigation.getParam('title'));
-  // TODO: sometimes type is missing, how do we handle this?
   const sortingType = navigation.getParam('sortingType').toLowerCase();
   const sortingTypeSymbol = getIconCode(sortingType);
   const sortingAvailability = allSortingTypes.includes(sortingType);
   const message = getSearchModalMessage(sortingType, title);
-  // url to list of recyclingcentrals in stockholm on SVOA's webpage
+  /* url to list of recyclingcentrals in stockholm on SVOA's webpage */
   const externalUrl = 'https://tinyurl.com/y9sast9a';
 
   return (
@@ -70,6 +69,8 @@ export const SearchModal = (props: Props) => {
           activeOpacity={0.7}
           onPress={() => navigation.navigate('Home')}
         >
+          {/* TODO: this could probably be more DRY and isoldated into 
+          component file */}
           {sortingAvailability ? (
             <>
               <ParagraphBold
