@@ -1,4 +1,4 @@
-//@flow
+// @flow
 
 export const colors = {
   green: 'rgb(155,199,160)',
@@ -10,6 +10,7 @@ export const colors = {
   white: 'rgb(255,255,255)',
   whiteSmoke: 'rgb(245, 245, 245)',
   red: 'rgb(255,51,51)',
+  orange: 'rgb(255,150,39)',
   black: 'rgb(70, 70, 70)',
 
   ftiGreen: 'rgb(106,178,32)',

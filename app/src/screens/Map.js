@@ -1,23 +1,11 @@
 //@flow
 import React, { Component } from 'react';
-import {
-  SafeAreaView,
-  View,
-  Alert,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import { SafeAreaView, View, Alert, Text, TouchableOpacity } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import Permissions from 'react-native-permissions';
-import MapView, { Marker } from 'react-native-maps';
+import MapView, { Marker, Callout } from 'react-native-maps';
 import { initialRegion } from '../utils';
-import {
-  utilityStyles,
-  FilterToggler,
-  MarkerImage,
-  colors,
-  GpsIconButton,
-} from '../components/UI';
+import { utilityStyles, FilterToggler, MarkerImage, colors, GpsIconButton } from '../components/UI';
 import { MapModal } from '../components/UI/MapModal';
 
 type State = {
@@ -26,13 +14,6 @@ type State = {
   modulePositions: Object[],
   isFtiContainerVisible: boolean,
   isModuleVisible: boolean,
-  isModalVisible: boolean,
-  clickedMarker: {
-    locationName: string,
-    sorting: string[],
-    locationConfirmed?: boolean,
-    sortingConfirmed?: boolean,
-  },
 };
 
 type Props = {
@@ -54,11 +35,6 @@ export class Map extends Component<Props, State> {
     modulePositions: [],
     isFtiContainerVisible: true,
     isModuleVisible: true,
-    isModalVisible: false,
-    clickedMarker: {
-      locationName: '',
-      sorting: [],
-    },
   };
 
   map: ?React$Element<any>;
@@ -76,12 +52,11 @@ export class Map extends Component<Props, State> {
   };
 
   componentDidMount() {
-    Promise.all([this.getFtiPositions(), this.getModulePositions()]).then(
-      stations =>
-        this.setState({
-          ftiPositions: stations[0],
-          modulePositions: stations[1],
-        })
+    Promise.all([this.getFtiPositions(), this.getModulePositions()]).then(stations =>
+      this.setState({
+        ftiPositions: stations[0],
+        modulePositions: stations[1],
+      }),
     );
   }
 
@@ -97,18 +72,6 @@ export class Map extends Component<Props, State> {
     });
   };
 
-  handleModal = () => {
-    this.setState({
-      isModalVisible: !this.state.isModalVisible,
-    });
-  };
-
-  handleMarkerInfo = (marker: Object) => {
-    this.setState({
-      clickedMarker: marker,
-    });
-  };
-
   renderModuleMarkers = (modulePositions: any) => {
     return modulePositions.map((marker: any) => (
       <Marker
@@ -118,14 +81,11 @@ export class Map extends Component<Props, State> {
           longitude: marker.lng,
         }}
         title={marker.title}
-        onPress={() => {
-          // save marker obj in state
-          this.handleMarkerInfo(marker);
-          // open modal
-          this.handleModal();
-        }}
       >
         <MarkerImage type={'pin-module'} />
+        <Callout>
+          <MapModal marker={marker} />
+        </Callout>
       </Marker>
     ));
   };
@@ -139,14 +99,11 @@ export class Map extends Component<Props, State> {
           longitude: marker.lng,
         }}
         title={marker.address}
-        onPress={() => {
-          // save marker obj in state
-          this.handleMarkerInfo(marker);
-          // open modal
-          this.handleModal();
-        }}
       >
         <MarkerImage type={'pin-fti-container'} />
+        <Callout>
+          <MapModal marker={marker} />
+        </Callout>
       </Marker>
     ));
   };
@@ -176,7 +133,7 @@ export class Map extends Component<Props, State> {
               text: 'Ja, ändra inställningar',
               onPress: Permissions.openSettings,
             },
-      ]
+      ],
     );
   };
 
@@ -195,15 +152,11 @@ export class Map extends Component<Props, State> {
       this.alertForLocationPermission();
     };
 
-    navigator.geolocation.getCurrentPosition(
-      onLocationRecived,
-      onLocationDenied,
-      {
-        timeout: 200,
-        enableHighAccuracy: true,
-        maximumAge: 0,
-      }
-    );
+    navigator.geolocation.getCurrentPosition(onLocationRecived, onLocationDenied, {
+      timeout: 200,
+      enableHighAccuracy: true,
+      maximumAge: 0,
+    });
   };
 
   render() {
@@ -213,8 +166,6 @@ export class Map extends Component<Props, State> {
       ftiPositions,
       isFtiContainerVisible,
       isModuleVisible,
-      isModalVisible,
-      clickedMarker,
     } = this.state;
 
     return (
@@ -241,13 +192,6 @@ export class Map extends Component<Props, State> {
           onFtiContainerPress={this.handleFtiContainerToggling}
           onModulePress={this.handleModuleToggling}
         />
-        {isModalVisible ? (
-          <MapModal
-            visible={isModalVisible}
-            onPress={this.handleModal}
-            marker={clickedMarker}
-          />
-        ) : null}
         <GpsIconButton onPress={this.showCurrentLocation} />
       </SafeAreaView>
     );

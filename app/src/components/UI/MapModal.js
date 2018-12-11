@@ -8,106 +8,65 @@ import { CancelIcon, SuccessIcon, WarningIcon } from './Icons';
 import { calcColor, toUpperCase, parseArray } from '../../utils';
 
 type Props = {
-  visible: boolean,
-  onPress: () => void,
   marker: {
     locationName: string,
     sorting: string[],
-    locationConfirmed?: boolean,
     sortingConfirmed?: boolean,
+    locationConfirmed?: boolean,
   },
 };
 
 export const MapModal = (props: Props) => {
-  const { visible, onPress, marker } = props;
+  const { marker } = props;
 
   // returns circles with color symbolizing the sortingtype
-  const sortingSymbols = marker.sorting.map(option => {
-    const backgroundColor = calcColor(option);
-    return <View key={option} style={[styles.circle, { backgroundColor }]} />;
+  const sortingSymbols = marker.sorting.map(sortingType => {
+    const backgroundColor = calcColor(sortingType);
+    return <View key={sortingType} style={[styles.circle, { backgroundColor }]} />;
   });
+
+  const sortingNotConfirmed = marker.sortingConfirmed === false || undefined;
+  const locationNotConfirmed = marker.locationConfirmed === false || undefined;
+  const informationNotConfirmed = sortingNotConfirmed || locationNotConfirmed;
 
   const sortingOptions = parseArray(marker.sorting);
   const formattedSortingOptions = toUpperCase(sortingOptions);
 
-  const backgroundColor =
-    (marker.hasOwnProperty('locationConfirmed') && marker.locationConfirmed) ||
-    sortingOptions.length > 0
-      ? colors.blue
-      : colors.red;
+  const backgroundColor = informationNotConfirmed ? colors.orange : colors.blue;
 
   return (
-    <View style={[utilityStyles.flex1, utilityStyles.justifyCenter]}>
-      <Modal visible={visible} transparent={true} animationType={'none'}>
-        <View style={[utilityStyles.flex1, utilityStyles.center]}>
-          <View style={[utilityStyles.boxShadow, styles.modalContent]}>
-            <View
-              style={[
-                styles.modalHeader,
-                utilityStyles.row,
-                { backgroundColor },
-              ]}
-            >
-              <SubHeading
-                style={[utilityStyles.capitalizeText, utilityStyles.whiteText]}
-              >
-                {marker.locationName}
-              </SubHeading>
-              {/* TODO: user should also be able to close by press on map */}
-              <TouchableOpacity onPress={() => onPress()} style={styles.button}>
-                <CancelIcon width={20} height={20} fill={colors.white} />
-              </TouchableOpacity>
-            </View>
+    <View style={styles.container}>
+      <View style={[styles.modalHeader, { backgroundColor }]}>
+        <SubHeading
+          style={[utilityStyles.capitalizeText, utilityStyles.whiteText, styles.locationName]}
+        >
+          {marker.locationName}
+        </SubHeading>
+      </View>
 
-            <View style={styles.modalInner}>
-              {/* fti-positions don't have this flag so we want don't to check this
-                if we don't we will get a negative false  */}
-              {marker.hasOwnProperty('locationConfirmed') ? (
-                marker.locationConfirmed ? null : (
-                  <View style={utilityStyles.row}>
-                    <Paragraph>Stationens position är ej bekräftad.</Paragraph>
-                    <WarningIcon width={20} height={20} fill={colors.red} />
-                  </View>
-                )
-              ) : null}
-
-              {sortingOptions.length > 0 ? (
-                <View style={utilityStyles.lineHeightNormal}>
-                  <ParagraphBold>Här kan du återvinna:</ParagraphBold>
-                  <View style={utilityStyles.col}>
-                    <View style={utilityStyles.row}>
-                      <Paragraph>{formattedSortingOptions}</Paragraph>
-                    </View>
-                    <View style={[utilityStyles.row, styles.sortingSymbols]}>
-                      {sortingSymbols}
-                    </View>
-                  </View>
-                </View>
-              ) : (
-                <Paragraph>Sorteringsalternativ är ej bekräftade.</Paragraph>
-              )}
-
-              {marker.hasOwnProperty('locationConfirmed') ? (
-                !marker.locationConfirmed || !marker.sortingConfirmed ? (
-                  <ParagraphBold style={styles.finePrint}>
-                    *På grund av otillräcklig information kan inte modulens
-                    plats/sorteringsalternativ garanteras.
-                  </ParagraphBold>
-                ) : null
-              ) : null}
-            </View>
+      <View style={styles.modalInner}>
+        <ParagraphBold>Här kan du återvinna:</ParagraphBold>
+        <View style={utilityStyles.col}>
+          <View style={utilityStyles.row}>
+            <Paragraph>{formattedSortingOptions}</Paragraph>
           </View>
+          <View style={[utilityStyles.row, styles.sortingSymbols]}>{sortingSymbols}</View>
         </View>
-      </Modal>
+        {informationNotConfirmed && (
+          <ParagraphBold style={styles.finePrint}>
+            {`* På grund av otillräcklig information kan vi inte garantera exakt placering eller sorteringsalternativ för den här modulen.`}
+          </ParagraphBold>
+        )}
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  modalContent: {
+  container: {
+    margin: -12,
+    width: 250,
     backgroundColor: colors.white,
-    maxHeight: 500,
-    width: '90%',
     borderBottomRightRadius: 5,
     borderBottomLeftRadius: 5,
   },
@@ -115,6 +74,10 @@ const styles = StyleSheet.create({
     padding: 10,
     borderTopLeftRadius: 5,
     borderTopRightRadius: 5,
+  },
+  locationName: {
+    fontSize: 18,
+    fontWeight: '700',
   },
   modalInner: {
     padding: 10,
@@ -125,7 +88,7 @@ const styles = StyleSheet.create({
   },
   finePrint: {
     fontSize: 12,
-    color: colors.red,
+    color: colors.orange,
   },
   sortingSymbols: {
     marginTop: 10,
