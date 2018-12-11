@@ -12,7 +12,7 @@ export const AppNavigator = createBottomTabNavigator(
     Home: {
       screen: SearchNavigator,
       navigationOptions: {
-        tabBarLabel: 'HEM',
+        tabBarLabel: 'SÖK',
         tabBarIcon: ({ activeTintColor, focused }) => (
           <SearchIcon width={25} height={25} fill={focused ? colors.blue : colors.darkGrey} />
         ),
