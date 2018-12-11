@@ -23,7 +23,8 @@ export const MapModal = (props: Props) => {
 
   // returns circles with color symbolizing the sortingtype
   const sortingSymbols = marker.sorting.map(option => {
-    const backgroundColor = calcColor(option);
+    const colorCode = getIconCode(option);
+    const backgroundColor = calcColor(colorCode);
     return <View key={option} style={[styles.circle, { backgroundColor }]} />;
   });
 
