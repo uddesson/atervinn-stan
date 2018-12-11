@@ -9,6 +9,8 @@ import {
   SearchResultList,
   colors,
   CloseButton,
+  Message,
+  Paragraph,
 } from '../components/UI';
 
 type Props = {
@@ -35,7 +37,9 @@ export class Search extends Component<Props, State> {
 
   getSearchResuts = async (searchInput: string) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/sorting/search/${searchInput}`);
+      const res = await fetch(
+        `http://localhost:5000/api/sorting/search/${searchInput}`
+      );
       const searchResults = await res.json();
       // Store searchresults in state
       this.setState({ searchResults });
@@ -53,11 +57,19 @@ export class Search extends Component<Props, State> {
       <SafeAreaView style={[styles.screen]}>
         <View style={[utilityStyles.justifyCenter, styles.container]}>
           <View style={[utilityStyles.row, styles.innerContainer]}>
-            <SearchInput navigation={navigation} onChangeText={this.handleSearchInput} />
+            <SearchInput
+              navigation={navigation}
+              onChangeText={this.handleSearchInput}
+            />
             <CloseButton onPress={() => navigation.goBack()} />
           </View>
-
-          <SearchResultList results={searchResults} navigation={navigation} />
+          {searchInput.length === 0 ? (
+            <Message type={'examples'} />
+          ) : searchResults.length === 0 ? (
+            <Message type={'error'} />
+          ) : (
+            <SearchResultList results={searchResults} navigation={navigation} />
+          )}
         </View>
       </SafeAreaView>
     );
