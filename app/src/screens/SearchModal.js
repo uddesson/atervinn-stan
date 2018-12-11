@@ -69,19 +69,34 @@ export const SearchModal = (props: Props) => {
           activeOpacity={0.7}
           onPress={() => navigation.navigate('Home')}
         >
-          <ParagraphBold
-            style={[
-              utilityStyles.whiteText,
-              styles.buttonText,
-              utilityStyles.uppercaseText,
-            ]}
-          >
-            {sortingAvailability ? 'Hitta station' : 'Hitta central'}
-          </ParagraphBold>
           {sortingAvailability ? (
-            <GpsIcon height={20} width={20} fill={colors.white} />
+            <>
+              <ParagraphBold
+                style={[
+                  utilityStyles.whiteText,
+                  styles.buttonText,
+                  utilityStyles.uppercaseText,
+                ]}
+              >
+                Hitta station
+              </ParagraphBold>
+              <GpsIcon height={20} width={20} fill={colors.white} />
+            </>
           ) : (
-            <ExternalLinkIcon height={20} width={20} fill={colors.white} />
+            <>
+              <ExternalLink url={externalUrl}>
+                <ParagraphBold
+                  style={[
+                    utilityStyles.whiteText,
+                    utilityStyles.uppercaseText,
+                    styles.buttonText,
+                  ]}
+                >
+                  Hitta central
+                </ParagraphBold>
+                <ExternalLinkIcon height={20} width={20} fill={colors.white} />
+              </ExternalLink>
+            </>
           )}
         </TouchableOpacity>
       </View>
