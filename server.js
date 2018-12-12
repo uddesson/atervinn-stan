@@ -1,11 +1,11 @@
-const express = require("express");
-const cors = require("cors");
+const express = require('express');
+const cors = require('cors');
 const app = express();
 
 // Data imports.
-const sortingData = require("./data/sorting.json");
-const moduleData = require("./data/modules.json");
-const ftiData = require("./data/ftistations.json");
+const sortingData = require('./data/sorting.json');
+const moduleData = require('./data/modules.json');
+const ftiData = require('./data/ftistations.json');
 
 app.use(cors());
 
@@ -50,12 +50,16 @@ app.get('/api/sorting/search/:query', (req, res) => {
 });
 
 // Get all modules.
-app.get("/api/modules", (req, res) => {
+app.get('/api/modules', (req, res) => {
   res.send(moduleData);
 });
 
 // Get all fti stations.
-app.get("/api/fti", (req, res) => {
+app.get('/api/fti', (req, res) => {
+  if (error) {
+    throwError(500, 'ingen kontakt till appens databas');
+  }
+
   res.send(ftiData);
 });
 
