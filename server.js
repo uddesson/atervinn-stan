@@ -58,3 +58,10 @@ app.get("/api/modules", (req, res) => {
 app.get("/api/fti", (req, res) => {
   res.send(ftiData);
 });
+
+app.use((err, req, res, next) => {
+  // log stacktrace
+  console.error(err.stack);
+  // send error as json, if no code is sent default is 500
+  res.status(err.status || 500).send({ message: err.message });
+});
