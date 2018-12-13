@@ -9,10 +9,16 @@ import {
   StaticSearchInput,
   HomeMessage,
 } from '../components/UI';
+import { checkModuleAvailability } from '../utils';
 
 type Props = {
   navigation: NavigationScreenProps,
 };
+
+const isModulesAvailable = checkModuleAvailability();
+const message = isModulesAvailable
+  ? 'Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper dig'
+  : 'Observera att återvinningsmodulerna inte står ute nu. FTI Stationerna finns dock tillgängliga året om och sökfunktionen fungerar som vanligt.';
 
 export class Home extends Component<Props> {
   static navigationOptions = { header: null };
@@ -53,10 +59,7 @@ export class Home extends Component<Props> {
               ]}
             >
               <StaticSearchInput navigation={navigation} />
-              <HomeMessage>
-                Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper
-                dig.
-              </HomeMessage>
+              <HomeMessage>{message}</HomeMessage>
             </View>
           </ImageBackground>
         </View>
