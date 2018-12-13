@@ -1,6 +1,11 @@
 //@flow
 import React, { Component } from 'react';
-import { StyleSheet, SafeAreaView, View, ActivityIndicator } from 'react-native';
+import {
+  StyleSheet,
+  SafeAreaView,
+  View,
+  ActivityIndicator,
+} from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import {
   utilityStyles,
@@ -51,7 +56,9 @@ export class Search extends Component<Props, State> {
   getSearchResuts = async (searchInput: string) => {
     this.setState({ loading: true });
     try {
-      const res = await fetch(`http://localhost:5000/api/sorting/search/${searchInput}`);
+      const res = await fetch(
+        `http://localhost:5000/api/sorting/search/${searchInput}`
+      );
       const searchResults = await res.json();
       this.setState({ searchResults, loading: false });
     } catch (err) {
@@ -72,13 +79,23 @@ export class Search extends Component<Props, State> {
 
   handleSearchOutPut = () => {
     const { navigation } = this.props;
-    const { searchInput, searchResults, exampleResults, error, loading } = this.state;
+    const {
+      searchInput,
+      searchResults,
+      exampleResults,
+      error,
+      loading,
+    } = this.state;
 
     if (error) return <SearchResultMessage type={'error'} />;
-    if (!error && loading) return <ActivityIndicator size={'large'} style={{ marginTop: '45%' }} />;
+    if (!error && loading)
+      return <ActivityIndicator size={'large'} style={{ marginTop: '45%' }} />;
     if (searchInput.length > 1 && searchResults.length === 0)
       return <SearchResultMessage type={'no-results'} />;
-    if (!searchInput) return <SearchResultList results={exampleResults} navigation={navigation} />;
+    if (!searchInput)
+      return (
+        <SearchResultList results={exampleResults} navigation={navigation} />
+      );
 
     return <SearchResultList results={searchResults} navigation={navigation} />;
   };
@@ -88,17 +105,21 @@ export class Search extends Component<Props, State> {
     const { searchInput, searchResults, error, loading } = this.state;
 
     return (
-      <SafeAreaView style={[utilityStyles.flex1, utilityStyles.fullWidth, styles.screen]}>
+      <SafeAreaView
+        style={[utilityStyles.flex1, utilityStyles.fullWidth, styles.screen]}
+      >
         <View style={[utilityStyles.justifyCenter, styles.container]}>
           <View
             style={[
               utilityStyles.row,
               utilityStyles.fullWidth,
               utilityStyles.justifyAround,
-              styles.innerContainer,
             ]}
           >
-            <SearchInput navigation={navigation} onChangeText={this.handleSearchInput} />
+            <SearchInput
+              navigation={navigation}
+              onChangeText={this.handleSearchInput}
+            />
             <CloseButton onPress={() => navigation.goBack()} />
           </View>
           {this.handleSearchOutPut()}
@@ -116,9 +137,5 @@ const styles = StyleSheet.create({
     marginTop: 20,
     paddingLeft: 20,
     paddingRight: 20,
-  },
-  innerContainer: {
-    width: '100%',
-    justifyContent: 'space-around',
   },
 });
