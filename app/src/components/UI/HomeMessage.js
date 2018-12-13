@@ -1,9 +1,7 @@
 //@flow
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { utilityStyles } from './utilityStyles';
-import { colors } from './colors';
-import { Paragraph } from './Types';
+import { utilityStyles, colors, Paragraph } from '.';
 
 type Props = {
   children: string,
@@ -19,13 +17,7 @@ export const HomeMessage = (props: Props) => {
   const { children } = props;
   return (
     <View style={[styles.container, utilityStyles.fullWidth]}>
-      <Paragraph
-        style={[
-          styles.message,
-          utilityStyles.whiteText,
-          utilityStyles.centerText,
-        ]}
-      >
+      <Paragraph style={[styles.message, utilityStyles.whiteText, utilityStyles.centerText]}>
         {children}
       </Paragraph>
     </View>

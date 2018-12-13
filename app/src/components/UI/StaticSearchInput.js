@@ -2,10 +2,7 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
-import { colors } from './colors';
-import { SearchIcon } from './Icons';
-import { Paragraph } from './Types';
-import { utilityStyles } from './utilityStyles';
+import { colors, SearchIcon, Paragraph, utilityStyles } from '.';
 
 type Props = {
   navigation: NavigationScreenProps,

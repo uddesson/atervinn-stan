@@ -1,10 +1,7 @@
 //@flow
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Paragraph } from './Types';
-import { HeartIcon } from './Icons';
-import { colors } from './colors';
-import { utilityStyles } from './utilityStyles';
+import { Paragraph, colors, utilityStyles } from '.';
 
 type Props = {
   type: string,

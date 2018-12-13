@@ -1,7 +1,7 @@
 //@flow
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
-import { colors } from './colors';
+import { colors } from '.';
 
 type TextProps = React$ElementProps<typeof Text>;
 
@@ -18,12 +18,7 @@ export const Paragraph = ({ style, ...props }: TextProps) => {
 };
 
 export const ParagraphBold = ({ style, ...props }: TextProps) => {
-  return (
-    <Text
-      style={[styles.paragraph, styles.bold, styles.black, style]}
-      {...props}
-    />
-  );
+  return <Text style={[styles.paragraph, styles.bold, styles.black, style]} {...props} />;
 };
 
 const styles = StyleSheet.create({
