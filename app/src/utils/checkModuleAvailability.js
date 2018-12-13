@@ -13,7 +13,14 @@ import twix from 'twix';
  */
 
 export const checkModuleAvailability = () => {
-  return moment('04 01', 'MM DD')
-    .twix('10 31', 'MM DD')
-    .isCurrent();
+  // Uncomment and replace date to test cases
+  //const today = moment('2018 05 02');
+
+  return (
+    moment('04 01', 'MM DD')
+      .twix('10 31', 'MM DD')
+      // Comment out if you want to test another date than currentdate
+      .isCurrent()
+    // .contains(today);
+  );
 };
