@@ -16,6 +16,15 @@ type Props = {
 };
 
 const seasonImageUri = checkCurrentSeason();
+
+/*
+ * Credits for example images.
+ * Photo by Jon Flobrant on Unsplash (winter)
+ * Photo by Arno Smit on Unsplash (spring)
+ * Photo by yapo zhou on Unsplash (fall)
+ * Photo by Oscar Helgstrand on Unsplash
+ */
+
 const isModulesAvailable = checkModuleAvailability();
 const message = isModulesAvailable
   ? 'Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper dig'
