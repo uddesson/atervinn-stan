@@ -1,10 +1,21 @@
 //@flow
 import React from 'react';
-import { View, ScrollView, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
+import {
+  View,
+  ScrollView,
+  TouchableOpacity,
+  FlatList,
+  StyleSheet,
+} from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
-import { calcColor, getStationSymbol, toUpperCase, allSortingTypes } from '../../utils';
+import {
+  calcColor,
+  getStationSymbol,
+  toUpperCase,
+  allSortingTypes,
+} from '../../utils';
 import { WarningIcon } from './Icons';
 import { colors } from './colors';
 
@@ -23,13 +34,18 @@ export const SearchResultList = (props: Props) => {
   const { navigation, results } = props;
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={styles.container}
+    >
       <FlatList
-        keyExtractor={item => item.id}
+        keyExtractor={item => item.id.toString()}
         data={results}
         renderItem={({ item }) => {
           const backgroundColor = calcColor(item.type.toLowerCase());
-          const sortingTypeAvailable = allSortingTypes.includes(item.type.toLowerCase());
+          const sortingTypeAvailable = allSortingTypes.includes(
+            item.type.toLowerCase()
+          );
 
           return (
             <View style={styles.result}>
@@ -50,21 +66,31 @@ export const SearchResultList = (props: Props) => {
               >
                 <View style={utilityStyles.row}>
                   {sortingTypeAvailable ? (
-                    <View style={[styles.circle, styles.iconMargin, { backgroundColor }]} />
+                    <View
+                      style={[
+                        styles.circle,
+                        styles.iconMargin,
+                        { backgroundColor },
+                      ]}
+                    />
                   ) : (
                     <View style={styles.iconMargin}>
                       <WarningIcon width={20} height={40} fill={colors.red} />
                     </View>
                   )}
                   <Paragraph
-                    style={sortingTypeAvailable ? styles.shortText : styles.longText}
+                    style={
+                      sortingTypeAvailable ? styles.shortText : styles.longText
+                    }
                     numberOfLines={1}
                   >
                     {toUpperCase(item.name)}
                   </Paragraph>
                 </View>
 
-                <View style={utilityStyles.row}>{getStationSymbol(item.type)}</View>
+                <View style={utilityStyles.row}>
+                  {getStationSymbol(item.type)}
+                </View>
               </TouchableOpacity>
             </View>
           );
