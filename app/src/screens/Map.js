@@ -52,12 +52,16 @@ export class Map extends Component<Props, State> {
   };
 
   componentDidMount() {
-    Promise.all([this.getFtiPositions(), this.getModulePositions()]).then(stations =>
-      this.setState({
-        ftiPositions: stations[0],
-        modulePositions: stations[1],
-      }),
-    );
+    Promise.all([this.getFtiPositions(), this.getModulePositions()])
+      .then(stations =>
+        this.setState({
+          ftiPositions: stations[0],
+          modulePositions: stations[1],
+        }),
+      )
+      .catch(() => {
+        Alert.alert('Något gick fel', 'Kan inte hämta positioner just nu.');
+      });
   }
 
   handleFtiContainerToggling = () => {

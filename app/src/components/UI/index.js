@@ -4,7 +4,7 @@ export { utilityStyles } from './utilityStyles';
 export {
   Heading, SubHeading, Paragraph, ParagraphBold,
 } from './Types';
-export { Message } from './Message';
+export { SearchResultMessage } from './SearchResultMessage';
 export {
   HeartIcon,
   SadIcon,

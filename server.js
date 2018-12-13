@@ -22,11 +22,11 @@ app.get('/api/sorting/search/:query', (req, res) => {
   };
 
   /*
-   * Wait till query is more than 2 characters, to avoid autocomplete
-   * on only one or two letters (will return too many irrelevant results.)
+   * Wait till query is more than 1 character, to avoid autocomplete
+   * on only one letter (will return too many irrelevant results.)
    */
 
-  if (query.length > 2) {
+  if (query.length > 1) {
     // Check if query string matches either item.name or one of the item synonyms.
     results = sortingData.items.filter(
       item =>
