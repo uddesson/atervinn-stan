@@ -2,9 +2,7 @@
 
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
-import { colors } from './colors';
-import { utilityStyles } from './utilityStyles';
-import { GpsIcon } from './Icons';
+import { colors, utilityStyles, GpsIcon } from '.';
 
 type Props = {
   onPress: () => void,

@@ -3,10 +3,7 @@ import React, { Component } from 'react';
 import { TouchableOpacity, View, Alert, StyleSheet } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import Permissions from 'react-native-permissions';
-import { Paragraph, ParagraphBold } from './Types';
-import { colors } from './colors';
-import { utilityStyles } from './utilityStyles';
-import { Pulse } from './Pulse';
+import { Paragraph, ParagraphBold, colors, utilityStyles, Pulse } from '.';
 
 type Props = {
   onPress: () => void,
@@ -42,7 +39,7 @@ export class ShortcutBanner extends Component<Props> {
               text: 'Ja, ändra inställningar',
               onPress: Permissions.openSettings,
             },
-      ]
+      ],
     );
   };
 
@@ -84,11 +81,7 @@ export class ShortcutBanner extends Component<Props> {
             icon={<View style={styles.circle} />}
           />
           <ParagraphBold
-            style={[
-              utilityStyles.whiteText,
-              styles.textMargin,
-              utilityStyles.uppercaseText,
-            ]}
+            style={[utilityStyles.whiteText, styles.textMargin, utilityStyles.uppercaseText]}
           >
             Hitta närmsta station
           </ParagraphBold>

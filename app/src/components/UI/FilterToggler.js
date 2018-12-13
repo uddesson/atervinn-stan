@@ -1,8 +1,7 @@
 //@flow
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Image } from 'react-native';
-import { colors } from './colors';
-import { utilityStyles } from './utilityStyles';
+import { colors, utilityStyles } from '.';
 
 type Props = {
   isFtiContainerVisible: boolean,
@@ -12,12 +11,7 @@ type Props = {
 };
 
 export const FilterToggler = (props: Props) => {
-  const {
-    isFtiContainerVisible,
-    isModuleVisible,
-    onFtiContainerPress,
-    onModulePress,
-  } = props;
+  const { isFtiContainerVisible, isModuleVisible, onFtiContainerPress, onModulePress } = props;
 
   return (
     <View
