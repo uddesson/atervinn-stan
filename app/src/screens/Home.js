@@ -9,11 +9,21 @@ import {
   StaticSearchInput,
   HomeMessage,
 } from '../components/UI';
-import { checkModuleAvailability } from '../utils';
+import { checkModuleAvailability, checkCurrentSeason } from '../utils';
 
 type Props = {
   navigation: NavigationScreenProps,
 };
+
+const seasonImageUri = checkCurrentSeason();
+
+/*
+ * Credits for example images.
+ * Photo by Jon Flobrant on Unsplash (winter)
+ * Photo by Arno Smit on Unsplash (spring)
+ * Photo by yapo zhou on Unsplash (fall)
+ * Photo by Oscar Helgstrand on Unsplash
+ */
 
 const isModulesAvailable = checkModuleAvailability();
 const message = isModulesAvailable
@@ -43,7 +53,7 @@ export class Home extends Component<Props> {
         >
           <ShortcutBanner navigation={navigation} />
           <ImageBackground
-            source={{ uri: 'header-city' }}
+            source={{ uri: seasonImageUri }}
             style={[
               utilityStyles.fullWidth,
               utilityStyles.fullHeight,
