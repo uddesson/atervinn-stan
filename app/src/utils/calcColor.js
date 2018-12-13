@@ -1,6 +1,12 @@
 //@flow
 import { colors } from '../components/UI';
 
+/*
+ * In the mapmodal we use circles with colors representing what
+ * kind of recycling options the offer which we calclulate from
+ * the option name.
+ */
+
 export const calcColor = (category: string): string => {
   switch (category) {
     case 'papper':

@@ -26,7 +26,7 @@ export const SearchModal = (props: Props) => {
   const title = toUpperCase(navigation.getParam('title'));
   const sortingType = navigation.getParam('sortingType').toLowerCase();
   const sortingAvailability = allSortingTypes.includes(sortingType);
-  const message = getSearchModalMessage(sortingType);
+  const message = getSearchModalMessage(sortingType, title);
   // url to list of recyclingcentrals in stockholm on SVOA's webpage
   const externalUrl = 'https://tinyurl.com/y9sast9a';
 
@@ -51,7 +51,7 @@ export const SearchModal = (props: Props) => {
           )}
 
           <Paragraph style={[styles.paragraph, utilityStyles.lineHeightNormal]}>
-            {`${message} ${sortingType}.`}
+            {`${message}.`}
           </Paragraph>
         </View>
 

@@ -9,6 +9,11 @@ type Props = {
   children: string,
 };
 
+/*
+ * Component which presents a message on a black card.
+ * Mainly used on the homescreen.
+ */
+
 /* Should this have a more generic name for scaleability? */
 export const HomeMessage = (props: Props) => {
   const { children } = props;

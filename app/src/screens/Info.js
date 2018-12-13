@@ -1,6 +1,13 @@
 //@flow
 import React, { Component } from 'react';
-import { StyleSheet, SafeAreaView, ScrollView, FlatList, View, Image } from 'react-native';
+import {
+  StyleSheet,
+  SafeAreaView,
+  ScrollView,
+  FlatList,
+  View,
+  Image,
+} from 'react-native';
 import {
   Paragraph,
   Heading,
@@ -17,15 +24,21 @@ export class Info extends Component<Props> {
   render() {
     return (
       <SafeAreaView>
-        <ScrollView contentContainerStyle={[styles.screen, utilityStyles.justifyCenter]}>
+        <ScrollView
+          contentContainerStyle={[styles.screen, utilityStyles.justifyCenter]}
+        >
           <Heading style={styles.heading}>Symbolförklaring</Heading>
           <FlatList
             data={symbolExplanations}
             ListFooterComponent={
               <Paragraph style={styles.smallText}>
-                <ParagraphBold style={styles.smallText}>ÅTERVINN STAN</ParagraphBold>
-                använder data och material hämtat från FTI, HSR, SVOA och Stockholms stad. Bilder
-                tagna av Någon Någonsson, Någon Någonsson och Någon Någonsson.
+                <ParagraphBold
+                  style={styles.smallText}
+                >{`ÅTERVINN STAN `}</ParagraphBold>
+                använder data och material hämtat från FTI (Förpackning och
+                tidnings insamlingen), HSR (Håll Sverige rent), SVOA (Stockholm
+                vatten och avfall) och Stockholms stad. Bilder tagna av Någon
+                Någonsson, Någon Någonsson och Någon Någonsson.
               </Paragraph>
             }
             keyExtractor={item => item.title}
@@ -38,15 +51,19 @@ export class Info extends Component<Props> {
                 ]}
               >
                 <Image
-                  style={[item.icon === 'module' ? styles.imageBig : styles.image]}
+                  style={[
+                    item.icon === 'module' ? styles.imageBig : styles.image,
+                  ]}
                   source={{ uri: item.icon }}
                 />
 
                 <View style={styles.textContainer}>
-                  <SubHeading style={[utilityStyles.capitalizeText, styles.subHeading]}>
+                  <SubHeading style={styles.subHeading}>
                     {item.title}
                   </SubHeading>
-                  <Paragraph style={[styles.description, utilityStyles.lineHeightNormal]}>
+                  <Paragraph
+                    style={[styles.description, utilityStyles.lineHeightNormal]}
+                  >
                     {toUpperCase(item.text)}
                   </Paragraph>
                 </View>

@@ -1,42 +1,45 @@
 export const symbolExplanations = [
   {
-    title: 'FTI station',
-    text: 'Utställda av förpackning & tidnings insamlingen.',
+    title: 'FTI Station',
+    text:
+      'Återvinningstationer utställda av förpackning & tidnings insamlingen.',
     icon: 'fti-container',
   },
   {
     title: 'Modul',
-    text: 'Utställda av stockholms stad april–oktober varje år sen 2015.',
+    text:
+      'Mobila återvinningskärl utställda av stockholms stad april–oktober varje år.',
     icon: 'module',
   },
   {
-    title: 'plast',
-    text: 't.ex. plastbestick, korkar och olika plastförpackningar.',
+    title: 'Plast',
+    text:
+      'Här återvinner du bland annat ketchupflaskan och plastflaskor utan pant',
     icon: 'plast',
   },
   {
-    title: 'papper',
-    text: 't.ex. kaffemuggar, pappersbestick och andra typer av pappersförpackningar.',
+    title: 'Papper',
+    text: 'Här återvinner du bland annat take-away muggar och juicekartonger.',
     icon: 'papper',
   },
   {
-    title: 'metall',
-    text: 't.ex. kapsyler, aluminiumfolie.',
+    title: 'Metall',
+    text: 'Här återvinner du bland annat kapsyler och aluminiumfolie',
     icon: 'metall',
   },
   {
-    title: 'glas',
-    text: 't.ex. glasflaskor och glasburkar.',
+    title: 'Glas',
+    text: 'Här återvinner du flaskor i glas.',
     icon: 'glas',
   },
   {
-    title: 'tidningar & returpapper',
-    text: 't.ex. reklamblad, Hem & Hyra.',
+    title: 'Tidningar & returpapper',
+    text: 'Här återvinner reklamblad och tidningar',
     icon: 'tidningar',
   },
   {
-    title: 'övrigt',
-    text: 't.ex. servetter, döda djur, ciggarettfimpar och tuggummi.',
+    title: 'Övrigt',
+    text: 'Här återvinner du bland annat tuggumi och ciggarettfimpar.',
     icon: 'övrigt',
   },
 ];
