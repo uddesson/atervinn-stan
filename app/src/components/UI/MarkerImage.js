@@ -13,28 +13,22 @@ export const MarkerImage = (props: Props) => {
   const isModule = type === 'pin-module' ? true : false;
   const isAvailable = checkModuleAvailability();
 
+  const getImageUri = () => {
+    if (isModule) {
+      if (isAvailable) {
+        return 'pin-module';
+      }
+      return 'pin-module-disabled';
+    } else {
+      return 'pin-fti-container';
+    }
+  };
+
   return (
-    /*
-     * This could probably be a bit more DRY, however it was not possible to
-     * make a tenerary inside style prop since it would then apply to both markers
-     */
-    <>
-      {isModule ? (
-        <Image
-          source={{ uri: type }}
-          style={[
-            utilityStyles.boxShadow,
-            styles.image,
-            isAvailable ? styles.active : styles.inactive,
-          ]}
-        />
-      ) : (
-        <Image
-          source={{ uri: type }}
-          style={[utilityStyles.boxShadow, styles.image]}
-        />
-      )}
-    </>
+    <Image
+      source={{ uri: getImageUri() }}
+      style={[utilityStyles.boxShadow, styles.image]}
+    />
   );
 };
 
@@ -43,11 +37,5 @@ const styles = StyleSheet.create({
     height: 70,
     width: 60,
     resizeMode: 'contain',
-  },
-  active: {
-    opacity: 1,
-  },
-  inactive: {
-    opacity: 0.7,
   },
 });
