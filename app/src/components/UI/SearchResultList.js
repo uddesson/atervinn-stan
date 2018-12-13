@@ -13,6 +13,12 @@ type Props = {
   navigation: NavigationScreenProps,
 };
 
+/**
+ * TODO:
+ * (Nice to have) Use withNavigation decorator for component
+ * to avoid having to send down navigation as a prop.
+ */
+
 export const SearchResultList = (props: Props) => {
   const { navigation, results } = props;
 
