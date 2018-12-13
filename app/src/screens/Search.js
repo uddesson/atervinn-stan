@@ -1,6 +1,6 @@
 //@flow
 import React, { Component } from 'react';
-import { StyleSheet, SafeAreaView, View, Alert, ActivityIndicator } from 'react-native';
+import { StyleSheet, SafeAreaView, View, ActivityIndicator } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import {
   utilityStyles,
