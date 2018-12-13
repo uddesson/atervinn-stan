@@ -24,13 +24,9 @@ type Props = {
 export const SearchModal = (props: Props) => {
   const { navigation } = props;
   const title = toUpperCase(navigation.getParam('title'));
-
-  // TODO: sometimes type is missing, how do we handle this?
   const sortingType = navigation.getParam('sortingType').toLowerCase();
-
   const sortingAvailability = allSortingTypes.includes(sortingType);
   const message = getSearchModalMessage(sortingType);
-
   // url to list of recyclingcentrals in stockholm on SVOA's webpage
   const externalUrl = 'https://tinyurl.com/y9sast9a';
 
@@ -64,19 +60,14 @@ export const SearchModal = (props: Props) => {
           activeOpacity={0.7}
           onPress={() => navigation.navigate('Home')}
         >
-          {/* TODO: try to make more DRY */}
           {sortingAvailability ? (
             <>
               <ParagraphBold
-                style={[
-                  utilityStyles.whiteText,
-                  styles.buttonText,
-                  utilityStyles.uppercaseText,
-                ]}
+                style={[utilityStyles.whiteText, utilityStyles.uppercaseText]}
               >
                 Hitta station
               </ParagraphBold>
-              <GpsIcon height={20} width={20} fill={colors.white} />
+              <GpsIcon height={50} width={50} fill={colors.white} />
             </>
           ) : (
             <>
@@ -116,7 +107,7 @@ const styles = StyleSheet.create({
     width: 25,
     height: 25,
     borderRadius: 12.5,
-    borderWidth: 1,
+    borderWidth: 2,
     borderColor: colors.red,
     marginLeft: 10,
   },
@@ -124,12 +115,11 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   button: {
-    borderWidth: 1,
-    borderColor: colors.darkGreen,
     backgroundColor: colors.darkGreen,
     borderRadius: 5,
     padding: 15,
-    marginTop: 15,
+    width: '100%',
+    height: 50,
   },
   buttonText: {
     marginRight: 10,
