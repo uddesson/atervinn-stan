@@ -58,7 +58,7 @@ export const SearchModal = (props: Props) => {
         <TouchableOpacity
           style={[styles.button, utilityStyles.row, utilityStyles.center]}
           activeOpacity={0.7}
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('Map')}
         >
           {sortingAvailability ? (
             <>
