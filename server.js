@@ -45,7 +45,7 @@ app.get('/api/modules', (req, res) => {
 
 // Get all fti stations.
 app.get('/api/fti', (req, res) => {
-  res.send(ftiData1);
+  res.send(ftiData);
 });
 
 /*
