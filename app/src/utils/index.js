@@ -6,3 +6,5 @@ export { allSortingTypes } from './sortingTypes';
 export { getSearchModalMessage } from './getSearchModalMessage';
 export { parseArray } from './parseArray';
 export { symbolExplanations } from './symbolExplanations';
+export { checkModuleAvailability } from './checkModuleAvailability';
+export { checkCurrentSeason } from './checkCurrentSeason';

@@ -9,10 +9,26 @@ import {
   StaticSearchInput,
   HomeMessage,
 } from '../components/UI';
+import { checkModuleAvailability, checkCurrentSeason } from '../utils';
 
 type Props = {
   navigation: NavigationScreenProps,
 };
+
+const seasonImageUri = checkCurrentSeason();
+
+/*
+ * Credits for example images.
+ * Photo by Jon Flobrant on Unsplash (winter)
+ * Photo by Arno Smit on Unsplash (spring)
+ * Photo by yapo zhou on Unsplash (fall)
+ * Photo by Oscar Helgstrand on Unsplash
+ */
+
+const isModulesAvailable = checkModuleAvailability();
+const message = isModulesAvailable
+  ? 'Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper dig'
+  : 'Observera att återvinningsmodulerna inte står ute nu. FTI Stationerna finns dock tillgängliga året om och sökfunktionen fungerar som vanligt.';
 
 export class Home extends Component<Props> {
   static navigationOptions = { header: null };
@@ -37,7 +53,7 @@ export class Home extends Component<Props> {
         >
           <ShortcutBanner navigation={navigation} />
           <ImageBackground
-            source={{ uri: 'header-city' }}
+            source={{ uri: seasonImageUri }}
             style={[
               utilityStyles.fullWidth,
               utilityStyles.fullHeight,
@@ -53,10 +69,7 @@ export class Home extends Component<Props> {
               ]}
             >
               <StaticSearchInput navigation={navigation} />
-              <HomeMessage>
-                Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper
-                dig.
-              </HomeMessage>
+              <HomeMessage>{message}</HomeMessage>
             </View>
           </ImageBackground>
         </View>
