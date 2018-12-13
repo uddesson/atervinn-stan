@@ -12,17 +12,6 @@ app.use(cors());
 const port = process.env.port || 5000;
 app.listen(port, () => console.log(`Server listening on port ${port}`));
 
-/**
- * TODO: Handle errors for all endpoints.
- */
-
-// util function to throw errors to keep code DRY
-const throwError = (code, message) => {
-  const err = new Error(message);
-  err.status = code;
-  throw err;
-};
-
 // Search in sortingdata.
 app.get('/api/sorting/search/:query', (req, res) => {
   let query = req.params.query;
