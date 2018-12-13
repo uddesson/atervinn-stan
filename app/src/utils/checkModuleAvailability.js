@@ -10,6 +10,7 @@ import twix from 'twix';
  * isCurrent returns true its summertime and the modules are out.
  *
  * Regarding date format: moment does NOT allow dates in MM-DD or MM/DD.
+ * Ref: https://github.com/moment/moment/issues/1407
  */
 
 export const checkModuleAvailability = () => {
