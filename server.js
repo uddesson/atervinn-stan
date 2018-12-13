@@ -45,16 +45,15 @@ app.get('/api/modules', (req, res) => {
 
 // Get all fti stations.
 app.get('/api/fti', (req, res) => {
-  if (error) {
-    throwError(500, 'ingen kontakt till appens databas');
-  }
-
-  res.send(ftiData);
+  res.send(ftiData1);
 });
 
+/*
+ * Send error as json in browser, if no code is sent default is 500
+ * This will catch if we try to send a non-existing resource.
+ * But NOT if network request fails.
+ */
 app.use((err, req, res, next) => {
-  // log stacktrace
   console.error(err.stack);
-  // send error as json, if no code is sent default is 500
   res.status(err.status || 500).send({ message: err.message });
 });
