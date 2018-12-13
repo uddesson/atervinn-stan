@@ -9,6 +9,7 @@
     "flow": "flow"
   },
   "dependencies": {
+    "moment": "^2.23.0",
     "react": "16.6.1",
     "react-native": "0.57.5",
     "react-native-gesture-handler": "^1.0.10",
@@ -16,7 +17,8 @@
     "react-native-maps": "^0.22.1",
     "react-native-permissions": "^1.1.1",
     "react-native-svg": "^8.0.8",
-    "react-navigation": "^3.0.1"
+    "react-navigation": "^3.0.1",
+    "twix": "^1.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.5",
