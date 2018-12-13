@@ -1,5 +1,10 @@
 //@flow
 
+/*
+ * Parser which allow you to pass in an array and the the following output:
+ * item1, item2 and item3.
+ */
+
 export const parseArray = (arr: string[]) => {
   if (arr.length === 0) {
     return '';
