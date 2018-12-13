@@ -21,6 +21,7 @@ type State = {
   loading: boolean,
   searchInput: string,
   searchResults: Object[],
+  exampleResults: Object[],
 };
 
 export class Search extends Component<Props, State> {
@@ -31,7 +32,12 @@ export class Search extends Component<Props, State> {
     loading: false,
     searchInput: '',
     searchResults: [],
+    exampleResults: [],
   };
+
+  componentDidMount() {
+    this.getExampleResults();
+  }
 
   handleSearchInput = (searchInput: string) => {
     // Always set the searchInput to state, even if it's empty. Controls the output and message to user.
@@ -53,19 +59,28 @@ export class Search extends Component<Props, State> {
     }
   };
 
+  getExampleResults = async () => {
+    try {
+      const res = await fetch('http://localhost:5000/api/exampleSorting');
+      const exampleResults = await res.json();
+
+      this.setState({ exampleResults });
+    } catch (err) {
+      this.setState({ error: true });
+    }
+  };
+
   handleSearchOutPut = () => {
-    const { searchInput, searchResults, error, loading } = this.state;
+    const { navigation } = this.props;
+    const { searchInput, searchResults, exampleResults, error, loading } = this.state;
 
     if (error) return <SearchResultMessage type={'error'} />;
     if (!error && loading) return <ActivityIndicator size={'large'} style={{ marginTop: '45%' }} />;
     if (searchInput.length > 1 && searchResults.length === 0)
       return <SearchResultMessage type={'no-results'} />;
-    if (!searchInput)
-      return (
-        <Paragraph>{`(Tillfällig text utan styling.) Visa exempeldata här ifall servern är igång`}</Paragraph>
-      );
+    if (!searchInput) return <SearchResultList results={exampleResults} navigation={navigation} />;
 
-    return <SearchResultList results={searchResults} />;
+    return <SearchResultList results={searchResults} navigation={navigation} />;
   };
 
   render() {

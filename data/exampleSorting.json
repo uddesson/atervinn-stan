@@ -1,0 +1,165 @@
+[
+  {
+    "id": 1395,
+    "name": "Ballong",
+    "type": "övrigt",
+    "privateSiteTypes": [
+      {
+        "id": 322,
+        "name": "övrigt"
+      }
+    ],
+    "commercialSiteTypes": [
+      {
+        "id": 322,
+        "name": "övrigt"
+      }
+    ],
+    "privateSites": [],
+    "commercialSites": [],
+    "synonyms": [],
+    "symbols": []
+  },
+  {
+    "id": 1462,
+    "name": "Cigarettändare, tom",
+    "type": "Farligt Avfall",
+    "privateSiteTypes": [
+      {
+        "id": 282,
+        "name": "Återvinningscentral"
+      },
+      {
+        "id": 298,
+        "name": "Miljöstation"
+      },
+      {
+        "id": 301,
+        "name": "Mobila miljöstationen"
+      },
+      {
+        "id": 481,
+        "name": "Farligt avfall hämtning"
+      }
+    ],
+    "commercialSiteTypes": [
+      {
+        "id": 323,
+        "name": "Extern anläggning"
+      }
+    ],
+    "privateSites": [],
+    "commercialSites": [],
+    "synonyms": [],
+    "symbols": []
+  },
+  {
+    "id": 3342,
+    "name": "Grillkolspåse",
+    "type": "papper",
+    "privateSiteTypes": [
+      {
+        "id": 282,
+        "name": "Återvinningscentral"
+      },
+      {
+        "id": 299,
+        "name": "Återvinningsstation"
+      }
+    ],
+    "commercialSiteTypes": [
+      {
+        "id": 661,
+        "name": "FTI:s mottagningspunkt"
+      }
+    ],
+    "privateSites": [],
+    "commercialSites": [],
+    "synonyms": [],
+    "symbols": []
+  },
+  {
+    "id": 1605,
+    "name": "Glasburk",
+    "type": "glas",
+    "privateSiteTypes": [
+      {
+        "id": 282,
+        "name": "Återvinningscentral"
+      },
+      {
+        "id": 299,
+        "name": "Återvinningsstation"
+      }
+    ],
+    "commercialSiteTypes": [
+      {
+        "id": 661,
+        "name": "FTI:s mottagningspunkt"
+      }
+    ],
+    "privateSites": [],
+    "commercialSites": [],
+    "synonyms": [],
+    "symbols": []
+  },
+  {
+    "id": 1720,
+    "name": "Kapsyl i metall",
+    "type": "metall",
+    "privateSiteTypes": [
+      {
+        "id": 282,
+        "name": "Återvinningscentral"
+      },
+      {
+        "id": 299,
+        "name": "Återvinningsstation"
+      }
+    ],
+    "commercialSiteTypes": [
+      {
+        "id": 661,
+        "name": "FTI:s mottagningspunkt"
+      }
+    ],
+    "privateSites": [],
+    "commercialSites": [],
+    "synonyms": [],
+    "symbols": []
+  },
+  {
+    "id": 1467,
+    "name": "Dagstidning",
+    "type": "tidningar",
+    "privateSiteTypes": [
+      {
+        "id": 282,
+        "name": "Återvinningscentral"
+      },
+      {
+        "id": 299,
+        "name": "Återvinningsstation"
+      }
+    ],
+    "commercialSiteTypes": [
+      {
+        "id": 661,
+        "name": "FTI:s mottagningspunkt"
+      }
+    ],
+    "privateSites": [],
+    "commercialSites": [],
+    "synonyms": [
+      {
+        "id": 1517,
+        "value": "Kvällstidning"
+      },
+      {
+        "id": 1518,
+        "value": "Tidning"
+      }
+    ],
+    "symbols": []
+  }
+]
