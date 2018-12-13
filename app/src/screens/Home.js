@@ -18,7 +18,7 @@ type Props = {
 const isModulesAvailable = checkModuleAvailability();
 const message = isModulesAvailable
   ? 'Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper dig'
-  : 'Observera att återvinningsmodulerna inte står ute nu. Använd gärna sökfunktionen som vanligt och FTI Stationerna finns tillgängliga året om.';
+  : 'Observera att återvinningsmodulerna inte står ute nu. FTI Stationerna finns dock tillgängliga året om och sökfunktionen fungerar som vanligt.';
 
 export class Home extends Component<Props> {
   static navigationOptions = { header: null };
