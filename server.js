@@ -1,23 +1,19 @@
-const express = require("express");
-const cors = require("cors");
+const express = require('express');
+const cors = require('cors');
 const app = express();
 
 // Data imports.
-const sortingData = require("./data/sorting.json");
-const moduleData = require("./data/modules.json");
-const ftiData = require("./data/ftistations.json");
+const sortingData = require('./data/sorting.json');
+const moduleData = require('./data/modules.json');
+const ftiData = require('./data/ftistations.json');
 
 app.use(cors());
 
 const port = process.env.port || 5000;
 app.listen(port, () => console.log(`Server listening on port ${port}`));
 
-/**
- * TODO: Handle errors for all endpoints.
- */
-
 // Search in sortingdata.
-app.get("/api/sorting/search/:query", (req, res) => {
+app.get('/api/sorting/search/:query', (req, res) => {
   let query = req.params.query;
   let results = [];
 
@@ -43,11 +39,21 @@ app.get("/api/sorting/search/:query", (req, res) => {
 });
 
 // Get all modules.
-app.get("/api/modules", (req, res) => {
+app.get('/api/modules', (req, res) => {
   res.send(moduleData);
 });
 
 // Get all fti stations.
-app.get("/api/fti", (req, res) => {
+app.get('/api/fti', (req, res) => {
   res.send(ftiData);
+});
+
+/*
+ * Send error as json in browser, if no code is sent default is 500
+ * This will catch if we try to send a non-existing resource.
+ * But NOT if network request fails.
+ */
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(err.status || 500).send({ message: err.message });
 });
