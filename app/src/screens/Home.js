@@ -9,12 +9,13 @@ import {
   StaticSearchInput,
   HomeMessage,
 } from '../components/UI';
-import { checkModuleAvailability } from '../utils';
+import { checkModuleAvailability, checkCurrentSeason } from '../utils';
 
 type Props = {
   navigation: NavigationScreenProps,
 };
 
+const seasonImageUri = checkCurrentSeason();
 const isModulesAvailable = checkModuleAvailability();
 const message = isModulesAvailable
   ? 'Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper dig'
@@ -43,7 +44,7 @@ export class Home extends Component<Props> {
         >
           <ShortcutBanner navigation={navigation} />
           <ImageBackground
-            source={{ uri: 'header-city' }}
+            source={{ uri: seasonImageUri }}
             style={[
               utilityStyles.fullWidth,
               utilityStyles.fullHeight,
