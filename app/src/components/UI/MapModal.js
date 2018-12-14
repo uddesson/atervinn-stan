@@ -1,17 +1,8 @@
 //@flow
 import React, { Component } from 'react';
-import { View, Modal, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import { calcColor, toUpperCase, parseArray } from '../../utils';
-import {
-  colors,
-  utilityStyles,
-  SubHeading,
-  Paragraph,
-  ParagraphBold,
-  CancelIcon,
-  SuccessIcon,
-  WarningIcon,
-} from '.';
+import { View, StyleSheet } from 'react-native';
+import { toUpperCase, parseArray } from '../../utils';
+import { colors, utilityStyles, SubHeading, Paragraph, ParagraphBold } from '.';
 
 type Props = {
   marker: {
