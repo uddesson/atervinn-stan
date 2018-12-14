@@ -77,7 +77,7 @@
     "lng": 17.995335,
     "locationConfirmed": true,
     "sortingConfirmed": false,
-    "sorting": ["övrigt", "plast"]
+    "sorting": ["plast", "papper", "glas", "övrigt"]
   },
   {
     "locationName": "lugnet",
@@ -85,7 +85,7 @@
     "lng": 17.970653,
     "locationConfirmed": true,
     "sortingConfirmed": false,
-    "sorting": ["övrigt", "plast"]
+    "sorting": ["plast", "papper", "glas", "övrigt"]
   },
   {
     "locationName": "sannadalsparken",
@@ -93,7 +93,7 @@
     "lng": 18.00924,
     "locationConfirmed": true,
     "sortingConfirmed": false,
-    "sorting": ["övrigt", "plast"]
+    "sorting": ["plast", "papper", "glas", "övrigt"]
   },
   {
     "locationName": "parkleken vippan",
@@ -101,7 +101,7 @@
     "lng": 17.970455,
     "locationConfirmed": true,
     "sortingConfirmed": false,
-    "sorting": ["övrigt", "plast"]
+    "sorting": ["plast", "papper", "glas", "övrigt"]
   },
   {
     "locationName": "vinterviken",
