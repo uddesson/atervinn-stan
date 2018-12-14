@@ -17,7 +17,6 @@ type Props = {
   marker: {
     locationName: string,
     sorting: string[],
-    sortingConfirmed?: boolean,
     locationConfirmed?: boolean,
   },
 };
@@ -31,9 +30,6 @@ export const MapModal = (props: Props) => {
     return <View key={sortingType} style={[styles.circle, { backgroundColor }]} />;
   });
 
-  const sortingNotConfirmed = marker.sortingConfirmed === false || undefined;
-  const locationNotConfirmed = marker.locationConfirmed === false || undefined;
-  const informationNotConfirmed = sortingNotConfirmed || locationNotConfirmed;
 
   const sortingOptions = parseArray(marker.sorting);
   const formattedSortingOptions = toUpperCase(sortingOptions);
