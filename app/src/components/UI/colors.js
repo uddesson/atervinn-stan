@@ -13,6 +13,7 @@ export const colors = {
   orange: 'rgb(255,150,39)',
   black: 'rgb(70, 70, 70)',
 
+  ftiContainerGreen: 'rgb(0,141,61)',
   ftiGreen: 'rgb(106,178,32)',
   ftiGrey: 'rgb(163,164,168)',
   ftiYellow: 'rgb(254,211,22)',
