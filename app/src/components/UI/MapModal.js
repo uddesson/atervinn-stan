@@ -56,11 +56,10 @@ export const MapModal = (props: Props) => {
           <View style={utilityStyles.row}>
             <Paragraph>{formattedSortingOptions}</Paragraph>
           </View>
-          <View style={[utilityStyles.row, styles.sortingSymbols]}>{sortingSymbols}</View>
         </View>
-        {informationNotConfirmed && (
+        {locationNotConfirmed && (
           <ParagraphBold style={styles.finePrint}>
-            {`* På grund av otillräcklig information kan vi inte garantera exakt placering eller sorteringsalternativ för den här modulen.`}
+            {`* På grund av otillräcklig information kan vi inte garantera exakt placering för den här modulen.`}
           </ParagraphBold>
         )}
       </View>
