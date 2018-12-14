@@ -77,7 +77,7 @@
     "lng": 17.995335,
     "locationConfirmed": true,
     "sortingConfirmed": false,
-    "sorting": ["övrigt"]
+    "sorting": ["övrigt", "plast"]
   },
   {
     "locationName": "lugnet",
@@ -85,7 +85,7 @@
     "lng": 17.970653,
     "locationConfirmed": true,
     "sortingConfirmed": false,
-    "sorting": ["övrigt"]
+    "sorting": ["övrigt", "plast"]
   },
   {
     "locationName": "sannadalsparken",
@@ -93,7 +93,7 @@
     "lng": 18.00924,
     "locationConfirmed": true,
     "sortingConfirmed": false,
-    "sorting": ["övrigt"]
+    "sorting": ["övrigt", "plast"]
   },
   {
     "locationName": "parkleken vippan",
@@ -101,7 +101,7 @@
     "lng": 17.970455,
     "locationConfirmed": true,
     "sortingConfirmed": false,
-    "sorting": ["övrigt"]
+    "sorting": ["övrigt", "plast"]
   },
   {
     "locationName": "vinterviken",
@@ -117,7 +117,7 @@
     "lng": 17.901067,
     "locationConfirmed": false,
     "sortingConfirmed": false,
-    "sorting": ["övrigt"]
+    "sorting": ["plast", "papper", "glas", "övrigt"]
   },
   {
     "locationName": "raul wallenbergs torg",
@@ -125,7 +125,7 @@
     "lng": 18.0757,
     "locationConfirmed": false,
     "sortingConfirmed": false,
-    "sorting": ["övrigt"]
+    "sorting": ["plast", "papper", "glas", "övrigt"]
   },
   {
     "locationName": "strömgatan",
@@ -133,7 +133,7 @@
     "lng": 18.068406,
     "locationConfirmed": false,
     "sortingConfirmed": false,
-    "sorting": ["övrigt"]
+    "sorting": ["plast", "papper", "glas", "övrigt"]
   },
   {
     "locationName": "tegelbacken",
@@ -141,7 +141,7 @@
     "lng": 18.061473,
     "locationConfirmed": false,
     "sortingConfirmed": false,
-    "sorting": ["övrigt"]
+    "sorting": ["plast", "papper", "glas", "övrigt"]
   },
   {
     "locationName": "flatenvägen/kasbyvägen",
