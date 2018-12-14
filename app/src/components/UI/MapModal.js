@@ -1,7 +1,7 @@
 //@flow
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { toUpperCase, parseArray } from '../../utils';
+import { toUpperCase, parseArray, checkModuleAvailability } from '../../utils';
 import { colors, utilityStyles, SubHeading, Paragraph, ParagraphBold } from '.';
 
 type Props = {
@@ -17,6 +17,7 @@ export const MapModal = (props: Props) => {
   const sortingOptions = parseArray(marker.sorting);
   const formattedSortingOptions = toUpperCase(sortingOptions);
   const locationNotConfirmed = marker.locationConfirmed === false;
+  const isModuleAvailable = checkModuleAvailability();
 
   /*
    * Since we our data for the two different stations are very similar
@@ -30,11 +31,21 @@ export const MapModal = (props: Props) => {
    * of station, if its position is not confirmed and if the module
    * isnt out.
    */
-  const backgroundColor = locationNotConfirmed
-    ? colors.orange
-    : ftiStation
-    ? colors.ftiContainerGreen
-    : colors.blue;
+  const getBackgroundColor = () => {
+    let backgroundColor = '';
+
+    if (!ftiStation && !isModuleAvailable) {
+      return (backgroundColor = colors.lightGrey);
+    } else if (locationNotConfirmed) {
+      return (backgroundColor = colors.orange);
+    } else if (ftiStation) {
+      return (backgroundColor = colors.ftiContainerGreen);
+    } else {
+      return (backgroundColor = colors.blue);
+    }
+  };
+
+  const backgroundColor = getBackgroundColor();
 
   return (
     <View style={styles.container}>
