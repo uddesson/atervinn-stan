@@ -88,22 +88,8 @@ const styles = StyleSheet.create({
   modalInner: {
     padding: 10,
   },
-  button: {
-    marginLeft: 'auto',
-    alignSelf: 'flex-start',
-  },
   finePrint: {
     fontSize: 12,
     color: colors.orange,
-  },
-  sortingSymbols: {
-    marginTop: 10,
-    marginBottom: 10,
-  },
-  circle: {
-    width: 20,
-    height: 20,
-    borderRadius: 10,
-    marginRight: 10,
   },
 });
