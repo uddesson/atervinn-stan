@@ -25,14 +25,35 @@ export const MapModal = (props: Props) => {
   const { marker } = props;
   const sortingOptions = parseArray(marker.sorting);
   const formattedSortingOptions = toUpperCase(sortingOptions);
+  const locationNotConfirmed = marker.locationConfirmed === false;
 
-  const backgroundColor = informationNotConfirmed ? colors.orange : colors.blue;
+  /*
+   * Since we our data for the two different stations are very similar
+   * we don't have a better way of seperating them without adding
+   * more data
+   */
+  const ftiStation = marker.locationConfirmed === undefined;
+
+  /*
+   * Render different color on modal header depending on type of
+   * of station, if its position is not confirmed and if the module
+   * isnt out.
+   */
+  const backgroundColor = locationNotConfirmed
+    ? colors.orange
+    : ftiStation
+    ? colors.ftiContainerGreen
+    : colors.blue;
 
   return (
     <View style={styles.container}>
       <View style={[styles.modalHeader, { backgroundColor }]}>
         <SubHeading
-          style={[utilityStyles.capitalizeText, utilityStyles.whiteText, styles.locationName]}
+          style={[
+            utilityStyles.capitalizeText,
+            utilityStyles.whiteText,
+            styles.locationName,
+          ]}
         >
           {marker.locationName}
         </SubHeading>
