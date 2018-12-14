@@ -72,7 +72,7 @@ export const MapModal = (props: Props) => {
           <ParagraphBold style={styles.finePrint}>
             {isModuleAvailable
               ? 'På grund av otillräcklig information kan vi inte garantera exakt placering eller sorteringsalternativ för den här modulen.'
-              : 'Stationen är endast tillgänglig 1 April - 31 Oktober'}
+              : 'Stationen är endast tillgänglig 1 April - 31 Oktober.'}
           </ParagraphBold>
         )}
       </View>
@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   finePrint: {
+    paddingTop: 10,
     fontSize: 12,
     color: colors.orange,
   },
