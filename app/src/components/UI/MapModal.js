@@ -68,9 +68,11 @@ export const MapModal = (props: Props) => {
             <Paragraph>{formattedSortingOptions}</Paragraph>
           </View>
         </View>
-        {locationNotConfirmed && (
+        {!ftiStation && (
           <ParagraphBold style={styles.finePrint}>
-            {`* På grund av otillräcklig information kan vi inte garantera exakt placering för den här modulen.`}
+            {isModuleAvailable
+              ? 'På grund av otillräcklig information kan vi inte garantera exakt placering eller sorteringsalternativ för den här modulen.'
+              : 'Stationen är endast tillgänglig 1 April - 31 Oktober'}
           </ParagraphBold>
         )}
       </View>
