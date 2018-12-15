@@ -6,11 +6,10 @@ import { utilityStyles } from './utilityStyles';
 type Props = {
   url: string,
   children: React$Element<any>,
-  styles: Object,
 };
 
 export const ExternalLink = (props: Props) => {
-  const { url, children, styles } = props;
+  const { url, children } = props;
 
   const onPress = () =>
     Linking.canOpenURL(url).then(() => {
@@ -18,7 +17,7 @@ export const ExternalLink = (props: Props) => {
     });
 
   return (
-    <TouchableOpacity onPress={onPress} style={[utilityStyles.row, styles]}>
+    <TouchableOpacity onPress={onPress} style={[utilityStyles.row]}>
       {children}
     </TouchableOpacity>
   );
