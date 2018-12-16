@@ -13,7 +13,7 @@ export const allSortingTypes = [
   'övrigt',
 ];
 
-export const moduleSorting = ['papper', 'plast', 'glas', 'metall', 'övrigt'];
+export const moduleSorting = ['papper', 'plast', 'glas', 'övrigt'];
 
 export const ftiStationSorting = [
   'papper',
