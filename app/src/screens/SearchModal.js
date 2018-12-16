@@ -7,7 +7,6 @@ import {
   utilityStyles,
   colors,
   Paragraph,
-  ParagraphBold,
   ButtonLabel,
   SubHeading,
   WarningIcon,
@@ -33,8 +32,14 @@ export const SearchModal = (props: Props) => {
   const externalUrl = 'https://tinyurl.com/y9sast9a';
 
   return (
-    <SafeAreaView style={styles.wrapper}>
-      <View style={[utilityStyles.justifyBetween, utilityStyles.flex1]}>
+    <SafeAreaView style={[utilityStyles.fullHeight, styles.container]}>
+      <View
+        style={[
+          utilityStyles.justifyBetween,
+          utilityStyles.flex1,
+          styles.innerContainer,
+        ]}
+      >
         <View>
           {sortingAvailability ? (
             <>
@@ -58,19 +63,15 @@ export const SearchModal = (props: Props) => {
         </View>
 
         {sortingAvailability ? (
-          <Button onPress={navigation.navigate('Map')}>
+          <Button onPress={() => navigation.navigate('Map')}>
             <ButtonLabel>Hitta station</ButtonLabel>
-            <GpsIcon height={50} width={50} fill={colors.white} />
+            <GpsIcon height={60} width={60} fill={colors.white} />
           </Button>
         ) : (
-          <Button>
-            <ExternalLink url={externalUrl}>
-              <ButtonLabel style={styles.marginRight}>
-                Hitta central
-              </ButtonLabel>
-              <ExternalLinkIcon height={20} width={20} fill={colors.white} />
-            </ExternalLink>
-          </Button>
+          <ExternalLink url={externalUrl}>
+            <ButtonLabel>Hitta central</ButtonLabel>
+            <ExternalLinkIcon height={25} width={25} fill={colors.white} />
+          </ExternalLink>
         )}
       </View>
     </SafeAreaView>
@@ -78,9 +79,11 @@ export const SearchModal = (props: Props) => {
 };
 
 const styles = StyleSheet.create({
-  wrapper: {
-    height: '90%',
-    margin: 20,
+  container: {
+    backgroundColor: colors.whiteSmoke,
+  },
+  innerContainer: {
+    margin: 30,
   },
   imageContainer: {
     marginBottom: 20,
@@ -99,15 +102,5 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     marginTop: 5,
-  },
-  button: {
-    backgroundColor: colors.darkGreen,
-    borderRadius: 5,
-    padding: 15,
-    width: '100%',
-    height: 50,
-  },
-  marginRight: {
-    marginRight: 10,
   },
 });
