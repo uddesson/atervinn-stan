@@ -13,7 +13,12 @@ export const Button = (props: Props) => {
   const { onPress, children } = props;
   return (
     <TouchableOpacity
-      style={[styles.button, utilityStyles.row, utilityStyles.center]}
+      style={[
+        styles.button,
+        utilityStyles.row,
+        utilityStyles.center,
+        utilityStyles.justifyAround,
+      ]}
       activeOpacity={0.7}
       onPress={onPress}
     >
@@ -23,17 +28,12 @@ export const Button = (props: Props) => {
 };
 
 const styles = StyleSheet.create({
-  paragraph: {
-    marginTop: 5,
-  },
   button: {
-    backgroundColor: colors.darkGreen,
+    backgroundColor: colors.green,
     borderRadius: 5,
-    padding: 15,
+    paddingVertical: 25,
+    paddingHorizontal: 60,
     width: '100%',
-    height: 50,
-  },
-  buttonText: {
-    marginRight: 10,
+    height: 70,
   },
 });
