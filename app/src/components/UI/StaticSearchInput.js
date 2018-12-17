@@ -32,13 +32,9 @@ export const StaticSearchInput = (props: Props) => {
 
 const styles = StyleSheet.create({
   searchInput: {
-    marginTop: 130,
-    marginBottom: 100,
     borderRadius: 30,
-    paddingBottom: 15,
-    paddingTop: 15,
-    paddingLeft: 25,
-    paddingRight: 25,
+    paddingVertical: 15,
+    paddingHorizontal: 25,
     backgroundColor: colors.white,
   },
   searchText: {
