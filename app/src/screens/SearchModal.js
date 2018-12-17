@@ -32,8 +32,14 @@ export const SearchModal = (props: Props) => {
   const externalUrl = 'https://tinyurl.com/y9sast9a';
 
   return (
-    <SafeAreaView style={[utilityStyles.fullHeight, styles.container]}>
-      <View style={[utilityStyles.justifyBetween, utilityStyles.flex1, styles.innerContainer]}>
+    <View style={[utilityStyles.fullHeight, styles.container]}>
+      <View
+        style={[
+          utilityStyles.justifyBetween,
+          utilityStyles.flex1,
+          styles.innerContainer,
+        ]}
+      >
         <View>
           {sortingAvailability ? (
             <>
@@ -68,7 +74,7 @@ export const SearchModal = (props: Props) => {
           </ExternalLink>
         )}
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 

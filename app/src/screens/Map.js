@@ -1,11 +1,23 @@
 //@flow
 import React, { Component } from 'react';
-import { SafeAreaView, View, Alert, Text, TouchableOpacity } from 'react-native';
+import {
+  SafeAreaView,
+  View,
+  Alert,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import Permissions from 'react-native-permissions';
 import MapView, { Marker, Callout } from 'react-native-maps';
 import { initialRegion } from '../utils';
-import { utilityStyles, FilterToggler, MarkerImage, colors, GpsIconButton } from '../components/UI';
+import {
+  utilityStyles,
+  FilterToggler,
+  MarkerImage,
+  colors,
+  GpsIconButton,
+} from '../components/UI';
 import { MapModal } from '../components/UI/MapModal';
 
 type State = {
@@ -57,7 +69,7 @@ export class Map extends Component<Props, State> {
         this.setState({
           ftiPositions: stations[0],
           modulePositions: stations[1],
-        }),
+        })
       )
       .catch(() => {
         Alert.alert('Något gick fel', 'Kan inte hämta positioner just nu.');
@@ -137,7 +149,7 @@ export class Map extends Component<Props, State> {
               text: 'Ja, ändra inställningar',
               onPress: Permissions.openSettings,
             },
-      ],
+      ]
     );
   };
 
@@ -156,11 +168,15 @@ export class Map extends Component<Props, State> {
       this.alertForLocationPermission();
     };
 
-    navigator.geolocation.getCurrentPosition(onLocationRecived, onLocationDenied, {
-      timeout: 200,
-      enableHighAccuracy: true,
-      maximumAge: 0,
-    });
+    navigator.geolocation.getCurrentPosition(
+      onLocationRecived,
+      onLocationDenied,
+      {
+        timeout: 200,
+        enableHighAccuracy: true,
+        maximumAge: 0,
+      }
+    );
   };
 
   render() {
@@ -173,7 +189,7 @@ export class Map extends Component<Props, State> {
     } = this.state;
 
     return (
-      <SafeAreaView>
+      <>
         <MapView
           ref={map => (this.map = map)}
           style={[utilityStyles.fullWidth, utilityStyles.fullHeight]}
@@ -197,7 +213,7 @@ export class Map extends Component<Props, State> {
           onModulePress={this.handleModuleToggling}
         />
         <GpsIconButton onPress={this.showCurrentLocation} />
-      </SafeAreaView>
+      </>
     );
   }
 }
