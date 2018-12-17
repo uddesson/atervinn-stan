@@ -105,9 +105,7 @@ export class Search extends Component<Props, State> {
     const { searchInput, searchResults, error, loading } = this.state;
 
     return (
-      <SafeAreaView
-        style={[utilityStyles.flex1, utilityStyles.fullWidth, styles.screen]}
-      >
+      <View style={[styles.screen, utilityStyles.fullHeight]}>
         <View style={[utilityStyles.justifyCenter, styles.container]}>
           <View
             style={[
@@ -124,7 +122,7 @@ export class Search extends Component<Props, State> {
           </View>
           {this.handleSearchOutPut()}
         </View>
-      </SafeAreaView>
+      </View>
     );
   }
 }
