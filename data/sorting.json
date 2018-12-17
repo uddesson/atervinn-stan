@@ -1732,7 +1732,7 @@
     {
       "id": 1513,
       "name": "Engångsgrill",
-      "type": "",
+      "type": "grovmetall",
       "privateSiteTypes": [
         {
           "id": 282,
@@ -2968,47 +2968,6 @@
         {
           "id": 322,
           "name": "övrigt"
-        }
-      ],
-      "privateSites": [],
-      "commercialSites": [],
-      "synonyms": [],
-      "symbols": []
-    },
-    {
-      "id": 1651,
-      "name": "Hink",
-      "type": "",
-      "privateSiteTypes": [
-        {
-          "id": 282,
-          "name": "Återvinningscentral"
-        },
-        {
-          "id": 321,
-          "name": "Grovsoprum"
-        },
-        {
-          "id": 382,
-          "name": "Grovsopshämtning"
-        }
-      ],
-      "commercialSiteTypes": [
-        {
-          "id": 282,
-          "name": "Återvinningscentral"
-        },
-        {
-          "id": 321,
-          "name": "Grovsoprum"
-        },
-        {
-          "id": 323,
-          "name": "Extern anläggning"
-        },
-        {
-          "id": 382,
-          "name": "Grovsopshämtning"
         }
       ],
       "privateSites": [],
@@ -5791,7 +5750,7 @@
     {
       "id": 1886,
       "name": "Matolja",
-      "type": "",
+      "type": "Fett och slam",
       "privateSiteTypes": [
         {
           "id": 282,
@@ -6184,47 +6143,6 @@
         {
           "id": 661,
           "name": "FTI:s mottagningspunkt"
-        }
-      ],
-      "privateSites": [],
-      "commercialSites": [],
-      "synonyms": [],
-      "symbols": []
-    },
-    {
-      "id": 1925,
-      "name": "Musikinstrument",
-      "type": "",
-      "privateSiteTypes": [
-        {
-          "id": 282,
-          "name": "Återvinningscentral"
-        },
-        {
-          "id": 321,
-          "name": "Grovsoprum"
-        },
-        {
-          "id": 382,
-          "name": "Grovsopshämtning"
-        }
-      ],
-      "commercialSiteTypes": [
-        {
-          "id": 282,
-          "name": "Återvinningscentral"
-        },
-        {
-          "id": 321,
-          "name": "Grovsoprum"
-        },
-        {
-          "id": 323,
-          "name": "Extern anläggning"
-        },
-        {
-          "id": 382,
-          "name": "Grovsopshämtning"
         }
       ],
       "privateSites": [],
@@ -11073,39 +10991,6 @@
       "commercialSites": [],
       "synonyms": [],
       "symbols": []
-    },
-    {
-      "id": 2275,
-      "name": "Tomtebloss, oanvända",
-      "type": "",
-      "privateSiteTypes": [
-        {
-          "id": 282,
-          "name": "Återvinningscentral"
-        },
-        {
-          "id": 298,
-          "name": "Miljöstation"
-        },
-        {
-          "id": 301,
-          "name": "Mobila miljöstationen"
-        }
-      ],
-      "commercialSiteTypes": [
-        {
-          "id": 323,
-          "name": "Extern anläggning"
-        }
-      ],
-      "privateSites": [],
-      "commercialSites": [],
-      "synonyms": [],
-      "symbols": [
-        {
-          "id": 2
-        }
-      ]
     },
     {
       "id": 2277,
