@@ -23,32 +23,32 @@ _NOTE: react native comes with support for flow but it requires an older version
 ### `React-native-maps`
 In the prototype we used react-maps which took use of google maps. Since then googles pricing has been changed. A lot of other map libraries also requires an API key from google. In react-native-maps its possible to use apple maps ie its free of charge.
 
-[Link to library]()
+[Link to library](https://github.com/react-native-community/react-native-maps)
 
 ### `Moment`
 Well established library to handle time and date. Used in combination with twix.
 
-[Link to library]()
+[Link to library](https://www.npmjs.com/package/moment)
 
 ### `Twix`
 Plugin to moment where you can create date ranges and compare date to see if its included in range.
 
-[Link to library]()
+[Link to library](https://www.npmjs.com/package/twix)
 
 ### `react-native-permissions`
 
-
+[Link to library](https://github.com/yonahforst/react-native-permissions)
 [Link to library]()
 
 ### `react-native-svg`
 React native does not currently support inline-svg a library is therefore needed.
 
-[Link to library]()
+[Link to library](https://github.com/react-native-community/react-native-svg)
 
 ### `react-navigation`
 Well established library for navigation, allows you to send data between screens.
 
-[Link to library]()
+[Link to library](https://www.npmjs.com/package/react-navigation)
 
 
 ## Install
