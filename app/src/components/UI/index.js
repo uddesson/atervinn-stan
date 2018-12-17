@@ -2,7 +2,11 @@ export { SearchInput } from './SearchInput';
 export { colors } from './colors';
 export { utilityStyles } from './utilityStyles';
 export {
-  Heading, SubHeading, Paragraph, ParagraphBold,
+  Heading,
+  SubHeading,
+  Paragraph,
+  ParagraphBold,
+  ButtonLabel,
 } from './Types';
 export { SearchResultMessage } from './SearchResultMessage';
 export {
@@ -26,3 +30,4 @@ export { GpsIconButton } from './GpsIconButton';
 export { CloseButton } from './CloseButton';
 export { StaticSearchInput } from './StaticSearchInput';
 export { HomeMessage } from './HomeMessage';
+export { Button } from './Button';

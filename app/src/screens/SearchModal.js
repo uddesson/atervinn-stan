@@ -7,12 +7,13 @@ import {
   utilityStyles,
   colors,
   Paragraph,
-  ParagraphBold,
+  ButtonLabel,
   SubHeading,
+  WarningIcon,
+  Button,
   GpsIcon,
   ExternalLink,
   ExternalLinkIcon,
-  WarningIcon,
 } from '../components/UI';
 import { toUpperCase, allSortingTypes, getSearchModalMessage } from '../utils';
 import { moduleSorting, ftiStationSorting } from '../utils/sortingTypes';
@@ -31,8 +32,14 @@ export const SearchModal = (props: Props) => {
   const externalUrl = 'https://tinyurl.com/y9sast9a';
 
   return (
-    <SafeAreaView style={styles.wrapper}>
-      <View style={[utilityStyles.justifyBetween, utilityStyles.flex1]}>
+    <SafeAreaView style={[utilityStyles.fullHeight, styles.container]}>
+      <View
+        style={[
+          utilityStyles.justifyBetween,
+          utilityStyles.flex1,
+          styles.innerContainer,
+        ]}
+      >
         <View>
           {sortingAvailability ? (
             <>
@@ -55,46 +62,28 @@ export const SearchModal = (props: Props) => {
           </Paragraph>
         </View>
 
-        <TouchableOpacity
-          style={[styles.button, utilityStyles.row, utilityStyles.center]}
-          activeOpacity={0.7}
-          onPress={() => navigation.navigate('Map')}
-        >
-          {sortingAvailability ? (
-            <>
-              <ParagraphBold
-                style={[utilityStyles.whiteText, utilityStyles.uppercaseText]}
-              >
-                Hitta station
-              </ParagraphBold>
-              <GpsIcon height={50} width={50} fill={colors.white} />
-            </>
-          ) : (
-            <>
-              <ExternalLink url={externalUrl} style={styles.button}>
-                <ParagraphBold
-                  style={[
-                    utilityStyles.whiteText,
-                    utilityStyles.uppercaseText,
-                    styles.buttonText,
-                  ]}
-                >
-                  Hitta central
-                </ParagraphBold>
-                <ExternalLinkIcon height={20} width={20} fill={colors.white} />
-              </ExternalLink>
-            </>
-          )}
-        </TouchableOpacity>
+        {sortingAvailability ? (
+          <Button onPress={() => navigation.navigate('Map')}>
+            <ButtonLabel>Hitta station</ButtonLabel>
+            <GpsIcon height={60} width={60} fill={colors.white} />
+          </Button>
+        ) : (
+          <ExternalLink url={externalUrl}>
+            <ButtonLabel>Hitta central</ButtonLabel>
+            <ExternalLinkIcon height={25} width={25} fill={colors.white} />
+          </ExternalLink>
+        )}
       </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  wrapper: {
-    height: '90%',
-    margin: 20,
+  container: {
+    backgroundColor: colors.whiteSmoke,
+  },
+  innerContainer: {
+    margin: 30,
   },
   imageContainer: {
     marginBottom: 20,
@@ -113,15 +102,5 @@ const styles = StyleSheet.create({
   },
   paragraph: {
     marginTop: 5,
-  },
-  button: {
-    backgroundColor: colors.darkGreen,
-    borderRadius: 5,
-    padding: 15,
-    width: '100%',
-    height: 50,
-  },
-  buttonText: {
-    marginRight: 10,
   },
 });

@@ -1,30 +1,26 @@
 //@flow
 import React from 'react';
-import { TouchableOpacity, StyleSheet, Linking } from 'react-native';
-import { utilityStyles, colors } from '.';
+import { TouchableOpacity, StyleSheet } from 'react-native';
+import { NavigationScreenProps } from 'react-navigation';
+import { utilityStyles, ParagraphBold, ExternalLink, colors } from '.';
 
 type Props = {
-  url: string,
+  onPress?: Function,
   children: React$Element<any>,
 };
 
-export const ExternalLink = (props: Props) => {
-  const { url, children } = props;
-
-  const onPress = () =>
-    Linking.canOpenURL(url).then(() => {
-      Linking.openURL(url);
-    });
-
+export const Button = (props: Props) => {
+  const { onPress, children } = props;
   return (
     <TouchableOpacity
-      onPress={onPress}
       style={[
+        styles.button,
         utilityStyles.row,
         utilityStyles.center,
         utilityStyles.justifyAround,
-        styles.button,
       ]}
+      activeOpacity={0.7}
+      onPress={onPress}
     >
       {children}
     </TouchableOpacity>
@@ -32,7 +28,6 @@ export const ExternalLink = (props: Props) => {
 };
 
 const styles = StyleSheet.create({
-  // this is used in 2 files, create utilityclass?
   button: {
     backgroundColor: colors.green,
     borderRadius: 5,
