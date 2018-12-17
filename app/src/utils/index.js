@@ -1,10 +1,8 @@
-export { calcColor } from './calcColor';
+export { checkColor } from './checkColor';
 export { toUpperCase } from './toUpperCase';
 export { initialRegion } from './getRegion';
 export { getStationSymbol } from './getStationSymbol';
-export { allSortingTypes } from './sortingTypes';
 export { getSearchModalMessage } from './getSearchModalMessage';
 export { parseArray } from './parseArray';
-export { symbolExplanations } from './symbolExplanations';
 export { checkModuleAvailability } from './checkModuleAvailability';
 export { checkCurrentSeason } from './checkCurrentSeason';

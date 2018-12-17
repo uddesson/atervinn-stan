@@ -2,7 +2,7 @@
 import React from 'react';
 import { Image, View, StyleSheet } from 'react-native';
 import { utilityStyles } from '../components/UI';
-import { moduleSorting, ftiStationSorting } from './sortingTypes';
+import { moduleSorting, ftiStationSorting } from '../assets';
 
 /*
  * In our search results list we want to show a symbol of a module or
@@ -13,9 +13,7 @@ import { moduleSorting, ftiStationSorting } from './sortingTypes';
 export const getStationSymbol = (sortingType: string) => {
   const type = sortingType.toLowerCase();
 
-  const moduleSymbol = (
-    <Image style={styles.image} source={{ uri: 'module' }} />
-  );
+  const moduleSymbol = <Image style={styles.image} source={{ uri: 'module' }} />;
 
   const ftiContainerSymbol = (
     <Image

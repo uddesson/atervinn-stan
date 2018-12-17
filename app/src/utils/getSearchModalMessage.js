@@ -1,6 +1,6 @@
 //@flow
 import React from 'react';
-import { moduleSorting, ftiStationSorting } from './sortingTypes';
+import { moduleSorting, ftiStationSorting } from '../assets';
 
 export const getSearchModalMessage = (sortingType: string) => {
   /*
