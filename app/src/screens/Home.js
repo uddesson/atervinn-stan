@@ -7,7 +7,7 @@ import {
   ShortcutBanner,
   colors,
   StaticSearchInput,
-  HomeMessage,
+  BlackBoxMessage,
 } from '../components/UI';
 import { checkModuleAvailability, checkCurrentSeason } from '../utils';
 
@@ -37,28 +37,12 @@ export class Home extends Component<Props> {
     const { navigation } = this.props;
 
     return (
-      <SafeAreaView
-        style={[
-          utilityStyles.flex1,
-          utilityStyles.fullWidth,
-          utilityStyles.center,
-        ]}
-      >
-        <View
-          style={[
-            styles.container,
-            utilityStyles.flex1,
-            utilityStyles.fullWidth,
-          ]}
-        >
+      <SafeAreaView style={[utilityStyles.flex1, utilityStyles.fullWidth, utilityStyles.center]}>
+        <View style={[styles.container, utilityStyles.flex1, utilityStyles.fullWidth]}>
           <ShortcutBanner navigation={navigation} />
           <ImageBackground
             source={{ uri: seasonImageUri }}
-            style={[
-              utilityStyles.fullWidth,
-              utilityStyles.fullHeight,
-              styles.headerImage,
-            ]}
+            style={[utilityStyles.fullWidth, utilityStyles.fullHeight, styles.headerImage]}
           >
             <View
               style={[
@@ -69,7 +53,7 @@ export class Home extends Component<Props> {
               ]}
             >
               <StaticSearchInput navigation={navigation} />
-              <HomeMessage>{message}</HomeMessage>
+              <BlackBoxMessage>{message}</BlackBoxMessage>
             </View>
           </ImageBackground>
         </View>

@@ -13,7 +13,7 @@ type Props = {
  */
 
 /* Should this have a more generic name for scaleability? */
-export const HomeMessage = (props: Props) => {
+export const BlackBoxMessage = (props: Props) => {
   const { children } = props;
   return (
     <View style={[styles.container, utilityStyles.fullWidth]}>

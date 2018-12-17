@@ -13,5 +13,5 @@ export { MarkerImage } from './MarkerImage';
 export { GpsIconButton } from './GpsIconButton';
 export { CloseButton } from './CloseButton';
 export { StaticSearchInput } from './StaticSearchInput';
-export { HomeMessage } from './HomeMessage';
+export { BlackBoxMessage } from './BlackBoxMessage';
 export { Button } from './Button';
