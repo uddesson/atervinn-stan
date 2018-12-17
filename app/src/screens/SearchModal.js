@@ -15,8 +15,8 @@ import {
   ExternalLink,
   ExternalLinkIcon,
 } from '../components/UI';
-import { toUpperCase, allSortingTypes, getSearchModalMessage } from '../utils';
-import { moduleSorting, ftiStationSorting } from '../utils/sortingTypes';
+import { toUpperCase, getSearchModalMessage } from '../utils';
+import { moduleSorting, ftiStationSorting, allSortingTypes } from '../assets';
 
 type Props = {
   navigation: NavigationScreenProps,
@@ -33,13 +33,7 @@ export const SearchModal = (props: Props) => {
 
   return (
     <SafeAreaView style={[utilityStyles.fullHeight, styles.container]}>
-      <View
-        style={[
-          utilityStyles.justifyBetween,
-          utilityStyles.flex1,
-          styles.innerContainer,
-        ]}
-      >
+      <View style={[utilityStyles.justifyBetween, utilityStyles.flex1, styles.innerContainer]}>
         <View>
           {sortingAvailability ? (
             <>

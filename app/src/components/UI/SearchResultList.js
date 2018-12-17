@@ -4,7 +4,8 @@ import { View, ScrollView, TouchableOpacity, FlatList, StyleSheet } from 'react-
 import { NavigationScreenProps } from 'react-navigation';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
-import { calcColor, getStationSymbol, toUpperCase, allSortingTypes } from '../../utils';
+import { allSortingTypes } from '../../assets';
+import { calcColor, getStationSymbol, toUpperCase } from '../../utils';
 import { WarningIcon, colors } from '.';
 
 type Props = {
