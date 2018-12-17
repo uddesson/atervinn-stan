@@ -22,7 +22,7 @@ export const SearchNavigator = createStackNavigator(
     SearchModal: {
       screen: SearchModal,
       navigationOptions: () => ({
-        headerStyle: { borderBottomWidth: 0 },
+        headerStyle: { borderBottomWidth: 0, backgroundColor: colors.whiteSmoke },
         headerLeftContainerStyle: { marginLeft: 10, marginTop: 10 },
         headerTintColor: colors.blue,
       }),
