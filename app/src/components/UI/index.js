@@ -1,25 +1,9 @@
 export { SearchInput } from './SearchInput';
 export { colors } from './colors';
 export { utilityStyles } from './utilityStyles';
-export {
-  Heading,
-  SubHeading,
-  Paragraph,
-  ParagraphBold,
-  ButtonLabel,
-} from './Types';
+export * from './Types';
 export { SearchResultMessage } from './SearchResultMessage';
-export {
-  HeartIcon,
-  SadIcon,
-  SearchIcon,
-  MapIcon,
-  InfoIcon,
-  GpsIcon,
-  ExternalLinkIcon,
-  CancelIcon,
-  WarningIcon,
-} from './Icons';
+export * from './Icons';
 export { SearchResultList } from './SearchResultList';
 export { ShortcutBanner } from './ShortcutBanner';
 export { Pulse } from './Pulse';
