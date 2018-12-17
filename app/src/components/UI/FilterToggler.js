@@ -11,7 +11,12 @@ type Props = {
 };
 
 export const FilterToggler = (props: Props) => {
-  const { isFtiContainerVisible, isModuleVisible, onFtiContainerPress, onModulePress } = props;
+  const {
+    isFtiContainerVisible,
+    isModuleVisible,
+    onFtiContainerPress,
+    onModulePress,
+  } = props;
 
   return (
     <View
@@ -51,7 +56,7 @@ export const FilterToggler = (props: Props) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.white,
-    top: '5%',
+    top: '2%',
     left: '3%',
     width: 65,
     height: 110,
