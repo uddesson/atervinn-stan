@@ -1,4 +1,4 @@
-export { calcColor } from './calcColor';
+export { calcColor } from './checkColor';
 export { toUpperCase } from './toUpperCase';
 export { initialRegion } from './getRegion';
 export { getStationSymbol } from './getStationSymbol';
