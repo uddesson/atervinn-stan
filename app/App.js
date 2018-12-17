@@ -5,7 +5,9 @@
 
 import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
+import { SafeAreaView } from 'react-native';
 import { AppNavigator } from './src/components/AppNavigator';
+import { utilityStyles } from './src/components/UI';
 
 /**
  * NOTES:
@@ -21,6 +23,10 @@ const RootNavigator = createAppContainer(AppNavigator);
 
 export default class App extends Component<{}> {
   render() {
-    return <RootNavigator />;
+    return (
+      <SafeAreaView style={utilityStyles.flex1}>
+        <RootNavigator />
+      </SafeAreaView>
+    );
   }
 }
