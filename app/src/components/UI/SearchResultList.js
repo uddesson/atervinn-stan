@@ -5,7 +5,7 @@ import { NavigationScreenProps } from 'react-navigation';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
 import { allSortingTypes } from '../../assets';
-import { calcColor, getStationSymbol, toUpperCase } from '../../utils';
+import { checkColor, getStationSymbol, toUpperCase } from '../../utils';
 import { WarningIcon, colors } from '.';
 
 type Props = {
@@ -28,7 +28,7 @@ export const SearchResultList = (props: Props) => {
         keyExtractor={item => item.id.toString()}
         data={results}
         renderItem={({ item }) => {
-          const backgroundColor = calcColor(item.type.toLowerCase());
+          const backgroundColor = checkColor(item.type.toLowerCase());
           const sortingTypeAvailable = allSortingTypes.includes(item.type.toLowerCase());
 
           return (
