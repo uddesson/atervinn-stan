@@ -1,104 +1,11 @@
 //@flow
 import React from 'react';
-import Svg, {
-  G,
-  Path,
-  Polygon,
-  Circle,
-  Line,
-  Polyline,
-} from 'react-native-svg';
+import Svg, { G, Path, Polygon, Circle, Line, Polyline } from 'react-native-svg';
 
 type Props = {
   width: number,
   height: number,
   fill: string,
-};
-
-export const SadIcon = (props: Props) => {
-  const { width, height, fill } = props;
-
-  return (
-    <Svg
-      version="1.1"
-      x="0px"
-      y="0px"
-      width={width}
-      height={height}
-      viewBox="0 0 64 64"
-      enable-background="new 0 0 64 64"
-    >
-      <G>
-        <Line
-          fill="none"
-          stroke={fill}
-          stroke-width="2"
-          stroke-miterlimit="10"
-          x1="18"
-          y1="20"
-          x2="20"
-          y2="20"
-        />
-        <Line
-          fill="none"
-          stroke={fill}
-          stroke-width="2"
-          stroke-miterlimit="10"
-          x1="46"
-          y1="20"
-          x2="44"
-          y2="20"
-        />
-        <Polygon
-          fill="none"
-          stroke={fill}
-          stroke-width="2"
-          stroke-miterlimit="10"
-          points="32,47 63,47 63,5 1,5 1,47 18,47 18,59"
-        />
-      </G>
-      <Path
-        fill="none"
-        stroke={fill}
-        stroke-width="2"
-        stroke-miterlimit="10"
-        d="M40,38c0-4.418-3.582-8-8-8s-8,3.582-8,8"
-      />
-    </Svg>
-  );
-};
-
-export const HeartIcon = (props: Props) => {
-  const { width, height, fill } = props;
-
-  return (
-    <Svg
-      version="1.1"
-      x="0px"
-      y="0px"
-      width={width}
-      height={height}
-      viewBox="0 0 64 64"
-      enable-background="new 0 0 64 64"
-    >
-      <Polygon
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke={fill}
-        stroke-width="4"
-        stroke-miterlimit="10"
-        points="32,47 63,47 63,5 1,5 1,47 18,47 18,59 "
-      />
-      <Path
-        fill={fill}
-        stroke={fill}
-        stroke-width="2"
-        stroke-miterlimit="10"
-        d="M22,23c0,6.666,10,12,10,12s10-5.334,10-12
-	c0-2.762-2-5-5-5c-2.762,0-5,2.238-5,5c0-2.762-2.238-5-5-5C24,18,22,20.238,22,23z"
-      />
-    </Svg>
-  );
 };
 
 export const SearchIcon = (props: Props) => {
@@ -213,10 +120,7 @@ export const WarningIcon = (props: Props) => {
     <Svg width={width} height={height} viewBox="0 0 24 24" fill="none">
       <Path d="M0 0h24v24H0V0z" />
       <Circle fill={fill} cx="12" cy="19" r="2" />
-      <Path
-        fill={fill}
-        d="M12 3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2s2-.9 2-2V5c0-1.1-.9-2-2-2z"
-      />
+      <Path fill={fill} d="M12 3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2s2-.9 2-2V5c0-1.1-.9-2-2-2z" />
     </Svg>
   );
 };
@@ -233,25 +137,6 @@ export const CancelIcon = (props: Props) => {
         stroke={fill}
         fill={fill}
       />
-    </Svg>
-  );
-};
-
-export const SuccessIcon = (props: Props) => {
-  const { width, height, fill } = props;
-
-  return (
-    <Svg
-      width={width}
-      height={height}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke={fill}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <Polyline points="20 6 9 17 4 12" />
     </Svg>
   );
 };
