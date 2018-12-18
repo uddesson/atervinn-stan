@@ -14,4 +14,5 @@ export { GpsIconButton } from './GpsIconButton';
 export { CloseButton } from './CloseButton';
 export { StaticSearchInput } from './StaticSearchInput';
 export { BlackBoxMessage } from './BlackBoxMessage';
-export { Button } from './Button';
+//export { Button } from './Button';
+export { Button, ExternalLinkButton } from './Buttons';

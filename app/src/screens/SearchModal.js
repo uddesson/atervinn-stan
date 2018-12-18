@@ -17,7 +17,8 @@ import {
   SubHeading,
   WarningIcon,
   Button,
-  GpsIcon,
+  ExternalLinkButton,
+  NavigationIcon,
   ExternalLink,
   ExternalLinkIcon,
 } from '../components/UI';
@@ -58,7 +59,13 @@ export const SearchModal = (props: Props) => {
               </SubHeading>
             </>
           ) : (
-            <View style={utilityStyles.row}>
+            <View
+              style={[
+                utilityStyles.row,
+                utilityStyles.boldText,
+                styles.unavailableItem,
+              ]}
+            >
               <SubHeading>{toUpperCase(title)}</SubHeading>
               <View style={[utilityStyles.center, styles.iconCircle]}>
                 <WarningIcon width={20} height={20} fill={colors.red} />
@@ -74,14 +81,18 @@ export const SearchModal = (props: Props) => {
         <View>
           {sortingAvailability ? (
             <Button onPress={() => navigation.navigate('Map')}>
-              <ButtonLabel>Hitta station</ButtonLabel>
-              <GpsIcon height={60} width={60} fill={colors.white} />
+              <ButtonLabel style={styles.buttonLabel}>
+                Hitta station
+              </ButtonLabel>
+              <NavigationIcon height={25} width={25} fill={colors.white} />
             </Button>
           ) : (
-            <ExternalLink url={externalUrl}>
-              <ButtonLabel>Hitta central</ButtonLabel>
+            <ExternalLinkButton url={externalUrl}>
+              <ButtonLabel style={styles.buttonLabel}>
+                Hitta central
+              </ButtonLabel>
               <ExternalLinkIcon height={25} width={25} fill={colors.white} />
-            </ExternalLink>
+            </ExternalLinkButton>
           )}
         </View>
       </ScrollView>
@@ -101,9 +112,13 @@ const styles = StyleSheet.create({
   imageContainer: {
     marginBottom: 20,
   },
+  unavailableItem: {
+    marginTop: 20,
+  },
   image: {
     width: 190,
     height: 190,
+    marginBottom: 10,
   },
   iconCircle: {
     width: 25,
@@ -114,7 +129,9 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   paragraph: {
-    marginTop: 8,
-    marginBottom: 10,
+    marginVertical: 20,
+  },
+  buttonLabel: {
+    marginRight: 10,
   },
 });
