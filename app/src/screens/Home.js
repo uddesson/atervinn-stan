@@ -19,7 +19,7 @@ const seasonImageUri = checkCurrentSeason();
 
 const isModulesAvailable = checkModuleAvailability();
 const message = isModulesAvailable
-  ? 'Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper dig'
+  ? 'Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper dig.'
   : 'Observera att Stockholms mobila stationer inte står ute vintertid, men FTI:s Stationer är tillgängliga året om.';
 
 export class Home extends Component<Props> {
