@@ -1,19 +1,20 @@
 // @flow
 import React from 'react';
-import { Image, View, StyleSheet } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 import { utilityStyles } from '../components/UI';
 import { moduleSorting, ftiStationSorting } from '../assets';
 
 /*
- * In our search results list we want to show a symbol of a module or
- * a fti station depending on if you can recycle the item on one of
- * them or both.
+ * Returns an image of either an module or an FTI Station depending
+ * on if the item it receives can be recycled at one or both.
  */
 
 export const getStationSymbol = (sortingType: string) => {
   const type = sortingType.toLowerCase();
 
-  const moduleSymbol = <Image style={styles.image} source={{ uri: 'module' }} />;
+  const moduleSymbol = (
+    <Image style={styles.image} source={{ uri: 'module' }} />
+  );
 
   const ftiContainerSymbol = (
     <Image

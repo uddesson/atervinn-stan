@@ -7,7 +7,7 @@ import { colors } from '../components/UI';
  * the option name.
  */
 
-export const checkColor = (category: string): string => {
+export const getSortingColor = (category: string): string => {
   switch (category) {
     case 'papper':
       return colors.ftiYellow;

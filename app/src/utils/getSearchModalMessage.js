@@ -13,9 +13,7 @@ export const getSearchModalMessage = (sortingType: string) => {
   const availableMessage = `Kan återvinnas i stan, både vid modul och FTI Station. Sorteras som ${sortingType}.`;
   const moduleMessage = `Kan återvinnas i stan vid en modul och sorteras som ${sortingType}.`;
   const ftiMessage = `Kan återvinnas i stan vid en FTI Station och sorteras som ${sortingType}.`;
-  const unavailableMessage = `Måste återvinnas på en större återvinningscentral och sorteras där som ${sortingType}.
-
-Klicka på "Hitta Central" för att se en lista av adresser för alla Återvinningscentraler i Stockholm.`;
+  const unavailableMessage = `Måste återvinnas på en större återvinningscentral och sorteras där som ${sortingType}. Klicka på "Hitta Central" för att se en lista av adresser för alla Återvinningscentraler i Stockholm.`;
 
   if (moduleSortingAvailable && ftiStationSortingAvailable) {
     return availableMessage;

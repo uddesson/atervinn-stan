@@ -16,7 +16,15 @@ export const SearchResultMessage = (props: Props) => {
 
   return (
     <View style={styles.container}>
-      <Paragraph style={[styles.message, utilityStyles.lineHeightNormal]}>{message}</Paragraph>
+      <Paragraph
+        style={[
+          styles.message,
+          utilityStyles.lineHeightNormal,
+          utilityStyles.centerText,
+        ]}
+      >
+        {message}
+      </Paragraph>
     </View>
   );
 };
@@ -27,6 +35,5 @@ const styles = StyleSheet.create({
   },
   message: {
     margin: 8,
-    textAlign: 'center',
   },
 });

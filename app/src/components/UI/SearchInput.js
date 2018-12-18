@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.lightGrey,
     width: '70%',
     paddingVertical: 10,
-    //marginLeft: 10,
     fontSize: 20,
   },
 });

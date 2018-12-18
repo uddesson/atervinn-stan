@@ -8,11 +8,9 @@ import {
   StyleSheet,
 } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
-import { Paragraph } from './Types';
-import { utilityStyles } from './utilityStyles';
+import { WarningIcon, colors, Paragraph, utilityStyles } from '.';
 import { allSortingTypes } from '../../assets';
-import { checkColor, getStationSymbol, toUpperCase } from '../../utils';
-import { WarningIcon, colors } from '.';
+import { getSortingColor, getStationSymbol, toUpperCase } from '../../utils';
 
 type Props = {
   results: Object[],
@@ -37,7 +35,7 @@ export const SearchResultList = (props: Props) => {
         keyExtractor={item => item.id.toString()}
         data={results}
         renderItem={({ item }) => {
-          const backgroundColor = checkColor(item.type.toLowerCase());
+          const backgroundColor = getSortingColor(item.type.toLowerCase());
           const sortingTypeAvailable = allSortingTypes.includes(
             item.type.toLowerCase()
           );
@@ -102,8 +100,7 @@ const styles = StyleSheet.create({
   result: {
     paddingTop: 10,
     paddingBottom: 5,
-    paddingLeft: 4,
-    paddingRight: 4,
+    paddingHorizontal: 4,
   },
   wrapper: {
     padding: 10,
