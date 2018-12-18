@@ -1,6 +1,12 @@
 //@flow
 import React from 'react';
-import { View, ScrollView, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import {
+  View,
+  ScrollView,
+  TouchableOpacity,
+  StyleSheet,
+  Image,
+} from 'react-native';
 import { SafeAreaView } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import {
@@ -33,51 +39,58 @@ export const SearchModal = (props: Props) => {
   const externalUrl = 'https://tinyurl.com/y9sast9a';
 
   return (
-    <ScrollView
-      contentContainerStyle={[
-        utilityStyles.flexGrow,
-        utilityStyles.justifyAround,
-        styles.container,
-      ]}
-    >
-      <View>
-        {sortingAvailability ? (
-          <>
-            <View style={[utilityStyles.center, styles.imageContainer]}>
-              <Image style={styles.image} source={{ uri: sortingType }} />
+    <View style={[styles.screen, utilityStyles.flexGrow]}>
+      <ScrollView
+        contentContainerStyle={[
+          utilityStyles.flexGrow,
+          utilityStyles.justifyAround,
+          styles.container,
+        ]}
+      >
+        <View>
+          {sortingAvailability ? (
+            <>
+              <View style={[utilityStyles.center, styles.imageContainer]}>
+                <Image style={styles.image} source={{ uri: sortingType }} />
+              </View>
+              <SubHeading>{toUpperCase(title)}</SubHeading>
+            </>
+          ) : (
+            <View style={utilityStyles.row}>
+              <SubHeading>{toUpperCase(title)}</SubHeading>
+              <View style={[utilityStyles.center, styles.iconCircle]}>
+                <WarningIcon width={20} height={20} fill={colors.red} />
+              </View>
             </View>
-            <SubHeading>{toUpperCase(title)}</SubHeading>
-          </>
-        ) : (
-          <View style={utilityStyles.row}>
-            <SubHeading>{toUpperCase(title)}</SubHeading>
-            <View style={[utilityStyles.center, styles.iconCircle]}>
-              <WarningIcon width={20} height={20} fill={colors.red} />
-            </View>
-          </View>
-        )}
+          )}
 
-        <Paragraph style={[styles.paragraph, utilityStyles.lineHeightNormal]}>{message}</Paragraph>
-      </View>
+          <Paragraph style={[styles.paragraph, utilityStyles.lineHeightNormal]}>
+            {message}
+          </Paragraph>
+        </View>
 
-      <View>
-        {sortingAvailability ? (
-          <Button onPress={() => navigation.navigate('Map')}>
-            <ButtonLabel>Hitta station</ButtonLabel>
-            <GpsIcon height={60} width={60} fill={colors.white} />
-          </Button>
-        ) : (
-          <ExternalLink url={externalUrl}>
-            <ButtonLabel>Hitta central</ButtonLabel>
-            <ExternalLinkIcon height={25} width={25} fill={colors.white} />
-          </ExternalLink>
-        )}
-      </View>
-    </ScrollView>
+        <View>
+          {sortingAvailability ? (
+            <Button onPress={() => navigation.navigate('Map')}>
+              <ButtonLabel>Hitta station</ButtonLabel>
+              <GpsIcon height={60} width={60} fill={colors.white} />
+            </Button>
+          ) : (
+            <ExternalLink url={externalUrl}>
+              <ButtonLabel>Hitta central</ButtonLabel>
+              <ExternalLinkIcon height={25} width={25} fill={colors.white} />
+            </ExternalLink>
+          )}
+        </View>
+      </ScrollView>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  screen: {
+    backgroundColor: colors.whiteSmoke,
+  },
   container: {
     backgroundColor: colors.whiteSmoke,
     paddingHorizontal: '8%',
