@@ -43,7 +43,7 @@ export const SearchModal = (props: Props) => {
       <ScrollView
         contentContainerStyle={[
           utilityStyles.flexGrow,
-          utilityStyles.justifyAround,
+          utilityStyles.justifyBetween,
           styles.container,
         ]}
       >
@@ -53,7 +53,9 @@ export const SearchModal = (props: Props) => {
               <View style={[utilityStyles.center, styles.imageContainer]}>
                 <Image style={styles.image} source={{ uri: sortingType }} />
               </View>
-              <SubHeading>{toUpperCase(title)}</SubHeading>
+              <SubHeading style={utilityStyles.boldText}>
+                {toUpperCase(title)}
+              </SubHeading>
             </>
           ) : (
             <View style={utilityStyles.row}>

@@ -45,6 +45,7 @@ export class Info extends Component<{}> {
               style={[
                 utilityStyles.row,
                 utilityStyles.boxShadow,
+                utilityStyles.center,
                 styles.itemContainer,
               ]}
             >
@@ -90,15 +91,15 @@ const styles = StyleSheet.create({
   image: {
     width: 80,
     height: 80,
-    marginRight: 15,
+    marginHorizontal: 15,
   },
   imageBig: {
     width: 80,
     height: 90,
-    marginRight: 15,
+    marginHorizontal: 15,
   },
   textContainer: {
-    width: '68%',
+    width: '60%',
   },
   subHeading: {
     fontWeight: 'bold',
