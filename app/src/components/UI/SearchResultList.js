@@ -35,7 +35,7 @@ export const SearchResultList = (props: Props) => {
         keyExtractor={item => item.id.toString()}
         data={results}
         renderItem={({ item }) => {
-          const backgroundColor = checkColor(item.type.toLowerCase());
+          const backgroundColor = getSortingColor(item.type.toLowerCase());
           const sortingTypeAvailable = allSortingTypes.includes(
             item.type.toLowerCase()
           );
@@ -100,8 +100,7 @@ const styles = StyleSheet.create({
   result: {
     paddingTop: 10,
     paddingBottom: 5,
-    paddingLeft: 4,
-    paddingRight: 4,
+    paddingHorizontal: 4,
   },
   wrapper: {
     padding: 10,

@@ -9,14 +9,13 @@ import {
   StaticSearchInput,
   BlackBoxMessage,
 } from '../components/UI';
-import { checkModuleAvailability, checkCurrentSeason } from '../utils';
+import { checkModuleAvailability, getCurrentSeason } from '../utils';
 
 type Props = {
   navigation: NavigationScreenProps,
 };
 
-const seasonImageUri = checkCurrentSeason();
-
+const seasonImageUri = getCurrentSeason();
 const isModulesAvailable = checkModuleAvailability();
 const message = isModulesAvailable
   ? 'Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper dig.'
