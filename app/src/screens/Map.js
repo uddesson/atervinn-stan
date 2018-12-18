@@ -197,7 +197,7 @@ export class Map extends Component<Props, State> {
           showsUserLocation
           userLocationAnnotationTitle={'Min plats'}
           onMapReady={this.showCurrentLocation}
-          onRegionChange={this.handleMapRegionChange}
+          onRegionChangeComplete={this.handleMapRegionChange}
           loadingEnabled
           loadingIndicatorColor={colors.blue}
           loadingBackgroundColor={colors.whiteSmoke}
