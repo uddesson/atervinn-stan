@@ -54,19 +54,25 @@ export const SearchModal = (props: Props) => {
               <View style={[utilityStyles.center, styles.imageContainer]}>
                 <Image style={styles.image} source={{ uri: sortingType }} />
               </View>
-              <SubHeading style={utilityStyles.boldText}>
+              <SubHeading
+                style={[
+                  utilityStyles.boldText,
+                  utilityStyles.letterSpaceNormal,
+                ]}
+              >
                 {toUpperCase(title)}
               </SubHeading>
             </>
           ) : (
-            <View
-              style={[
-                utilityStyles.row,
-                utilityStyles.boldText,
-                styles.unavailableItem,
-              ]}
-            >
-              <SubHeading>{toUpperCase(title)}</SubHeading>
+            <View style={[utilityStyles.row, styles.unavailableItem]}>
+              <SubHeading
+                style={[
+                  utilityStyles.boldText,
+                  utilityStyles.letterSpaceNormal,
+                ]}
+              >
+                {toUpperCase(title)}
+              </SubHeading>
               <View style={[utilityStyles.center, styles.iconCircle]}>
                 <WarningIcon width={20} height={20} fill={colors.red} />
               </View>
@@ -129,7 +135,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   paragraph: {
-    marginVertical: 20,
+    marginBottom: 20,
+    marginTop: 10,
   },
   buttonLabel: {
     marginRight: 10,
