@@ -1,6 +1,6 @@
 //@flow
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { View, ScrollView, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import {
@@ -28,40 +28,39 @@ export const SearchModal = (props: Props) => {
   const sortingType = navigation.getParam('sortingType').toLowerCase();
   const sortingAvailability = allSortingTypes.includes(sortingType);
   const message = getSearchModalMessage(sortingType);
+
   // url to list of recyclingcentrals in stockholm on SVOA's webpage
   const externalUrl = 'https://tinyurl.com/y9sast9a';
 
   return (
-    <View style={[utilityStyles.fullHeight, styles.container]}>
-      <View
-        style={[
-          utilityStyles.justifyBetween,
-          utilityStyles.flex1,
-          styles.innerContainer,
-        ]}
-      >
-        <View>
-          {sortingAvailability ? (
-            <>
-              <View style={[utilityStyles.center, styles.imageContainer]}>
-                <Image style={styles.image} source={{ uri: sortingType }} />
-              </View>
-              <SubHeading>{toUpperCase(title)}</SubHeading>
-            </>
-          ) : (
-            <View style={utilityStyles.row}>
-              <SubHeading>{toUpperCase(title)}</SubHeading>
-              <View style={[utilityStyles.center, styles.iconCircle]}>
-                <WarningIcon width={20} height={20} fill={colors.red} />
-              </View>
+    <ScrollView
+      contentContainerStyle={[
+        utilityStyles.flexGrow,
+        utilityStyles.justifyAround,
+        styles.container,
+      ]}
+    >
+      <View>
+        {sortingAvailability ? (
+          <>
+            <View style={[utilityStyles.center, styles.imageContainer]}>
+              <Image style={styles.image} source={{ uri: sortingType }} />
             </View>
-          )}
+            <SubHeading>{toUpperCase(title)}</SubHeading>
+          </>
+        ) : (
+          <View style={utilityStyles.row}>
+            <SubHeading>{toUpperCase(title)}</SubHeading>
+            <View style={[utilityStyles.center, styles.iconCircle]}>
+              <WarningIcon width={20} height={20} fill={colors.red} />
+            </View>
+          </View>
+        )}
 
-          <Paragraph style={[styles.paragraph, utilityStyles.lineHeightNormal]}>
-            {`${message}.`}
-          </Paragraph>
-        </View>
+        <Paragraph style={[styles.paragraph, utilityStyles.lineHeightNormal]}>{message}</Paragraph>
+      </View>
 
+      <View>
         {sortingAvailability ? (
           <Button onPress={() => navigation.navigate('Map')}>
             <ButtonLabel>Hitta station</ButtonLabel>
@@ -74,16 +73,15 @@ export const SearchModal = (props: Props) => {
           </ExternalLink>
         )}
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.whiteSmoke,
-  },
-  innerContainer: {
-    margin: 30,
+    paddingHorizontal: '8%',
+    paddingBottom: 20,
   },
   imageContainer: {
     marginBottom: 20,
@@ -101,6 +99,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   paragraph: {
-    marginTop: 5,
+    marginTop: 8,
+    marginBottom: 10,
   },
 });

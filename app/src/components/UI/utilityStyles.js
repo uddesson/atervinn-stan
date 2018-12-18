@@ -1,4 +1,4 @@
-//@flow
+// @flow
 import { StyleSheet } from 'react-native';
 import { colors } from './colors';
 
@@ -32,6 +32,9 @@ export const utilityStyles = StyleSheet.create({
   },
   flex1: {
     flex: 1,
+  },
+  flexGrow: {
+    flexGrow: 1,
   },
   alignSelfEnd: {
     alignSelf: 'flex-end',
