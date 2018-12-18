@@ -32,13 +32,10 @@ export class Info extends Component<Props> {
           data={symbolExplanations}
           ListFooterComponent={
             <Paragraph style={styles.smallText}>
-              <ParagraphBold
-                style={styles.smallText}
-              >{`ÅTERVINN STAN `}</ParagraphBold>
-              använder data och material hämtat från FTI (Förpackning och
-              tidnings insamlingen), HSR (Håll Sverige rent), SVOA (Stockholm
-              vatten och avfall) och Stockholms stad. Bilder tagna av Någon
-              Någonsson, Någon Någonsson och Någon Någonsson.
+              <ParagraphBold style={styles.smallText}>{`ÅTERVINN STAN `}</ParagraphBold>
+              använder data och material hämtat från FTI (Förpackning och tidnings insamlingen), HSR
+              (Håll Sverige Rent), SVOA (Stockholm Vatten och Avfall) och Stockholms Stad.
+              Bakgrundbilder tagna av Theodor Lundqvist, Arno Smit, Yapo Zhou och Fredrik Ohlander.
             </Paragraph>
           }
           keyExtractor={item => item.title}
@@ -113,5 +110,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 12,
     margin: 15,
+    lineHeight: 18,
   },
 });

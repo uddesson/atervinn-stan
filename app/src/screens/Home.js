@@ -17,18 +17,10 @@ type Props = {
 
 const seasonImageUri = checkCurrentSeason();
 
-/*
- * Credits for example images.
- * Photo by Jon Flobrant on Unsplash (winter)
- * Photo by Arno Smit on Unsplash (spring)
- * Photo by yapo zhou on Unsplash (fall)
- * Photo by Oscar Helgstrand on Unsplash
- */
-
 const isModulesAvailable = checkModuleAvailability();
 const message = isModulesAvailable
   ? 'Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper dig'
-  : 'Observera att återvinningsmodulerna inte står ute nu. FTI Stationerna finns dock tillgängliga året om och sökfunktionen fungerar som vanligt.';
+  : 'Observera att Stockholms mobila stationer inte står ute vintertid, men FTI:s Stationer är tillgängliga året om.';
 
 export class Home extends Component<Props> {
   static navigationOptions = { header: null };

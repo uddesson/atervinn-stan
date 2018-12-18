@@ -78,4 +78,13 @@ export const utilityStyles = StyleSheet.create({
     shadowRadius: 2,
     shadowOpacity: 0.8,
   },
+  boxShadowDark: {
+    shadowColor: colors.darkGrey,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowRadius: 3,
+    shadowOpacity: 0.3,
+  },
 });
