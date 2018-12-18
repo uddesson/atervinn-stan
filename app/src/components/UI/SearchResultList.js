@@ -8,11 +8,9 @@ import {
   StyleSheet,
 } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
-import { Paragraph } from './Types';
-import { utilityStyles } from './utilityStyles';
+import { WarningIcon, colors, Paragraph, utilityStyles } from '.';
 import { allSortingTypes } from '../../assets';
-import { checkColor, getStationSymbol, toUpperCase } from '../../utils';
-import { WarningIcon, colors } from '.';
+import { getSortingColor, getStationSymbol, toUpperCase } from '../../utils';
 
 type Props = {
   results: Object[],
