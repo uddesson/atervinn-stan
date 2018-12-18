@@ -59,7 +59,13 @@ export const SearchModal = (props: Props) => {
               </SubHeading>
             </>
           ) : (
-            <View style={utilityStyles.row}>
+            <View
+              style={[
+                utilityStyles.row,
+                utilityStyles.boldText,
+                styles.unavailableItem,
+              ]}
+            >
               <SubHeading>{toUpperCase(title)}</SubHeading>
               <View style={[utilityStyles.center, styles.iconCircle]}>
                 <WarningIcon width={20} height={20} fill={colors.red} />
@@ -105,6 +111,9 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     marginBottom: 20,
+  },
+  unavailableItem: {
+    marginTop: 20,
   },
   image: {
     width: 190,
