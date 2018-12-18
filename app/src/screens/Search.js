@@ -106,20 +106,22 @@ export class Search extends Component<Props, State> {
 
     return (
       <View style={[utilityStyles.fullHeight, styles.screen]}>
-        <View
-          style={[
-            utilityStyles.row,
-            utilityStyles.justifyBetween,
-            styles.container,
-          ]}
-        >
-          <SearchInput
-            navigation={navigation}
-            onChangeText={this.handleSearchInput}
-          />
-          <CloseButton onPress={() => navigation.goBack()} />
+        <View style={[utilityStyles.justifyCenter]}>
+          <View
+            style={[
+              utilityStyles.row,
+              utilityStyles.justifyBetween,
+              styles.container,
+            ]}
+          >
+            <SearchInput
+              navigation={navigation}
+              onChangeText={this.handleSearchInput}
+            />
+            <CloseButton onPress={() => navigation.goBack()} />
+          </View>
+          {this.handleSearchOutPut()}
         </View>
-        {this.handleSearchOutPut()}
       </View>
     );
   }
