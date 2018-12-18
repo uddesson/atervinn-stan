@@ -1,6 +1,12 @@
 //@flow
 import React from 'react';
-import { View, ScrollView, TouchableOpacity, FlatList, StyleSheet } from 'react-native';
+import {
+  View,
+  ScrollView,
+  TouchableOpacity,
+  FlatList,
+  StyleSheet,
+} from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import { Paragraph } from './Types';
 import { utilityStyles } from './utilityStyles';
@@ -23,13 +29,18 @@ export const SearchResultList = (props: Props) => {
   const { navigation, results } = props;
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.container}>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={styles.container}
+    >
       <FlatList
         keyExtractor={item => item.id.toString()}
         data={results}
         renderItem={({ item }) => {
           const backgroundColor = checkColor(item.type.toLowerCase());
-          const sortingTypeAvailable = allSortingTypes.includes(item.type.toLowerCase());
+          const sortingTypeAvailable = allSortingTypes.includes(
+            item.type.toLowerCase()
+          );
 
           return (
             <View style={styles.result}>
@@ -50,21 +61,31 @@ export const SearchResultList = (props: Props) => {
               >
                 <View style={utilityStyles.row}>
                   {sortingTypeAvailable ? (
-                    <View style={[styles.circle, styles.iconMargin, { backgroundColor }]} />
+                    <View
+                      style={[
+                        styles.circle,
+                        styles.iconMargin,
+                        { backgroundColor },
+                      ]}
+                    />
                   ) : (
                     <View style={styles.iconMargin}>
                       <WarningIcon width={20} height={40} fill={colors.red} />
                     </View>
                   )}
                   <Paragraph
-                    style={sortingTypeAvailable ? styles.shortText : styles.longText}
+                    style={
+                      sortingTypeAvailable ? styles.shortText : styles.longText
+                    }
                     numberOfLines={1}
                   >
                     {toUpperCase(item.name)}
                   </Paragraph>
                 </View>
 
-                <View style={utilityStyles.row}>{getStationSymbol(item.type)}</View>
+                <View style={utilityStyles.row}>
+                  {getStationSymbol(item.type)}
+                </View>
               </TouchableOpacity>
             </View>
           );
@@ -76,7 +97,7 @@ export const SearchResultList = (props: Props) => {
 
 const styles = StyleSheet.create({
   container: {
-    paddingBottom: 40,
+    paddingTop: 20,
   },
   result: {
     paddingTop: 10,
@@ -98,9 +119,9 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   shortText: {
-    maxWidth: 200,
+    maxWidth: 180,
   },
   longText: {
-    maxWidth: 270,
+    maxWidth: 250,
   },
 });

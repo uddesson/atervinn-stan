@@ -105,23 +105,21 @@ export class Search extends Component<Props, State> {
     const { searchInput, searchResults, error, loading } = this.state;
 
     return (
-      <View style={[styles.screen, utilityStyles.fullHeight]}>
-        <View style={[utilityStyles.justifyCenter, styles.container]}>
-          <View
-            style={[
-              utilityStyles.row,
-              utilityStyles.fullWidth,
-              utilityStyles.justifyAround,
-            ]}
-          >
-            <SearchInput
-              navigation={navigation}
-              onChangeText={this.handleSearchInput}
-            />
-            <CloseButton onPress={() => navigation.goBack()} />
-          </View>
-          {this.handleSearchOutPut()}
+      <View style={[utilityStyles.fullHeight, styles.screen]}>
+        <View
+          style={[
+            utilityStyles.row,
+            utilityStyles.justifyBetween,
+            styles.container,
+          ]}
+        >
+          <SearchInput
+            navigation={navigation}
+            onChangeText={this.handleSearchInput}
+          />
+          <CloseButton onPress={() => navigation.goBack()} />
         </View>
+        {this.handleSearchOutPut()}
       </View>
     );
   }
@@ -130,10 +128,10 @@ export class Search extends Component<Props, State> {
 const styles = StyleSheet.create({
   screen: {
     backgroundColor: colors.whiteSmoke,
+    paddingHorizontal: '8%',
   },
   container: {
+    paddingHorizontal: 8,
     marginTop: 20,
-    paddingLeft: 20,
-    paddingRight: 20,
   },
 });
