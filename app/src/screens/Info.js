@@ -86,15 +86,15 @@ const styles = StyleSheet.create({
   image: {
     width: 80,
     height: 80,
-    marginHorizontal: 15,
+    marginRight: 15,
   },
   imageBig: {
     width: 80,
     height: 90,
-    marginHorizontal: 15,
+    marginRight: 15,
   },
   textContainer: {
-    width: '60%',
+    width: '65%',
   },
 
   description: {
