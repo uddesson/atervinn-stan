@@ -1,6 +1,13 @@
 //@flow
 import React from 'react';
-import Svg, { G, Path, Polygon, Circle, Line, Polyline } from 'react-native-svg';
+import Svg, {
+  G,
+  Path,
+  Polygon,
+  Circle,
+  Line,
+  Polyline,
+} from 'react-native-svg';
 
 type Props = {
   width: number,
@@ -120,7 +127,10 @@ export const WarningIcon = (props: Props) => {
     <Svg width={width} height={height} viewBox="0 0 24 24" fill="none">
       <Path d="M0 0h24v24H0V0z" />
       <Circle fill={fill} cx="12" cy="19" r="2" />
-      <Path fill={fill} d="M12 3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2s2-.9 2-2V5c0-1.1-.9-2-2-2z" />
+      <Path
+        fill={fill}
+        d="M12 3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2s2-.9 2-2V5c0-1.1-.9-2-2-2z"
+      />
     </Svg>
   );
 };
@@ -137,6 +147,25 @@ export const CancelIcon = (props: Props) => {
         stroke={fill}
         fill={fill}
       />
+    </Svg>
+  );
+};
+
+export const NavigationIcon = (props: Props) => {
+  const { width, height, fill } = props;
+
+  return (
+    <Svg
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={fill}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <Polygon points="3 11 22 2 13 21 11 13 3 11" />
     </Svg>
   );
 };
