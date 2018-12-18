@@ -20,6 +20,6 @@ export const colors = {
   ftiBlue: 'rgb(0,150,213)',
   ftiOrange: 'rgb(245,129,42)',
 
-  transparentBlack: 'rgba(0,0,0,0.4)',
+  transparentBlack: 'rgba(15,15,20,0.6)',
   transparentWhite: 'rgba(255,255,255,0.7)',
 };
