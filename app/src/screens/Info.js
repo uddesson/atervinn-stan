@@ -110,5 +110,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 12,
     margin: 15,
+    lineHeight: 18,
   },
 });
