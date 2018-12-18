@@ -51,6 +51,9 @@ export const utilityStyles = StyleSheet.create({
   greenText: {
     color: colors.darkGreen,
   },
+  boldText: {
+    fontWeight: '700',
+  },
   capitalizeText: {
     textTransform: 'capitalize',
   },
