@@ -4,6 +4,13 @@ import { View, StyleSheet } from 'react-native';
 import { toUpperCase, parseArray, checkModuleAvailability } from '../../utils';
 import { colors, utilityStyles, SubHeading, Paragraph, ParagraphBold } from '.';
 
+/*
+ * Note: if two markers are close to each other both modals will be triggered.
+ * This is a known issue and there is no good fix for this right now.
+ *
+ * Ref: https://github.com/react-native-community/react-native-maps/issues/2492
+ */
+
 type Props = {
   marker: {
     locationName: string,
