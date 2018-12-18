@@ -1,12 +1,6 @@
 //@flow
 import React, { Component } from 'react';
-import {
-  SafeAreaView,
-  View,
-  Alert,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import { View, Alert } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import Permissions from 'react-native-permissions';
 import MapView, { Marker, Callout } from 'react-native-maps';

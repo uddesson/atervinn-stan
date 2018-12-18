@@ -1,13 +1,6 @@
 //@flow
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  SafeAreaView,
-  ScrollView,
-  FlatList,
-  View,
-  Image,
-} from 'react-native';
+import { StyleSheet, ScrollView, FlatList, View, Image } from 'react-native';
 import {
   Paragraph,
   Heading,

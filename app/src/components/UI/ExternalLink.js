@@ -1,7 +1,6 @@
 //@flow
 import React from 'react';
-import { TouchableOpacity, StyleSheet, Linking } from 'react-native';
-import { utilityStyles, colors } from '.';
+import { TouchableOpacity, Linking } from 'react-native';
 
 type Props = {
   url: string,
