@@ -44,14 +44,15 @@ export const MapModal = (props: Props) => {
   const getBackgroundColor = () => {
     let backgroundColor = '';
 
-    if (!ftiStation && !moduleIsAvailable) {
-      return (backgroundColor = colors.lightGrey);
-    } else if (locationConfirmed) {
-      return (backgroundColor = colors.orange);
-    } else if (ftiStation) {
-      return (backgroundColor = colors.ftiContainerGreen);
-    } else {
+    if (!ftiStation) {
+      if (!moduleIsAvailable) {
+        return (backgroundColor = colors.lightGrey);
+      } else if (!locationConfirmed) {
+        return (backgroundColor = colors.orange);
+      }
       return (backgroundColor = colors.blue);
+    } else {
+      return (backgroundColor = colors.ftiContainerGreen);
     }
   };
 
@@ -78,12 +79,12 @@ export const MapModal = (props: Props) => {
             <Paragraph>{formattedSortingOptions}</Paragraph>
           </View>
         </View>
-        {showInfoMessage && (
+        {!ftiStation && showInfoMessage && (
           <ParagraphBold style={styles.finePrint}>
-            {locationConfirmed
-              ? 'På grund av otillräcklig information kan vi inte garantera exakt placering eller sorteringsalternativ för den här modulen.'
-              : !moduleIsAvailable
+            {!moduleIsAvailable
               ? 'Stationen är endast tillgänglig 1 April - 31 Oktober.'
+              : !locationConfirmed
+              ? 'På grund av otillräcklig information kan vi inte garantera exakt placering eller sorteringsalternativ för den här modulen.'
               : null}
           </ParagraphBold>
         )}
