@@ -18,7 +18,7 @@ export const StaticSearchInput = (props: Props) => {
           utilityStyles.row,
           utilityStyles.justifyBetween,
           utilityStyles.fullWidth,
-          utilityStyles.boxShadow,
+          utilityStyles.boxShadowDark,
         ]}
         onPress={() => navigation.navigate('Search')}
         activeOpacity={1}
