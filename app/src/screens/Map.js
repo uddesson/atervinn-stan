@@ -186,7 +186,7 @@ export class Map extends Component<Props, State> {
       <>
         <MapView
           ref={map => (this.map = map)}
-          style={[utilityStyles.fullWidth, utilityStyles.fullHeight]}
+          style={utilityStyles.flex1}
           initialRegion={region}
           showsUserLocation
           userLocationAnnotationTitle={'Min plats'}
@@ -196,8 +196,8 @@ export class Map extends Component<Props, State> {
           loadingIndicatorColor={colors.blue}
           loadingBackgroundColor={colors.whiteSmoke}
         >
-          {isModuleVisible ? this.renderModuleMarkers(modulePositions) : null}
-          {isFtiContainerVisible ? this.renderFtiMarkers(ftiPositions) : null}
+          {isModuleVisible && this.renderModuleMarkers(modulePositions)}
+          {isFtiContainerVisible && this.renderFtiMarkers(ftiPositions)}
         </MapView>
         <FilterToggler
           style={utilityStyles.absolute}
