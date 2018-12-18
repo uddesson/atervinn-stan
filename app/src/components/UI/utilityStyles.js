@@ -66,6 +66,9 @@ export const utilityStyles = StyleSheet.create({
   lineHeightNormal: {
     lineHeight: 25,
   },
+  letterSpaceNormal: {
+    letterSpacing: 0.4,
+  },
   absolute: {
     position: 'absolute',
   },
