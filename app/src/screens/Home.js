@@ -32,10 +32,20 @@ export class Home extends Component<Props> {
         <ShortcutBanner navigation={navigation} />
         <ImageBackground
           source={{ uri: seasonImageUri }}
-          style={[utilityStyles.fullWidth, utilityStyles.fullHeight, styles.headerImage]}
+          style={[
+            utilityStyles.fullWidth,
+            utilityStyles.fullHeight,
+            styles.headerImage,
+          ]}
         >
-          <View style={[utilityStyles.col, utilityStyles.justifyAround, utilityStyles.flex1]}>
-            <View style={styles.staticSearchInputWrapper}>
+          <View
+            style={[
+              utilityStyles.col,
+              utilityStyles.justifyAround,
+              utilityStyles.flex1,
+            ]}
+          >
+            <View style={utilityStyles.fullWidth}>
               <StaticSearchInput navigation={navigation} />
             </View>
             <BlackBoxMessage>{message}</BlackBoxMessage>
@@ -49,9 +59,6 @@ export class Home extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     paddingBottom: 50,
-  },
-  staticSearchInputWrapper: {
-    width: '100%',
   },
   headerImage: {
     paddingHorizontal: '8%',

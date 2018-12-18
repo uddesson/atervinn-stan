@@ -50,7 +50,9 @@ export class Info extends Component<{}> {
               />
 
               <View style={styles.textContainer}>
-                <SubHeading style={styles.subHeading}>{item.title}</SubHeading>
+                <SubHeading style={utilityStyles.boldText}>
+                  {item.title}
+                </SubHeading>
                 <Paragraph
                   style={[styles.description, utilityStyles.lineHeightNormal]}
                 >
@@ -94,9 +96,7 @@ const styles = StyleSheet.create({
   textContainer: {
     width: '60%',
   },
-  subHeading: {
-    fontWeight: 'bold',
-  },
+
   description: {
     fontSize: 16,
   },
