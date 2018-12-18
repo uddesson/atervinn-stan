@@ -9,7 +9,6 @@ import {
   colors,
   CloseButton,
   SearchResultMessage,
-  Paragraph,
 } from '../components/UI';
 
 type Props = {
