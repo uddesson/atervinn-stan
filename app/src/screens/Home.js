@@ -37,43 +37,19 @@ export class Home extends Component<Props> {
     const { navigation } = this.props;
 
     return (
-      <View
-        style={[
-          utilityStyles.flex1,
-          utilityStyles.fullWidth,
-          utilityStyles.center,
-        ]}
-      >
-        <View
-          style={[
-            styles.container,
-            utilityStyles.flex1,
-            utilityStyles.fullWidth,
-          ]}
+      <View style={[styles.container, utilityStyles.flex1]}>
+        <ShortcutBanner navigation={navigation} />
+        <ImageBackground
+          source={{ uri: seasonImageUri }}
+          style={[utilityStyles.fullWidth, utilityStyles.fullHeight, styles.headerImage]}
         >
-          <ShortcutBanner navigation={navigation} />
-          <ImageBackground
-            source={{ uri: seasonImageUri }}
-            style={[
-              utilityStyles.fullWidth,
-              utilityStyles.fullHeight,
-              styles.headerImage,
-            ]}
-          >
-            <View
-              style={[
-                utilityStyles.col,
-                utilityStyles.justifyAround,
-                utilityStyles.flex1,
-              ]}
-            >
-              <View style={styles.staticSearchInputWrapper}>
-                <StaticSearchInput navigation={navigation} />
-              </View>
-              <BlackBoxMessage>{message}</BlackBoxMessage>
+          <View style={[utilityStyles.col, utilityStyles.justifyAround, utilityStyles.flex1]}>
+            <View style={styles.staticSearchInputWrapper}>
+              <StaticSearchInput navigation={navigation} />
             </View>
-          </ImageBackground>
-        </View>
+            <BlackBoxMessage>{message}</BlackBoxMessage>
+          </View>
+        </ImageBackground>
       </View>
     );
   }
