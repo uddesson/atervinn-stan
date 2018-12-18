@@ -105,13 +105,13 @@ export class Search extends Component<Props, State> {
     const { searchInput, searchResults, error, loading } = this.state;
 
     return (
-      <View style={[styles.screen, utilityStyles.fullHeight]}>
-        <View style={[utilityStyles.justifyCenter, styles.container]}>
+      <View style={[utilityStyles.fullHeight, styles.screen]}>
+        <View style={[utilityStyles.justifyCenter]}>
           <View
             style={[
               utilityStyles.row,
-              utilityStyles.fullWidth,
-              utilityStyles.justifyAround,
+              utilityStyles.justifyBetween,
+              styles.container,
             ]}
           >
             <SearchInput
@@ -130,10 +130,10 @@ export class Search extends Component<Props, State> {
 const styles = StyleSheet.create({
   screen: {
     backgroundColor: colors.whiteSmoke,
+    paddingHorizontal: '8%',
   },
   container: {
+    paddingHorizontal: 8,
     marginTop: 20,
-    paddingLeft: 20,
-    paddingRight: 20,
   },
 });

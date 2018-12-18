@@ -29,8 +29,8 @@ export const GpsIconButton = (props: Props) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.blue,
-    bottom: '5%',
-    right: '5%',
+    bottom: '2%',
+    right: '4%',
     width: 50,
     height: 50,
     borderRadius: 50 / 2,
