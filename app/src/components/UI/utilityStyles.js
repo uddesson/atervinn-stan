@@ -51,6 +51,9 @@ export const utilityStyles = StyleSheet.create({
   greenText: {
     color: colors.darkGreen,
   },
+  boldText: {
+    fontWeight: '700',
+  },
   capitalizeText: {
     textTransform: 'capitalize',
   },
@@ -62,6 +65,9 @@ export const utilityStyles = StyleSheet.create({
   },
   lineHeightNormal: {
     lineHeight: 25,
+  },
+  letterSpaceNormal: {
+    letterSpacing: 0.4,
   },
   absolute: {
     position: 'absolute',

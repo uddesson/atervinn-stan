@@ -1,6 +1,6 @@
 //@flow
 import React, { Component } from 'react';
-import { StyleSheet, SafeAreaView, ImageBackground, View } from 'react-native';
+import { StyleSheet, ImageBackground, View } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import {
   utilityStyles,
@@ -9,17 +9,16 @@ import {
   StaticSearchInput,
   BlackBoxMessage,
 } from '../components/UI';
-import { checkModuleAvailability, checkCurrentSeason } from '../utils';
+import { checkModuleAvailability, getCurrentSeason } from '../utils';
 
 type Props = {
   navigation: NavigationScreenProps,
 };
 
-const seasonImageUri = checkCurrentSeason();
-
+const seasonImageUri = getCurrentSeason();
 const isModulesAvailable = checkModuleAvailability();
 const message = isModulesAvailable
-  ? 'Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper dig'
+  ? 'Osäker på hur du ska sortera ditt skräp? Vår sökfunktion hjälper dig.'
   : 'Observera att Stockholms mobila stationer inte står ute vintertid, men FTI:s Stationer är tillgängliga året om.';
 
 export class Home extends Component<Props> {
@@ -33,10 +32,20 @@ export class Home extends Component<Props> {
         <ShortcutBanner navigation={navigation} />
         <ImageBackground
           source={{ uri: seasonImageUri }}
-          style={[utilityStyles.fullWidth, utilityStyles.fullHeight, styles.headerImage]}
+          style={[
+            utilityStyles.fullWidth,
+            utilityStyles.fullHeight,
+            styles.headerImage,
+          ]}
         >
-          <View style={[utilityStyles.col, utilityStyles.justifyAround, utilityStyles.flex1]}>
-            <View style={styles.staticSearchInputWrapper}>
+          <View
+            style={[
+              utilityStyles.col,
+              utilityStyles.justifyAround,
+              utilityStyles.flex1,
+            ]}
+          >
+            <View style={utilityStyles.fullWidth}>
               <StaticSearchInput navigation={navigation} />
             </View>
             <BlackBoxMessage>{message}</BlackBoxMessage>
@@ -50,9 +59,6 @@ export class Home extends Component<Props> {
 const styles = StyleSheet.create({
   container: {
     paddingBottom: 50,
-  },
-  staticSearchInputWrapper: {
-    width: '100%',
   },
   headerImage: {
     paddingHorizontal: '8%',

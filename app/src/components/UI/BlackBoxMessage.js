@@ -12,12 +12,17 @@ type Props = {
  * Mainly used on the homescreen.
  */
 
-/* Should this have a more generic name for scaleability? */
 export const BlackBoxMessage = (props: Props) => {
   const { children } = props;
   return (
     <View style={[styles.container, utilityStyles.fullWidth]}>
-      <Paragraph style={[styles.message, utilityStyles.whiteText, utilityStyles.centerText]}>
+      <Paragraph
+        style={[
+          styles.message,
+          utilityStyles.whiteText,
+          utilityStyles.centerText,
+        ]}
+      >
         {children}
       </Paragraph>
     </View>

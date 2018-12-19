@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { TextInput, StyleSheet } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import { colors } from './colors';
+import { utilityStyles } from './utilityStyles';
 
 type Props = {
   navigation: NavigationScreenProps,
@@ -39,7 +40,7 @@ export class SearchInput extends Component<Props, State> {
         placeholder={'Jag vill återvinna...'}
         value={value}
         placeholderTextColor={colors.lightGrey}
-        style={styles.inputContainer}
+        style={[styles.inputContainer]}
       />
     );
   }
@@ -49,8 +50,8 @@ const styles = StyleSheet.create({
   inputContainer: {
     borderBottomWidth: 1,
     borderBottomColor: colors.lightGrey,
-    width: '80%',
-    padding: 10,
+    width: '70%',
+    paddingVertical: 10,
     fontSize: 20,
   },
 });

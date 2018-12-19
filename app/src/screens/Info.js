@@ -1,13 +1,6 @@
 //@flow
 import React, { Component } from 'react';
-import {
-  StyleSheet,
-  SafeAreaView,
-  ScrollView,
-  FlatList,
-  View,
-  Image,
-} from 'react-native';
+import { StyleSheet, ScrollView, FlatList, View, Image } from 'react-native';
 import {
   Paragraph,
   Heading,
@@ -19,23 +12,24 @@ import {
 import { symbolExplanations } from '../assets';
 import { toUpperCase } from '../utils';
 
-type Props = {};
-
-export class Info extends Component<Props> {
+export class Info extends Component<{}> {
   render() {
     return (
       <ScrollView
         contentContainerStyle={[styles.screen, utilityStyles.justifyCenter]}
       >
-        <Heading style={styles.heading}>Symbolförklaring</Heading>
+        <Heading style={styles.heading}>Symbolförklaringar</Heading>
         <FlatList
           data={symbolExplanations}
           ListFooterComponent={
             <Paragraph style={styles.smallText}>
-              <ParagraphBold style={styles.smallText}>{`ÅTERVINN STAN `}</ParagraphBold>
-              använder data och material hämtat från FTI (Förpackning och tidnings insamlingen), HSR
-              (Håll Sverige Rent), SVOA (Stockholm Vatten och Avfall) och Stockholms Stad.
-              Bakgrundbilder tagna av Theodor Lundqvist, Arno Smit, Yapo Zhou och Fredrik Ohlander.
+              <ParagraphBold
+                style={styles.smallText}
+              >{`ÅTERVINN STAN `}</ParagraphBold>
+              använder data och material hämtat från FTI (Förpackning och
+              tidnings insamlingen), HSR (Håll Sverige Rent), SVOA (Stockholm
+              Vatten och Avfall) och Stockholms Stad. Bakgrundbilder tagna av
+              Theodor Lundqvist, Arno Smit, Yapo Zhou och Fredrik Ohlander.
             </Paragraph>
           }
           keyExtractor={item => item.title}
@@ -44,6 +38,7 @@ export class Info extends Component<Props> {
               style={[
                 utilityStyles.row,
                 utilityStyles.boxShadow,
+                utilityStyles.center,
                 styles.itemContainer,
               ]}
             >
@@ -55,7 +50,9 @@ export class Info extends Component<Props> {
               />
 
               <View style={styles.textContainer}>
-                <SubHeading style={styles.subHeading}>{item.title}</SubHeading>
+                <SubHeading style={utilityStyles.boldText}>
+                  {item.title}
+                </SubHeading>
                 <Paragraph
                   style={[styles.description, utilityStyles.lineHeightNormal]}
                 >
@@ -73,6 +70,7 @@ export class Info extends Component<Props> {
 const styles = StyleSheet.create({
   screen: {
     backgroundColor: colors.whiteSmoke,
+    paddingHorizontal: 8,
   },
   itemContainer: {
     backgroundColor: colors.white,
@@ -82,10 +80,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   heading: {
-    marginLeft: 15,
-    marginRight: 15,
-    marginTop: 5,
-    marginBottom: 5,
+    marginTop: 30,
+    paddingHorizontal: '5%',
   },
   image: {
     width: 80,
@@ -98,11 +94,9 @@ const styles = StyleSheet.create({
     marginRight: 15,
   },
   textContainer: {
-    width: '69%',
+    width: '65%',
   },
-  subHeading: {
-    fontWeight: 'bold',
-  },
+
   description: {
     fontSize: 16,
   },

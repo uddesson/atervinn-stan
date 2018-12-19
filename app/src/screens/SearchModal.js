@@ -17,7 +17,8 @@ import {
   SubHeading,
   WarningIcon,
   Button,
-  GpsIcon,
+  ExternalLinkButton,
+  NavigationIcon,
   ExternalLink,
   ExternalLinkIcon,
 } from '../components/UI';
@@ -43,7 +44,7 @@ export const SearchModal = (props: Props) => {
       <ScrollView
         contentContainerStyle={[
           utilityStyles.flexGrow,
-          utilityStyles.justifyAround,
+          utilityStyles.justifyBetween,
           styles.container,
         ]}
       >
@@ -53,11 +54,25 @@ export const SearchModal = (props: Props) => {
               <View style={[utilityStyles.center, styles.imageContainer]}>
                 <Image style={styles.image} source={{ uri: sortingType }} />
               </View>
-              <SubHeading>{toUpperCase(title)}</SubHeading>
+              <SubHeading
+                style={[
+                  utilityStyles.boldText,
+                  utilityStyles.letterSpaceNormal,
+                ]}
+              >
+                {toUpperCase(title)}
+              </SubHeading>
             </>
           ) : (
-            <View style={utilityStyles.row}>
-              <SubHeading>{toUpperCase(title)}</SubHeading>
+            <View style={[utilityStyles.row, styles.unavailableItem]}>
+              <SubHeading
+                style={[
+                  utilityStyles.boldText,
+                  utilityStyles.letterSpaceNormal,
+                ]}
+              >
+                {toUpperCase(title)}
+              </SubHeading>
               <View style={[utilityStyles.center, styles.iconCircle]}>
                 <WarningIcon width={20} height={20} fill={colors.red} />
               </View>
@@ -72,14 +87,18 @@ export const SearchModal = (props: Props) => {
         <View>
           {sortingAvailability ? (
             <Button onPress={() => navigation.navigate('Map')}>
-              <ButtonLabel>Hitta station</ButtonLabel>
-              <GpsIcon height={60} width={60} fill={colors.white} />
+              <ButtonLabel style={styles.buttonLabel}>
+                Hitta station
+              </ButtonLabel>
+              <NavigationIcon height={25} width={25} fill={colors.white} />
             </Button>
           ) : (
-            <ExternalLink url={externalUrl}>
-              <ButtonLabel>Hitta central</ButtonLabel>
+            <ExternalLinkButton url={externalUrl}>
+              <ButtonLabel style={styles.buttonLabel}>
+                Hitta central
+              </ButtonLabel>
               <ExternalLinkIcon height={25} width={25} fill={colors.white} />
-            </ExternalLink>
+            </ExternalLinkButton>
           )}
         </View>
       </ScrollView>
@@ -99,9 +118,13 @@ const styles = StyleSheet.create({
   imageContainer: {
     marginBottom: 20,
   },
+  unavailableItem: {
+    marginTop: 20,
+  },
   image: {
     width: 190,
     height: 190,
+    marginBottom: 10,
   },
   iconCircle: {
     width: 25,
@@ -112,7 +135,10 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   paragraph: {
-    marginTop: 8,
-    marginBottom: 10,
+    marginBottom: 20,
+    marginTop: 10,
+  },
+  buttonLabel: {
+    marginRight: 10,
   },
 });

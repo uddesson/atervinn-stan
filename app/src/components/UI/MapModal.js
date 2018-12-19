@@ -23,8 +23,11 @@ export const MapModal = (props: Props) => {
   const { marker } = props;
   const sortingOptions = parseArray(marker.sorting);
   const formattedSortingOptions = toUpperCase(sortingOptions);
-  const locationNotConfirmed = marker.locationConfirmed === false;
-  const isModuleAvailable = checkModuleAvailability();
+  const locationConfirmed = marker.locationConfirmed === true;
+  const moduleIsAvailable = checkModuleAvailability();
+
+  // Info message should be shown if either the location is unconfirmed or module is unavailable.
+  const showInfoMessage = !locationConfirmed || !moduleIsAvailable;
 
   /*
    * Since we our data for the two different stations are very similar
@@ -41,14 +44,15 @@ export const MapModal = (props: Props) => {
   const getBackgroundColor = () => {
     let backgroundColor = '';
 
-    if (!ftiStation && !isModuleAvailable) {
-      return (backgroundColor = colors.lightGrey);
-    } else if (locationNotConfirmed) {
-      return (backgroundColor = colors.orange);
-    } else if (ftiStation) {
-      return (backgroundColor = colors.ftiContainerGreen);
-    } else {
+    if (!ftiStation) {
+      if (!moduleIsAvailable) {
+        return (backgroundColor = colors.lightGrey);
+      } else if (!locationConfirmed) {
+        return (backgroundColor = colors.orange);
+      }
       return (backgroundColor = colors.blue);
+    } else {
+      return (backgroundColor = colors.ftiContainerGreen);
     }
   };
 
@@ -75,11 +79,13 @@ export const MapModal = (props: Props) => {
             <Paragraph>{formattedSortingOptions}</Paragraph>
           </View>
         </View>
-        {!ftiStation && (
+        {!ftiStation && showInfoMessage && (
           <ParagraphBold style={styles.finePrint}>
-            {isModuleAvailable
+            {!moduleIsAvailable
+              ? 'Stationen är endast tillgänglig 1 April - 31 Oktober.'
+              : !locationConfirmed
               ? 'På grund av otillräcklig information kan vi inte garantera exakt placering eller sorteringsalternativ för den här modulen.'
-              : 'Stationen är endast tillgänglig 1 April - 31 Oktober.'}
+              : null}
           </ParagraphBold>
         )}
       </View>

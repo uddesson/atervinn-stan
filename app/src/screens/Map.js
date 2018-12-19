@@ -1,12 +1,6 @@
 //@flow
 import React, { Component } from 'react';
-import {
-  SafeAreaView,
-  View,
-  Alert,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import { View, Alert } from 'react-native';
 import { NavigationScreenProps } from 'react-navigation';
 import Permissions from 'react-native-permissions';
 import MapView, { Marker, Callout } from 'react-native-maps';
@@ -192,18 +186,18 @@ export class Map extends Component<Props, State> {
       <>
         <MapView
           ref={map => (this.map = map)}
-          style={[utilityStyles.fullWidth, utilityStyles.fullHeight]}
+          style={utilityStyles.flex1}
           initialRegion={region}
           showsUserLocation
           userLocationAnnotationTitle={'Min plats'}
           onMapReady={this.showCurrentLocation}
-          onRegionChange={this.handleMapRegionChange}
+          onRegionChangeComplete={this.handleMapRegionChange}
           loadingEnabled
           loadingIndicatorColor={colors.blue}
           loadingBackgroundColor={colors.whiteSmoke}
         >
-          {isModuleVisible ? this.renderModuleMarkers(modulePositions) : null}
-          {isFtiContainerVisible ? this.renderFtiMarkers(ftiPositions) : null}
+          {isModuleVisible && this.renderModuleMarkers(modulePositions)}
+          {isFtiContainerVisible && this.renderFtiMarkers(ftiPositions)}
         </MapView>
         <FilterToggler
           style={utilityStyles.absolute}
