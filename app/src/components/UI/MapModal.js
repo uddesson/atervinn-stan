@@ -1,7 +1,7 @@
 //@flow
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
-import { toUpperCase, parseArray, checkModuleAvailability } from '../../utils';
+import { toUpperCase, arrayParser, checkModuleAvailability } from '../../utils';
 import { colors, utilityStyles, SubHeading, Paragraph, ParagraphBold } from '.';
 
 /*
@@ -21,7 +21,7 @@ type Props = {
 
 export const MapModal = (props: Props) => {
   const { marker } = props;
-  const sortingOptions = parseArray(marker.sorting);
+  const sortingOptions = arrayParser(marker.sorting);
   const formattedSortingOptions = toUpperCase(sortingOptions);
   const locationConfirmed = marker.locationConfirmed === true;
   const moduleIsAvailable = checkModuleAvailability();
