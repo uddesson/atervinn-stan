@@ -14,7 +14,7 @@ import {
   colors,
   Paragraph,
   ButtonLabel,
-  SubHeading,
+  Heading,
   WarningIcon,
   Button,
   ExternalLinkButton,
@@ -54,25 +54,25 @@ export const SearchModal = (props: Props) => {
               <View style={[utilityStyles.center, styles.imageContainer]}>
                 <Image style={styles.image} source={{ uri: sortingType }} />
               </View>
-              <SubHeading
+              <Heading
                 style={[
                   utilityStyles.boldText,
                   utilityStyles.letterSpaceNormal,
                 ]}
               >
                 {toUpperCase(title)}
-              </SubHeading>
+              </Heading>
             </>
           ) : (
             <View style={[utilityStyles.row, styles.unavailableItem]}>
-              <SubHeading
+              <Heading
                 style={[
                   utilityStyles.boldText,
                   utilityStyles.letterSpaceNormal,
                 ]}
               >
                 {toUpperCase(title)}
-              </SubHeading>
+              </Heading>
               <View style={[utilityStyles.center, styles.iconCircle]}>
                 <WarningIcon width={20} height={20} fill={colors.red} />
               </View>
