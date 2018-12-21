@@ -48,8 +48,7 @@ export const ExternalLinkButton = (props: Props) => {
 const styles = StyleSheet.create({
   button: {
     backgroundColor: colors.green,
-    borderRadius: 5,
-    padding: 25,
-    height: 70,
+    borderRadius: 6,
+    padding: 12,
   },
 });

@@ -14,7 +14,7 @@ import {
   colors,
   Paragraph,
   ButtonLabel,
-  SubHeading,
+  Heading,
   WarningIcon,
   Button,
   ExternalLinkButton,
@@ -54,25 +54,25 @@ export const SearchModal = (props: Props) => {
               <View style={[utilityStyles.center, styles.imageContainer]}>
                 <Image style={styles.image} source={{ uri: sortingType }} />
               </View>
-              <SubHeading
+              <Heading
                 style={[
                   utilityStyles.boldText,
                   utilityStyles.letterSpaceNormal,
                 ]}
               >
                 {toUpperCase(title)}
-              </SubHeading>
+              </Heading>
             </>
           ) : (
             <View style={[utilityStyles.row, styles.unavailableItem]}>
-              <SubHeading
+              <Heading
                 style={[
                   utilityStyles.boldText,
                   utilityStyles.letterSpaceNormal,
                 ]}
               >
                 {toUpperCase(title)}
-              </SubHeading>
+              </Heading>
               <View style={[utilityStyles.center, styles.iconCircle]}>
                 <WarningIcon width={20} height={20} fill={colors.red} />
               </View>
@@ -88,14 +88,14 @@ export const SearchModal = (props: Props) => {
           {sortingAvailability ? (
             <Button onPress={() => navigation.navigate('Map')}>
               <ButtonLabel style={styles.buttonLabel}>
-                Hitta station
+                hitta närmsta
               </ButtonLabel>
               <NavigationIcon height={25} width={25} fill={colors.white} />
             </Button>
           ) : (
             <ExternalLinkButton url={externalUrl}>
               <ButtonLabel style={styles.buttonLabel}>
-                Hitta central
+                visa centraler
               </ButtonLabel>
               <ExternalLinkIcon height={25} width={25} fill={colors.white} />
             </ExternalLinkButton>
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   },
   container: {
     backgroundColor: colors.whiteSmoke,
-    paddingHorizontal: '8%',
+    paddingHorizontal: '10%',
     paddingBottom: 20,
   },
   imageContainer: {
