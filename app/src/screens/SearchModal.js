@@ -88,14 +88,14 @@ export const SearchModal = (props: Props) => {
           {sortingAvailability ? (
             <Button onPress={() => navigation.navigate('Map')}>
               <ButtonLabel style={styles.buttonLabel}>
-                Hitta station
+                hitta närmsta
               </ButtonLabel>
               <NavigationIcon height={25} width={25} fill={colors.white} />
             </Button>
           ) : (
             <ExternalLinkButton url={externalUrl}>
               <ButtonLabel style={styles.buttonLabel}>
-                Hitta central
+                visa centraler
               </ButtonLabel>
               <ExternalLinkIcon height={25} width={25} fill={colors.white} />
             </ExternalLinkButton>
