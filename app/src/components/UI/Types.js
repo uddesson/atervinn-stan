@@ -6,21 +6,48 @@ import { colors, utilityStyles } from '.';
 type TextProps = React$ElementProps<typeof Text>;
 
 export const Heading = ({ style, ...props }: TextProps) => {
-  return <Text style={[styles.heading, styles.black, style]} {...props} />;
+  return (
+    <Text
+      style={[
+        styles.jaldi,
+        styles.fontSizeBig,
+        styles.bold,
+        styles.black,
+        style,
+      ]}
+      {...props}
+    />
+  );
 };
 
 export const SubHeading = ({ style, ...props }: TextProps) => {
-  return <Text style={[styles.subHeading, styles.black, style]} {...props} />;
+  return (
+    <Text
+      style={[styles.jaldi, styles.fontSizeMedium, styles.black, style]}
+      {...props}
+    />
+  );
 };
 
 export const Paragraph = ({ style, ...props }: TextProps) => {
-  return <Text style={[styles.paragraph, styles.black, style]} {...props} />;
+  return (
+    <Text
+      style={[styles.roboto, styles.fontSizeSmall, styles.black, style]}
+      {...props}
+    />
+  );
 };
 
 export const ParagraphBold = ({ style, ...props }: TextProps) => {
   return (
     <Text
-      style={[styles.paragraph, styles.bold, styles.black, style]}
+      style={[
+        styles.roboto,
+        styles.fontSizeSmall,
+        styles.bold,
+        styles.black,
+        style,
+      ]}
       {...props}
     />
   );
@@ -30,7 +57,8 @@ export const ButtonLabel = ({ style, ...props }: TextProps) => {
   return (
     <Text
       style={[
-        styles.paragraph,
+        styles.fontSizeMedium,
+        styles.jaldi,
         styles.bold,
         styles.black,
         utilityStyles.uppercaseText,
@@ -43,17 +71,20 @@ export const ButtonLabel = ({ style, ...props }: TextProps) => {
 };
 
 const styles = StyleSheet.create({
-  heading: {
+  jaldi: {
     fontFamily: 'Jaldi',
-    fontSize: 32,
-    fontWeight: '700',
   },
-  subHeading: {
+  roboto: {
+    fontFamily: 'Roboto',
+  },
+  fontSizeSmall: {
+    fontSize: 18,
+  },
+  fontSizeMedium: {
     fontSize: 24,
   },
-  paragraph: {
-    fontFamily: 'Roboto',
-    fontSize: 18,
+  fontSizeBig: {
+    fontSize: 32,
   },
   bold: {
     fontWeight: '700',
