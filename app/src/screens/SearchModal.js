@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   },
   container: {
     backgroundColor: colors.whiteSmoke,
-    paddingHorizontal: '8%',
+    paddingHorizontal: '10%',
     paddingBottom: 20,
   },
   imageContainer: {
