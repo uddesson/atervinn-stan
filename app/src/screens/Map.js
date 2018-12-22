@@ -102,7 +102,7 @@ export class Map extends Component<Props, State> {
       });
   };
 
-  getMarkersWithinRegion = (region: Object, positions) => {
+  getMarkersWithinRegion = (region: Object, positions: Object[]) => {
     // Calculate bounds + add 30% outside of what the user is seeing (screen).
     const bounds = [
       region.longitude + (region.longitudeDelta / 2) * 1.3,
