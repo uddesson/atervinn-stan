@@ -18,8 +18,8 @@ type State = {
   region: Object,
   ftiPositions: Object[],
   modulePositions: Object[],
-  isFtiContainerVisible: boolean,
-  isModuleVisible: boolean,
+  ftiFilterIsActive: boolean,
+  moduleFilterIsActive: boolean,
 };
 
 type Props = {
@@ -39,11 +39,34 @@ export class Map extends Component<Props, State> {
     region: initialRegion,
     ftiPositions: [],
     modulePositions: [],
-    isFtiContainerVisible: true,
-    isModuleVisible: true,
+    ftiFilterIsActive: true,
+    moduleFilterIsActive: true,
   };
 
   map: ?React$Element<any>;
+
+  // Called when map is ready.
+  showCurrentLocation = () => {
+    const onLocationRecived = position => {
+      const region = {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+        latitudeDelta: 0.003,
+        longitudeDelta: 0.003,
+      };
+      this.map.animateToRegion(region);
+    };
+
+    const onLocationDenied = error => {
+      this.alertForLocationPermission();
+    };
+
+    navigator.geolocation.getCurrentPosition(onLocationRecived, onLocationDenied, {
+      timeout: 200,
+      enableHighAccuracy: true,
+      maximumAge: 0,
+    });
+  };
 
   getFtiPositions = async () => {
     const res = await fetch('http://localhost:5000/api/fti');
@@ -57,28 +80,87 @@ export class Map extends Component<Props, State> {
     return modulePositions;
   };
 
-  componentDidMount() {
+  handleRegionChangeComplete = (region: Object) => {
+    /**
+     * When the user changes region (drags map) - fetch positions and filter out those
+     * who are within the current region. Only show these.
+     *
+     * onRegionChangeComplete is also called initially when map first is rendendered,
+     * because it will always recive an initial region.
+     */
+
     Promise.all([this.getFtiPositions(), this.getModulePositions()])
       .then(stations =>
         this.setState({
-          ftiPositions: stations[0],
-          modulePositions: stations[1],
-        })
+          region,
+          ftiPositions: this.getMarkersWithinRegion(region, stations[0]),
+          modulePositions: this.getMarkersWithinRegion(region, stations[1]),
+        }),
       )
       .catch(() => {
         Alert.alert('Något gick fel', 'Kan inte hämta positioner just nu.');
       });
-  }
+  };
+
+  getMarkersWithinRegion = (region: Object, positions) => {
+    // Calculate bounds + add 30% outside of what the user is seeing (screen).
+    const bounds = [
+      region.longitude + (region.longitudeDelta / 2) * 1.3,
+      region.latitude + (region.latitudeDelta / 2) * 1.3,
+      region.longitude - (region.longitudeDelta / 2) * 1.3,
+      region.latitude - (region.latitudeDelta / 2) * 1.3,
+    ];
+
+    // Filter out positions (markers) that are outside of the bounds, don't render them.
+    const visiblePositions = positions.filter(position => {
+      if (
+        position.lng < bounds[0] &&
+        position.lat < bounds[1] &&
+        position.lng > bounds[2] &&
+        position.lat > bounds[3]
+      ) {
+        return position;
+      }
+      return false;
+    });
+
+    return visiblePositions;
+  };
+
+  alertForLocationPermission = async () => {
+    const permissionStatus = await Permissions.check('location');
+    Alert.alert(
+      'Appen har inte åtkomst till din plats',
+      'För att kunna guida dig på bästa sätt behöver appen känna till vart du befinner dig. Vill du ge åtkomst?',
+      [
+        {
+          text: 'Nej, jag hittar själv',
+          onPress: () => {},
+          style: 'cancel',
+        },
+
+        permissionStatus === 'undetermined'
+          ? {
+              text: 'Ja, det går bra',
+              onPress: await Permissions.request('location'),
+            } // Send a permission request.
+          : {
+              text: 'Ja, ändra inställningar',
+              onPress: Permissions.openSettings,
+            },
+      ],
+    );
+  };
 
   handleFtiContainerToggling = () => {
     this.setState({
-      isFtiContainerVisible: !this.state.isFtiContainerVisible,
+      ftiFilterIsActive: !this.state.ftiFilterIsActive,
     });
   };
 
   handleModuleToggling = () => {
     this.setState({
-      isModuleVisible: !this.state.isModuleVisible,
+      moduleFilterIsActive: !this.state.moduleFilterIsActive,
     });
   };
 
@@ -118,68 +200,13 @@ export class Map extends Component<Props, State> {
     ));
   };
 
-  handleMapRegionChange = (region: Object) => {
-    this.setState({ region });
-  };
-
-  alertForLocationPermission = async () => {
-    const permissionStatus = await Permissions.check('location');
-    Alert.alert(
-      'Appen har inte åtkomst till din plats',
-      'För att kunna guida dig på bästa sätt behöver appen känna till vart du befinner dig. Vill du ge åtkomst?',
-      [
-        {
-          text: 'Nej, jag hittar själv',
-          onPress: () => {},
-          style: 'cancel',
-        },
-
-        permissionStatus === 'undetermined'
-          ? {
-              text: 'Ja, det går bra',
-              onPress: await Permissions.request('location'),
-            } // Send a permission request.
-          : {
-              text: 'Ja, ändra inställningar',
-              onPress: Permissions.openSettings,
-            },
-      ]
-    );
-  };
-
-  showCurrentLocation = () => {
-    const onLocationRecived = position => {
-      const region = {
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude,
-        latitudeDelta: 0.003,
-        longitudeDelta: 0.003,
-      };
-      this.map.animateToRegion(region);
-    };
-
-    const onLocationDenied = error => {
-      this.alertForLocationPermission();
-    };
-
-    navigator.geolocation.getCurrentPosition(
-      onLocationRecived,
-      onLocationDenied,
-      {
-        timeout: 200,
-        enableHighAccuracy: true,
-        maximumAge: 0,
-      }
-    );
-  };
-
   render() {
     const {
       region,
       modulePositions,
       ftiPositions,
-      isFtiContainerVisible,
-      isModuleVisible,
+      ftiFilterIsActive,
+      moduleFilterIsActive,
     } = this.state;
 
     return (
@@ -191,18 +218,18 @@ export class Map extends Component<Props, State> {
           showsUserLocation
           userLocationAnnotationTitle={'Min plats'}
           onMapReady={this.showCurrentLocation}
-          onRegionChangeComplete={this.handleMapRegionChange}
+          onRegionChangeComplete={this.handleRegionChangeComplete}
           loadingEnabled
           loadingIndicatorColor={colors.blue}
           loadingBackgroundColor={colors.whiteSmoke}
         >
-          {isModuleVisible && this.renderModuleMarkers(modulePositions)}
-          {isFtiContainerVisible && this.renderFtiMarkers(ftiPositions)}
+          {moduleFilterIsActive && this.renderModuleMarkers(modulePositions)}
+          {ftiFilterIsActive && this.renderFtiMarkers(ftiPositions)}
         </MapView>
         <FilterToggler
           style={utilityStyles.absolute}
-          isFtiContainerVisible={isFtiContainerVisible}
-          isModuleVisible={isModuleVisible}
+          ftiFilterIsActive={ftiFilterIsActive}
+          moduleFilterIsActive={moduleFilterIsActive}
           onFtiContainerPress={this.handleFtiContainerToggling}
           onModulePress={this.handleModuleToggling}
         />

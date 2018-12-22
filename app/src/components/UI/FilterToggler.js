@@ -4,19 +4,14 @@ import { StyleSheet, View, TouchableOpacity, Image } from 'react-native';
 import { colors, utilityStyles } from '.';
 
 type Props = {
-  isFtiContainerVisible: boolean,
-  isModuleVisible: boolean,
+  ftiFilterIsActive: boolean,
+  moduleFilterIsActive: boolean,
   onFtiContainerPress: () => void,
   onModulePress: () => void,
 };
 
 export const FilterToggler = (props: Props) => {
-  const {
-    isFtiContainerVisible,
-    isModuleVisible,
-    onFtiContainerPress,
-    onModulePress,
-  } = props;
+  const { ftiFilterIsActive, moduleFilterIsActive, onFtiContainerPress, onModulePress } = props;
 
   return (
     <View
@@ -29,22 +24,22 @@ export const FilterToggler = (props: Props) => {
         utilityStyles.boxShadow,
       ]}
     >
-      <TouchableOpacity onPress={onFtiContainerPress}>
+      <TouchableOpacity onPress={onFtiContainerPress} activeOpacity={1}>
         <Image
           style={[
             styles.iconSmall,
             utilityStyles.relative,
-            isFtiContainerVisible ? styles.active : styles.inactive,
+            ftiFilterIsActive ? styles.active : styles.inactive,
           ]}
           source={{ uri: 'fti-container' }}
         />
       </TouchableOpacity>
-      <TouchableOpacity onPress={onModulePress}>
+      <TouchableOpacity onPress={onModulePress} activeOpacity={1}>
         <Image
           style={[
             styles.icon,
             utilityStyles.relative,
-            isModuleVisible ? styles.active : styles.inactive,
+            moduleFilterIsActive ? styles.active : styles.inactive,
           ]}
           source={{ uri: 'module' }}
         />
