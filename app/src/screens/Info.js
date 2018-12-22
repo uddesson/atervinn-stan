@@ -23,39 +23,22 @@ export class Info extends Component<{}> {
           data={symbolExplanations}
           ListFooterComponent={
             <Paragraph style={styles.smallText}>
-              <ParagraphBold
-                style={styles.smallText}
-              >{`ÅTERVINN STAN `}</ParagraphBold>
-              använder data och material hämtat från FTI (Förpackning och
-              tidnings insamlingen), HSR (Håll Sverige Rent), SVOA (Stockholm
-              Vatten och Avfall) och Stockholms Stad. Bakgrundbilder tagna av
-              Theodor Lundqvist, Arno Smit, Yapo Zhou och Fredrik Ohlander.
+              <ParagraphBold style={styles.smallText}>{`ÅTERVINN STAN `}</ParagraphBold>
+              använder data och material hämtat från FTI (Förpacknings- och tidningsinsamlingen),
+              HSR (Håll Sverige Rent), SVOA (Stockholm Vatten och Avfall) och Stockholms Stad.
+              Bakgrundbilder tagna av Theodor Lundqvist, Arno Smit, Yapo Zhou och Fredrik Ohlander.
             </Paragraph>
           }
           keyExtractor={item => item.title}
           renderItem={({ item }) => (
-            <View
-              style={[
-                utilityStyles.row,
-                utilityStyles.boxShadow,
-                utilityStyles.center,
-                styles.itemContainer,
-              ]}
-            >
-              <Image
-                style={[
-                  item.icon === 'module' ? styles.imageBig : styles.image,
-                ]}
-                source={{ uri: item.icon }}
-              />
+            <View style={[utilityStyles.row, utilityStyles.boxShadow, styles.itemContainer]}>
+              <View style={utilityStyles.flex1}>
+                <Image style={styles.image} source={{ uri: item.icon }} />
+              </View>
 
               <View style={styles.textContainer}>
-                <SubHeading style={utilityStyles.boldText}>
-                  {item.title}
-                </SubHeading>
-                <Paragraph
-                  style={[styles.description, utilityStyles.lineHeightNormal]}
-                >
+                <SubHeading style={[utilityStyles.boldText, styles.title]}>{item.title}</SubHeading>
+                <Paragraph style={[styles.description, utilityStyles.lineHeightNormal]}>
                   {toUpperCase(item.text)}
                 </Paragraph>
               </View>
@@ -70,33 +53,32 @@ export class Info extends Component<{}> {
 const styles = StyleSheet.create({
   screen: {
     backgroundColor: colors.whiteSmoke,
-    paddingHorizontal: 8,
+    paddingHorizontal: '5%',
   },
   itemContainer: {
     backgroundColor: colors.white,
     borderRadius: 10,
     padding: 15,
-    margin: 15,
-    marginTop: 10,
+    marginHorizontal: 4,
+    marginVertical: 8,
   },
   heading: {
-    marginTop: 30,
-    paddingHorizontal: '5%',
+    marginTop: 20,
   },
   image: {
-    width: 80,
-    height: 80,
-    marginRight: 15,
-  },
-  imageBig: {
-    width: 80,
-    height: 90,
+    flex: 1,
+    alignSelf: 'stretch',
+    width: undefined,
+    height: undefined,
+    resizeMode: 'contain',
     marginRight: 15,
   },
   textContainer: {
-    width: '65%',
+    flex: 2,
   },
-
+  title: {
+    lineHeight: 32,
+  },
   description: {
     fontSize: 16,
   },
