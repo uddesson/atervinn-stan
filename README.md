@@ -6,6 +6,10 @@ Mobile app encouraging and helping people to recycle their garbage, guiding them
 
 The app is currently iOS only and developed for iPhone and iPad. (Not distrubuted anywhere for now.)
 
+#### Credits:
+
+Data from Stockholms Stad, SVOA (Stockholm Vatten och Avfall) and FTI (Förpacknings- och tidningsinsamlingen).
+
 ## Requirements
 
 #### App
