@@ -24,7 +24,7 @@ export const FilterToggler = (props: Props) => {
         utilityStyles.boxShadow,
       ]}
     >
-      <TouchableOpacity onPress={onFtiContainerPress}>
+      <TouchableOpacity onPress={onFtiContainerPress} activeOpacity={1}>
         <Image
           style={[
             styles.iconSmall,
@@ -34,7 +34,7 @@ export const FilterToggler = (props: Props) => {
           source={{ uri: 'fti-container' }}
         />
       </TouchableOpacity>
-      <TouchableOpacity onPress={onModulePress}>
+      <TouchableOpacity onPress={onModulePress} activeOpacity={1}>
         <Image
           style={[
             styles.icon,
