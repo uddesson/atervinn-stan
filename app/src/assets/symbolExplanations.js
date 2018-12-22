@@ -1,20 +1,17 @@
 export const symbolExplanations = [
   {
     title: 'FTI Station',
-    text:
-      'Återvinningstationer utställda av förpackning & tidnings insamlingen.',
+    text: 'Återvinningstationer utställda av Förpacknings- och tidningsinsamlingen.',
     icon: 'fti-container',
   },
   {
     title: 'Modul',
-    text:
-      'Mobila återvinningskärl utställda av stockholms stad april–oktober varje år.',
+    text: 'Mobila återvinningskärl utställda av Stockholms Stad april–oktober varje år.',
     icon: 'module',
   },
   {
     title: 'Plast',
-    text:
-      'Här återvinner du bland annat ketchupflaskan och plastflaskor utan pant',
+    text: 'Här återvinner du plastförpackningar och plastflaskor utan pant.',
     icon: 'plast',
   },
   {
@@ -24,17 +21,17 @@ export const symbolExplanations = [
   },
   {
     title: 'Metall',
-    text: 'Här återvinner du bland annat kapsyler och aluminiumfolie',
+    text: 'Här återvinner du bland annat kapsyler och aluminiumfolie.',
     icon: 'metall',
   },
   {
     title: 'Glas',
-    text: 'Här återvinner du flaskor i glas.',
+    text: 'Här återvinner du flaskor och burkar i glas. Sortera i färgat och ofärgat glas.',
     icon: 'glas',
   },
   {
     title: 'Tidningar & returpapper',
-    text: 'Här återvinner reklamblad och tidningar',
+    text: 'Här återvinner du reklamblad, tidningar och diverse trycksaker.',
     icon: 'tidningar',
   },
   {
