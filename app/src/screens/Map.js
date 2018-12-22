@@ -18,8 +18,8 @@ type State = {
   region: Object,
   ftiPositions: Object[],
   modulePositions: Object[],
-  isFtiContainerVisible: boolean,
-  isModuleVisible: boolean,
+  ftiFilterIsActive: boolean,
+  moduleFilterIsActive: boolean,
 };
 
 type Props = {
@@ -39,8 +39,8 @@ export class Map extends Component<Props, State> {
     region: initialRegion,
     ftiPositions: [],
     modulePositions: [],
-    isFtiContainerVisible: true,
-    isModuleVisible: true,
+    ftiFilterIsActive: true,
+    moduleFilterIsActive: true,
   };
 
   map: ?React$Element<any>;
@@ -223,13 +223,13 @@ export class Map extends Component<Props, State> {
           loadingIndicatorColor={colors.blue}
           loadingBackgroundColor={colors.whiteSmoke}
         >
-          {isModuleVisible && this.renderModuleMarkers(modulePositions)}
-          {isFtiContainerVisible && this.renderFtiMarkers(ftiPositions)}
+          {moduleFilterIsActive && this.renderModuleMarkers(modulePositions)}
+          {ftiFilterIsActive && this.renderFtiMarkers(ftiPositions)}
         </MapView>
         <FilterToggler
           style={utilityStyles.absolute}
-          isFtiContainerVisible={isFtiContainerVisible}
-          isModuleVisible={isModuleVisible}
+          ftiFilterIsActive={ftiFilterIsActive}
+          moduleFilterIsActive={moduleFilterIsActive}
           onFtiContainerPress={this.handleFtiContainerToggling}
           onModulePress={this.handleModuleToggling}
         />
